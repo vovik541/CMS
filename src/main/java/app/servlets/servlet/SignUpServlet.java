@@ -1,4 +1,4 @@
-package app.servlets;
+package app.servlets.servlet;
 
 import app.entities.User;
 
@@ -17,27 +17,25 @@ public class SignUpServlet extends HttpServlet {
 
     private static final Logger logger = Logger.getLogger(SignUpServlet.class);
 
-/*
-
     @Override
     public void init(){
     }
-*/
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signUp.jsp");
+        logger.info("In SignUpServlet.doGet()");
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/register");
         req.setCharacterEncoding("UTF-8");
         ResourceBundle bundle = ResourceBundle.getBundle("resources",
                 new Locale("ru"));
-//        logger.info(req.getContextPath());
-        logger.info("WORKS!");
         req.setAttribute("bundle", bundle);
         requestDispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.info("In SignUpServlet.doPost()");
+
         req.setCharacterEncoding("UTF-8");
 
         String firstName = req.getParameter("firstName");
@@ -49,14 +47,11 @@ public class SignUpServlet extends HttpServlet {
         SignUpModel.createUser(new User(firstName,lastName,
                 email, login, password));
 
-
         req.setAttribute("userName", firstName);
         doGet(req, resp);
     }
 
-/*
     @Override
     public void destroy(){
     }
-*/
 }

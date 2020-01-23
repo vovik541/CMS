@@ -1,16 +1,22 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: USER
-  Date: 1/22/2020
-  Time: 4:17 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Sign out</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
+
+<body class="w3-light-grey">
+
+<%@ include file="../template/header.jsp" %>
+
+<div>
+    <h1>You were logged out</h1>
+</div>
+
+<%@ include file="../template/footer.jsp" %>
 
 </body>
 </html>

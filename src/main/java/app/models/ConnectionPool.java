@@ -1,4 +1,4 @@
-package app.model;
+package app.models;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

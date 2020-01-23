@@ -12,18 +12,18 @@ import java.io.IOException;
      * Logout.
      * Delete session.
      */
-public class LogOutServlet extends HttpServlet {
+public class SignOutServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
                 throws ServletException, IOException {
 
-
     final HttpSession session = req.getSession();
 
     session.removeAttribute("user");
 
-    resp.sendRedirect("/");
+    resp.sendRedirect("/views/authorization/signOut.jsp");
     }
+
 }
 

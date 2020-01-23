@@ -1,11 +1,12 @@
-package app.servlets;
+package app.servlets.servlet;
 
 import app.entities.User;
 import app.models.SignInModel;
-import app.servlets.filter.SimpleServletFilter;
+
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,31 +16,47 @@ import java.io.IOException;
 
 public class SignInServlet extends HttpServlet {
 
-    Logger logger = Logger.getLogger(SimpleServletFilter.class);
-
+    Logger logger = Logger.getLogger(SignInServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("In SignInServlet.doGet");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/signIn.jsp");
-        requestDispatcher.forward(req, resp);
+        req.getRequestDispatcher("/views/authorization/signIn.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         logger.info("In SignInServlet.doPost");
-        boolean noMatches = true;
+
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        User user = SignInModel.getUserByLogPas(login,password);
-
         HttpSession session = req.getSession();
-        session.setAttribute("user", user);
-//        noMatches = user==null ? true : false;
-//        req.setAttribute("noMatches", noMatches);
-        resp.sendRedirect("/logout");
-//        doGet(req, resp);
+
+        if(session.getAttribute("user") == null){
+            User user = SignInModel.getUserByLogPas(login,password);
+            if(user != null){
+                session.setAttribute("user", user);
+                resp.sendRedirect("/conferences");
+//                moveToPage(req,resp,user.getRole());
+            }else {
+                doGet(req, resp);
+                //MASSAGE!!!
+            }
+        }
+    }
+    public void moveToPage(final HttpServletRequest req,
+                           final HttpServletResponse resp,
+                           final int role)
+            throws ServletException, IOException {
+        logger.info("IN SWITCH");
+        switch (role){
+            case 1:
+                logger.info("/conf");
+//                RequestDispatcher dispatcher = req.getRequestDispatcher("/conferences");
+//                dispatcher.forward(req, resp);
+                resp.sendRedirect("/conferences");break;
+        }
     }
 }

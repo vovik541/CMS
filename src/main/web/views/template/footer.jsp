@@ -1,16 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: USER
-  Date: 1/17/2020
-  Time: 12:59 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<footer class="w3-container w3-blue-grey w3-opacity w3-right-align">
+    <h1>FOOTER</h1>
+</footer>

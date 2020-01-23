@@ -2,7 +2,7 @@ package app.servlets;
 
 //import app.model.DBCon;
 import app.entities.User;
-import app.model.RegLogModel;
+import app.models.SignInModel;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,7 +15,7 @@ import java.util.List;
 public class ListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> customers = RegLogModel.readCustomers();
+        List<User> customers = SignInModel.getUsers();
 
         req.setAttribute("customers", customers);
 

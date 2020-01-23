@@ -1,4 +1,15 @@
-/.idea
-/target
-/out
 *.iml
+*.class
+*.DS_Store
+.idea
+targetText
+com
+target
+*/target
+*/*/target
+out
+
+# Package Files #
+*.jar
+*.war
+*.ear
