@@ -1,8 +1,9 @@
 package app.servlets;
 
 import app.entities.User;
-import app.model.RegLogModel;
 
+import app.models.SignUpModel;
+import org.apache.log4j.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,13 +14,24 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class SignUpServlet extends HttpServlet {
+
+    private static final Logger logger = Logger.getLogger(SignUpServlet.class);
+
+/*
+
+    @Override
+    public void init(){
+    }
+*/
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/signUp.jsp");
         req.setCharacterEncoding("UTF-8");
         ResourceBundle bundle = ResourceBundle.getBundle("resources",
                 new Locale("ru"));
-
+//        logger.info(req.getContextPath());
+        logger.info("WORKS!");
         req.setAttribute("bundle", bundle);
         requestDispatcher.forward(req, resp);
     }
@@ -34,10 +46,17 @@ public class SignUpServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        RegLogModel.createUser(new User(firstName,lastName,
+        SignUpModel.createUser(new User(firstName,lastName,
                 email, login, password));
+
 
         req.setAttribute("userName", firstName);
         doGet(req, resp);
     }
+
+/*
+    @Override
+    public void destroy(){
+    }
+*/
 }
