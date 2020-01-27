@@ -5,7 +5,7 @@
          version="4.0">
 
     <!--filter check exist session for sign in-->
-    <filter>
+    <!--<filter>
         <filter-name>AuthFilter</filter-name>
         <filter-class>app.servlets.filter.AuthFilter</filter-class>
         <init-param>
@@ -21,24 +21,9 @@
         <url-pattern>/speaker</url-pattern>
         <url-pattern>/moder</url-pattern>
         <url-pattern>/admin</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
 
-    <!--filter check exist session for sign in-->
-    <filter>
-        <filter-name>AdminFilter</filter-name>
-        <filter-class>app.servlets.filter.AdminFilter</filter-class>
-        <init-param>
-            <param-name>active</param-name>
-            <param-value>true</param-value>
-        </init-param>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>AdminFilter</filter-name>
-        <url-pattern>/admin</url-pattern>
-    </filter-mapping>
-
-    <description>MySQL Test App</description>
+    <description>MySQL DB ConnectionPool</description>
     <resource-ref>
         <description>DB Connection</description>
         <res-ref-name>jdbc/poolName</res-ref-name>
@@ -46,75 +31,33 @@
         <res-auth>Container</res-auth>
     </resource-ref>
 
+    <listener>
+        <listener-class>app.listeners.SessionListener</listener-class>
+    </listener>
+
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/WEB-INF/views/index.jsp</welcome-file>
     </welcome-file-list>
 
-    <!--SignOutServlet-->
+    <!--SignInServlet-->
     <servlet>
-        <servlet-name>SignOutServlet</servlet-name>
-        <servlet-class>app.servlets.servlet.SignOutServlet</servlet-class>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>app.controllers.Controller</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>SignOutServlet</servlet-name>
-        <url-pattern>/logout</url-pattern>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/controller</url-pattern>
     </servlet-mapping>
 
-    <!--SignUpServlet-->
-    <servlet>
-        <servlet-name>sign up</servlet-name>
-        <servlet-class>app.servlets.servlet.SignUpServlet</servlet-class>
-    </servlet>
+     <!--error-page-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/views/errors/error404.jsp</location>
+    </error-page>
+<!--    <error-page>-->
+<!--        <error-code>500</error-code>-->
+<!--        <location>/WEB-INF/views/errors/error500.jsp</location>-->
+<!--    </error-page>-->
 
-    <servlet-mapping>
-        <servlet-name>sign up</servlet-name>
-        <url-pattern>/register</url-pattern>
-    </servlet-mapping>
-
-    <!-- SignInServlet -->
-    <servlet>
-        <servlet-name>sign in</servlet-name>
-        <servlet-class>app.servlets.servlet.SignInServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>sign in</servlet-name>
-        <url-pattern>/login</url-pattern>
-    </servlet-mapping>
-
-    <!--conferencesServlet-->
-    <servlet>
-        <servlet-name>conf</servlet-name>
-        <servlet-class>app.servlets.servlet.ConferencesServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>conf</servlet-name>
-        <url-pattern>/conferences</url-pattern>
-    </servlet-mapping>
-
-
-    <!--adminCabinetServlet-->
-    <servlet>
-        <servlet-name>adminCabinetServlet</servlet-name>
-        <servlet-class>app.servlets.servlet.AdminCabinetServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>adminCabinetServlet</servlet-name>
-        <url-pattern>/admin</url-pattern>
-    </servlet-mapping>
-
-
-<!--    &lt;!&ndash; list servlet &ndash;&gt;
-    <servlet>
-        <servlet-name>list</servlet-name>
-        <servlet-class>app.servlets.ListServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>list</servlet-name>
-        <url-pattern>/list</url-pattern>
-    </servlet-mapping>-->
 </web-app>

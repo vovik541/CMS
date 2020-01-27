@@ -21,7 +21,7 @@ public class SignInServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("In SignInServlet.doGet");
-        req.getRequestDispatcher("/views/authorization/signIn.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/views/authorization/signIn.jsp").forward(req, resp);
     }
 
     @Override
@@ -32,11 +32,13 @@ public class SignInServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        HttpSession session = req.getSession();
+        HttpSession session = req.getSession();   //FALSE!!!
+        System.out.println(session.getId());
 
         if(session.getAttribute("user") == null){
             User user = SignInModel.getUserByLogPas(login,password);
             if(user != null){
+                logger.info("user added to session");
                 session.setAttribute("user", user);
                 resp.sendRedirect("/conferences");
 //                moveToPage(req,resp,user.getRole());

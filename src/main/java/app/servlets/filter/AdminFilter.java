@@ -1,3 +1,4 @@
+/*
 package app.servlets.filter;
 
 import javax.servlet.http.HttpServletResponse;
@@ -62,3 +63,4 @@ public class AdminFilter implements Filter {
         }
     }
 }
+*/

@@ -20,8 +20,8 @@ public class SignOutServlet extends HttpServlet {
 
     final HttpSession session = req.getSession();
 
-    session.removeAttribute("user");
-
+//    session.removeAttribute("user");
+    session.invalidate();
     resp.sendRedirect("/views/authorization/signOut.jsp");
     }
 

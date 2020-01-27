@@ -1,3 +1,4 @@
+/*
 package app.servlets.servlet;
 
 import app.entities.User;
@@ -24,11 +25,8 @@ public class SignUpServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         logger.info("In SignUpServlet.doGet()");
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/register");
         req.setCharacterEncoding("UTF-8");
-        ResourceBundle bundle = ResourceBundle.getBundle("resources",
-                new Locale("ru"));
-        req.setAttribute("bundle", bundle);
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/views/authorization/signUp.jsp");
         requestDispatcher.forward(req, resp);
     }
 
@@ -48,10 +46,12 @@ public class SignUpServlet extends HttpServlet {
                 email, login, password));
 
         req.setAttribute("userName", firstName);
-        doGet(req, resp);
+//        doGet(req, resp);
+        req.getRequestDispatcher("/conferences").forward(req, resp);
     }
 
     @Override
     public void destroy(){
     }
 }
+*/

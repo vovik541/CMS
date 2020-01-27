@@ -1,15 +1,26 @@
-*.iml
+### Java ###
+# Compiled class file
 *.class
-*.DS_Store
+
+### Intellij Patch ###
+*.iml
+modules.xml
 .idea
-targetText
-com
-target
-*/target
-*/*/target
-out
+*.ipr
+
+# IntelliJ
+out/
+
+# Log file
+*.log
 
 # Package Files #
+/target
 *.jar
 *.war
+*.nar
 *.ear
+*.zip
+*.tar.gz
+*.rar
+*.ini

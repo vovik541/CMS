@@ -1,19 +1,19 @@
-/*
-package app.models;
+package app.persistences.dao;
 
+import app.entities.Role;
 import app.entities.User;
+import app.models.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class SignUpModel {
+public class SignUpDAO {
 
-    private static final Logger logger = Logger.getLogger(SignUpModel.class);
+    private static final Logger logger = Logger.getLogger(SignUpDAO.class);
 
-    public static void createUser(User user)    {
+    public void createUser(User user)    {
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -29,12 +29,14 @@ public class SignUpModel {
 
             preparedStatement = connection.prepareStatement(sql);
 
+            int role = 1;
+
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setString(3, user.getLogin());
             preparedStatement.setString(4, user.getPassword());
             preparedStatement.setString(5, user.getEmail());
-            preparedStatement.setInt(6, user.getRole());
+            preparedStatement.setInt(6, role);
             preparedStatement.executeUpdate();
 
             connection.commit();
@@ -60,4 +62,3 @@ public class SignUpModel {
         }
     }
 }
-*/

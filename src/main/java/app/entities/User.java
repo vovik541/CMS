@@ -1,13 +1,14 @@
 package app.entities;
 
 public class User {
+    private Role role = Role.USER;
+
     private String firstName;
     private String lastName;
     private String email;
     private String login;
     private String password;
     private int customerId;
-    private int role = 1;
 
     public User() {
     }
@@ -27,7 +28,17 @@ public class User {
         this.email = email;
         this.login = login;
         this.password = password;
-        this.role = role;
+
+        if(role == 1){
+            this.role = Role.USER;
+        }else if (role == 2){
+            this.role = Role.SPEAKER;
+        }else if (role == 3){
+            this.role = Role.MODER;
+        }else{
+            this.role = Role.ADMIN;
+        }
+
     }
 
     public User(int customerId, String firstName, String lastName,
@@ -38,7 +49,16 @@ public class User {
         this.email = email;
         this.login = login;
         this.password = password;
-        this.role = role;
+
+        if(role == 1){
+            this.role = Role.USER;
+        }else if (role == 2){
+            this.role = Role.SPEAKER;
+        }else if (role == 3){
+            this.role = Role.MODER;
+        }else{
+            this.role = Role.ADMIN;
+        }
     }
 
     public int getCustomerId() {
@@ -89,11 +109,11 @@ public class User {
         this.password = password;
     }
 
-    public int getRole() {
+    public Role getRole() {
         return role;
     }
 
-    public void setRole(int role) {
+    public void setRole(Role role) {
         this.role = role;
     }
 
