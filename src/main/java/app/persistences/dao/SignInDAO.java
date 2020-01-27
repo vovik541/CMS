@@ -1,7 +1,6 @@
 package app.persistences.dao;
 
 import app.entities.User;
-import app.models.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.Connection;

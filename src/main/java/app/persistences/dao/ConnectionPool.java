@@ -1,4 +1,4 @@
-package app.models;
+package app.persistences.dao;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;

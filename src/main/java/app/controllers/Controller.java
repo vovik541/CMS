@@ -21,19 +21,13 @@ public class Controller extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         logger.info("In Controller doGet");
-
-        String page = (String) request.getAttribute("chLang");
-
-        if(page != null){
-            logger.info("doGet page != null");
-            request.getRequestDispatcher(page).forward(request,response);
-        }
-
         processRequest(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         logger.info("In Controller doPost");
         processRequest(request, response);
     }
@@ -47,18 +41,13 @@ public class Controller extends HttpServlet {
         ICommand command = client.defineCommand(request);
         page = command.execute(request, response);
 
-        request.getSession().setAttribute("page", page);
-//        request.getSession().getAttribute((String) request.getAttribute("language"));
-
+        System.out.println(request.getSession().getAttribute("page")+" !!!!!!!!!!!");
 
         if (page != null) {
 
-//            if(command instanceof UserCabinetCommand) {
-//                response.sendRedirect(page);
-//            }
-
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);
             dispatcher.forward(request, response);
+
         } else {
 // установка страницы c cообщением об ошибке
             page = ConfigurationManager.getInstance()

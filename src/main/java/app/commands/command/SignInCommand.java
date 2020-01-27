@@ -35,7 +35,7 @@ public class SignInCommand implements ICommand{
 
         if (currentUser != null) {
 
-            request.setAttribute("currentUser", currentUser);
+            request.getSession().setAttribute("currentUser", currentUser);
             page = getPageByRole(currentUser.getRole());
 
         } else {

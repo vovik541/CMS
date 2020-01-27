@@ -1,4 +1,4 @@
-package app.servlets.filter;
+package app.filters;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
