@@ -3,10 +3,15 @@ package app.persistences.dao;
 import app.entities.Conference;
 import app.persistences.ConnectionDB;
 import app.persistences.ConnectionPool;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ConferenceDAO {
+
+    private static final Logger logger = Logger.getLogger(ConferenceDAO.class);
 
     public void addConference(Conference conference, Boolean accepted_by_moder, Boolean accepted_by_speaker){
 
@@ -36,6 +41,11 @@ public class ConferenceDAO {
             connection.commit();
 
         } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
             e.printStackTrace();
         }finally {
         try {
@@ -45,49 +55,51 @@ public class ConferenceDAO {
 //            logger.warn("connection wasn't closed!! Error in SignUpModel.createUser()");
             e.printStackTrace();
         }
-
     }
 }
+    public List<Conference> getConfBySpeakerId(int id){
 
-    public static void main(String[] args)  {
+        List<Conference> conferences = new LinkedList<>();
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        ResultSet resSet = null;
 
-        String confName = "ConfName";
-        String dateStr = "2020-01-01";
-        String beginsAt = "12:20:00";
-        String endsAt = "13:40:00";
-        String location = "location";
-        Boolean is_accepted_moder = true;
-        Boolean is_accepted_speaker = false;
-        int speaker_id = 1;
-
-        String sql = "INSERT INTO cms_db.conferences (conference_name, date, begins_at, ends_at, " +
-                "location, is_accepted_moder, is_accepted_speaker, speaker_id) " +
-
-                "VALUES ('" + confName +
-                "',{d'"+ dateStr +
-                "'},{t'"+ beginsAt +
-                "'},{t'"+ endsAt +
-                "'},'" + location +
-                "'," + is_accepted_moder +
-                "," + is_accepted_speaker+
-                "," + speaker_id+ ")";
+        String query = "SELECT * FROM cms_db.conferences WHERE speaker_id = ?";
 
         try {
             connection = ConnectionDB.getConnection();
-            Statement statement = connection.createStatement();
-            statement.execute(sql);
+            preparedStatement = connection.prepareStatement(query);
+            resSet = preparedStatement.executeQuery();
 
-//            String query = "SELECT * FROM cms_db.conferences";
-//            ResultSet resultSet = statement.executeQuery(query);
-//            while (resultSet.next()){
-//                System.out.println(resultSet.getDate("date"));
-//            }
+            while (resSet.next()){
+                conferences.add(new Conference(resSet.getInt("conference_id"),
+                        resSet.getInt("speaker_id"),
+                        resSet.getString("conference_name"),
+                        resSet.getDate("date").toString(),
+                        resSet.getTime("begins_at").toString(),
+                        resSet.getTime("ends_at").toString(),
+                        resSet.getString("location"),
+                        resSet.getBoolean("is_accepted_moder"),
+                        resSet.getBoolean("is_accepted_speaker")));
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                resSet.close();
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+
+        return conferences;
+    }
+
+    public static void main(String[] args)  {
+
     }
 }

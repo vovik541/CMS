@@ -72,7 +72,7 @@ public class Help {
         properties.setProperty("speaker.endsAt", "Конец в:");
         properties.setProperty("speaker.hour","о Годині:");
         properties.setProperty("speaker.minute","Хвилин:");
-        properties.setProperty("speaker.location", "Место проведения мероприятия");
+        properties.setProperty("speaker.location", "Місце проведення заходу:");
 
         properties.store(messages_ua,"");
 

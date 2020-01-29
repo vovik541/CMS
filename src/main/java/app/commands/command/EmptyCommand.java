@@ -27,7 +27,7 @@ public class EmptyCommand implements ICommand{
         //if user logged -> go to his cabinet
         if(currentUser != null){
             logger.info("USER EXISTS in SignInCommand");
-            page = SignInCommand.getPageByRole(currentUser.getRole());
+            page = SignInCommand.getPageByRole(currentUser,request);
             return page;
         }
 

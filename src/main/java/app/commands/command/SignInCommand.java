@@ -36,7 +36,7 @@ public class SignInCommand implements ICommand{
         if (currentUser != null) {
 
             request.getSession().setAttribute("currentUser", currentUser);
-            page = getPageByRole(currentUser.getRole());
+            page = getPageByRole(currentUser, request);
 
         } else {
             request.setAttribute("errorLoginPassMessage", true);
@@ -45,14 +45,16 @@ public class SignInCommand implements ICommand{
         return page;
     }
 
-    public static String getPageByRole(Role role){
+    public static String getPageByRole(User user, HttpServletRequest request){
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
         String page;
 
-        switch (role){
+        switch (user.getRole()){
             case USER:
                 page = confManager.getProperty(EnumManager.USER_CABINET.toString());
+                request.getSession().setAttribute("speakerConfList",
+                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());

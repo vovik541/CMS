@@ -62,29 +62,56 @@ public class SpeakerCabinetCommand implements ICommand{
         User user = (User) request.getSession().getAttribute("currentUser");
         speakerId = user.getCustomerId();
 
-
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
-        year = Integer.parseInt(request.getParameter("year"));
-        month = Integer.parseInt(request.getParameter("month"));
-        day = Integer.parseInt(request.getParameter("day"));
-        begHour = Integer.parseInt(request.getParameter("begHour"));
-        begMin = Integer.parseInt(request.getParameter("begMin"));
-        endHour = Integer.parseInt(request.getParameter("endHour"));
-        endMin = Integer.parseInt(request.getParameter("endMin"));
 
-        date = year + "-" + toFormat(month) + "-" + toFormat(day);
-        beginsAt = toFormat(begHour) + ":" + toFormat(begMin) + ":00";
-        endsAt = toFormat(endHour) + ":" + toFormat(endMin) + ":00";
+        try {
+            year = Integer.parseInt(request.getParameter("year"));
+            month = Integer.parseInt(request.getParameter("month"));
+            day = Integer.parseInt(request.getParameter("day"));
+            begHour = Integer.parseInt(request.getParameter("begHour"));
+            begMin = Integer.parseInt(request.getParameter("begMin"));
+            endHour = Integer.parseInt(request.getParameter("endHour"));
+            endMin = Integer.parseInt(request.getParameter("endMin"));
 
-        Conference conference = new Conference(speakerId, confName,
-                date, beginsAt, endsAt, location, acceptedByModer,
-                acceptedBySpeaker);
+            date = year + "-" + toFormat(month) + "-" + toFormat(day);
+            beginsAt = toFormat(begHour) + ":" + toFormat(begMin) + ":00";
+            endsAt = toFormat(endHour) + ":" + toFormat(endMin) + ":00";
 
-        MySqlDaoFactory.getConferenceDAO().
-                addConference(conference,false,true);
+            logger.info("before IF");
+            if(check(month,12) && check(day,31) &&
+                    check(begHour,24) && check(begMin,60) &&
+                    check(endHour, 24) && check(endMin,60)){
 
+                Conference conference = new Conference(speakerId, confName,
+                        date, beginsAt, endsAt, location, acceptedByModer,
+                        acceptedBySpeaker);
+
+                MySqlDaoFactory.getConferenceDAO().
+                        addConference(conference,false,true);
+
+                request.setAttribute("isInputError",false);
+                request.setAttribute("isAdded",true);
+            }
+
+            request.setAttribute("isInputError",true);
+            request.setAttribute("isAdded",false);
+
+        }catch (NumberFormatException ex){
+            request.setAttribute("isInputError",true);
+            request.setAttribute("isAdded",false);
+        }
+
+    }
+    private static boolean check(int number, int maxValue){
+        if(number < 0){
+            return false;
+        }
+        if (number > maxValue){
+            return false;
+        }
+        return true;
     }
     private static String toFormat(int number){
         if(number < 10){

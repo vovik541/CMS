@@ -18,8 +18,6 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
-<c:out value="${language.toString()}"></c:out>
-
 <fmt:message key="speaker.offer" var="offer"/>
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>
@@ -62,6 +60,12 @@
 
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
+        <c:if test="${requestScope.isAdded}">
+            <h3>Has been added!</h3>
+        </c:if>
+        <c:if test="${requestScope.isInputError}">
+            <h3>INCORRECT INPUT!!</h3>
+        </c:if>
     </div>
 
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
@@ -70,6 +74,16 @@
             <button>SIGN OUT</button>
         </form>
     </footer>
+    <div>
+        <h3>Your Conferences:</h3>
+        <c:forEach var="conf" items="${sessionScope.speakerConfList}">
+            ${conf.confName}
+            ${conf.location}
+            ${conf.date}
+            ${conf.beginsAt}
+            ${conf.endsAt}
+        </c:forEach>
+    </div>
 </div>
 
 </body>
