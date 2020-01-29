@@ -53,11 +53,11 @@ public class SignInCommand implements ICommand{
         switch (user.getRole()){
             case USER:
                 page = confManager.getProperty(EnumManager.USER_CABINET.toString());
-                request.getSession().setAttribute("speakerConfList",
-                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
+                request.getSession().setAttribute("speakerConfList",
+                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                 break;
             case MODER:
                 page = confManager.getProperty(EnumManager.MODER_CABINET.toString());

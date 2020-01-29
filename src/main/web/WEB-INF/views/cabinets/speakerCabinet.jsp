@@ -75,14 +75,34 @@
         </form>
     </footer>
     <div>
-        <h3>Your Conferences:</h3>
-        <c:forEach var="conf" items="${sessionScope.speakerConfList}">
-            ${conf.confName}
-            ${conf.location}
-            ${conf.date}
-            ${conf.beginsAt}
-            ${conf.endsAt}
-        </c:forEach>
+        <table>
+            <tr>
+                <th>${confName}</th>
+                <th>${location}</th>
+                <th>${day}</th>
+                <th>${beginsAt}</th>
+                <th>${endsAt}</th>
+                <th>Confirm</th>
+                <th>Delete</th>
+            </tr>
+            <c:forEach var="conf" items="${sessionScope.speakerConfList}">
+                <tr>
+                    <td>${conf.confName}</td>
+                    <td>${conf.location}</td>
+                    <td>${conf.date}</td>
+                    <td>${conf.beginsAt}</td>
+                    <td>${conf.endsAt}</td>
+                    <td>Confirm!!</td>
+                    <td>
+                        <form>
+                            <input type="hidden" name="command" value="speaker_cabinet" />
+                            <input type="hidden" name="action" value="delete_conference" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
     </div>
 </div>
 

@@ -70,6 +70,7 @@ public class ConferenceDAO {
         try {
             connection = ConnectionDB.getConnection();
             preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1,id);
             resSet = preparedStatement.executeQuery();
 
             while (resSet.next()){

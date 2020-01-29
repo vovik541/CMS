@@ -28,10 +28,14 @@ public class SpeakerCabinetCommand implements ICommand{
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
 
+        User user = (User) request.getSession().getAttribute("currentUser");
+
         switch (speakerAction){
             case OFFER_A_SPEECH:
                 doOffer(request);
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
+                request.getSession().setAttribute("speakerConfList",
+                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                 break;
             default:
                 break;
