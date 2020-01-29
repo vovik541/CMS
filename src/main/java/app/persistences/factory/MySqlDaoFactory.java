@@ -1,5 +1,6 @@
 package app.persistences.factory;
 
+import app.persistences.dao.ConferenceDAO;
 import app.persistences.dao.SignInDAO;
 import app.persistences.dao.SignUpDAO;
 
@@ -9,5 +10,8 @@ public class MySqlDaoFactory {
     }
     public static SignUpDAO getSignUpDAO(){
         return new SignUpDAO();
+    }
+    public static ConferenceDAO getConferenceDAO(){
+        return new ConferenceDAO();
     }
 }

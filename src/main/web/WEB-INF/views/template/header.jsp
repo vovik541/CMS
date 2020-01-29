@@ -11,25 +11,27 @@
 
     <c:out value="${sessionScope.page.toString()}"></c:out>
 
-    <form>
-        <button name="language" value="ua" type="submit">ua</button>
-        <button name="language" value="en" type="submit">en</button>
-        <button name="language" value="ru" type="submit">ru</button>
-    </form>
+    <c:choose>
+        <c:when test="${language.toString() eq 'ru'}">
+            <form>
+                <button name="language" value="en" type="submit">en</button>
+                <button name="language" value="ua" type="submit">ua</button>
+            </form>
+        </c:when>
+        <c:when test="${language.toString() eq 'ua'}">
+            <form>
+                <button name="language" value="en" type="submit">en</button>
+                <button name="language" value="ru" type="submit">ru</button>
+            </form>
+        </c:when>
+        <c:when test="${language.toString() eq 'en'}">
+            <form>
+                <button name="language" value="ua" type="submit">ua</button>
+                <button name="language" value="ru" type="submit">ru</button>
+            </form>
+        </c:when>
+    </c:choose>
 
     <c:out value="${language.toString()}"></c:out>
-
-<%--    <ul>--%>
-<%--        <li><a href="/?language=en"--%>
-<%--                <c:set var="chLang" value="${sessionScope.page.toString()}"--%>
-<%--                       scope="session"/>>en</a></li>--%>
-<%--        <li><a href="/?language=ua"--%>
-<%--                <c:set var="chLang" value="${sessionScope.page.toString()}"--%>
-<%--                       scope="session"/>>ua</a></li>--%>
-<%--        <li><a href="/?language=ru"--%>
-<%--                <c:set var="chLang" value="${sessionScope.page.toString()}"--%>
-<%--                       scope="session"/>>ru</a></li>--%>
-<%--    </ul>--%>
-
 
 </header>

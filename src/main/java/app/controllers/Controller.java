@@ -41,7 +41,7 @@ public class Controller extends HttpServlet {
         ICommand command = client.defineCommand(request);
         page = command.execute(request, response);
 
-        System.out.println(request.getSession().getAttribute("page")+" !!!!!!!!!!!");
+        System.out.println(page +" !!!!!!!!!!!");
 
         if (page != null) {
 

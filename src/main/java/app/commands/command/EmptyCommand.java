@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static app.commands.command.SignInCommand.getPageByRole;
-
 public class EmptyCommand implements ICommand{
 
     private static final Logger logger = Logger.getLogger(EmptyCommand.class);
@@ -29,7 +27,7 @@ public class EmptyCommand implements ICommand{
         //if user logged -> go to his cabinet
         if(currentUser != null){
             logger.info("USER EXISTS in SignInCommand");
-            page = getPageByRole(currentUser.getRole());
+            page = SignInCommand.getPageByRole(currentUser.getRole());
             return page;
         }
 

@@ -1,3 +1,4 @@
+/*
 package app.filters;
 
 import javax.servlet.http.HttpServletResponse;
@@ -52,7 +53,7 @@ public class AuthFilter implements Filter {
 
             final HttpSession session = req.getSession();
 
-            if(session.getAttribute("user") == null){
+            if(session.getAttribute("currentUser") == null){
                 logger.info("user hasn't access to page! redirecting to /login");
                 resp.sendRedirect("/login");
             }else {
@@ -62,3 +63,4 @@ public class AuthFilter implements Filter {
         }
     }
 }
+*/

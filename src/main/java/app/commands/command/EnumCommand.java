@@ -13,7 +13,7 @@ public enum EnumCommand {
     },
     SPEAKER_CABINET{
         {
-//            this.command =
+            this.command = new SpeakerCabinetCommand();
         }
     },
     SIGN_OUT{

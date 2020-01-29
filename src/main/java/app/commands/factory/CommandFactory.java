@@ -1,9 +1,7 @@
 package app.commands.factory;
 
-import app.commands.command.EnumCommand;
-import app.commands.command.EmptyCommand;
-import app.commands.command.SignInCommand;
-import app.commands.command.ICommand;
+import app.Managers.EnumManager;
+import app.commands.command.*;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +26,7 @@ public class CommandFactory {
         ICommand current = new EmptyCommand();
 
         String action = request.getParameter(COMMAND);
+        logger.info("ACTION IN FACTORY "+ action);
 
         if (action == null || action.isEmpty()) {
             logger.info("In Factory defined like EMPTY!");
@@ -36,7 +35,9 @@ public class CommandFactory {
 
         try {
             EnumCommand currentEnum = EnumCommand.valueOf(action.toUpperCase());   //SIGN_IN USER_CABINET
+            logger.info(currentEnum.getCurrentCommand().toString());
             current = currentEnum.getCurrentCommand();
+            logger.info(current.toString());
         } catch (IllegalArgumentException e) {
             logger.warn("WRONG ACTION in CommandFactory. Impossible action/command/path !!!");
 //            request.setAttribute("wrongAction", action

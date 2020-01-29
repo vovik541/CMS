@@ -3,7 +3,7 @@ package app.Managers;
 public enum EnumManager {
 
     BUNDLE_NAME("configuration"),
-
+    OFFER_A_SPEECH("OFFER_A_SPEECH"),
 
     INDEX("INDEX"),
     SIGN_IN("SIGN_IN"),

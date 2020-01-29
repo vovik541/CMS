@@ -1,4 +1,4 @@
-package app.persistences.dao;
+package app.persistences;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
