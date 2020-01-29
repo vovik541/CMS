@@ -26,7 +26,7 @@ public class ConferenceDAO {
                 "'},'" + conference.getLocation() +
                 "'," + conference.getAcceptedByModer() +
                 "," + conference.getAcceptedBySpeaker()+
-                "," + conference.getSpeaker_id() + ")";
+                "," + conference.getSpeakerId() + ")";
 
         try {
             connection = ConnectionPool.getConnection();

@@ -8,10 +8,10 @@ public class Conference {
     private String location;
     private Boolean acceptedByModer = false;
     private Boolean acceptedBySpeaker = false;
-    private int speaker_id;
-    private int conference_id;
+    private int speakerId;
+    private int conferenceId;
 
-    public Conference(int conference_id, int speaker_id, String confName, String date,
+    public Conference(int conferenceId, int speakerId, String confName, String date,
                       String beginsAt, String endsAt, String location,
                       Boolean acceptedByModer, Boolean acceptedBySpeaker){
 
@@ -22,19 +22,22 @@ public class Conference {
         this.location = location;
         this.acceptedByModer = acceptedByModer;
         this.acceptedBySpeaker = acceptedBySpeaker;
-        this.speaker_id = speaker_id;
-        this.conference_id = conference_id;
+        this.speakerId = speakerId;
+        this.conferenceId = conferenceId;
     }
 
-    public Conference(int speaker_id, String confName, String date,
-                      String beginsAt, String endsAt, String location){
+    public Conference(int speakerId, String confName, String date,
+                      String beginsAt, String endsAt, String location,
+                      Boolean acceptedByModer, Boolean acceptedBySpeaker){
 
         this.confName = confName;
         this.date = date;
         this.beginsAt = beginsAt;
         this.endsAt = endsAt;
         this.location = location;
-        this.speaker_id = speaker_id;
+        this.acceptedByModer = acceptedByModer;
+        this.acceptedBySpeaker = acceptedBySpeaker;
+        this.speakerId = speakerId;
     }
 
     public String getConfName() {
@@ -77,22 +80,6 @@ public class Conference {
         this.location = location;
     }
 
-    public int getSpeaker_id() {
-        return speaker_id;
-    }
-
-    public void setSpeaker_id(int speaker_id) {
-        this.speaker_id = speaker_id;
-    }
-
-    public int getConference_id() {
-        return conference_id;
-    }
-
-    public void setConference_id(int conference_id) {
-        this.conference_id = conference_id;
-    }
-
     public Boolean getAcceptedByModer() {
         return acceptedByModer;
     }
@@ -107,6 +94,22 @@ public class Conference {
 
     public void setAcceptedBySpeaker(Boolean acceptedBySpeaker) {
         this.acceptedBySpeaker = acceptedBySpeaker;
+    }
+
+    public int getSpeakerId() {
+        return speakerId;
+    }
+
+    public void setSpeakerId(int speakerId) {
+        this.speakerId = speakerId;
+    }
+
+    public int getConferenceId() {
+        return conferenceId;
+    }
+
+    public void setConferenceId(int conferenceId) {
+        this.conferenceId = conferenceId;
     }
 
     @Override

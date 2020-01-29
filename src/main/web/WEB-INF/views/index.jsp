@@ -12,8 +12,8 @@
 
 <body class="w3-light-grey">
 
-<%--<jsp:forward page="/controller"/>--%>
-<a href="/controller">LOGIN</a>
+<jsp:forward page="/controller"/>
+<%--<a href="/controller">LOGIN</a>--%>
 
 </body>
 </html>
