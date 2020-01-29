@@ -6,6 +6,11 @@ public enum EnumCommand {
             this.command = new SignInCommand();
         }
     },
+    SIGN_UP{
+        {
+            this.command = new SignUpCommand();
+        }
+    },
     USER_CABINET{
         {
             this.command = new UserCabinetCommand();

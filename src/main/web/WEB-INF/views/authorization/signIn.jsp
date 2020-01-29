@@ -44,6 +44,11 @@
         </form>
     </div>
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
+        <form method="get">
+            <input type="hidden" name="command" value="sign_up" />
+            <input type="hidden" name="action" value="sign_up" />
+            <button type="submit">Sign Up</button>
+        </form>
         <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>
     </footer>
 </div>

@@ -11,6 +11,7 @@
 <head>
     <title>Speaker</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 
@@ -35,9 +36,10 @@
 
     <div>
         <h1>${offer}</h1>
-        <form>
+        <form method="post">
             <input type="hidden" name="command" value="speaker_cabinet" />
-            <input type="hidden" name="action" value="offer_a_speech" />
+<%--            <input type="hidden" name="action" value="offer_a_speech" />--%>
+
 
             <p>${confName}</p>
             <label>
@@ -48,17 +50,37 @@
                 <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
 
-                <p>${beginsAt}</p>
-                <p>${year}</p><input type="text" name="year"><br />
-                <p>${month}</p><input type="text" name="month"><br />
-                <p>${day}</p><input type="text" name="day"><br />
-                <p>${hour}</p><input type="text" name="begHour"><br />
-                <p>${minute}</p><input type="text" name="begMin"><br />
-                <p>${endsAt}</p>
-                <p>${hour}</p><input type="text" name="endHour"><br />
-                <p>${minute}</p><input type="text" name="endMin"><br />
+            <p>${beginsAt}</p>
+            <p>${year}</p>
+                <label><input type="text" name="year"><br /></label>
+            <p>${month}</p>
+            <label>
+                <input type="text" name="month"><br />
+            </label>
+            <p>${day}</p>
+            <label>
+                <input type="text" name="day"><br />
+            </label>
+            <p>${hour}</p>
+            <label>
+                <input type="text" name="begHour"><br />
+            </label>
+            <p>${minute}</p>
+            <label>
+                <input type="text" name="begMin"><br />
+            </label>
+            <p>${endsAt}</p>
+            <p>${hour}</p>
+            <label>
+                <input type="text" name="endHour"><br />
+            </label>
+            <p>${minute}</p>
+            <label>
+                <input type="text" name="endMin"><br />
+            </label>
 
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
+            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom"
+                    <c:set var="action" value="offer_a_speech" scope="session"/>>Submit</button>
         </form>
         <c:if test="${requestScope.isAdded}">
             <h3>Has been added!</h3>
@@ -97,6 +119,7 @@
                         <form>
                             <input type="hidden" name="command" value="speaker_cabinet" />
                             <input type="hidden" name="action" value="delete_conference" />
+<%--                            <c:set var="action" value="delete_conference" scope="session"/>--%>
                             <button type="submit">Delete</button>
                         </form>
                     </td>

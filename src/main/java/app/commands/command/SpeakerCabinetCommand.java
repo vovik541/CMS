@@ -23,8 +23,10 @@ public class SpeakerCabinetCommand implements ICommand{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String page = null;
-        EnumManager speakerAction = EnumManager.
-                valueOf(request.getParameter("action").toUpperCase());
+
+        EnumManager speakerAction = EnumManager.valueOf(
+                request.getSession().getAttribute("action").
+                        toString().toUpperCase());
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
 
@@ -32,6 +34,7 @@ public class SpeakerCabinetCommand implements ICommand{
 
         switch (speakerAction){
             case OFFER_A_SPEECH:
+                request.getSession().removeAttribute("action");
                 doOffer(request);
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
                 request.getSession().setAttribute("speakerConfList",
@@ -69,6 +72,12 @@ public class SpeakerCabinetCommand implements ICommand{
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
+//        try {
+//            confName = URLDecoder.decode(confName, "UTF-8");
+//            location = URLDecoder.decode(location, "UTF-8");
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
 
         try {
             year = Integer.parseInt(request.getParameter("year"));
