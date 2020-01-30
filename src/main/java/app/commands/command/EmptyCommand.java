@@ -22,6 +22,8 @@ public class EmptyCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.info("EmptyUser execute");
+
         User currentUser = (User)request.getSession().getAttribute("currentUser");
         String page;
 

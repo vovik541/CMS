@@ -5,6 +5,8 @@ import app.Managers.EnumManager;
 import app.entities.Conference;
 import app.entities.User;
 import app.persistences.factory.MySqlDaoFactory;
+import org.apache.log4j.Logger;
+import sun.rmi.runtime.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +18,8 @@ import java.util.List;
 
 public class UserCabinetCommand implements ICommand{
 
+    private static final Logger logger = Logger.getLogger(UserCabinetCommand.class);
+
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -25,10 +29,11 @@ public class UserCabinetCommand implements ICommand{
         ConfigurationManager confManager = ConfigurationManager.getInstance();
 
         if (method.equalsIgnoreCase(EnumManager.GET.toString())) {
-
+            logger.info("IN USER CABINET GET");
             page = confManager.getProperty(EnumManager.USER_CABINET.toString());
 
         }else if (method.equalsIgnoreCase(EnumManager.POST.toString())){
+            logger.info("IN USER CABINET POST");
 
             String action = request.getParameter(EnumManager.ACTION.toString());
             System.out.println("ACTION "+action);
@@ -46,31 +51,8 @@ public class UserCabinetCommand implements ICommand{
 
         }
 
-
-
         return page;
     }
 
-    private static List<Conference> getConfForView(){
 
-        Calendar c=Calendar.getInstance();
-
-        int year=c.get(c.YEAR);
-        int month=c.get(c.MONTH)+1;
-        int day = c.get(c.DAY_OF_MONTH);
-        int hours = c.get(c.HOUR_OF_DAY);
-        int minutes = c.get(c.MINUTE);
-
-        String currentDate = year+"-"+toFormat(month)+"-"+toFormat(day)+" 00:00:00";
-        String currentTime = toFormat(hours)+":"+toFormat(minutes)+":00";
-
-        return MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(currentDate,currentTime);
-    }
-
-    private static String toFormat(int number){
-        if(number < 10){
-            return "0"+number;
-        }
-        return String.valueOf(number);
-    }
 }

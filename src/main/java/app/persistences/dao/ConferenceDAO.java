@@ -191,8 +191,9 @@ public class ConferenceDAO {
                 "customers.first_name, customers.last_name\n" +
                 "FROM conferences\n" +
                 "INNER JOIN customers on conferences.speaker_id = customers.customer_id\n" +
-                "WHERE date > '" + currentDate + "' AND is_accepted_speaker = '1' " +
-                "AND is_accepted_moder = '1' AND ends_at > '" + currentTime + "';";
+                "WHERE ((date > '" + currentDate + "') OR " +
+                "(ends_at > '" + currentDate + "' AND date = '" + currentDate + "') " +
+                "AND is_accepted_speaker = '1' AND is_accepted_moder = '1');";
         try {
             connection = ConnectionDB.getConnection();
             statement = connection.createStatement();
