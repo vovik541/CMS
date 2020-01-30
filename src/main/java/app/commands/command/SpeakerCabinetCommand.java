@@ -3,6 +3,7 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
 import app.entities.Conference;
+import app.entities.Role;
 import app.entities.User;
 import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
@@ -16,9 +17,6 @@ public class SpeakerCabinetCommand implements ICommand{
 
     private static final Logger logger = Logger.getLogger(SpeakerCabinetCommand.class);
 
-    private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD = "password";
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -27,10 +25,8 @@ public class SpeakerCabinetCommand implements ICommand{
         ConfigurationManager confManager = ConfigurationManager.getInstance();
         String page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
 
-        String action = request.getParameter("action");
+        String action = request.getParameter(EnumManager.ACTION.toString());
         System.out.println("ACTION "+action);
-//        action = (String) request.getSession().getAttribute("action");
-//        System.out.println("ACTION "+action);
 
         if(action != null){
 
@@ -44,6 +40,22 @@ public class SpeakerCabinetCommand implements ICommand{
                     request.getSession().setAttribute("speakerConfList",
                             MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                     break;
+                case DELETE_CONFERENCE:
+                    doDelete(request);
+                    request.getSession().setAttribute("speakerConfList",
+                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+                    break;
+                case CONFIRM_CONFERENCE:
+                    doConfirm(request);
+                    request.getSession().setAttribute("speakerConfList",
+                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+                    break;
+                case REFUSE_CONFERENCE:
+                    doRefuse(request);
+                    request.getSession().setAttribute("speakerConfList",
+                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+                    break;
+
                 default:
                     break;
             }
@@ -122,6 +134,24 @@ public class SpeakerCabinetCommand implements ICommand{
         }
 
     }
+
+    private static void doDelete(HttpServletRequest request){
+//        logger.info("doDelete");
+        int conferenceId = Integer.parseInt(request.getParameter("id"));
+//        logger.info("id = :"+conferenceId);
+        MySqlDaoFactory.getConferenceDAO().deleteById(conferenceId);
+    }
+
+    private static void doConfirm(HttpServletRequest request){
+        int conferenceId = Integer.parseInt(request.getParameter("id"));
+        MySqlDaoFactory.getConferenceDAO().setAgreement(Role.SPEAKER, conferenceId, true);
+    }
+
+    private static void doRefuse(HttpServletRequest request){
+        int conferenceId = Integer.parseInt(request.getParameter("id"));
+        MySqlDaoFactory.getConferenceDAO().setAgreement(Role.SPEAKER, conferenceId, false);
+    }
+
     private static boolean check(int number, int maxValue){
         if(number < 1){
             return false;
@@ -131,6 +161,7 @@ public class SpeakerCabinetCommand implements ICommand{
         }
         return true;
     }
+
     private static String toFormat(int number){
         if(number < 10){
             return "0"+number;

@@ -11,8 +11,6 @@ public class CommandFactory {
 
     private static final Logger logger = Logger.getLogger(CommandFactory.class);
 
-    private static final String COMMAND = "command";
-
     private CommandFactory instance;
 
     public CommandFactory(){
@@ -25,7 +23,7 @@ public class CommandFactory {
 
         ICommand current = new EmptyCommand();
 
-        String commandFromFront = request.getParameter(COMMAND);
+        String commandFromFront = request.getParameter(EnumManager.COMMAND.toString());  //COMMAND = "command";
         logger.info("ACTION IN FACTORY "+ commandFromFront);
 
         if (commandFromFront == null || commandFromFront.isEmpty()) {

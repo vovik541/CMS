@@ -105,6 +105,7 @@
                 <th>${beginsAt}</th>
                 <th>${endsAt}</th>
                 <th>Confirm</th>
+                <td>Accepted By Moder</td>
                 <th>Delete</th>
             </tr>
             <c:forEach var="conf" items="${sessionScope.speakerConfList}">
@@ -114,14 +115,48 @@
                     <td>${conf.date}</td>
                     <td>${conf.beginsAt}</td>
                     <td>${conf.endsAt}</td>
-                    <td>Confirm!!</td>
                     <td>
-                        <form>
-                            <input type="hidden" name="command" value="speaker_cabinet" />
-                            <input type="hidden" name="action" value="delete_conference" />
-<%--                            <c:set var="action" value="delete_conference" scope="session"/>--%>
-                            <button type="submit">Delete</button>
-                        </form>
+                        <c:choose>
+                            <c:when test="${conf.acceptedBySpeaker}">
+                                <form method="post" id="${conf.conferenceId}refuse">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="command" value="speaker_cabinet" />
+                                    <input type="hidden" name="action" value="refuse_conference" />
+                                    <button type="submit" form="${conf.conferenceId}refuse">refuse</button>
+                                </form>
+                            </c:when>
+                            <c:when test="${not conf.acceptedBySpeaker}">
+                                <form method="post" id="${conf.conferenceId}confirm">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="command" value="speaker_cabinet" />
+                                    <input type="hidden" name="action" value="confirm_conference" />
+                                    <button type="submit" form="${conf.conferenceId}confirm">Confirm</button>
+                                </form>
+                            </c:when>
+                            <c:otherwise></c:otherwise>
+                        </c:choose>
+                    </td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${conf.acceptedByModer}">ACCEPTED</c:when>
+                            <c:otherwise>NOT ACCEPTED</c:otherwise>
+                        </c:choose>
+                    </td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${conf.acceptedByModer}">
+                                You can not delete conf accepted by Moder
+                            </c:when>
+                            <c:otherwise>
+                                <form method="post" id="${conf.conferenceId}del">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="command" value="speaker_cabinet" />
+                                    <input type="hidden" name="action" value="delete_conference" />
+                                        <%--                            <c:set var="action" value="delete_conference" scope="session"/>--%>
+                                    <button type="submit" form="${conf.conferenceId}del">Delete</button>
+                                </form>
+                            </c:otherwise>
+                        </c:choose>
                     </td>
                 </tr>
             </c:forEach>

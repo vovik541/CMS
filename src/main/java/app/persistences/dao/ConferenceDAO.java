@@ -1,6 +1,7 @@
 package app.persistences.dao;
 
 import app.entities.Conference;
+import app.entities.Role;
 import app.persistences.ConnectionDB;
 import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
@@ -99,6 +100,79 @@ public class ConferenceDAO {
 
         return conferences;
     }
+
+    public void deleteById(int id) {
+
+        String sql = "DELETE FROM cms_db.conferences WHERE conference_id = '"+id+"'";
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+            connection = ConnectionPool.getConnection();
+            connection.setAutoCommit(false);
+            statement = connection.createStatement();
+            statement.execute(sql);
+            connection.commit();
+
+        } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void setAgreement(Role role, int id, Boolean agreement){
+
+        String agreementColumn = null;
+
+        if(role == Role.SPEAKER){
+            agreementColumn = "is_accepted_speaker";
+        }else if(role == Role.SPEAKER || role == Role.MODER){
+            agreementColumn = "is_accepted_moder";
+        }
+
+        String sql = "UPDATE conferences SET " +
+                agreementColumn + " = " + agreement + " WHERE conference_id = '" + id + "'";
+        Connection connection = null;
+        Statement statement = null;
+
+        try {
+            connection = ConnectionPool.getConnection();
+            connection.setAutoCommit(false);
+            statement = connection.createStatement();
+            statement.execute(sql);
+            connection.commit();
+
+        } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        } finally {
+            try {
+                statement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+    }
+
+
 
     public static void main(String[] args)  {
 
