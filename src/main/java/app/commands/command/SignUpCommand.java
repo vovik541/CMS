@@ -51,22 +51,36 @@ public class SignUpCommand implements ICommand {
         password = request.getParameter("password");
         email = request.getParameter("email");
 
-        SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
-        SignUpDAO signUpDAO = MySqlDaoFactory.getSignUpDAO();
+        if(isInputAlright(firstName,lastName,login,password,email)){
 
+            SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
+            SignUpDAO signUpDAO = MySqlDaoFactory.getSignUpDAO();
 
-        if(!(signUpDAO.checkBy(EnumManager.LOGIN.toString(), login) ||
-                signUpDAO.checkBy(EnumManager.EMAIL.toString(), email))){
+            if(!(signUpDAO.checkBy(EnumManager.LOGIN.toString(), login) ||
+                    signUpDAO.checkBy(EnumManager.EMAIL.toString(), email))){
 
-            User user = new User(firstName, lastName, email, login, password);
-            MySqlDaoFactory.getSignUpDAO().createUser(user);
+                User user = new User(firstName, lastName, email, login, password);
+                MySqlDaoFactory.getSignUpDAO().createUser(user);
 
-            User currentUser = signInDAO.getUserByLogPas(login, password);
+                User currentUser = signInDAO.getUserByLogPas(login, password);
 
-            request.getSession().setAttribute("currentUser", currentUser);
-            request.setAttribute("userExistsErrorMessage", false);
-        }else {
-            request.setAttribute("userExistsErrorMessage", true);
+                request.getSession().setAttribute("currentUser", currentUser);
+                request.setAttribute("userExistsErrorMessage", false);
+            }else {
+                request.setAttribute("userExistsErrorMessage", true);
+            }
+            request.setAttribute("userInputErrorMessage", false);
         }
+
+        request.setAttribute("userInputErrorMessage", true);
+    }
+    private static boolean isInputAlright(String firstName, String lastName, String login,
+                                          String password, String email){
+
+        if(firstName.isEmpty() || lastName.isEmpty() ||
+                login.isEmpty() || password.isEmpty() || email.isEmpty()){
+            return false;
+        }
+        return true;
     }
 }

@@ -17,11 +17,15 @@
     <c:if test="${requestScope.userExistsErrorMessage == true}">
         <h1 style="color: red">User with such log or emeil exists</h1>
     </c:if>
+    <c:if test="${requestScope.userInputErrorMessage}">
+        <h1 style="color: red">Fields mustn't be empty!</h1>
+    </c:if>
 
     <div class="w3-card-4">
         <div class="w3-container w3-center w3-green">
             <h2>We are glad to see you!</h2>
         </div>
+
         <form method="post" class="w3-selection w3-light-grey w3-padding">
             <label>First Name:
                 <input type="text" name="firstName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />

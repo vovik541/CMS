@@ -37,29 +37,23 @@ public class SpeakerCabinetCommand implements ICommand{
                 case OFFER_A_SPEECH:
                     doOffer(request);
                     logger.info("IN OFFER_A_SPEECH");
-                    request.getSession().setAttribute("speakerConfList",
-                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                     break;
                 case DELETE_CONFERENCE:
                     doDelete(request);
-                    request.getSession().setAttribute("speakerConfList",
-                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                     break;
                 case CONFIRM_CONFERENCE:
                     doConfirm(request);
-                    request.getSession().setAttribute("speakerConfList",
-                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                     break;
                 case REFUSE_CONFERENCE:
                     doRefuse(request);
-                    request.getSession().setAttribute("speakerConfList",
-                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                     break;
-
                 default:
                     break;
             }
+            request.getSession().setAttribute("speakerConfList",
+                    MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
         }
+
 
         return page;
     }

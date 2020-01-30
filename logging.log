@@ -4614,3 +4614,179 @@
 2020-01-30 14:20:55 INFO  SignInCommand:26 - false
 2020-01-30 14:20:55 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
 2020-01-30 14:20:55 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:01:29 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 15:01:30 INFO  SessionListener:38 - Session with id : AD2C668167E8BBFB28FD7E6929D97264 created.
+2020-01-30 15:01:30 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:01:30 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:01:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:01:30 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:01:30 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:01:31 INFO  SessionListener:38 - Session with id : D90357AEF4BB4080BBCC6A91422ABE0F created.
+2020-01-30 15:01:31 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:01:31 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:01:31 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:01:31 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:01:31 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:01:31 INFO  SessionListener:38 - Session with id : 272650F4EDDDFE906D9BEEA546CF9823 created.
+2020-01-30 15:01:31 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:01:31 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:01:31 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:01:31 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:01:31 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:01:31 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:11:29 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:11:29 INFO  CommandFactory:27 - ACTION IN FACTORY sign_in
+2020-01-30 15:11:29 INFO  CommandFactory:36 - app.commands.command.SignInCommand@6e1421b0
+2020-01-30 15:11:29 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6e1421b0
+2020-01-30 15:11:29 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:11:29 INFO  SignInCommand:26 - true
+2020-01-30 15:11:30 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 15:11:30 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 15:11:30 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 15:11:30 INFO  SignInCommand:36 - ConfMan in SignInCommand
+2020-01-30 15:11:30 INFO  SessionListener:52 - Attribute added: currentUser
+2020-01-30 15:11:30 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:11:30 INFO  SessionListener:52 - Attribute added: speakerConfList
+2020-01-30 15:11:31 INFO  SessionListener:52 - Attribute added: action
+2020-01-30 15:11:36 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:11:36 INFO  CommandFactory:27 - ACTION IN FACTORY speaker_cabinet
+2020-01-30 15:11:36 INFO  CommandFactory:36 - app.commands.command.SpeakerCabinetCommand@5b6f5da2
+2020-01-30 15:11:36 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@5b6f5da2
+2020-01-30 15:11:36 INFO  SpeakerCabinetCommand:23 - IN EXECUTE
+2020-01-30 15:11:36 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:11:40 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:11:40 INFO  CommandFactory:27 - ACTION IN FACTORY speaker_cabinet
+2020-01-30 15:11:40 INFO  CommandFactory:36 - app.commands.command.SpeakerCabinetCommand@5b6f5da2
+2020-01-30 15:11:40 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@5b6f5da2
+2020-01-30 15:11:40 INFO  SpeakerCabinetCommand:23 - IN EXECUTE
+2020-01-30 15:11:40 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:12:25 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:12:25 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:12:25 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:12:25 INFO  EmptyCommand:29 - USER EXISTS in SignInCommand
+2020-01-30 15:12:25 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:12:35 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:12:35 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:12:35 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:12:35 INFO  EmptyCommand:29 - USER EXISTS in SignInCommand
+2020-01-30 15:12:35 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:12:42 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:12:42 INFO  CommandFactory:27 - ACTION IN FACTORY sign_out
+2020-01-30 15:12:42 INFO  CommandFactory:36 - app.commands.command.SignOutCommand@7a586e50
+2020-01-30 15:12:42 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@7a586e50
+2020-01-30 15:12:42 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:12:42 INFO  SessionListener:44 - Session with id : 272650F4EDDDFE906D9BEEA546CF9823 killed.
+2020-01-30 15:12:42 INFO  SessionListener:38 - Session with id : 9B9920CE560F84D7F646D9EE5847CADE created.
+2020-01-30 15:12:48 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:12:48 INFO  CommandFactory:27 - ACTION IN FACTORY sign_up
+2020-01-30 15:12:48 INFO  CommandFactory:36 - app.commands.command.SignUpCommand@355fc9ab
+2020-01-30 15:12:48 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@355fc9ab
+2020-01-30 15:12:48 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:13:47 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:13:47 INFO  CommandFactory:27 - ACTION IN FACTORY sign_up
+2020-01-30 15:13:47 INFO  CommandFactory:36 - app.commands.command.SignUpCommand@355fc9ab
+2020-01-30 15:13:47 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@355fc9ab
+2020-01-30 15:13:47 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:13:47 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 15:13:47 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 15:13:47 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 15:13:47 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 15:13:47 INFO  SessionListener:52 - Attribute added: currentUser
+2020-01-30 15:13:47 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:13:47 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:13:47 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:17:28 INFO  SessionListener:44 - Session with id : D90357AEF4BB4080BBCC6A91422ABE0F killed.
+2020-01-30 15:17:28 INFO  SessionListener:44 - Session with id : AD2C668167E8BBFB28FD7E6929D97264 killed.
+2020-01-30 15:23:12 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 15:23:13 INFO  SessionListener:38 - Session with id : 40E594EDDC902AA2B75A586AE3AE436B created.
+2020-01-30 15:23:13 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:23:13 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:23:13 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:23:13 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:23:13 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:23:14 INFO  SessionListener:38 - Session with id : 933D93486C5D9E8CA136F1BA6B010858 created.
+2020-01-30 15:23:14 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:23:14 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:23:14 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:23:14 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:23:14 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:23:14 INFO  SessionListener:38 - Session with id : 3A8D33086701ABA50979B8EE7947EAFA created.
+2020-01-30 15:23:14 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:23:14 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:23:14 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:23:14 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 15:23:14 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:23:14 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:23:18 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:23:18 INFO  CommandFactory:27 - ACTION IN FACTORY sign_up
+2020-01-30 15:23:18 INFO  CommandFactory:36 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:23:18 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:23:18 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:23:24 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:23:24 INFO  CommandFactory:27 - ACTION IN FACTORY sign_up
+2020-01-30 15:23:24 INFO  CommandFactory:36 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:23:24 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:23:24 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:24:22 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:24:22 INFO  CommandFactory:27 - ACTION IN FACTORY sign_up
+2020-01-30 15:24:22 INFO  CommandFactory:36 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:24:22 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@399a4e67
+2020-01-30 15:24:22 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:24:23 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 15:24:23 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 15:24:23 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 15:24:23 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 15:24:23 INFO  SessionListener:52 - Attribute added: currentUser
+2020-01-30 15:24:23 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:24:26 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:24:26 INFO  CommandFactory:27 - ACTION IN FACTORY sign_out
+2020-01-30 15:24:26 INFO  CommandFactory:36 - app.commands.command.SignOutCommand@53fc5790
+2020-01-30 15:24:26 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@53fc5790
+2020-01-30 15:24:26 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:24:26 INFO  SessionListener:44 - Session with id : 3A8D33086701ABA50979B8EE7947EAFA killed.
+2020-01-30 15:24:26 INFO  SessionListener:38 - Session with id : 36B421E8F34F9C7BBBA4FE335036D32E created.
+2020-01-30 15:24:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:24:49 INFO  CommandFactory:27 - ACTION IN FACTORY sign_in
+2020-01-30 15:24:49 INFO  CommandFactory:36 - app.commands.command.SignInCommand@34a8c400
+2020-01-30 15:24:49 INFO  CommandFactory:38 - app.commands.command.SignInCommand@34a8c400
+2020-01-30 15:24:49 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:24:49 INFO  SignInCommand:26 - false
+2020-01-30 15:24:49 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-01-30 15:24:49 INFO  SessionListener:52 - Attribute added: language
+2020-01-30 15:25:00 INFO  Controller:29 - In Controller doPost
+2020-01-30 15:25:00 INFO  CommandFactory:27 - ACTION IN FACTORY sign_in
+2020-01-30 15:25:00 INFO  CommandFactory:36 - app.commands.command.SignInCommand@34a8c400
+2020-01-30 15:25:00 INFO  CommandFactory:38 - app.commands.command.SignInCommand@34a8c400
+2020-01-30 15:25:00 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:25:00 INFO  SignInCommand:26 - true
+2020-01-30 15:25:00 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 15:25:00 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 15:25:00 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 15:25:00 INFO  SignInCommand:36 - ConfMan in SignInCommand
+2020-01-30 15:25:00 INFO  SessionListener:52 - Attribute added: currentUser
+2020-01-30 15:25:00 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:25:06 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:25:06 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:25:06 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:25:06 INFO  EmptyCommand:29 - USER EXISTS in SignInCommand
+2020-01-30 15:25:06 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:25:06 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:25:06 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:25:06 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:25:06 INFO  EmptyCommand:29 - USER EXISTS in SignInCommand
+2020-01-30 15:25:06 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 15:25:07 INFO  Controller:23 - In Controller doGet
+2020-01-30 15:25:07 INFO  CommandFactory:27 - ACTION IN FACTORY null
+2020-01-30 15:25:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-01-30 15:25:07 INFO  EmptyCommand:29 - USER EXISTS in SignInCommand
+2020-01-30 15:25:07 INFO  ConfigurationManager:18 - getConfigManager
