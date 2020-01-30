@@ -5,7 +5,6 @@ import org.apache.log4j.Logger;
 import java.util.ResourceBundle;
 
 public class ConfigurationManager {
-    private static final String BUNDLE_NAME = "configuration";
 
     private static final Logger logger = Logger.getLogger(ConfigurationManager.class);
 
@@ -13,9 +12,7 @@ public class ConfigurationManager {
 
     private ResourceBundle resourceBundle = ResourceBundle.getBundle(EnumManager.BUNDLE_NAME.toString());
 
-    private ConfigurationManager(){
-//        logger.info("ConfigurationManager CREATED!!!");
-    }
+    private ConfigurationManager(){}
 
     public static ConfigurationManager getInstance(){
         logger.info("getConfigManager");

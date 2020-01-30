@@ -2,7 +2,6 @@ package app.commands.command;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
-import app.entities.Role;
 import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.factory.MySqlDaoFactory;
@@ -17,15 +16,12 @@ public class SignInCommand implements ICommand{
 
     private static final Logger logger = Logger.getLogger(SignInCommand.class);
 
-    private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD = "password";
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String page = null;
-        String login = request.getParameter(PARAM_NAME_LOGIN);
-        String password = request.getParameter(PARAM_NAME_PASSWORD);
+        String login = request.getParameter(EnumManager.LOGIN.toString());
+        String password = request.getParameter(EnumManager.PASSWORD.toString());
         SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
 
         User currentUser = signInDAO.getUserByLogPas(login,password);

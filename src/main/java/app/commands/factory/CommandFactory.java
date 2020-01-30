@@ -25,16 +25,16 @@ public class CommandFactory {
 
         ICommand current = new EmptyCommand();
 
-        String action = request.getParameter(COMMAND);
-        logger.info("ACTION IN FACTORY "+ action);
+        String commandFromFront = request.getParameter(COMMAND);
+        logger.info("ACTION IN FACTORY "+ commandFromFront);
 
-        if (action == null || action.isEmpty()) {
+        if (commandFromFront == null || commandFromFront.isEmpty()) {
             logger.info("In Factory defined like EMPTY!");
             return current;
         }
 
         try {
-            EnumCommand currentEnum = EnumCommand.valueOf(action.toUpperCase());   //SIGN_IN USER_CABINET
+            EnumCommand currentEnum = EnumCommand.valueOf(commandFromFront.toUpperCase());   //SIGN_IN USER_CABINET
             logger.info(currentEnum.getCurrentCommand().toString());
             current = currentEnum.getCurrentCommand();
             logger.info(current.toString());

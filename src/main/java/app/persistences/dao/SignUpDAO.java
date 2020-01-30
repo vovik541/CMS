@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class SignUpDAO {
@@ -54,10 +55,46 @@ public class SignUpDAO {
                 preparedStatement.close();
                 connection.close();
             } catch (SQLException e) {
-                logger.warn("connection wasn't closed!! Error in SignUpModel.createUser()");
+                logger.warn("connection wasn't closed!! Error in SignUpDAO.createUser()");
                 e.printStackTrace();
             }
 
+        }
+    }
+    public Boolean checkBy(String checkParam, String value){
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        Boolean exists = false;
+
+        String sql = "SELECT * FROM cms_db.сustomers " +
+                "WHERE " + checkParam + " = ?";
+
+        try {
+            connection = ConnectionPool.getConnection();
+
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, value);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            System.out.println(checkParam + " " + value);
+
+            while (resultSet.next()){
+                exists = true;
+                System.out.println(resultSet.getString("login"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                logger.warn("connection wasn't closed!! Error in SignUpDAO.checkBy()");
+                e.printStackTrace();
+            }
+        return exists;
         }
     }
 }

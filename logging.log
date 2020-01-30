@@ -2246,3 +2246,912 @@
 2020-01-29 23:02:42 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
 2020-01-29 23:02:42 INFO  SignUpCommand:36 - ConfMan in SignUpCommand
 2020-01-29 23:02:42 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:18:03 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-29 23:18:05 INFO  SessionListener:38 - Session with id : B380F0E3774D5C13167E1DCABFAA8651 created.
+2020-01-29 23:18:05 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:18:05 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:18:05 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:18:05 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:18:05 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:18:05 INFO  SessionListener:38 - Session with id : 14FEA53A9CAEF31D40C0E8E4345847F7 created.
+2020-01-29 23:18:05 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:18:05 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:18:05 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:18:05 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:18:05 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:18:06 INFO  SessionListener:38 - Session with id : 9B3B54316099FD76EC213394CD0B3CAB created.
+2020-01-29 23:18:06 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:18:06 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:18:06 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:18:06 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:18:06 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:18:10 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:18:10 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-29 23:18:10 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7284e418
+2020-01-29 23:18:10 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7284e418
+2020-01-29 23:19:51 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-29 23:19:52 INFO  SessionListener:38 - Session with id : B686AB3BDBF824E30929D99610D946CC created.
+2020-01-29 23:19:52 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:19:52 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:19:52 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:19:52 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:19:52 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:19:53 INFO  SessionListener:38 - Session with id : 4A7921AE8A77B488C07ACAC96F2A8181 created.
+2020-01-29 23:19:53 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:19:53 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:19:53 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:19:53 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:19:53 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:19:53 INFO  SessionListener:38 - Session with id : 93E124C07B245C6DE816A1214D835449 created.
+2020-01-29 23:19:53 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:19:53 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-29 23:19:53 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-29 23:19:53 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-29 23:19:53 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:20:18 INFO  Controller:23 - In Controller doGet
+2020-01-29 23:20:18 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-29 23:20:18 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7b3ee5eb
+2020-01-29 23:20:18 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7b3ee5eb
+2020-01-29 23:20:18 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-29 23:35:50 INFO  SessionListener:44 - Session with id : 4A7921AE8A77B488C07ACAC96F2A8181 killed.
+2020-01-29 23:35:50 INFO  SessionListener:44 - Session with id : B686AB3BDBF824E30929D99610D946CC killed.
+2020-01-29 23:35:50 INFO  SessionListener:44 - Session with id : 93E124C07B245C6DE816A1214D835449 killed.
+2020-01-30 00:36:39 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:36:40 INFO  SessionListener:38 - Session with id : B1985C34E4AEA85C3A907F42BEF779FA created.
+2020-01-30 00:36:40 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:36:40 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:36:40 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:36:40 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:36:40 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:36:42 INFO  SessionListener:38 - Session with id : 93D8CBEB23B6E0673B6A357361381F6D created.
+2020-01-30 00:36:42 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:36:42 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:36:42 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:36:42 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:36:42 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:36:42 INFO  SessionListener:38 - Session with id : 955D20B5C76BBA02F9A1CFD498F0336A created.
+2020-01-30 00:36:42 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:36:42 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:36:42 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:36:42 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:36:42 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:36:58 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:36:58 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:36:58 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@29d0ff8
+2020-01-30 00:36:58 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@29d0ff8
+2020-01-30 00:36:58 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:44:17 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:44:18 INFO  SessionListener:38 - Session with id : DC966B1F4F4ED43521E10F11A8FFC4C6 created.
+2020-01-30 00:44:18 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:44:18 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:44:18 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:44:18 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:44:18 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:44:19 INFO  SessionListener:38 - Session with id : 8DA6BF8418BF891BBFC983034EF56706 created.
+2020-01-30 00:44:19 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:44:19 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:44:19 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:44:19 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:44:19 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:44:19 INFO  SessionListener:38 - Session with id : 2C8DA2BAD15854422726DFC5343B893D created.
+2020-01-30 00:44:19 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:44:19 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:44:19 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:44:19 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:44:20 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:44:23 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:44:23 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:44:23 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@54d99673
+2020-01-30 00:44:23 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@54d99673
+2020-01-30 00:44:23 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:44:24 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:44:24 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:44:24 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:44:24 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:45:09 INFO  Controller:29 - In Controller doPost
+2020-01-30 00:45:09 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:45:09 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@54d99673
+2020-01-30 00:45:09 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@54d99673
+2020-01-30 00:45:09 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:45:09 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:45:09 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:45:09 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:45:09 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:46:27 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:46:28 INFO  SessionListener:38 - Session with id : 7383137BFDFD8A5C50F1C9B488958B17 created.
+2020-01-30 00:46:28 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:46:28 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:46:28 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:46:28 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:46:28 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:46:29 INFO  SessionListener:38 - Session with id : B7344EC13968AE9DDA4C589F03995B05 created.
+2020-01-30 00:46:29 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:46:29 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:46:29 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:46:29 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:46:29 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:46:29 INFO  SessionListener:38 - Session with id : CBECC49B29E4218E756FCA61E8E947FE created.
+2020-01-30 00:46:29 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:46:29 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:46:29 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:46:29 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:46:29 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:47:50 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:47:51 INFO  SessionListener:38 - Session with id : 2F2EECFD49CE38916C6A686BD955BB5D created.
+2020-01-30 00:47:51 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:47:51 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:47:51 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:47:51 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:47:51 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:47:52 INFO  SessionListener:38 - Session with id : E30EF47F04BB1AE13F9A6D97C7144727 created.
+2020-01-30 00:47:52 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:47:52 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:47:52 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:47:52 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:47:52 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:47:52 INFO  SessionListener:38 - Session with id : 21FD60B5ED8DAF8BEBEEE7DFD072022C created.
+2020-01-30 00:47:52 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:47:52 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:47:52 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:47:52 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:47:52 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:49:52 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:49:53 INFO  SessionListener:38 - Session with id : 664FA87C380CEA2289EDF5AA9F66734C created.
+2020-01-30 00:49:53 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:49:53 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:49:53 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:49:53 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:49:53 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:49:54 INFO  SessionListener:38 - Session with id : 8817EE254F7E8B4855FA7CF4E9DADD0C created.
+2020-01-30 00:49:54 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:49:54 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:49:54 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:49:54 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:49:54 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:49:54 INFO  SessionListener:38 - Session with id : 664FF3093CA35D6C94405DAC1C799B46 created.
+2020-01-30 00:49:54 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:49:54 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:49:54 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:49:54 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:49:54 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:52:13 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:52:14 INFO  SessionListener:38 - Session with id : C8909CCA1E21A70A94C72903D3E0D3A7 created.
+2020-01-30 00:52:14 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:52:15 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:52:15 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:52:15 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:52:15 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:52:15 INFO  SessionListener:38 - Session with id : 3A33E4762CD3558F8B898DBA398F10D5 created.
+2020-01-30 00:52:15 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:52:15 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:52:15 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:52:15 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:52:15 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:52:15 INFO  SessionListener:38 - Session with id : A3EA4BD0E5BA3453E5BECD1D1D6AA345 created.
+2020-01-30 00:52:15 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:52:15 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:52:15 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:52:15 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:52:15 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:53:32 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:53:32 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:53:32 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:53:32 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:53:32 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:53:32 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 00:53:32 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 00:53:32 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 00:53:33 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:53:33 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:53:33 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:53:33 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:53:33 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 00:53:33 INFO  SignUpCommand:56 - MAKING PAGE
+2020-01-30 00:53:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:56:25 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:57:30 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:57:32 INFO  SessionListener:38 - Session with id : 890330E7B83EB2BEA2B8F8B146419E92 created.
+2020-01-30 00:57:32 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:57:32 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:57:32 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:57:32 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:57:32 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:57:32 INFO  SessionListener:38 - Session with id : EAB978C92FB861D0334EAC28534AB0F7 created.
+2020-01-30 00:57:32 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:57:32 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:57:32 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:57:32 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:57:32 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:57:33 INFO  SessionListener:38 - Session with id : A60F03A8650A9FEC083AADBB707DDD50 created.
+2020-01-30 00:57:33 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:57:33 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:57:33 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:57:33 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:57:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:57:36 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:57:36 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:57:36 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@781c50f
+2020-01-30 00:57:36 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@781c50f
+2020-01-30 00:57:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:57:36 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 00:57:36 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 00:57:36 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 00:57:37 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:57:37 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:57:37 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:57:37 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:57:37 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 00:57:45 INFO  Controller:29 - In Controller doPost
+2020-01-30 00:57:45 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:57:45 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@781c50f
+2020-01-30 00:57:45 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@781c50f
+2020-01-30 00:57:45 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:57:45 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 00:57:45 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 00:57:45 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 00:57:45 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:57:45 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:57:45 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:57:45 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:57:45 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 00:59:31 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 00:59:32 INFO  SessionListener:38 - Session with id : 61B8FC5C7C2A8515B24820A632B1092D created.
+2020-01-30 00:59:32 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:59:32 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:59:32 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:59:32 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:59:32 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:59:33 INFO  SessionListener:38 - Session with id : 55AC2D8008E09CC79973EB5701C35F1E created.
+2020-01-30 00:59:33 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:59:33 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:59:33 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:59:33 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:59:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:59:33 INFO  SessionListener:38 - Session with id : E16DE8C4099EDF85F95C616D70929AEA created.
+2020-01-30 00:59:33 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:59:33 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 00:59:33 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 00:59:33 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 00:59:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:59:40 INFO  Controller:23 - In Controller doGet
+2020-01-30 00:59:40 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:59:40 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:59:40 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:59:40 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:59:40 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 00:59:40 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 00:59:40 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 00:59:41 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:59:41 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:59:41 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:59:41 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:59:41 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 00:59:46 INFO  Controller:29 - In Controller doPost
+2020-01-30 00:59:46 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 00:59:46 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:59:46 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 00:59:46 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 00:59:46 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 00:59:46 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 00:59:46 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 00:59:46 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 00:59:46 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 00:59:46 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 00:59:46 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 00:59:46 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:03:07 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:03:08 INFO  SessionListener:38 - Session with id : 69A411189A1805357A21C052540B5007 created.
+2020-01-30 01:03:08 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:03:08 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:03:08 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:03:08 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:03:08 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:03:09 INFO  SessionListener:38 - Session with id : EB4366AE931842AEFEBE3ADC3AC1D06B created.
+2020-01-30 01:03:09 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:03:09 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:03:09 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:03:09 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:03:09 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:03:09 INFO  SessionListener:38 - Session with id : F3A9A06B00C17894876CE8EE668331B7 created.
+2020-01-30 01:03:09 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:03:09 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:03:09 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:03:09 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:03:09 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:03:12 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:03:12 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:03:12 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7174fd92
+2020-01-30 01:03:12 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7174fd92
+2020-01-30 01:03:12 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:03:12 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:03:12 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:03:12 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:03:13 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:03:13 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:03:13 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:03:13 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:03:13 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:03:16 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:03:16 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:03:16 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7174fd92
+2020-01-30 01:03:16 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7174fd92
+2020-01-30 01:03:16 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:03:16 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:03:17 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:03:17 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:03:17 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:03:17 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:03:17 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:03:17 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:03:17 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:05:43 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:05:44 INFO  SessionListener:38 - Session with id : 7049FFD3242DB2810FBB69D536734E22 created.
+2020-01-30 01:05:44 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:05:44 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:05:44 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:05:44 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:05:44 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:05:45 INFO  SessionListener:38 - Session with id : 1189D6AE12C3149448417734C57CE3A6 created.
+2020-01-30 01:05:45 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:05:45 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:05:45 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:05:45 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:05:45 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:05:45 INFO  SessionListener:38 - Session with id : F42E2174F00D55C1FE328E0202321EAE created.
+2020-01-30 01:05:45 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:05:45 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:05:45 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:05:45 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:05:45 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:05:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:05:49 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:05:49 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7f7e773f
+2020-01-30 01:05:49 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7f7e773f
+2020-01-30 01:05:49 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:05:49 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:05:49 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:05:49 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:05:50 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:05:50 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:05:50 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:05:50 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:05:50 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:05:55 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:05:55 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:05:55 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7f7e773f
+2020-01-30 01:05:55 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7f7e773f
+2020-01-30 01:05:55 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:05:55 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:05:55 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:05:55 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:05:55 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:05:55 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:05:55 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:05:55 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:05:55 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:09:18 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:09:19 INFO  SessionListener:38 - Session with id : F2B876335177F735F73D4F726453A78A created.
+2020-01-30 01:09:19 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:09:19 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:09:19 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:09:19 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:09:19 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:09:20 INFO  SessionListener:38 - Session with id : 264A6BBA56EC2D6937C0676511706408 created.
+2020-01-30 01:09:20 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:09:20 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:09:20 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:09:20 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:09:20 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:09:20 INFO  SessionListener:38 - Session with id : 79150F78776CE17D97CBC9DBA4893241 created.
+2020-01-30 01:09:20 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:09:20 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:09:20 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:09:20 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:09:20 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:09:24 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:09:24 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:09:24 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@1c24ce99
+2020-01-30 01:09:24 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@1c24ce99
+2020-01-30 01:09:24 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:09:24 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:09:24 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:09:24 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:09:25 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:09:25 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:09:25 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:09:25 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:09:25 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:09:30 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:09:30 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:09:30 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@1c24ce99
+2020-01-30 01:09:30 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@1c24ce99
+2020-01-30 01:09:30 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:09:30 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:09:30 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:09:30 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:09:30 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:09:30 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:09:30 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:09:30 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:09:30 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:10:59 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:11:00 INFO  SessionListener:38 - Session with id : 875C9E497388DBC62EA154BB2351F7C7 created.
+2020-01-30 01:11:00 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:11:00 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:11:00 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:11:00 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:11:00 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:11:01 INFO  SessionListener:38 - Session with id : 9CA60B3A7307EE8B19F4F849E4C74647 created.
+2020-01-30 01:11:01 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:11:01 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:11:01 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:11:01 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:11:01 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:11:01 INFO  SessionListener:38 - Session with id : 47AE43DEF34C7F870F21D13D402051AB created.
+2020-01-30 01:11:01 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:11:01 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:11:01 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:11:01 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:11:01 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:11:04 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:11:04 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:11:04 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@2b17c450
+2020-01-30 01:11:04 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@2b17c450
+2020-01-30 01:11:04 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:11:04 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:11:04 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:11:04 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:11:05 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:11:05 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:11:05 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:11:05 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:11:05 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:11:09 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:11:09 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:11:09 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@2b17c450
+2020-01-30 01:11:09 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@2b17c450
+2020-01-30 01:11:09 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:11:09 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:11:09 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:11:09 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:11:09 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:11:09 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:11:09 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:11:09 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:12:05 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:12:06 INFO  SessionListener:38 - Session with id : CE8688CC1BD9BF90B14E67EFBA3138EE created.
+2020-01-30 01:12:06 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:12:06 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:12:06 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:12:06 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:12:06 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:12:07 INFO  SessionListener:38 - Session with id : A1346735D76998CABB1F5A29066FADA9 created.
+2020-01-30 01:12:07 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:12:07 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:12:07 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:12:07 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:12:07 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:12:08 INFO  SessionListener:38 - Session with id : D26B3AF91DD9E1FA10E09A92DE516A6F created.
+2020-01-30 01:12:08 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:12:08 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:12:08 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:12:08 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:12:08 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:12:10 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:12:10 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:12:10 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:12:10 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:12:10 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:12:10 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:12:10 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:12:10 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:12:11 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:12:11 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:12:11 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:12:11 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:12:11 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:12:15 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:12:15 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:12:15 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:12:15 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:12:15 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:12:15 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:12:15 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:12:15 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:12:15 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:13:26 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:13:28 INFO  SessionListener:38 - Session with id : 847904B24EE32E25D42FD1E9BAA70238 created.
+2020-01-30 01:13:28 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:13:28 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:13:28 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:13:28 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:13:28 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:13:28 INFO  SessionListener:38 - Session with id : 414C9CA0979E1FF31B9575F0DB5B2D20 created.
+2020-01-30 01:13:28 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:13:28 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:13:28 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:13:28 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:13:28 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:13:29 INFO  SessionListener:38 - Session with id : B715A015CB0159DC19055A7E00570DFD created.
+2020-01-30 01:13:29 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:13:29 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:13:29 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:13:29 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:13:29 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:13:31 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:13:31 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:13:31 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:13:31 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:13:31 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:13:31 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:13:31 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:13:31 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:13:32 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:13:32 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:13:32 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:13:32 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:13:32 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:13:35 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:13:35 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:13:35 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:13:35 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:13:35 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:13:35 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:13:35 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:13:35 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:13:35 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:14:25 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:14:25 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:14:25 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:14:25 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@7fd03467
+2020-01-30 01:14:25 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:14:25 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:14:25 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:14:25 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:14:25 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:14:25 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:14:25 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:14:25 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:14:25 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:16:37 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:16:38 INFO  SessionListener:38 - Session with id : B7F80DE9CE8000A4A7FD85D4A77611CD created.
+2020-01-30 01:16:38 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:16:38 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:16:38 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:16:38 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:16:38 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:16:39 INFO  SessionListener:38 - Session with id : 0A4BC2E3076E9E2767B1924CAB63CB4A created.
+2020-01-30 01:16:39 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:16:39 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:16:39 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:16:39 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:16:39 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:16:40 INFO  SessionListener:38 - Session with id : 4093E6E2098D6DA492FE7DFA95A0C0C0 created.
+2020-01-30 01:16:40 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:16:40 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:16:40 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:16:40 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:16:40 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:16:52 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:16:52 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:16:52 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:16:52 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:16:52 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:16:52 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:16:52 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:16:52 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:16:52 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:16:52 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:16:52 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:16:52 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:16:52 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:16:52 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:16:52 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:16:52 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:16:53 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:16:53 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:16:53 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:16:53 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:16:53 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:16:53 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:16:53 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:16:53 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:16:53 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:16:53 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:17:36 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:17:36 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:17:36 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:17:36 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@1b216076
+2020-01-30 01:17:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:17:36 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:17:36 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:17:36 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:17:36 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:17:36 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:17:36 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:17:36 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:17:36 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:17:36 INFO  SignUpCommand:57 - MAKING PAGE
+2020-01-30 01:17:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:17:36 INFO  SignUpCommand:59 - /WEB-INF/views/cabinets/userCabinet.jsp
+2020-01-30 01:17:54 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:17:54 INFO  CommandFactory:29 - ACTION IN FACTORY sign_out
+2020-01-30 01:17:54 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@c4def72
+2020-01-30 01:17:54 INFO  CommandFactory:40 - app.commands.command.SignOutCommand@c4def72
+2020-01-30 01:17:54 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:17:54 INFO  SessionListener:44 - Session with id : 4093E6E2098D6DA492FE7DFA95A0C0C0 killed.
+2020-01-30 01:17:54 INFO  SessionListener:38 - Session with id : AA0AA029B179CFE251FDA540EC5EAFEA created.
+2020-01-30 01:19:28 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:19:30 INFO  SessionListener:38 - Session with id : 2FC5FB7FB7F60D78B4BA15440D86998D created.
+2020-01-30 01:19:30 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:19:30 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:19:30 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:19:30 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:19:30 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:19:30 INFO  SessionListener:38 - Session with id : E12201B52C3258E39CC5E49A70491C79 created.
+2020-01-30 01:19:30 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:19:30 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:19:30 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:19:30 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:19:30 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:19:31 INFO  SessionListener:38 - Session with id : BF6083191334484D4F4676453D6E2EF6 created.
+2020-01-30 01:19:31 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:19:31 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:19:31 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:19:31 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:19:31 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:19:37 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:19:37 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:19:37 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@66518dd5
+2020-01-30 01:19:37 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@66518dd5
+2020-01-30 01:19:37 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:19:37 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:19:37 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:19:37 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:19:38 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:19:38 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:19:38 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:19:38 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:19:38 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:20:36 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:20:36 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:20:36 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@66518dd5
+2020-01-30 01:20:36 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@66518dd5
+2020-01-30 01:20:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:20:36 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:20:36 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:20:36 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:20:36 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:20:36 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:20:36 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:20:36 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:20:36 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:20:36 INFO  SignUpCommand:57 - MAKING PAGE
+2020-01-30 01:20:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:20:36 INFO  SignUpCommand:59 - /WEB-INF/views/cabinets/userCabinet.jsp
+2020-01-30 01:22:46 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:22:48 INFO  SessionListener:38 - Session with id : 5DF96AFB7B559D3A6788C5AF879B2C2B created.
+2020-01-30 01:22:48 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:22:48 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:22:48 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:22:48 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:22:48 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:22:49 INFO  SessionListener:38 - Session with id : 32CC7E8B935B2FE1C14B18C4C3C6C48A created.
+2020-01-30 01:22:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:22:49 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:22:49 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:22:49 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:22:49 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:22:49 INFO  SessionListener:38 - Session with id : B0F8937CF8C8F22EEA3D3E9B35725665 created.
+2020-01-30 01:22:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:22:49 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:22:49 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:22:49 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:22:49 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:22:59 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:22:59 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:22:59 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@43816c66
+2020-01-30 01:22:59 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@43816c66
+2020-01-30 01:22:59 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:22:59 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:22:59 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:22:59 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:23:00 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:23:00 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:23:00 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:23:00 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:23:00 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:23:49 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:23:49 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:23:49 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@43816c66
+2020-01-30 01:23:49 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@43816c66
+2020-01-30 01:23:49 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:23:49 INFO  SignUpCommand:44 - IN ELSE 
+2020-01-30 01:23:49 INFO  SignUpCommand:48 - SIGN_UP
+2020-01-30 01:23:49 INFO  SignUpCommand:51 - BEFORE DO SIGN UP
+2020-01-30 01:23:49 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:23:49 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:23:49 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:23:49 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:23:49 INFO  SignUpCommand:54 - AFTER DO SIGN UP
+2020-01-30 01:23:49 INFO  SignUpCommand:57 - MAKING PAGE
+2020-01-30 01:23:49 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:23:49 INFO  SignUpCommand:60 - /WEB-INF/views/cabinets/userCabinet.jsp
+2020-01-30 01:24:32 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:24:33 INFO  SessionListener:38 - Session with id : 8F87B0B2CC57DB727723E3B491584700 created.
+2020-01-30 01:24:33 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:24:33 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:24:33 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:24:33 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:24:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:24:34 INFO  SessionListener:38 - Session with id : 54A7054F6819CD8E98225E692D713429 created.
+2020-01-30 01:24:34 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:24:34 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:24:34 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:24:34 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:24:34 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:24:34 INFO  SessionListener:38 - Session with id : 6A698DC8E5E4018FB30CD787D6CF170D created.
+2020-01-30 01:24:34 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:24:34 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:24:34 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:24:34 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:24:34 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:24:36 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:24:36 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:24:36 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@161981d7
+2020-01-30 01:24:36 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@161981d7
+2020-01-30 01:24:36 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:24:36 INFO  SignUpCommand:43 - IN ELSE 
+2020-01-30 01:24:36 INFO  SignUpCommand:47 - SIGN_UP
+2020-01-30 01:24:36 INFO  SignUpCommand:50 - BEFORE DO SIGN UP
+2020-01-30 01:24:37 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:24:37 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:24:37 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:24:37 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:24:37 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:25:33 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:25:33 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:25:33 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@161981d7
+2020-01-30 01:25:33 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@161981d7
+2020-01-30 01:25:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:25:33 INFO  SignUpCommand:43 - IN ELSE 
+2020-01-30 01:25:33 INFO  SignUpCommand:47 - SIGN_UP
+2020-01-30 01:25:33 INFO  SignUpCommand:50 - BEFORE DO SIGN UP
+2020-01-30 01:25:33 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:25:33 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:25:33 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:25:33 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:25:33 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:25:33 INFO  SignUpCommand:56 - MAKING PAGE
+2020-01-30 01:25:33 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:25:33 INFO  SignUpCommand:59 - /WEB-INF/views/cabinets/userCabinet.jsp
+2020-01-30 01:30:15 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:30:16 INFO  SessionListener:38 - Session with id : 3D954842C653619098C5F2ED6CD89A8B created.
+2020-01-30 01:30:16 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:30:16 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:30:16 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:30:16 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:30:16 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:30:17 INFO  SessionListener:38 - Session with id : 20C8AEC0E4356B0222FA51C9A83FFD8E created.
+2020-01-30 01:30:17 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:30:17 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:30:17 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:30:17 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:30:17 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:30:18 INFO  SessionListener:38 - Session with id : FE15E944D8772E903712EED9CC3DC95F created.
+2020-01-30 01:30:18 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:30:18 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:30:18 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:30:18 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:30:18 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:30:19 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:30:19 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:30:19 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@4c02f9ed
+2020-01-30 01:30:19 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@4c02f9ed
+2020-01-30 01:30:19 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:30:19 INFO  SignUpCommand:43 - IN ELSE 
+2020-01-30 01:30:19 INFO  SignUpCommand:47 - SIGN_UP
+2020-01-30 01:30:19 INFO  SignUpCommand:50 - BEFORE DO SIGN UP
+2020-01-30 01:30:20 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:30:20 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:30:20 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:30:20 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:30:20 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:35:08 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:35:09 INFO  SessionListener:38 - Session with id : 911E8062F2F075B9A4DE0778A62D2CEE created.
+2020-01-30 01:35:09 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:35:09 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:35:09 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:35:09 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:35:09 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:35:10 INFO  SessionListener:38 - Session with id : F4571A7448A69787004218BB466095DE created.
+2020-01-30 01:35:10 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:35:10 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:35:10 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:35:10 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:35:10 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:35:10 INFO  SessionListener:38 - Session with id : C7409719FCEEF2785BAA3E40027CA519 created.
+2020-01-30 01:35:10 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:35:10 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:35:10 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:35:10 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:35:10 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:35:13 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:35:13 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:35:13 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:35:13 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@49b82558
+2020-01-30 01:35:13 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:35:13 INFO  SignUpCommand:43 - IN ELSE 
+2020-01-30 01:35:13 INFO  SignUpCommand:47 - SIGN_UP
+2020-01-30 01:35:13 INFO  SignUpCommand:50 - BEFORE DO SIGN UP
+2020-01-30 01:35:14 ERROR SignUpDAO:45 - The user wasn't created! ERROR in SignUpModel.createUser()
+2020-01-30 01:35:14 WARN  SignUpDAO:48 - The transaction was rolled back! SignUpModel.createUser()
+2020-01-30 01:35:14 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:35:14 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:35:14 INFO  SignUpCommand:53 - AFTER DO SIGN UP
+2020-01-30 01:39:19 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:39:20 INFO  SessionListener:38 - Session with id : 5C95D9B9A3E9C727388B8D0673048F70 created.
+2020-01-30 01:39:20 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:39:20 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:39:20 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:39:20 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:39:20 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:39:21 INFO  SessionListener:38 - Session with id : E6E355ACC2BCA79A8DC77B8FF4AE3CE0 created.
+2020-01-30 01:39:21 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:39:21 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:39:21 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:39:21 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:39:21 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:39:21 INFO  SessionListener:38 - Session with id : D342ACCDCDEC2ED5798705FAF18CA4A7 created.
+2020-01-30 01:39:21 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:39:21 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:39:21 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:39:21 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:39:21 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:39:24 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:39:24 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:39:24 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@73aa00b4
+2020-01-30 01:39:24 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@73aa00b4
+2020-01-30 01:39:24 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:39:24 INFO  SignUpCommand:43 - IN ELSE 
+2020-01-30 01:46:25 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 01:46:26 INFO  SessionListener:38 - Session with id : 33003C6AA60FDB30FD820232AC2D11BE created.
+2020-01-30 01:46:26 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:46:26 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:46:26 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:46:26 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:46:26 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:46:26 INFO  SessionListener:38 - Session with id : 2723B32C6428F5F74C052EE0F9CCDD41 created.
+2020-01-30 01:46:26 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:46:26 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:46:26 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:46:26 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:46:26 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:46:27 INFO  SessionListener:38 - Session with id : EE8D421B71EEAC4857EF941FBD7A6E6C created.
+2020-01-30 01:46:27 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:46:27 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 01:46:27 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 01:46:27 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 01:46:27 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:46:29 INFO  Controller:23 - In Controller doGet
+2020-01-30 01:46:29 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:46:29 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@3f047712
+2020-01-30 01:46:29 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@3f047712
+2020-01-30 01:46:29 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:46:29 INFO  SignUpCommand:33 - IN ELSE 
+2020-01-30 01:47:46 INFO  Controller:29 - In Controller doPost
+2020-01-30 01:47:46 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 01:47:46 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@3f047712
+2020-01-30 01:47:46 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@3f047712
+2020-01-30 01:47:46 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:47:46 INFO  SignUpCommand:33 - IN ELSE 
+2020-01-30 01:47:46 INFO  SignUpCommand:41 - SIGN_UP
+2020-01-30 01:47:46 INFO  SignUpCommand:44 - BEFORE DO SIGN UP
+2020-01-30 01:47:47 INFO  SignUpDAO:43 - New user has been registered
+2020-01-30 01:47:47 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 01:47:47 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 01:47:47 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 01:47:47 INFO  SignUpCommand:47 - AFTER DO SIGN UP
+2020-01-30 01:47:47 INFO  SignUpCommand:50 - MAKING PAGE
+2020-01-30 01:47:47 INFO  ConfigurationManager:21 - getConfigManager
+2020-01-30 01:47:47 INFO  SignUpCommand:53 - /WEB-INF/views/cabinets/userCabinet.jsp

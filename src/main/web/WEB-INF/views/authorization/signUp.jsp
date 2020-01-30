@@ -14,9 +14,8 @@
 
 <div class="w3-container w3-padding">
 
-    <c:if test = "${not empty userName}">
-        <h3>${userName}</h3>
-        <p>You have been successfully registered!</p>
+    <c:if test="${requestScope.userExistsErrorMessage == true}">
+        <h1 style="color: red">User with such log or emeil exists</h1>
     </c:if>
 
     <div class="w3-card-4">
@@ -39,12 +38,19 @@
             <label>Password:
                 <input type="password" name="password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
+            <input type="hidden" name="command" value="sign_up" />
+            <input type="hidden" name="action" value="sign_up" />
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
     </div>
 </div>
 
 <div class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
+    <form method="get">
+        <input type="hidden" name="command" value="sign_in" />
+        <input type="hidden" name="action" value="sign_in" />
+        <button type="submit">Sign In</button>
+    </form>
     <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>
 </div>
 

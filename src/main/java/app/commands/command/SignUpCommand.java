@@ -2,6 +2,10 @@ package app.commands.command;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
+import app.entities.User;
+import app.persistences.dao.SignInDAO;
+import app.persistences.dao.SignUpDAO;
+import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -11,30 +15,66 @@ import java.io.IOException;
 
 public class SignUpCommand implements ICommand {
 
-
     private static final Logger logger = Logger.getLogger(SignUpCommand.class);
-
-    private static final String PARAM_NAME_LOGIN = "login";
-    private static final String PARAM_NAME_PASSWORD = "password";
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String page = null;
 
-        EnumManager speakerAction = EnumManager.valueOf(
-                request.getSession().getAttribute("action").
-                        toString().toUpperCase());
+        page = ConfigurationManager.getInstance()
+                .getProperty(EnumManager.SIGN_UP.toString());
 
-        switch (speakerAction){
-            case SIGN_UP:
-                page = ConfigurationManager.getInstance()
-                        .getProperty(EnumManager.SIGN_UP.toString());
-                break;
-            default:
-                break;
+        String action = request.getParameter("action");
+
+        if(action != null){
+            EnumManager speakerAction = EnumManager.valueOf(
+                    action.toUpperCase());
+
+            if(speakerAction == EnumManager.SIGN_UP){
+
+                doSignUp(request);
+                User currentUser = (User) request.getSession().getAttribute("currentUser");
+
+                if(!Boolean.getBoolean(request.
+                        getParameter("userExistsErrorMessage")) && currentUser != null){
+                    page = ConfigurationManager.getInstance().
+                            getProperty(EnumManager.USER_CABINET.toString());
+                }
+            }
         }
 
         return page;
+    }
+    private static void doSignUp(HttpServletRequest request){
+        String firstName;
+        String lastName;
+        String login;
+        String password;
+        String email;
+
+        firstName = request.getParameter("firstName");
+        lastName = request.getParameter("lastName");
+        login = request.getParameter("login");
+        password = request.getParameter("password");
+        email = request.getParameter("email");
+
+        SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
+        SignUpDAO signUpDAO = MySqlDaoFactory.getSignUpDAO();
+
+
+        if(!(signUpDAO.checkBy(EnumManager.LOGIN.toString(), login) ||
+                signUpDAO.checkBy(EnumManager.EMAIL.toString(), email))){
+
+            User user = new User(firstName, lastName, email, login, password);
+            MySqlDaoFactory.getSignUpDAO().createUser(user);
+
+            User currentUser = signInDAO.getUserByLogPas(login, password);
+
+            request.getSession().setAttribute("currentUser", currentUser);
+            request.setAttribute("userExistsErrorMessage", false);
+        }else {
+            request.setAttribute("userExistsErrorMessage", true);
+        }
     }
 }
