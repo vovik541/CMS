@@ -18,7 +18,7 @@ public class SignUpDAO {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String sql = "INSERT INTO cms_db.сustomers " +
+        String sql = "INSERT INTO сustomers " +
                 "(first_name, last_name, login, password, email, role)" +
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -67,7 +67,7 @@ public class SignUpDAO {
 
         Boolean exists = false;
 
-        String sql = "SELECT * FROM cms_db.сustomers " +
+        String sql = "SELECT * FROM сustomers " +
                 "WHERE " + checkParam + " = ?";
 
         try {

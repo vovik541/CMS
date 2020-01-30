@@ -31,7 +31,6 @@ public class SpeakerCabinetCommand implements ICommand{
         if(action != null){
 
             EnumManager speakerAction = EnumManager.valueOf(action.toUpperCase());
-            User user = (User) request.getSession().getAttribute("currentUser");
 
             switch (speakerAction){
                 case OFFER_A_SPEECH:
@@ -50,15 +49,15 @@ public class SpeakerCabinetCommand implements ICommand{
                 default:
                     break;
             }
+
+            User user = (User) request.getSession().getAttribute("currentUser");
             request.getSession().setAttribute("speakerConfList",
                     MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
         }
 
-
         return page;
     }
     private static void doOffer(HttpServletRequest request){
-
 
         String confName;
         String date;

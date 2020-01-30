@@ -4,6 +4,9 @@ public enum EnumManager {
 
     BUNDLE_NAME("configuration"),
 
+    POST("POST"),
+    GET("GET"),
+
     LOGIN("login"),
     PASSWORD("password"),
     EMAIL("email"),

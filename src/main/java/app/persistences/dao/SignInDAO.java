@@ -18,7 +18,7 @@ public class SignInDAO {
     public List<User> getUsers(){
         List<User> usersList;
 
-        String query = "SELECT * FROM cms_db.сustomers";
+        String query = "SELECT * FROM сustomers";
 
         try (ResultSet customerResSet = ConnectionPool.getConnection().
                 createStatement().executeQuery(query)) {
@@ -41,7 +41,7 @@ public class SignInDAO {
         PreparedStatement preparedStatement = null;
         ResultSet userResSet = null;
 
-        String query = "SELECT * FROM cms_db.сustomers WHERE login = ? AND password = ?";
+        String query = "SELECT * FROM customers WHERE login = ? AND password = ?";
 
         try {
             List<User> usersList = null;

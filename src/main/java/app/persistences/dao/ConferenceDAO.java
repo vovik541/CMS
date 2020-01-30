@@ -22,7 +22,7 @@ public class ConferenceDAO {
         conference.setAcceptedByModer(accepted_by_moder);
         conference.setAcceptedBySpeaker(accepted_by_speaker);
 
-        String sql = "INSERT INTO cms_db.conferences (conference_name, date, begins_at, ends_at, " +
+        String sql = "INSERT INTO conferences (conference_name, date, begins_at, ends_at, " +
                 "location, is_accepted_moder, is_accepted_speaker, speaker_id) " +
 
                 "VALUES ('" + conference.getConfName() +
@@ -66,7 +66,7 @@ public class ConferenceDAO {
         PreparedStatement preparedStatement = null;
         ResultSet resSet = null;
 
-        String query = "SELECT * FROM cms_db.conferences WHERE speaker_id = ?";
+        String query = "SELECT * FROM conferences WHERE speaker_id = ?";
 
         try {
             connection = ConnectionDB.getConnection();
@@ -103,7 +103,7 @@ public class ConferenceDAO {
 
     public void deleteById(int id) {
 
-        String sql = "DELETE FROM cms_db.conferences WHERE conference_id = '"+id+"'";
+        String sql = "DELETE FROM conferences WHERE conference_id = '"+id+"'";
         Connection connection = null;
         Statement statement = null;
 
@@ -172,9 +172,37 @@ public class ConferenceDAO {
 
     }
 
+    public static List<Conference> getConfForView(){
+
+        return null;
+    }
+
+    public static void main(String[] args) throws SQLException {
+
+        List<Conference> conferences = new LinkedList<>();
+
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resSet = null;
+
+//        String query = "SELECT speaker_id, conference_id, conference_name, first_name, last_name FROM conferengit ces INNER JOIN cms_db.customers ON cms_db.conferences.speaker_id=customers.customer_id";
+        String query = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
+                "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
+                "conferences.is_accepted_speaker, conferences.location,\n" +
+                "customers.first_name, customers.last_name\n" +
+                "FROM conferences\n" +
+                "INNER JOIN customers on conferences.speaker_id = customers.customer_id; ";
 
 
-    public static void main(String[] args)  {
+            connection = ConnectionDB.getConnection();
+            statement = connection.createStatement();
+            resSet = statement.executeQuery(query);
+
+            while (resSet.next()){
+                    int i = resSet.getInt("speaker_id");
+                    String c = resSet.getString("conference_name");
+                System.out.println(i+c);
+            }
 
     }
 }

@@ -1,6 +1,10 @@
 package app.entities;
 
 public class Conference {
+
+    private String speakerFirstName;
+    private String speakerLastName;
+
     private String confName;
     private String date;
     private String beginsAt;
@@ -10,6 +14,24 @@ public class Conference {
     private Boolean acceptedBySpeaker = false;
     private int speakerId;
     private int conferenceId;
+
+    public Conference(int conferenceId, int speakerId, String confName, String date,
+                      String beginsAt, String endsAt, String location,
+                      Boolean acceptedByModer, Boolean acceptedBySpeaker,
+                      String speakerFirstName, String speakerLastName){
+
+        this.confName = confName;
+        this.date = date;
+        this.beginsAt = beginsAt;
+        this.endsAt = endsAt;
+        this.location = location;
+        this.acceptedByModer = acceptedByModer;
+        this.acceptedBySpeaker = acceptedBySpeaker;
+        this.speakerId = speakerId;
+        this.conferenceId = conferenceId;
+        this.speakerFirstName = speakerFirstName;
+        this.speakerLastName = speakerLastName;
+    }
 
     public Conference(int conferenceId, int speakerId, String confName, String date,
                       String beginsAt, String endsAt, String location,
@@ -110,6 +132,22 @@ public class Conference {
 
     public void setConferenceId(int conferenceId) {
         this.conferenceId = conferenceId;
+    }
+
+    public String getSpeakerFirstName() {
+        return speakerFirstName;
+    }
+
+    public void setSpeakerFirstName(String speakerFirstName) {
+        this.speakerFirstName = speakerFirstName;
+    }
+
+    public String getSpeakerLastName() {
+        return speakerLastName;
+    }
+
+    public void setSpeakerLastName(String speakerLastName) {
+        this.speakerLastName = speakerLastName;
     }
 
     @Override
