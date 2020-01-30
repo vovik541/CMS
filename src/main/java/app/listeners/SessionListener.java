@@ -49,9 +49,7 @@ public class SessionListener implements ServletContextListener,
     // -------------------------------------------------------
 
     public void attributeAdded(HttpSessionBindingEvent sbe) {
-      /* This method is called when an attribute 
-         is added to a session.
-      */
+      logger.info("Attribute added: "+ sbe.getName());
     }
 
     public void attributeRemoved(HttpSessionBindingEvent sbe) {

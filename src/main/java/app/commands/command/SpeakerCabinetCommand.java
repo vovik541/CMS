@@ -22,26 +22,31 @@ public class SpeakerCabinetCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String page = null;
-
-        EnumManager speakerAction = EnumManager.valueOf(
-                request.getSession().getAttribute("action").
-                        toString().toUpperCase());
+        logger.info("IN EXECUTE");
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
+        String page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
 
-        User user = (User) request.getSession().getAttribute("currentUser");
+        String action = request.getParameter("action");
+        System.out.println("ACTION "+action);
+//        action = (String) request.getSession().getAttribute("action");
+//        System.out.println("ACTION "+action);
 
-        switch (speakerAction){
-            case OFFER_A_SPEECH:
-                request.getSession().removeAttribute("action");
-                doOffer(request);
-                page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
-                request.getSession().setAttribute("speakerConfList",
-                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
-                break;
-            default:
-                break;
+        if(action != null){
+
+            EnumManager speakerAction = EnumManager.valueOf(action.toUpperCase());
+            User user = (User) request.getSession().getAttribute("currentUser");
+
+            switch (speakerAction){
+                case OFFER_A_SPEECH:
+                    doOffer(request);
+                    logger.info("IN OFFER_A_SPEECH");
+                    request.getSession().setAttribute("speakerConfList",
+                            MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+                    break;
+                default:
+                    break;
+            }
         }
 
         return page;
@@ -118,7 +123,7 @@ public class SpeakerCabinetCommand implements ICommand{
 
     }
     private static boolean check(int number, int maxValue){
-        if(number < 0){
+        if(number < 1){
             return false;
         }
         if (number > maxValue){

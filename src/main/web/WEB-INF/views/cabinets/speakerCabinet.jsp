@@ -36,9 +36,9 @@
 
     <div>
         <h1>${offer}</h1>
-        <form method="post">
+        <form method="post" id="offer">
             <input type="hidden" name="command" value="speaker_cabinet" />
-<%--            <input type="hidden" name="action" value="offer_a_speech" />--%>
+            <input type="hidden" name="action" value="offer_a_speech" />
 
 
             <p>${confName}</p>
@@ -79,7 +79,7 @@
                 <input type="text" name="endMin"><br />
             </label>
 
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom"
+            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer"
                     <c:set var="action" value="offer_a_speech" scope="session"/>>Submit</button>
         </form>
         <c:if test="${requestScope.isAdded}">

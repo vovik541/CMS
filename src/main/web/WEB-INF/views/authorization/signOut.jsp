@@ -15,7 +15,14 @@
 <div>
     <h1>You were logged out</h1>
 </div>
-
+<form method="get" id="backToLog">
+    <input type="hidden" name="command" value="sign_in" />
+    <button type="submit" form="backToLog">Sign In</button>
+</form>
+<form id="GoToSignUp" method="get">
+    <input type="hidden" name="command" value="sign_up" />
+    <button type="submit" form="GoToSignUp">Sign Up</button>
+</form>
 <%--<a href="/login">LOGIN</a>--%>
 <%--<%@ include file="../template/footer.jsp" %>--%>
 

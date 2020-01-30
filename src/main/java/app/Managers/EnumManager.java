@@ -8,6 +8,10 @@ public enum EnumManager {
     PASSWORD("password"),
     EMAIL("email"),
 
+    COMMAND("command"),
+    ACTION("cation"),
+
+
     INDEX("INDEX"),
     SIGN_IN("SIGN_IN"),
     SIGN_UP("SIGN_UP"),
