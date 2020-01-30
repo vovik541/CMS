@@ -3,6 +3,8 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
 import app.entities.User;
+import app.persistences.factory.MySqlDaoFactory;
+import app.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -27,7 +29,7 @@ public class EmptyCommand implements ICommand{
         //if user logged -> go to his cabinet
         if(currentUser != null){
             logger.info("USER EXISTS in SignInCommand");
-            page = SignInCommand.getPageByRole(currentUser,request);
+            page = UserService.getInstance().getPageByRole(currentUser,request);
             return page;
         }
 

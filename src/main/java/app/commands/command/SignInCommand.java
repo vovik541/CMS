@@ -5,6 +5,7 @@ import app.Managers.EnumManager;
 import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.factory.MySqlDaoFactory;
+import app.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -38,39 +39,12 @@ public class SignInCommand implements ICommand{
             if (currentUser != null) {
 
                 request.getSession().setAttribute("currentUser", currentUser);
-                page = getPageByRole(currentUser, request);
+                page = UserService.getInstance().getPageByRole(currentUser, request);
 
             } else {
                 request.setAttribute("errorLoginPassMessage", true);
             }
         }
-        return page;
-    }
-
-    public static String getPageByRole(User user, HttpServletRequest request){
-
-        ConfigurationManager confManager = ConfigurationManager.getInstance();
-        String page;
-
-        switch (user.getRole()){
-            case USER:
-                page = confManager.getProperty(EnumManager.USER_CABINET.toString());
-                break;
-            case SPEAKER:
-                page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
-                request.getSession().setAttribute("speakerConfList",
-                        MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
-                break;
-            case MODER:
-                page = confManager.getProperty(EnumManager.MODER_CABINET.toString());
-                break;
-            case ADMIN:
-                page = confManager.getProperty(EnumManager.ADMIN_CABINET.toString());
-                break;
-            default: page = confManager.getProperty(EnumManager.INDEX.toString());
-                break;
-        }
-
         return page;
     }
 }

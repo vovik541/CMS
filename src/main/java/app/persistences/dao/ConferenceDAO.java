@@ -7,6 +7,10 @@ import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -172,12 +176,8 @@ public class ConferenceDAO {
 
     }
 
-    public static List<Conference> getConfForView(){
+    public List<Conference> getConfBeforeDateTime(String currentDate, String currentTime){
 
-        return null;
-    }
-
-    public static void main(String[] args) throws SQLException {
 
         List<Conference> conferences = new LinkedList<>();
 
@@ -185,24 +185,56 @@ public class ConferenceDAO {
         Statement statement = null;
         ResultSet resSet = null;
 
-//        String query = "SELECT speaker_id, conference_id, conference_name, first_name, last_name FROM conferengit ces INNER JOIN cms_db.customers ON cms_db.conferences.speaker_id=customers.customer_id";
-        String query = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
+        String query = "select conferences.conference_id, conferences.conference_name, conferences.date,\n" +
                 "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
                 "conferences.is_accepted_speaker, conferences.location,\n" +
                 "customers.first_name, customers.last_name\n" +
                 "FROM conferences\n" +
-                "INNER JOIN customers on conferences.speaker_id = customers.customer_id; ";
-
-
+                "INNER JOIN customers on conferences.speaker_id = customers.customer_id\n" +
+                "WHERE date > '" + currentDate + "' AND is_accepted_speaker = '1' " +
+                "AND is_accepted_moder = '1' AND ends_at > '" + currentTime + "';";
+        try {
             connection = ConnectionDB.getConnection();
             statement = connection.createStatement();
             resSet = statement.executeQuery(query);
 
             while (resSet.next()){
-                    int i = resSet.getInt("speaker_id");
-                    String c = resSet.getString("conference_name");
-                System.out.println(i+c);
+                conferences.add(new Conference(resSet.getInt("conference_id"),
+                        resSet.getInt("speaker_id"),
+                        resSet.getString("conference_name"),
+                        resSet.getDate("date").toString(),
+                        resSet.getTime("begins_at").toString(),
+                        resSet.getTime("ends_at").toString(),
+                        resSet.getString("location"),
+                        resSet.getBoolean("is_accepted_moder"),
+                        resSet.getBoolean("is_accepted_speaker"),
+                        resSet.getString("first_name"),
+                        resSet.getString("last_Name")
+                ));
+                System.out.println(conferences.get(0).toString());
             }
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                resSet.close();
+                statement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return conferences;
     }
+
+    public static void main(String[] args) throws SQLException {
+
+
+
+//        System.out.println(time);
+    }
+
+
 }
