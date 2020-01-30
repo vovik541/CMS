@@ -3155,3 +3155,330 @@
 2020-01-30 01:47:47 INFO  SignUpCommand:50 - MAKING PAGE
 2020-01-30 01:47:47 INFO  ConfigurationManager:21 - getConfigManager
 2020-01-30 01:47:47 INFO  SignUpCommand:53 - /WEB-INF/views/cabinets/userCabinet.jsp
+2020-01-30 02:01:20 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:01:21 INFO  SessionListener:38 - Session with id : 7B4680356BE746F57469AFADE7208C94 created.
+2020-01-30 02:01:21 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:01:21 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:01:21 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:01:21 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:01:21 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:01:22 INFO  SessionListener:38 - Session with id : 96DB54C96964EFC50F78947C068E1E5E created.
+2020-01-30 02:01:22 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:01:22 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:01:22 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:01:22 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:01:22 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:01:23 INFO  SessionListener:38 - Session with id : 9C4B4B233D11BF4D47DD9583C60F7E69 created.
+2020-01-30 02:01:23 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:01:23 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:01:23 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:01:23 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:01:23 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:01:25 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:01:25 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 02:01:25 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5e0f2a9d
+2020-01-30 02:01:25 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@5e0f2a9d
+2020-01-30 02:01:25 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:01:30 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:01:30 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:01:30 INFO  CommandFactory:38 - app.commands.command.SignInCommand@601a6a90
+2020-01-30 02:01:30 INFO  CommandFactory:40 - app.commands.command.SignInCommand@601a6a90
+2020-01-30 02:01:31 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 02:01:31 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 02:01:31 INFO  SignInCommand:29 - ConfMan in SignInCommand
+2020-01-30 02:01:31 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:02:40 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:02:41 INFO  SessionListener:38 - Session with id : 31E2BA4E7E0267381C91EAC48E78DACC created.
+2020-01-30 02:02:41 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:02:41 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:02:41 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:02:41 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:02:41 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:02:42 INFO  SessionListener:38 - Session with id : A9E7FA6FAD7AD2EE50C7F795BD2B0890 created.
+2020-01-30 02:02:42 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:02:42 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:02:42 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:02:42 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:02:42 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:02:43 INFO  SessionListener:38 - Session with id : 5B4DFBE3CF7655DEC857C12C07811A30 created.
+2020-01-30 02:02:43 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:02:43 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:02:43 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:02:43 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:02:43 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:02:45 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:02:45 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 02:02:45 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@25900e09
+2020-01-30 02:02:45 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@25900e09
+2020-01-30 02:02:45 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:02:46 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:02:46 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:02:46 INFO  CommandFactory:38 - app.commands.command.SignInCommand@449011d7
+2020-01-30 02:02:46 INFO  CommandFactory:40 - app.commands.command.SignInCommand@449011d7
+2020-01-30 02:02:47 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 02:02:47 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 02:02:47 INFO  SignInCommand:29 - ConfMan in SignInCommand
+2020-01-30 02:02:47 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:13:42 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:13:43 INFO  SessionListener:38 - Session with id : 553A152D64B7978670391B489CD7AE02 created.
+2020-01-30 02:13:43 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:13:43 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:13:43 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:13:43 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:13:43 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:13:44 INFO  SessionListener:38 - Session with id : C9ABAA5CB0A309FEC4408053D39B402F created.
+2020-01-30 02:13:44 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:13:44 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:13:44 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:13:44 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:13:44 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:13:44 INFO  SessionListener:38 - Session with id : 379C4FF3130E5810184CC29F3ABEB29A created.
+2020-01-30 02:13:44 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:13:44 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:13:44 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:13:44 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:13:44 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:13:46 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:13:46 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 02:13:46 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@3777be93
+2020-01-30 02:13:46 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@3777be93
+2020-01-30 02:13:46 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:13:55 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:13:55 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:13:55 INFO  CommandFactory:38 - app.commands.command.SignInCommand@443067ed
+2020-01-30 02:13:55 INFO  CommandFactory:40 - app.commands.command.SignInCommand@443067ed
+2020-01-30 02:19:21 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:19:22 INFO  SessionListener:38 - Session with id : 0AC7C7FB26D6950F14BD9749443F21CC created.
+2020-01-30 02:19:22 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:19:22 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:19:22 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:19:22 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:19:22 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:19:23 INFO  SessionListener:38 - Session with id : C6BCAB4A4AB663407931B1E7BCC315B4 created.
+2020-01-30 02:19:23 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:19:23 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:19:23 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:19:23 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:19:23 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:19:23 INFO  SessionListener:38 - Session with id : 3F33FEF652FDD16EE78D3550A2F357D6 created.
+2020-01-30 02:19:23 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:19:23 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:19:23 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:19:23 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:19:23 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:19:28 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:19:28 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 02:19:28 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@484aee80
+2020-01-30 02:19:28 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@484aee80
+2020-01-30 02:19:28 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:19:54 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:19:54 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:19:54 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:19:54 INFO  CommandFactory:40 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:19:54 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:20:29 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:20:29 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:20:29 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:29 INFO  CommandFactory:40 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:29 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:20:39 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:20:39 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:20:39 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:39 INFO  CommandFactory:40 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:39 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:20:40 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:20:40 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:20:40 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:40 INFO  CommandFactory:40 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:20:40 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:21:18 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:21:18 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:21:18 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:21:18 INFO  CommandFactory:40 - app.commands.command.SignInCommand@6fdb0d81
+2020-01-30 02:21:18 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:22:39 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:22:40 INFO  SessionListener:38 - Session with id : 0951371D8ADD9E4441A0E38301900A71 created.
+2020-01-30 02:22:40 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:22:40 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:22:40 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:22:40 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:22:40 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:22:40 INFO  SessionListener:38 - Session with id : 05B6A8F7F21902524C1909FCEDA0937C created.
+2020-01-30 02:22:40 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:22:40 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:22:40 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:22:40 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:22:40 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:22:41 INFO  SessionListener:38 - Session with id : 6B5F6F16BB48679FC9F2DB47BA1017EC created.
+2020-01-30 02:22:41 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:22:41 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:22:41 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:22:41 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:22:41 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:23:47 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:23:48 INFO  SessionListener:38 - Session with id : AF8479CBE4AF4A7C73AFF1723B8FCBCF created.
+2020-01-30 02:23:48 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:23:48 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:23:48 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:23:48 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:23:48 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:23:49 INFO  SessionListener:38 - Session with id : 8AB12C40C567717A7A898BC47B2F728A created.
+2020-01-30 02:23:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:23:49 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:23:49 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:23:49 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:23:49 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:23:49 INFO  SessionListener:38 - Session with id : EFBAA2CCF96D6AD2374B22ECBB8A48B1 created.
+2020-01-30 02:23:49 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:23:49 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:23:49 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:23:49 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:23:49 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:23:59 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:23:59 INFO  CommandFactory:29 - ACTION IN FACTORY sign_up
+2020-01-30 02:24:00 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@585d79b0
+2020-01-30 02:24:00 INFO  CommandFactory:40 - app.commands.command.SignUpCommand@585d79b0
+2020-01-30 02:24:00 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:24:05 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:24:05 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:24:05 INFO  CommandFactory:38 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:05 INFO  CommandFactory:40 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:05 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:24:05 INFO  SignInCommand:26 - false
+2020-01-30 02:24:09 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:24:09 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:24:09 INFO  CommandFactory:38 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:09 INFO  CommandFactory:40 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:09 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:24:09 INFO  SignInCommand:26 - false
+2020-01-30 02:24:21 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:24:21 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:24:21 INFO  CommandFactory:38 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:21 INFO  CommandFactory:40 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:24:21 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:24:21 INFO  SignInCommand:26 - false
+2020-01-30 02:25:48 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:25:48 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:25:48 INFO  CommandFactory:38 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:25:48 INFO  CommandFactory:40 - app.commands.command.SignInCommand@7a586e50
+2020-01-30 02:25:48 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:25:48 INFO  SignInCommand:26 - false
+2020-01-30 02:27:25 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:27:26 INFO  SessionListener:38 - Session with id : B2BC705D893905BB9679250680CE1A3D created.
+2020-01-30 02:27:26 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:27:26 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:27:26 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:27:26 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:27:26 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:27:26 INFO  SessionListener:38 - Session with id : 49C755C78A9D87A54FCECCE1F4432C08 created.
+2020-01-30 02:27:26 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:27:26 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:27:26 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:27:26 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:27:26 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:27:27 INFO  SessionListener:38 - Session with id : 94FD092A71897A0168E10D57EB425E70 created.
+2020-01-30 02:27:27 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:27:27 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:27:27 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:27:27 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:27:27 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:27:29 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:27:29 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:27:29 INFO  CommandFactory:38 - app.commands.command.SignInCommand@7cf612ec
+2020-01-30 02:27:29 INFO  CommandFactory:40 - app.commands.command.SignInCommand@7cf612ec
+2020-01-30 02:27:29 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:27:29 INFO  SignInCommand:26 - false
+2020-01-30 02:28:06 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:28:07 INFO  SessionListener:38 - Session with id : 8BD77C49FD0C2733EA5B2AEFE9155A99 created.
+2020-01-30 02:28:07 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:28:07 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:28:07 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:28:07 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:28:07 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:28:08 INFO  SessionListener:38 - Session with id : 5E9F236379B6973D3E08A5BCC6A8B203 created.
+2020-01-30 02:28:08 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:28:08 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:28:08 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:28:08 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:28:08 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:28:08 INFO  SessionListener:38 - Session with id : 4D3802D52CEDC684A8680C39A8C2EB52 created.
+2020-01-30 02:28:08 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:28:08 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:28:08 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:28:08 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:28:08 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:28:11 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:28:11 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:28:11 INFO  CommandFactory:38 - app.commands.command.SignInCommand@3a7ab03
+2020-01-30 02:28:11 INFO  CommandFactory:40 - app.commands.command.SignInCommand@3a7ab03
+2020-01-30 02:28:11 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:28:11 INFO  SignInCommand:26 - false
+2020-01-30 02:29:42 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-01-30 02:29:43 INFO  SessionListener:38 - Session with id : 2783987F4D0075E10091AD541CB75447 created.
+2020-01-30 02:29:43 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:29:43 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:29:43 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:29:43 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:29:43 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:29:44 INFO  SessionListener:38 - Session with id : 741248AC0AE201850508DA6266998322 created.
+2020-01-30 02:29:44 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:29:44 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:29:44 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:29:44 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:29:44 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:29:44 INFO  SessionListener:38 - Session with id : 43644824A5E5110EE70D24B450D5BF2B created.
+2020-01-30 02:29:44 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:29:44 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:29:44 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:29:44 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:29:44 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:29:47 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:29:47 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:29:47 INFO  CommandFactory:38 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:29:47 INFO  CommandFactory:40 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:29:47 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:29:47 INFO  SignInCommand:26 - true
+2020-01-30 02:29:48 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 02:29:48 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 02:29:48 INFO  SignInCommand:37 - ConfMan in SignInCommand
+2020-01-30 02:30:03 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:30:03 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:30:03 INFO  CommandFactory:38 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:30:03 INFO  CommandFactory:40 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:30:03 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:03 INFO  SignInCommand:26 - true
+2020-01-30 02:30:03 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 02:30:03 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 02:30:03 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 02:30:03 INFO  SignInCommand:37 - ConfMan in SignInCommand
+2020-01-30 02:30:03 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:25 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:30:25 INFO  CommandFactory:29 - ACTION IN FACTORY sign_out
+2020-01-30 02:30:25 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@32d5bbbb
+2020-01-30 02:30:25 INFO  CommandFactory:40 - app.commands.command.SignOutCommand@32d5bbbb
+2020-01-30 02:30:25 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:25 INFO  SessionListener:44 - Session with id : 43644824A5E5110EE70D24B450D5BF2B killed.
+2020-01-30 02:30:25 INFO  SessionListener:38 - Session with id : D7F02698997FD33352B168F80A22194D created.
+2020-01-30 02:30:27 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:30:27 INFO  CommandFactory:29 - ACTION IN FACTORY null
+2020-01-30 02:30:27 INFO  CommandFactory:32 - In Factory defined like EMPTY!
+2020-01-30 02:30:27 INFO  EmptyCommand:34 - ConfigurationManager in EmptyCommand
+2020-01-30 02:30:27 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:36 INFO  Controller:29 - In Controller doPost
+2020-01-30 02:30:36 INFO  CommandFactory:29 - ACTION IN FACTORY sign_in
+2020-01-30 02:30:36 INFO  CommandFactory:38 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:30:36 INFO  CommandFactory:40 - app.commands.command.SignInCommand@2d469f3e
+2020-01-30 02:30:36 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:36 INFO  SignInCommand:26 - true
+2020-01-30 02:30:36 INFO  SignInDAO:99 - initUsersList worked
+2020-01-30 02:30:36 INFO  SignInDAO:61 - user was found by login / password
+2020-01-30 02:30:36 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-01-30 02:30:36 INFO  SignInCommand:37 - ConfMan in SignInCommand
+2020-01-30 02:30:36 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:43 INFO  Controller:23 - In Controller doGet
+2020-01-30 02:30:43 INFO  CommandFactory:29 - ACTION IN FACTORY sign_out
+2020-01-30 02:30:43 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@32d5bbbb
+2020-01-30 02:30:43 INFO  CommandFactory:40 - app.commands.command.SignOutCommand@32d5bbbb
+2020-01-30 02:30:43 INFO  ConfigurationManager:18 - getConfigManager
+2020-01-30 02:30:43 INFO  SessionListener:44 - Session with id : D7F02698997FD33352B168F80A22194D killed.
+2020-01-30 02:30:43 INFO  SessionListener:38 - Session with id : 761F69938BB71E6AEA0BCAD500A4D63B created.

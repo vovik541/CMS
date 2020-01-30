@@ -19,24 +19,30 @@ public class SignInCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String page = null;
-        String login = request.getParameter(EnumManager.LOGIN.toString());
-        String password = request.getParameter(EnumManager.PASSWORD.toString());
-        SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
+        String page = ConfigurationManager.getInstance()
+                .getProperty(EnumManager.SIGN_IN.toString());
 
-        User currentUser = signInDAO.getUserByLogPas(login,password);
+        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
+        logger.info(buttonPressed);
 
-        logger.info("ConfMan in SignInCommand");
-        ConfigurationManager confManager = ConfigurationManager.getInstance();
+        if(buttonPressed){
 
-        if (currentUser != null) {
+            String login = request.getParameter(EnumManager.LOGIN.toString());
+            String password = request.getParameter(EnumManager.PASSWORD.toString());
+            SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
 
-            request.getSession().setAttribute("currentUser", currentUser);
-            page = getPageByRole(currentUser, request);
+            User currentUser = signInDAO.getUserByLogPas(login,password);
 
-        } else {
-            request.setAttribute("errorLoginPassMessage", true);
-            page = confManager.getProperty(EnumManager.SIGN_IN.toString());
+            logger.info("ConfMan in SignInCommand");
+
+            if (currentUser != null) {
+
+                request.getSession().setAttribute("currentUser", currentUser);
+                page = getPageByRole(currentUser, request);
+
+            } else {
+                request.setAttribute("errorLoginPassMessage", true);
+            }
         }
         return page;
     }

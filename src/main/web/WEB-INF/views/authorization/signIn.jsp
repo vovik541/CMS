@@ -31,7 +31,6 @@
 
     <div class="w3-container">
         <form method="post" id="signIn" class="w3-selection w3-light-grey w3-padding-64 w3-margin-top">
-            <input type="hidden" name="command" value="sign_in" />
             <p>${logMessage}</p>
             <label>
                 <input type="text" name="login" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
@@ -40,14 +39,15 @@
                 <p>${passMessage}</p>
                 <input type="password" name="password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
+            <input type="hidden" name="command" value="sign_in" />
+            <input type="hidden" name="isPressed" value="true" />
             <button type="submit" form="signIn" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
     </div>
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-        <form id="signUp" method="get">
+        <form id="GoToSignUp" method="get">
             <input type="hidden" name="command" value="sign_up" />
-<%--            <input type="hidden" name="action" value="sign_up" />--%>
-            <button type="submit" form="signUp">Sign Up</button>
+            <button type="submit" form="GoToSignUp">Sign Up</button>
         </form>
         <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>
     </footer>
