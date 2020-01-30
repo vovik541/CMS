@@ -20,27 +20,19 @@ public class SignUpCommand implements ICommand {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String page = null;
-
-        page = ConfigurationManager.getInstance()
+        String page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_UP.toString());
 
-        String action = request.getParameter("action");
+        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
 
-        if(action != null){
-            EnumManager speakerAction = EnumManager.valueOf(
-                    action.toUpperCase());
+        if(buttonPressed){
+            doSignUp(request);
+            User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-            if(speakerAction == EnumManager.SIGN_UP){
-
-                doSignUp(request);
-                User currentUser = (User) request.getSession().getAttribute("currentUser");
-
-                if(!Boolean.getBoolean(request.
-                        getParameter("userExistsErrorMessage")) && currentUser != null){
-                    page = ConfigurationManager.getInstance().
-                            getProperty(EnumManager.USER_CABINET.toString());
-                }
+            if(!Boolean.getBoolean(request.
+                    getParameter("userExistsErrorMessage")) && currentUser != null){
+                page = ConfigurationManager.getInstance().
+                        getProperty(EnumManager.USER_CABINET.toString());
             }
         }
 
