@@ -22,18 +22,22 @@ public class EmptyCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.info("in EmptyCommand");
+
         User currentUser = (User)request.getSession().getAttribute("currentUser");
         String page;
 
         //if user logged -> go to his cabinet
         if(currentUser != null){
-            logger.info("USER EXISTS in SignInCommand");
+            logger.info("USER EXISTS in EmptyCommand");
             page = UserService.getInstance().getPageByRole(currentUser,request);
             return page;
         }
 
-        logger.info("ConfigurationManager in EmptyCommand");
-        return ConfigurationManager.getInstance()
+        logger.info("default page = sign_in");
+        page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_IN.toString());
+
+        return page;
     }
 }

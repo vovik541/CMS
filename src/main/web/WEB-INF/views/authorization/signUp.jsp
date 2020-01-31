@@ -26,7 +26,7 @@
             <h2>We are glad to see you!</h2>
         </div>
 
-        <form method="post" class="w3-selection w3-light-grey w3-padding">
+        <form method="post" class="w3-selection w3-light-grey w3-padding" id="signUpForm">
             <label>First Name:
                 <input type="text" name="firstName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
@@ -42,10 +42,10 @@
             <label>Password:
                 <input type="password" name="password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
-            <input type="hidden" name="command" value="sign_up" />
+            <input type="hidden" name="command" value="user_cabinet" />
             <input type="hidden" name="isPressed" value="true" />
 
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
+            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="signUpForm">Submit</button>
         </form>
     </div>
 </div>

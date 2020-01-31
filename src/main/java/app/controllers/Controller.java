@@ -39,7 +39,7 @@ public class Controller extends HttpServlet {
         ICommand command = client.defineCommand(request);
         page = command.execute(request, response);
 
-        System.out.println(page +" !!!!!!!!!!!");
+        logger.info("PAGE IN CONTROLLER: "+ page);
 
         if (page != null) {
 
@@ -52,6 +52,7 @@ public class Controller extends HttpServlet {
                     .getProperty(EnumManager.INDEX.toString());
 
             logger.info(request.getContextPath() + "  -> request.getContextPath()");
+            logger.info("RESPONSE TO:" + request.getContextPath() + page);
             response.sendRedirect(request.getContextPath() + page);
         }
     }

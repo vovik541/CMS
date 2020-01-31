@@ -20,33 +20,39 @@ public class SpeakerCabinetCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        logger.info("IN EXECUTE");
+        logger.info("in SpeakerCabinetCommand");
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
         String page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
 
         String action = request.getParameter(EnumManager.ACTION.toString());
-        System.out.println("ACTION "+action);
+        System.out.println("ACTION in SpeakerCabinetCommand"+action);
 
         if(action != null){
+
+            logger.info("Action != null");
 
             EnumManager speakerAction = EnumManager.valueOf(action.toUpperCase());
 
             switch (speakerAction){
                 case OFFER_A_SPEECH:
                     doOffer(request);
-                    logger.info("IN OFFER_A_SPEECH");
+                    logger.info("OFFER_A_SPEECH");
                     break;
                 case DELETE_CONFERENCE:
+                    logger.info("DELETE_A_CONFERENCE");
                     doDelete(request);
                     break;
                 case CONFIRM_CONFERENCE:
+                    logger.info("CONFIRM_A_CONFERENCE");
                     doConfirm(request);
                     break;
                 case REFUSE_CONFERENCE:
+                    logger.info("REFUSE_THE_CONFERENCE");
                     doRefuse(request);
                     break;
                 default:
+                    logger.info("DEFAULT IN SWITCH");
                     break;
             }
 

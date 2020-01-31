@@ -21,18 +21,22 @@ public class SignUpCommand implements ICommand {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.info("in SignUpCommand");
+
         String page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_UP.toString());
 
         Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
 
         if(buttonPressed){
+            logger.info("in SignUpCommand button is pressed");
             doSignUp(request);
             User currentUser = (User) request.getSession().getAttribute("currentUser");
 
             if(!Boolean.getBoolean(request.getParameter("userExistsErrorMessage")) &&
                     currentUser != null){
 
+                logger.info("userExistsError in SignUpCommand");
                 page = UserService.getPageByRole(currentUser,request);
             }
         }

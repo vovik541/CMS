@@ -38,8 +38,8 @@ public class UserService {
                 page = confManager.getProperty(EnumManager.USER_CABINET.toString());
                 request.getSession().setAttribute("conferencesToRegisterIn",
                         UserService.getInstance().getConfForView());
-                request.setAttribute("action","user_cabinet");
-                logger.info(request.getParameter("action"));
+//                request.setAttribute("action","user_cabinet");
+//                logger.info(request.getParameter("action"));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());

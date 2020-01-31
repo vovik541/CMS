@@ -24,7 +24,7 @@ public class SignInDAO {
                 createStatement().executeQuery(query)) {
 
             usersList = initUsersList(customerResSet);
-            logger.info("Customers were read");
+//            logger.info("Customers were read");
         } catch (SQLException e) {
             logger.error("Customers weren't read! ERROR in SignInModel.readCustomers()");
             e.printStackTrace();
@@ -96,7 +96,7 @@ public class SignInDAO {
             );
             usersList.add(user);
         }
-        logger.info("initUsersList worked");
+//        logger.info("initUsersList worked");
         return usersList;
     }
 }

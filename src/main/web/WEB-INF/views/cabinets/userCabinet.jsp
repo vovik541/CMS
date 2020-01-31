@@ -44,8 +44,8 @@
             <td>
                 <form method="post" id="${conf.conferenceId}reg">
                     <input type="hidden" name="id" value="${conf.conferenceId}" />
-                    <input type="hidden" name="command" value="user_cabinet" />
-                    <input type="hidden" name="action" value="register_in_conference" />
+                    <input type="hidden" name="command" value="user_cabinet"/>
+                    <input type="hidden" name="action" value=   "register_in_conference" />
                     <button type="submit" form="${conf.conferenceId}reg">Register</button>
                 </form>
             </td>

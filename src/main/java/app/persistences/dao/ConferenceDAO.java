@@ -224,8 +224,7 @@ public class ConferenceDAO {
 
     public void registerInConf(int userId, int conferenceId){
 
-
-        logger.info("USER ID AND CONFERENCE ID:" +userId + " " +conferenceId);
+//        logger.info("USER ID AND CONFERENCE ID:" +userId + " " +conferenceId);
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;

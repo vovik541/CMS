@@ -24,7 +24,7 @@ public class CommandFactory {
         ICommand current = new EmptyCommand();
 
         String commandFromFront = request.getParameter(EnumManager.COMMAND.toString());  //COMMAND = "command";
-        logger.info("ACTION IN FACTORY "+ commandFromFront);
+        logger.info("COMMAND IN FACTORY "+ commandFromFront);
 
         if (commandFromFront == null || commandFromFront.isEmpty()) {
             logger.info("In Factory defined like EMPTY!");
@@ -33,7 +33,7 @@ public class CommandFactory {
 
         try {
             EnumCommand currentEnum = EnumCommand.valueOf(commandFromFront.toUpperCase());   //SIGN_IN USER_CABINET
-            logger.info(currentEnum.getCurrentCommand().toString());
+//            logger.info(currentEnum.getCurrentCommand().toString());
             current = currentEnum.getCurrentCommand();
             logger.info(current.toString());
         } catch (IllegalArgumentException e) {

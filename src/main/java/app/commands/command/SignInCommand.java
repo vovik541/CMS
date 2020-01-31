@@ -20,6 +20,8 @@ public class SignInCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.info("in SignInCommand");
+
         String page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_IN.toString());
 
@@ -27,23 +29,34 @@ public class SignInCommand implements ICommand{
 
 //        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
 //        logger.info(buttonPressed);
+        User currentUser = (User)request.getSession().getAttribute("currentUser");
+
+        //if user logged -> go to his cabinet
+        if(currentUser != null){
+            logger.info("user exists in SignInCommand");
+            page = UserService.getInstance().getPageByRole(currentUser,request);
+            return page;
+        }
 
         if (method.equalsIgnoreCase(EnumManager.POST.toString())) {
+
+            logger.info("POST in SignInCommand");
 
             String login = request.getParameter(EnumManager.LOGIN.toString());
             String password = request.getParameter(EnumManager.PASSWORD.toString());
             SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
 
-            User currentUser = signInDAO.getUserByLogPas(login,password);
-
-            logger.info("ConfMan in SignInCommand");
+            currentUser = signInDAO.getUserByLogPas(login,password);
 
             if (currentUser != null) {
 
+                logger.info("user logged in SignInCommand");
                 request.getSession().setAttribute("currentUser", currentUser);
                 page = UserService.getInstance().getPageByRole(currentUser, request);
 
             } else {
+
+                logger.info("incorrect input in SignInCommand");
                 request.setAttribute("errorLoginPassMessage", true);
             }
         }

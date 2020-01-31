@@ -24,17 +24,19 @@ public class UserCabinetCommand implements ICommand{
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        logger.info("in UserCabinetCommand");
+
         String page = null;
 
         String method = request.getMethod();
         ConfigurationManager confManager = ConfigurationManager.getInstance();
 
         if (method.equalsIgnoreCase(EnumManager.GET.toString())) {
-            logger.info("IN USER CABINET GET");
+            logger.info("in UserCabinet GET");
             page = confManager.getProperty(EnumManager.USER_CABINET.toString());
 
         }else if (method.equalsIgnoreCase(EnumManager.POST.toString())){
-            logger.info("IN USER CABINET POST");
+            logger.info("in UserCabinet POST");
 
             String action = request.getParameter(EnumManager.ACTION.toString());
             System.out.println("ACTION "+action);
@@ -46,7 +48,6 @@ public class UserCabinetCommand implements ICommand{
 
                 switch (speakerAction){
                     case REGISTER_IN_CONFERENCE:
-
                         logger.info("REGISTER_IN_CONFERENCE");
                         page = confManager.getProperty(EnumManager.USER_CABINET.toString());
                         doRegistration(request, user.getCustomerId());
@@ -54,6 +55,7 @@ public class UserCabinetCommand implements ICommand{
                                 UserService.getInstance().getConfForView());
                         break;
                     default:
+                        logger.info("DEFAULT IN SWITCH");
                         break;
                 }
             }

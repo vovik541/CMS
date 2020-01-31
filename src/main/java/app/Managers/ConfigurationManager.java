@@ -15,7 +15,7 @@ public class ConfigurationManager {
     private ConfigurationManager(){}
 
     public static ConfigurationManager getInstance(){
-        logger.info("getConfigManager");
+//        logger.info("getConfigManager");
         if(instance == null){
            instance = new ConfigurationManager();
         }
