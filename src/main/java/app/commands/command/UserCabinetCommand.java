@@ -5,6 +5,7 @@ import app.Managers.EnumManager;
 import app.entities.Conference;
 import app.entities.User;
 import app.persistences.factory.MySqlDaoFactory;
+import app.services.UserService;
 import org.apache.log4j.Logger;
 import sun.rmi.runtime.Log;
 
@@ -44,15 +45,24 @@ public class UserCabinetCommand implements ICommand{
                 User user = (User) request.getSession().getAttribute("currentUser");
 
                 switch (speakerAction){
+                    case REGISTER_IN_CONFERENCE:
+
+                        logger.info("REGISTER_IN_CONFERENCE");
+                        page = confManager.getProperty(EnumManager.USER_CABINET.toString());
+                        doRegistration(request, user.getCustomerId());
+                        request.getSession().setAttribute("conferencesToRegisterIn",
+                                UserService.getInstance().getConfForView());
+                        break;
                     default:
                         break;
                 }
             }
-
         }
-
         return page;
     }
 
-
+    private static void doRegistration(HttpServletRequest request, int userId){
+        int conference_id = Integer.parseInt(request.getParameter("id"));
+        MySqlDaoFactory.getConferenceDAO().registerInConf(userId,conference_id);
+    }
 }

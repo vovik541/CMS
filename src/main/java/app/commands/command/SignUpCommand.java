@@ -6,6 +6,7 @@ import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.dao.SignUpDAO;
 import app.persistences.factory.MySqlDaoFactory;
+import app.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -29,10 +30,10 @@ public class SignUpCommand implements ICommand {
             doSignUp(request);
             User currentUser = (User) request.getSession().getAttribute("currentUser");
 
-            if(!Boolean.getBoolean(request.
-                    getParameter("userExistsErrorMessage")) && currentUser != null){
-                page = ConfigurationManager.getInstance().
-                        getProperty(EnumManager.USER_CABINET.toString());
+            if(!Boolean.getBoolean(request.getParameter("userExistsErrorMessage")) &&
+                    currentUser != null){
+
+                page = UserService.getPageByRole(currentUser,request);
             }
         }
 

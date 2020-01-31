@@ -40,7 +40,7 @@
                 <input type="password" name="password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
             </label>
             <input type="hidden" name="command" value="sign_in" />
-            <input type="hidden" name="isPressed" value="true" />
+<%--            <input type="hidden" name="isPressed" value="true" />--%>
             <button type="submit" form="signIn" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
         </form>
     </div>

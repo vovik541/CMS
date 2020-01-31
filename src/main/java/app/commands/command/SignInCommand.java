@@ -23,10 +23,12 @@ public class SignInCommand implements ICommand{
         String page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_IN.toString());
 
-        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
-        logger.info(buttonPressed);
+        String method = request.getMethod();
 
-        if(buttonPressed){
+//        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
+//        logger.info(buttonPressed);
+
+        if (method.equalsIgnoreCase(EnumManager.POST.toString())) {
 
             String login = request.getParameter(EnumManager.LOGIN.toString());
             String password = request.getParameter(EnumManager.PASSWORD.toString());

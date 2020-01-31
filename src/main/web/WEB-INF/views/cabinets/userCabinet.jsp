@@ -17,15 +17,10 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
-<fmt:message key="speaker.offer" var="offer"/>
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>
 <fmt:message key="speaker.endsAt" var="endsAt"/>
-<fmt:message key="speaker.month" var="month"/>
-<fmt:message key="speaker.year" var="year"/>
 <fmt:message key="speaker.day" var="day"/>
-<fmt:message key="speaker.hour" var="hour"/>
-<fmt:message key="speaker.minute" var="minute"/>
 <fmt:message key="speaker.location" var="location"/>
 
 <table>
@@ -35,7 +30,7 @@
         <th>${day}</th>
         <th>${beginsAt}</th>
         <th>${endsAt}</th>
-<%--        <th>Confirm</th>--%>
+        <th>Register In Conference</th>
 <%--        <td>Accepted By Moder</td>--%>
 <%--        <th>Delete</th>--%>
     </tr>
@@ -46,6 +41,14 @@
             <td>${conf.date}</td>
             <td>${conf.beginsAt}</td>
             <td>${conf.endsAt}</td>
+            <td>
+                <form method="post" id="${conf.conferenceId}reg">
+                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                    <input type="hidden" name="command" value="user_cabinet" />
+                    <input type="hidden" name="action" value="register_in_conference" />
+                    <button type="submit" form="${conf.conferenceId}reg">Register</button>
+                </form>
+            </td>
         </tr>
     </c:forEach>
 </table>

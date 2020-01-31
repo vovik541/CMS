@@ -7,10 +7,6 @@ import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-import java.text.DateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -101,7 +97,6 @@ public class ConferenceDAO {
                 e.printStackTrace();
             }
         }
-
         return conferences;
     }
 
@@ -172,12 +167,9 @@ public class ConferenceDAO {
                 e.printStackTrace();
             }
         }
-
-
     }
 
     public List<Conference> getConfBeforeDateTime(String currentDate, String currentTime){
-
 
         List<Conference> conferences = new LinkedList<>();
 
@@ -230,12 +222,68 @@ public class ConferenceDAO {
         return conferences;
     }
 
-    public static void main(String[] args) throws SQLException {
+    public void registerInConf(int userId, int conferenceId){
 
 
+        logger.info("USER ID AND CONFERENCE ID:" +userId + " " +conferenceId);
 
-//        System.out.println(time);
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String sql = "INSERT INTO registered_in_conference (user_id, conference_id,is_present) " +
+                "VALUES (?,?);";
+
+        try {
+            connection = ConnectionPool.getConnection();
+            connection.setAutoCommit(false);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,userId);
+            preparedStatement.setInt(2,conferenceId);
+            connection.commit();
+
+        } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+            e.printStackTrace();
+        }finally {
+            try {
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+//            logger.warn("connection wasn't closed!! Error in SignUpModel.createUser()");
+                e.printStackTrace();
+            }
+        }
     }
+    public static void main(String[] args) {
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String sql = "INSERT INTO registered_in_conference (user_id, conference_id,is_present) " +
+                "VALUES (?,?,?);";
+
+//        "INSERT INTO registered_in_conference (user_id, conference_id, is_present) \n" +
+//                "VALUES (1,32,1);"
+
+        int userId = 1;
+        int conferenceId = 31;
+
+        try {
+            connection = ConnectionDB.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,userId);
+            preparedStatement.setInt(2,conferenceId);
+            preparedStatement.setInt(3,0);
+            preparedStatement.execute();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+ }
 
 
-}

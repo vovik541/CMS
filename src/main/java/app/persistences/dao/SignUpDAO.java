@@ -18,7 +18,7 @@ public class SignUpDAO {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String sql = "INSERT INTO сustomers " +
+        String sql = "INSERT INTO cms_db.customers " +
                 "(first_name, last_name, login, password, email, role)" +
                 "VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -37,7 +37,7 @@ public class SignUpDAO {
             preparedStatement.setString(4, user.getPassword());
             preparedStatement.setString(5, user.getEmail());
             preparedStatement.setInt(6, role);
-            preparedStatement.executeUpdate();
+            preparedStatement.execute();
 
             connection.commit();
             logger.info("New user has been registered");
@@ -67,8 +67,8 @@ public class SignUpDAO {
 
         Boolean exists = false;
 
-        String sql = "SELECT * FROM сustomers " +
-                "WHERE " + checkParam + " = ?";
+        String sql = "SELECT * FROM cms_db.customers " +
+                "WHERE " + checkParam + " = ?;";
 
         try {
             connection = ConnectionPool.getConnection();

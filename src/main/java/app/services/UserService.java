@@ -3,6 +3,7 @@ package app.services;
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
 import app.entities.Conference;
+import app.entities.Role;
 import app.entities.User;
 import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
@@ -35,7 +36,10 @@ public class UserService {
             case USER:
                 logger.info("IN USER SERVICE USER");
                 page = confManager.getProperty(EnumManager.USER_CABINET.toString());
-                request.getSession().setAttribute("conferencesToRegisterIn", getConfForView());
+                request.getSession().setAttribute("conferencesToRegisterIn",
+                        UserService.getInstance().getConfForView());
+                request.setAttribute("action","user_cabinet");
+                logger.info(request.getParameter("action"));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
@@ -48,13 +52,14 @@ public class UserService {
             case ADMIN:
                 page = confManager.getProperty(EnumManager.ADMIN_CABINET.toString());
                 break;
-            default: page = confManager.getProperty(EnumManager.INDEX.toString());
+            default: page = confManager.getProperty(EnumManager.SIGN_IN.toString());
                 break;
         }
 
         return page;
     }
-    private static List<Conference> getConfForView(){
+
+    public List<Conference> getConfForView(){
 
         Calendar c=Calendar.getInstance();
 
@@ -82,5 +87,20 @@ public class UserService {
             return "0"+number;
         }
         return String.valueOf(number);
+    }
+    private static int parseRoleToInt(Role role){
+
+        switch (role){
+            case USER:
+                return 1;
+            case SPEAKER:
+                return 2;
+            case MODER:
+                return 3;
+            case ADMIN:
+                return 4;
+        }
+
+        return -1;
     }
 }
