@@ -26,6 +26,7 @@
 <table>
     <tr>
         <th>${confName}</th>
+        <th>SPEAKER</th>
         <th>${location}</th>
         <th>${day}</th>
         <th>${beginsAt}</th>
@@ -37,22 +38,30 @@
     <c:forEach var="conf" items="${sessionScope.conferencesToRegisterIn}">
         <tr>
             <td>${conf.confName}</td>
+            <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
             <td>${conf.location}</td>
             <td>${conf.date}</td>
             <td>${conf.beginsAt}</td>
             <td>${conf.endsAt}</td>
+
             <td>
-                <form method="post" id="${conf.conferenceId}reg">
-                    <input type="hidden" name="id" value="${conf.conferenceId}" />
-                    <input type="hidden" name="command" value="user_cabinet"/>
-                    <input type="hidden" name="action" value=   "register_in_conference" />
-                    <button type="submit" form="${conf.conferenceId}reg">Register</button>
-                </form>
+                <c:choose>
+                    <c:when test="${conf.registered}">
+                        You are Already registered!
+                    </c:when>
+                    <c:otherwise>
+                        <form method="post" id="${conf.conferenceId}reg">
+                            <input type="hidden" name="id" value="${conf.conferenceId}" />
+                            <input type="hidden" name="command" value="user_cabinet"/>
+                            <input type="hidden" name="action" value="register_in_conference" />
+                            <button type="submit" form="${conf.conferenceId}reg">Register</button>
+                        </form>
+                    </c:otherwise>
+                </c:choose>
             </td>
         </tr>
     </c:forEach>
 </table>
-
 
 <div class="w3-card-4">
 
@@ -65,7 +74,5 @@
         </form>
     </footer>
 </div>
-
-
 </body>
 </html>

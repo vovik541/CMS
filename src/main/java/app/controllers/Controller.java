@@ -21,12 +21,19 @@ public class Controller extends HttpServlet {
             throws ServletException, IOException {
 
         logger.info("In Controller doGet");
+
+        logger.info(request.getParameter(EnumManager.COMMAND.toString()));
+
         processRequest(request, response);
     }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         logger.info("In Controller doPost");
+
+        logger.info(request.getParameter(EnumManager.COMMAND.toString()));
+
         processRequest(request, response);
     }
     private void processRequest(HttpServletRequest request,

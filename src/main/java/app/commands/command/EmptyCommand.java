@@ -34,6 +34,11 @@ public class EmptyCommand implements ICommand{
             return page;
         }
 
+        if(request.getParameter("EmptyCommandSignUp") != null){
+            return ConfigurationManager.getInstance()
+                    .getProperty(EnumManager.SIGN_UP.toString());
+        }
+
         logger.info("default page = sign_in");
         page = ConfigurationManager.getInstance()
                 .getProperty(EnumManager.SIGN_IN.toString());

@@ -20,27 +20,37 @@ public class SignUpCommand implements ICommand {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         logger.info("in SignUpCommand");
 
-        String page = ConfigurationManager.getInstance()
-                .getProperty(EnumManager.SIGN_UP.toString());
+        String method = request.getMethod();
+        ConfigurationManager confManager = ConfigurationManager.getInstance();
 
-        Boolean buttonPressed = Boolean.valueOf(request.getParameter("isPressed"));
+        String page = confManager.getProperty(EnumManager.SIGN_UP.toString());
 
-        if(buttonPressed){
-            logger.info("in SignUpCommand button is pressed");
+        if (method.equalsIgnoreCase(EnumManager.GET.toString())) {
+
+            return page;
+
+        }else if (method.equalsIgnoreCase(EnumManager.POST.toString())){
+
             doSignUp(request);
+
             User currentUser = (User) request.getSession().getAttribute("currentUser");
+
+            if(currentUser != null){
+                logger.info("user exists in SignUpCommand");
+                page = UserService.getInstance().getPageByRole(currentUser,request);
+                request.setAttribute("command","user_cabinet");
+                logger.info(request.getParameter("command")+" COMMAND REMOVED!");
+                return page;
+            }
 
             if(!Boolean.getBoolean(request.getParameter("userExistsErrorMessage")) &&
                     currentUser != null){
-
-                logger.info("userExistsError in SignUpCommand");
-                page = UserService.getPageByRole(currentUser,request);
+                page = UserService.getInstance().getPageByRole(currentUser,request);
             }
+            return page;
         }
-
         return page;
     }
     private static void doSignUp(HttpServletRequest request){

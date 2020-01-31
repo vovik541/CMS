@@ -32,7 +32,7 @@ public class CommandFactory {
         }
 
         try {
-            EnumCommand currentEnum = EnumCommand.valueOf(commandFromFront.toUpperCase());   //SIGN_IN USER_CABINET
+            EnumCommand currentEnum = EnumCommand.valueOf(commandFromFront.toUpperCase());
 //            logger.info(currentEnum.getCurrentCommand().toString());
             current = currentEnum.getCurrentCommand();
             logger.info(current.toString());

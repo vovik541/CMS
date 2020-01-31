@@ -77,11 +77,8 @@ public class SignUpDAO {
             preparedStatement.setString(1, value);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            System.out.println(checkParam + " " + value);
-
             while (resultSet.next()){
                 exists = true;
-                System.out.println(resultSet.getString("login"));
             }
 
         } catch (SQLException e) {

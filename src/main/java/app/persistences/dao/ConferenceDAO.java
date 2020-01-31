@@ -7,6 +7,7 @@ import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -218,8 +219,44 @@ public class ConferenceDAO {
                 e.printStackTrace();
             }
         }
-
         return conferences;
+    }
+
+    public Boolean isRegisteredInConf(int userId, int conferenceId){
+
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet= null;
+        Boolean isRegistered = false;
+
+        String sql = "SELECT * FROM registered_in_conference " +
+                "WHERE user_id = ? AND conference_id = ?";
+
+        try {
+            connection = ConnectionPool.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1,userId);
+            preparedStatement.setInt(2,conferenceId);
+
+            resultSet=preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                isRegistered = true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return isRegistered;
     }
 
     public void registerInConf(int userId, int conferenceId){
@@ -229,23 +266,17 @@ public class ConferenceDAO {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String sql = "INSERT INTO registered_in_conference (user_id, conference_id,is_present) " +
+        String sql = "INSERT INTO registered_in_conference (user_id, conference_id) " +
                 "VALUES (?,?);";
 
         try {
             connection = ConnectionPool.getConnection();
-            connection.setAutoCommit(false);
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,userId);
             preparedStatement.setInt(2,conferenceId);
-            connection.commit();
+            preparedStatement.execute();
 
         } catch (SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
             e.printStackTrace();
         }finally {
             try {
@@ -257,31 +288,45 @@ public class ConferenceDAO {
             }
         }
     }
-    public static void main(String[] args) {
+
+    //returns conferences ids that user with userId registered in
+
+    public ArrayList<Integer> getRegisteredConfId(int userId) {
+
+        ArrayList<Integer> confId = new ArrayList<>();
 
         Connection connection = null;
         PreparedStatement preparedStatement = null;
+        ResultSet resultSet= null;
+        Boolean isRegistered = false;
 
-        String sql = "INSERT INTO registered_in_conference (user_id, conference_id,is_present) " +
-                "VALUES (?,?,?);";
-
-//        "INSERT INTO registered_in_conference (user_id, conference_id, is_present) \n" +
-//                "VALUES (1,32,1);"
-
-        int userId = 1;
-        int conferenceId = 31;
+        String sql = "SELECT * FROM registered_in_conference " +
+                "WHERE user_id = ?";
 
         try {
-            connection = ConnectionDB.getConnection();
+            connection = ConnectionPool.getConnection();
             preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setInt(1,userId);
-            preparedStatement.setInt(2,conferenceId);
-            preparedStatement.setInt(3,0);
-            preparedStatement.execute();
+
+            resultSet=preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                confId.add(resultSet.getInt("conference_id"));
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            try {
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
+
+        return confId;
     }
  }
 

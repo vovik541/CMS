@@ -4,6 +4,7 @@ import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
 import app.entities.Conference;
 import app.entities.User;
+import app.persistences.dao.ConferenceDAO;
 import app.persistences.factory.MySqlDaoFactory;
 import app.services.UserService;
 import org.apache.log4j.Logger;
@@ -13,9 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
+import java.util.*;
 
 public class UserCabinetCommand implements ICommand{
 
@@ -46,13 +45,17 @@ public class UserCabinetCommand implements ICommand{
                 EnumManager speakerAction = EnumManager.valueOf(action.toUpperCase());
                 User user = (User) request.getSession().getAttribute("currentUser");
 
+                UserService userService = UserService.getInstance();
+
                 switch (speakerAction){
                     case REGISTER_IN_CONFERENCE:
                         logger.info("REGISTER_IN_CONFERENCE");
                         page = confManager.getProperty(EnumManager.USER_CABINET.toString());
-                        doRegistration(request, user.getCustomerId());
+                        userService.doRegistration(request, user.getCustomerId());
+
+                        List<Conference> conferences = userService.getConfToRegIn(user.getCustomerId());
                         request.getSession().setAttribute("conferencesToRegisterIn",
-                                UserService.getInstance().getConfForView());
+                                conferences);
                         break;
                     default:
                         logger.info("DEFAULT IN SWITCH");
@@ -63,8 +66,5 @@ public class UserCabinetCommand implements ICommand{
         return page;
     }
 
-    private static void doRegistration(HttpServletRequest request, int userId){
-        int conference_id = Integer.parseInt(request.getParameter("id"));
-        MySqlDaoFactory.getConferenceDAO().registerInConf(userId,conference_id);
-    }
+
 }

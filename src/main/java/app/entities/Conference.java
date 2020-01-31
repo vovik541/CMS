@@ -15,6 +15,30 @@ public class Conference {
     private int speakerId;
     private int conferenceId;
 
+    private boolean isPresent;
+    private boolean isRegistered;
+
+    public Conference(int conferenceId, int speakerId, String confName, String date,
+                      String beginsAt, String endsAt, String location,
+                      Boolean acceptedByModer, Boolean acceptedBySpeaker,
+                      String speakerFirstName, String speakerLastName,
+                      boolean isRegistered, boolean isPresent){
+
+        this.confName = confName;
+        this.date = date;
+        this.beginsAt = beginsAt;
+        this.endsAt = endsAt;
+        this.location = location;
+        this.acceptedByModer = acceptedByModer;
+        this.acceptedBySpeaker = acceptedBySpeaker;
+        this.speakerId = speakerId;
+        this.conferenceId = conferenceId;
+        this.speakerFirstName = speakerFirstName;
+        this.speakerLastName = speakerLastName;
+        this.isRegistered = isRegistered;
+        this.isPresent = isPresent;
+    }
+
     public Conference(int conferenceId, int speakerId, String confName, String date,
                       String beginsAt, String endsAt, String location,
                       Boolean acceptedByModer, Boolean acceptedBySpeaker,
@@ -148,6 +172,22 @@ public class Conference {
 
     public void setSpeakerLastName(String speakerLastName) {
         this.speakerLastName = speakerLastName;
+    }
+
+    public boolean isPresent() {
+        return isPresent;
+    }
+
+    public void setPresent(boolean present) {
+        isPresent = present;
+    }
+
+    public boolean isRegistered() {
+        return isRegistered;
+    }
+
+    public void setRegistered(boolean registered) {
+        isRegistered = registered;
     }
 
     @Override

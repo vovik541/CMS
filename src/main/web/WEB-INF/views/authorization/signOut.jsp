@@ -19,7 +19,7 @@
     <button type="submit" form="backToLog">Sign In</button>
 </form>
 <form id="GoToSignUp" method="get">
-    <input type="hidden" name="emptyCommand" value="sign_Up" />
+    <input type="hidden" name="EmptyCommandSignUp" value="up"/>
     <button type="submit" form="GoToSignUp">Sign Up</button>
 </form>
 <%--<a href="/login">LOGIN</a>--%>
