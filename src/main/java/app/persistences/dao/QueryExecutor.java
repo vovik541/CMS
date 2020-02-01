@@ -1,6 +1,5 @@
 package app.persistences.dao;
 
-import app.persistences.ConnectionDB;
 import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 

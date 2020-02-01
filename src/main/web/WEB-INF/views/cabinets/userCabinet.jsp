@@ -62,6 +62,40 @@
         </tr>
     </c:forEach>
 </table>
+<h1>CONFERENCES WHERE YOU HAVE BEEN</h1>
+
+<table>
+    <tr>
+        <th>${confName}</th>
+        <th>SPEAKER</th>
+        <th>${location}</th>
+        <th>${day}</th>
+        <th>${beginsAt}</th>
+        <th>${endsAt}</th>
+        <th>RATE!</th>
+    </tr>
+    <c:forEach var="conf" items="${sessionScope.conferencesWasPresentIn}">
+        <tr>
+            <td>${conf.confName}</td>
+            <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
+            <td>${conf.location}</td>
+            <td>${conf.date}</td>
+            <td>${conf.beginsAt}</td>
+            <td>${conf.endsAt}</td>
+
+            <td>
+                <c:choose>
+                    <c:when test="${conf.rate == 0}">
+                        You can rate the speaker!
+                    </c:when>
+                    <c:otherwise>
+                        <p>You rated speaker by ${conf.rate}</p>
+                    </c:otherwise>
+                </c:choose>
+            </td>
+        </tr>
+    </c:forEach>
+</table>
 
 <div class="w3-card-4">
 

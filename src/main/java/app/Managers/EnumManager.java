@@ -15,6 +15,9 @@ public enum EnumManager {
     COMMAND("command"),
     POST("POST"),
     GET("GET"),
+    USERNAME_DB("root"),
+    PASSWORD_DB("root"),
+    URL_DB("jdbc:mysql://localhost:3306/cms_db?useSSL=false&serverTimezone=UTC"),
 
     //________________COMMANDS,
 

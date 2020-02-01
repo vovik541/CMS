@@ -208,6 +208,14 @@ public class Conference {
         isRegistered = registered;
     }
 
+    public int getRate() {
+        return rate;
+    }
+
+    public void setRate(int rate) {
+        this.rate = rate;
+    }
+
     @Override
     public String toString() {
         return "Conference{" +

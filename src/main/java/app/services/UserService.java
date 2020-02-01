@@ -2,7 +2,6 @@ package app.services;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.EnumManager;
-import app.commands.command.UserCabinetCommand;
 import app.entities.Conference;
 import app.entities.Role;
 import app.entities.User;
@@ -44,6 +43,8 @@ public class UserService {
                 List<Conference> conferences = getConfToRegIn(user.getCustomerId());
                 request.getSession().setAttribute("conferencesToRegisterIn",
                         conferences);
+                request.getSession().setAttribute("conferencesWasPresentIn",
+                        getConfUserWasPresentIn(user.getCustomerId()));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
@@ -107,27 +108,6 @@ public class UserService {
 
         return conferences;
     }
-    /*public List<Conference> getConfForView(){
-
-        Calendar c=Calendar.getInstance();
-
-        int year=c.get(c.YEAR);
-        int month=c.get(c.MONTH)+1;
-        int day = c.get(c.DAY_OF_MONTH);
-        int hours = c.get(c.HOUR_OF_DAY);
-        int minutes = c.get(c.MINUTE);
-
-//        logger.info("TIME AND DATE ARE GOTTEN");
-
-        String currentDate = year+"-"+toFormat(month)+"-"+toFormat(day)+" 00:00:00";
-        String currentTime = toFormat(hours)+":"+toFormat(minutes)+":00";
-
-//        logger.info(currentDate +"!!!"+currentTime );
-        List<Conference> conferences =  MySqlDaoFactory.getConferenceDAO().
-                getConfBeforeDateTime(currentDate,currentTime);
-
-        return conferences;
-    }*/
 
     private String toFormat(int number){
         if(number < 10){
@@ -162,7 +142,7 @@ public class UserService {
 
     public List<Conference> getConfToRegIn(int userId){
 
-        //here we got all conferences that didn't pass/end
+        //here we got all conferences that didn't pass/end until now
 
         List<Conference> conferences = UserService.getInstance().getConfForView();
 
@@ -179,7 +159,11 @@ public class UserService {
                 }
             }
         }
-
+        return conferences;
+    }
+    public List<Conference> getConfUserWasPresentIn(int userId){
+        List<Conference> conferences = MySqlDaoFactory.getConferenceDAO().
+                getConfUserWasPresentIn(userId,getCurrentDay(),getCurrentTime());
         return conferences;
     }
 }

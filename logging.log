@@ -1475,3 +1475,266 @@
 2020-02-01 20:35:12 INFO  SpeakerCabinetCommand:111 - before IF
 2020-02-01 20:35:12 INFO  SpeakerCabinetCommand:40 - OFFER_A_SPEECH
 2020-02-01 20:35:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:03:46 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-01 21:03:47 INFO  SessionListener:38 - Session with id : B3A45F024EB487AF3B6878540ECB6861 created.
+2020-02-01 21:03:47 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:03:47 INFO  Controller:25 - 
+2020-02-01 21:03:47 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:03:47 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:03:47 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:03:47 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:03:47 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:03:48 INFO  SessionListener:38 - Session with id : 9463990C352C7FFE2F2CAE0842BA63C3 created.
+2020-02-01 21:03:48 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:03:48 INFO  Controller:25 - 
+2020-02-01 21:03:48 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:03:48 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:03:48 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:03:48 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:03:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:03:48 INFO  SessionListener:38 - Session with id : 8DF360DA130A83E8F15AAE10AD8D0821 created.
+2020-02-01 21:03:48 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:03:48 INFO  Controller:25 - 
+2020-02-01 21:03:48 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:03:48 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:03:48 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:03:48 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:03:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:03:48 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:03:53 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:03:53 INFO  Controller:35 - sign_in
+2020-02-01 21:03:53 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-01 21:03:54 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6c7cad83
+2020-02-01 21:03:54 INFO  SignInCommand:23 - in SignInCommand
+2020-02-01 21:03:54 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-01 21:03:54 INFO  SignInDAO:61 - user was found by login / password
+2020-02-01 21:03:54 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-01 21:03:54 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-01 21:03:54 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-01 21:03:54 INFO  SessionListener:52 - Attribute added: speakerConfList
+2020-02-01 21:03:54 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:03:55 INFO  SessionListener:52 - Attribute added: action
+2020-02-01 21:04:00 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:04:00 INFO  Controller:35 - speaker_cabinet
+2020-02-01 21:04:00 INFO  CommandFactory:27 - COMMAND IN FACTORY speaker_cabinet
+2020-02-01 21:04:00 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@b54dd57
+2020-02-01 21:04:00 INFO  SpeakerCabinetCommand:23 - in SpeakerCabinetCommand
+2020-02-01 21:04:00 INFO  SpeakerCabinetCommand:33 - Action != null
+2020-02-01 21:04:00 INFO  SpeakerCabinetCommand:51 - REFUSE_THE_CONFERENCE
+2020-02-01 21:04:00 ERROR QueryExecutor:64 - Execute statement error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''is_accepted_speaker' = 0 WHERE conference_id = 32' at line 1
+2020-02-01 21:04:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:04:03 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:04:03 INFO  Controller:35 - speaker_cabinet
+2020-02-01 21:04:03 INFO  CommandFactory:27 - COMMAND IN FACTORY speaker_cabinet
+2020-02-01 21:04:03 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@b54dd57
+2020-02-01 21:04:03 INFO  SpeakerCabinetCommand:23 - in SpeakerCabinetCommand
+2020-02-01 21:04:03 INFO  SpeakerCabinetCommand:33 - Action != null
+2020-02-01 21:04:03 INFO  SpeakerCabinetCommand:51 - REFUSE_THE_CONFERENCE
+2020-02-01 21:04:03 ERROR QueryExecutor:64 - Execute statement error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''is_accepted_speaker' = 0 WHERE conference_id = 27' at line 1
+2020-02-01 21:04:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:04:12 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:04:12 INFO  Controller:35 - speaker_cabinet
+2020-02-01 21:04:12 INFO  CommandFactory:27 - COMMAND IN FACTORY speaker_cabinet
+2020-02-01 21:04:12 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@b54dd57
+2020-02-01 21:04:12 INFO  SpeakerCabinetCommand:23 - in SpeakerCabinetCommand
+2020-02-01 21:04:12 INFO  SpeakerCabinetCommand:33 - Action != null
+2020-02-01 21:04:12 INFO  SpeakerCabinetCommand:43 - DELETE_A_CONFERENCE
+2020-02-01 21:04:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:04:15 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:04:15 INFO  Controller:35 - speaker_cabinet
+2020-02-01 21:04:15 INFO  CommandFactory:27 - COMMAND IN FACTORY speaker_cabinet
+2020-02-01 21:04:15 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@b54dd57
+2020-02-01 21:04:15 INFO  SpeakerCabinetCommand:23 - in SpeakerCabinetCommand
+2020-02-01 21:04:15 INFO  SpeakerCabinetCommand:33 - Action != null
+2020-02-01 21:04:15 INFO  SpeakerCabinetCommand:51 - REFUSE_THE_CONFERENCE
+2020-02-01 21:04:15 ERROR QueryExecutor:64 - Execute statement error You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''is_accepted_speaker' = 0 WHERE conference_id = 27' at line 1
+2020-02-01 21:04:15 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:09:57 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-01 21:09:58 INFO  SessionListener:38 - Session with id : CDA04AA27810F8337ABF95946120700E created.
+2020-02-01 21:09:58 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:09:58 INFO  Controller:25 - 
+2020-02-01 21:09:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:09:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:09:58 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:09:58 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:09:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:09:59 INFO  SessionListener:38 - Session with id : 2ED46455793AACF035DD3DF1547DDFE7 created.
+2020-02-01 21:09:59 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:09:59 INFO  Controller:25 - 
+2020-02-01 21:09:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:09:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:09:59 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:09:59 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:09:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:09:59 INFO  SessionListener:38 - Session with id : 8B0653D5A650BD1E8D362467E21CA63E created.
+2020-02-01 21:09:59 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:09:59 INFO  Controller:25 - 
+2020-02-01 21:09:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:09:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:09:59 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:09:59 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:09:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:09:59 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:10:01 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:10:01 INFO  Controller:35 - sign_in
+2020-02-01 21:10:01 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-01 21:10:01 INFO  CommandFactory:38 - app.commands.command.SignInCommand@e1479fa
+2020-02-01 21:10:01 INFO  SignInCommand:23 - in SignInCommand
+2020-02-01 21:10:01 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-01 21:10:02 INFO  SignInDAO:61 - user was found by login / password
+2020-02-01 21:10:02 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-01 21:10:02 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-01 21:10:02 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-01 21:10:02 INFO  SessionListener:52 - Attribute added: speakerConfList
+2020-02-01 21:10:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:10:02 INFO  SessionListener:52 - Attribute added: action
+2020-02-01 21:10:05 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:10:05 INFO  Controller:35 - speaker_cabinet
+2020-02-01 21:10:05 INFO  CommandFactory:27 - COMMAND IN FACTORY speaker_cabinet
+2020-02-01 21:10:05 INFO  CommandFactory:38 - app.commands.command.SpeakerCabinetCommand@79b2577f
+2020-02-01 21:10:05 INFO  SpeakerCabinetCommand:23 - in SpeakerCabinetCommand
+2020-02-01 21:10:05 INFO  SpeakerCabinetCommand:33 - Action != null
+2020-02-01 21:10:05 INFO  SpeakerCabinetCommand:51 - REFUSE_THE_CONFERENCE
+2020-02-01 21:10:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/speakerCabinet.jsp
+2020-02-01 21:26:43 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-01 21:26:44 INFO  SessionListener:38 - Session with id : 2D72AA7CD08F2E6BEE30504DF342041F created.
+2020-02-01 21:26:44 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:26:44 INFO  Controller:25 - 
+2020-02-01 21:26:44 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:26:44 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:26:44 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:26:44 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:26:44 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:26:45 INFO  SessionListener:38 - Session with id : C4C086F4AE16E52B65FF31F351C2B7CE created.
+2020-02-01 21:26:45 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:26:45 INFO  Controller:25 - 
+2020-02-01 21:26:45 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:26:45 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:26:45 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:26:45 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:26:45 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:26:45 INFO  SessionListener:38 - Session with id : E94CC9DEAE9602B1608EBDC14DBDED1F created.
+2020-02-01 21:26:45 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:26:45 INFO  Controller:25 - 
+2020-02-01 21:26:45 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:26:45 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:26:45 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:26:45 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:26:45 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:26:45 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:26:54 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:26:54 INFO  Controller:35 - sign_in
+2020-02-01 21:26:54 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-01 21:26:54 INFO  CommandFactory:38 - app.commands.command.SignInCommand@8286025
+2020-02-01 21:26:54 INFO  SignInCommand:23 - in SignInCommand
+2020-02-01 21:26:54 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-01 21:26:55 INFO  SignInDAO:61 - user was found by login / password
+2020-02-01 21:26:55 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-01 21:26:55 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-01 21:26:55 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-01 21:26:55 INFO  UserService:41 - IN USER SERVICE USER
+2020-02-01 21:37:28 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-01 21:37:29 INFO  SessionListener:38 - Session with id : 73D7A0B9A8CB80E7930CF21D8DDB9227 created.
+2020-02-01 21:37:29 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:37:29 INFO  Controller:25 - 
+2020-02-01 21:37:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:37:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:37:29 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:37:29 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:37:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:37:30 INFO  SessionListener:38 - Session with id : 1272CE916A5C10E0A7C5CBA143EF0750 created.
+2020-02-01 21:37:30 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:37:30 INFO  Controller:25 - 
+2020-02-01 21:37:30 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:37:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:37:30 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:37:30 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:37:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:37:30 INFO  SessionListener:38 - Session with id : 3BB3ADD7BF76207C3E9BFC3AAF9AB87A created.
+2020-02-01 21:37:30 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:37:30 INFO  Controller:25 - 
+2020-02-01 21:37:30 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:37:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:37:30 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:37:30 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:37:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:37:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:40:56 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:40:56 INFO  Controller:35 - sign_in
+2020-02-01 21:40:56 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-01 21:40:56 INFO  CommandFactory:38 - app.commands.command.SignInCommand@50b0bd7d
+2020-02-01 21:40:56 INFO  SignInCommand:23 - in SignInCommand
+2020-02-01 21:40:56 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-01 21:40:57 INFO  SignInDAO:61 - user was found by login / password
+2020-02-01 21:40:57 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-01 21:40:57 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-01 21:40:57 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-01 21:40:57 INFO  UserService:41 - IN USER SERVICE USER
+2020-02-01 21:40:57 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-01 21:40:57 INFO  SessionListener:52 - Attribute added: conferencesWasPresentIn
+2020-02-01 21:40:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/userCabinet.jsp
+2020-02-01 21:42:05 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-01 21:42:06 INFO  SessionListener:38 - Session with id : 94C9DF65F5D977B11D41F7C18DF9B736 created.
+2020-02-01 21:42:06 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:42:06 INFO  Controller:25 - 
+2020-02-01 21:42:06 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:42:06 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:42:06 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:42:06 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:42:06 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:42:07 INFO  SessionListener:38 - Session with id : 65A80105634EFA25850A7D441B92B173 created.
+2020-02-01 21:42:07 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:42:07 INFO  Controller:25 - 
+2020-02-01 21:42:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:42:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:42:07 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:42:07 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:42:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:42:07 INFO  SessionListener:38 - Session with id : 7E7B5D8DBED8143603E480CFCEB5E7D9 created.
+2020-02-01 21:42:07 INFO  Controller:23 - In Controller doGet
+2020-02-01 21:42:07 INFO  Controller:25 - 
+2020-02-01 21:42:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-01 21:42:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-01 21:42:07 INFO  EmptyCommand:25 - in EmptyCommand
+2020-02-01 21:42:07 INFO  EmptyCommand:42 - default page = sign_in
+2020-02-01 21:42:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-01 21:42:07 INFO  SessionListener:52 - Attribute added: language
+2020-02-01 21:43:53 INFO  Controller:33 - In Controller doPost
+2020-02-01 21:43:53 INFO  Controller:35 - sign_in
+2020-02-01 21:43:53 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-01 21:43:53 INFO  CommandFactory:38 - app.commands.command.SignInCommand@760d9ac8
+2020-02-01 21:43:53 INFO  SignInCommand:23 - in SignInCommand
+2020-02-01 21:43:53 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-01 21:43:54 INFO  SignInDAO:61 - user was found by login / password
+2020-02-01 21:43:54 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-01 21:43:54 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-01 21:43:54 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-01 21:43:54 INFO  UserService:41 - IN USER SERVICE USER
+2020-02-01 21:43:54 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-01 21:43:54 INFO  SessionListener:52 - Attribute added: conferencesWasPresentIn
+2020-02-01 21:43:54 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/userCabinet.jsp

@@ -2,8 +2,6 @@ package app.persistences.dao;
 
 import app.entities.Conference;
 import app.entities.Role;
-import app.persistences.ConnectionDB;
-import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
@@ -15,15 +13,6 @@ public class ConferenceDAO {
 
     private static final Logger logger = Logger.getLogger(ConferenceDAO.class);
 
-    private static final String sql = "select conferences.conference_id, conferences.conference_name, conferences.date,\n" +
-            "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.location, rate,\n" +
-            "customers.first_name, customers.last_name\n" +
-            "FROM conferences\n" +
-            "INNER JOIN customers on conferences.speaker_id = customers.customer_id\n" +
-            "INNER JOIN registered_in_conference on conferences.conference_id = registered_in_conference.conference_id\n" +
-            "WHERE ((date < {d?}) OR \n" +
-            "(ends_at < {t?} AND date = {d?}))" +
-            "AND registered_in_conference.is_present = '1' AND user_id = ?;";
     private static final String GET_CONF_BEFORE_DAY_TIME = "select conferences.conference_id, conferences.conference_name, conferences.date,\n" +
             "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
             "conferences.is_accepted_speaker, conferences.location,\n" +
@@ -49,7 +38,8 @@ public class ConferenceDAO {
             "VALUES (?,{d?},{t?},{t?},?,?,?,?)";
     private static final String GET_CONFERENCE_BY_SPEAKER_ID = "SELECT * FROM conferences WHERE speaker_id = ?";
     private static final String DELETE_CONFERENCE_BY_ID = "DELETE FROM conferences WHERE conference_id = ?";
-    private static final String SET_AGREEMENT = "UPDATE conferences SET ? = ? WHERE conference_id = ?";
+    private static final String SET_AGREEMENT_SPEAKER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
+    private static final String SET_AGREEMENT_MODER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
     private static final String REGISTER_IN_CONFERENCE = "INSERT INTO registered_in_conference " +
             "(user_id, conference_id) VALUES (?,?);";
     private static final String GET_CONF_ID_USER_IS_REG_IN = "SELECT * FROM registered_in_conference " +
@@ -100,15 +90,18 @@ public class ConferenceDAO {
         QueryExecutor executor = new QueryExecutor();
 
         if(role == Role.SPEAKER){
-            agreementColumn = "is_accepted_speaker";
-        }else if(role == Role.SPEAKER || role == Role.MODER){
-            agreementColumn = "is_accepted_moder";
+
+            Object[] arguments = {agreement, id};
+            executor.executeStatement(SET_AGREEMENT_SPEAKER, arguments);
+            executor.close();
+
+        }else if(role == Role.ADMIN || role == Role.MODER){
+
+            Object[] arguments = {agreement, id};
+            executor.executeStatement(SET_AGREEMENT_MODER, arguments);
+            executor.close();
+
         }
-
-        Object[] arguments = {agreementColumn, agreement, id};
-
-        executor.executeStatement(SET_AGREEMENT, arguments);
-        executor.close();
     }
 
     //returns conferences that will happen
@@ -156,7 +149,7 @@ public class ConferenceDAO {
 
     public ArrayList<Integer> getRegisteredConfId(int userId) {
 
-        ArrayList<Integer> confId = null;
+        ArrayList<Integer> confId = new ArrayList<>();
 
         QueryExecutor executor = new QueryExecutor();
         Object[] arguments = {userId};
@@ -166,6 +159,7 @@ public class ConferenceDAO {
         try {
             while (resultSet.next()){
                 confId.add(resultSet.getInt("conference_id"));
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -173,7 +167,7 @@ public class ConferenceDAO {
 
         return confId;
     }
-    public List<Conference> getConfUserWasPresentIn(int userId, String currentDate, String currentTime){
+    public List<Conference> getConfUserWasPresentIn(int userId, java.sql.Date currentDate, String currentTime){
 
         QueryExecutor executor = new QueryExecutor();
         List<Conference> conferences = null;
