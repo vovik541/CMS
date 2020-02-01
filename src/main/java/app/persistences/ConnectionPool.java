@@ -20,7 +20,14 @@ public class ConnectionPool {
         }
     }
 
-     public static Connection getConnection() throws SQLException { //EXCEPTION!!!!
-        return ds.getConnection();
+     public static Connection getConnection(){ //EXCEPTION!!!!
+         Connection connection = null;
+
+         try {
+             connection = ds.getConnection();
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+         return connection;
     }
 }

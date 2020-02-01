@@ -11,6 +11,8 @@ import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -61,7 +63,51 @@ public class UserService {
         return page;
     }
 
+    private java.sql.Date getCurrentDay(){
+
+        Calendar c=Calendar.getInstance();
+
+        int year=c.get(c.YEAR);
+        int month=c.get(c.MONTH)+1;
+        int day = c.get(c.DAY_OF_MONTH);
+
+        String currentDateStr = year+"-"+toFormat(month)+"-"+toFormat(day)+" 00:00:00";
+
+        java.util.Date dateStr = null;
+        try {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            dateStr = formatter.parse(currentDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        java.sql.Date currentDateDB = new java.sql.Date(dateStr.getTime());
+
+        return currentDateDB;
+    }
+
+    private String getCurrentTime(){
+
+        Calendar c=Calendar.getInstance();
+
+        int hours = c.get(c.HOUR_OF_DAY);
+        int minutes = c.get(c.MINUTE);
+
+        String currentTime = toFormat(hours)+":"+toFormat(minutes)+":00";
+
+        return currentTime;
+    }
+
     public List<Conference> getConfForView(){
+
+        java.sql.Date currentDate = getCurrentDay();
+        String currentTime = getCurrentTime();
+
+        List<Conference> conferences =  MySqlDaoFactory.getConferenceDAO().
+                getConfBeforeDateTime(currentDate,currentTime);
+
+        return conferences;
+    }
+    /*public List<Conference> getConfForView(){
 
         Calendar c=Calendar.getInstance();
 
@@ -81,7 +127,7 @@ public class UserService {
                 getConfBeforeDateTime(currentDate,currentTime);
 
         return conferences;
-    }
+    }*/
 
     private String toFormat(int number){
         if(number < 10){

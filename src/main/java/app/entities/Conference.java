@@ -14,6 +14,7 @@ public class Conference {
     private Boolean acceptedBySpeaker = false;
     private int speakerId;
     private int conferenceId;
+    private int rate;
 
     private boolean isPresent;
     private boolean isRegistered;
@@ -70,6 +71,23 @@ public class Conference {
         this.acceptedBySpeaker = acceptedBySpeaker;
         this.speakerId = speakerId;
         this.conferenceId = conferenceId;
+    }
+
+    public Conference(int conferenceId, int speakerId, String confName, String date,
+                      String beginsAt, String endsAt, String location,
+                      String speakerFirstName, String speakerLastName,
+                      int rate){
+
+        this.conferenceId = conferenceId;
+        this.confName = confName;
+        this.date = date;
+        this.beginsAt = beginsAt;
+        this.endsAt = endsAt;
+        this.location = location;
+        this.speakerId = speakerId;
+        this.speakerFirstName = speakerFirstName;
+        this.speakerLastName = speakerLastName;
+        this.rate = rate;
     }
 
     public Conference(int speakerId, String confName, String date,
