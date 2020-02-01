@@ -4,6 +4,7 @@ import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.Conference;
 import app.entities.User;
+import app.persistences.factory.MySqlDaoFactory;
 import app.services.UserService;
 import org.apache.log4j.Logger;
 
@@ -39,6 +40,8 @@ public class UserCabinetCommand implements ICommand{
 
             if(action != null){
 
+                page = confManager.getProperty(ResourceManager.USER_CABINET.toString());
+
                 ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
                 User user = (User) request.getSession().getAttribute("currentUser");
 
@@ -46,28 +49,33 @@ public class UserCabinetCommand implements ICommand{
 
                 switch (speakerAction){
                     case REGISTER_IN_CONFERENCE:
-                        page = confManager.getProperty(ResourceManager.USER_CABINET.toString());
 
                         logger.info("REGISTER_IN_CONFERENCE");
                         userService.doRegistration(request, user.getCustomerId());
-
-                        List<Conference> conferences = userService.getConfToRegIn(user.getCustomerId());
-                        request.getSession().setAttribute("conferencesToRegisterIn",
-                                conferences);
                         break;
                     case GIVE_RATE:
-
+                        logger.info("GIVE_RATE");
+                        doGiveRate(request, user.getCustomerId());
                         break;
                     default:
                         logger.info("DEFAULT IN SWITCH");
                         break;
                 }
+
+                List<Conference> conferences = userService.getConfToRegIn(user.getCustomerId());
+                request.getSession().setAttribute("conferencesToRegisterIn",
+                        conferences);
+
+                request.getSession().setAttribute("conferencesWasPresentIn",
+                        userService.getConfUserWasPresentIn(user.getCustomerId()));
             }
         }
         return page;
     }
-    private void doGiveRate(int userId, int conferenceId){
-
+    private void doGiveRate(HttpServletRequest request, int userId){
+        int conferenceId = Integer.parseInt(request.getParameter("id"));
+        int rate = Integer.parseInt(request.getParameter("rate"));
+        System.out.println("!!!!!!!!!!!!!! "+ rate);
+        MySqlDaoFactory.getConferenceDAO().setRate(rate, conferenceId, userId);
     }
-
 }

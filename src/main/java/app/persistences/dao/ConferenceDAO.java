@@ -44,6 +44,7 @@ public class ConferenceDAO {
             "(user_id, conference_id) VALUES (?,?);";
     private static final String GET_CONF_ID_USER_IS_REG_IN = "SELECT * FROM registered_in_conference " +
             "WHERE user_id = ?";
+    private static final String GIVE_RATE = "UPDATE registered_in_conference  SET rate = ? WHERE conference_id = ? AND user_id = ?;";
 
     public void addConference(Conference conference, Boolean accepted_by_moder,
                               Boolean accepted_by_speaker){
@@ -179,6 +180,16 @@ public class ConferenceDAO {
 
         return conferences;
     }
+
+    public void setRate(int rate, int conferenceId, int userId){
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {rate, conferenceId, userId};
+        executor.executeStatement(GIVE_RATE, arguments);
+        executor.close();
+
+    }
+
     private List<Conference> getConferencesFromResSet(ResultSet resSet, int initType){
 
         List<Conference> conferences = new LinkedList<>();

@@ -92,51 +92,51 @@
                         You can rate the speaker!
                         <ul>
                             <li>
-                            <form id="${conf.conferenceId}r">
+                            <form method="post" id="${conf.conferenceId}r1">
                                 <input type="hidden" name="id" value="${conf.conferenceId}" />
                                 <input type="hidden" name="rate" value="1" />
                                 <input type="hidden" name="action" value="give_rate" />
-                                <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r1">
                                     1
                                 </button>
                             </form>
                             </li>
                             <li>
-                                <form id="${conf.conferenceId}r">
+                                <form method="post" id="${conf.conferenceId}r2">
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="rate" value="2" />
                                     <input type="hidden" name="action" value="give_rate" />
-                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r2">
                                         2
                                     </button>
                                 </form>
                             </li>
                             <li>
-                                <form id="${conf.conferenceId}r">
+                                <form method="post" id="${conf.conferenceId}r3">
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="rate" value="3" />
                                     <input type="hidden" name="action" value="give_rate" />
-                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r3">
                                         3
                                     </button>
                                 </form>
                             </li>
                             <li>
-                                <form id="${conf.conferenceId}r">
+                                <form method="post" id="${conf.conferenceId}r4">
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="rate" value="4" />
                                     <input type="hidden" name="action" value="give_rate" />
-                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r4">
                                         4
                                     </button>
                                 </form>
                             </li>
                             <li>
-                                <form id="${conf.conferenceId}r">
+                                <form method="post" id="${conf.conferenceId}r5">
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="rate" value="5" />
                                     <input type="hidden" name="action" value="give_rate" />
-                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r5">
                                         5
                                     </button>
                                 </form>
