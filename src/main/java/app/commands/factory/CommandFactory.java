@@ -1,6 +1,6 @@
 package app.commands.factory;
 
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.commands.command.*;
 import org.apache.log4j.Logger;
 
@@ -23,7 +23,7 @@ public class CommandFactory {
 
         ICommand current = new EmptyCommand();
 
-        String commandFromFront = request.getParameter(EnumManager.COMMAND.toString());  //COMMAND = "command";
+        String commandFromFront = request.getParameter(ResourceManager.COMMAND.toString());  //COMMAND = "command";
         logger.info("COMMAND IN FACTORY "+ commandFromFront);
 
         if (commandFromFront == null || commandFromFront.isEmpty()) {

@@ -1,7 +1,7 @@
 package app.commands.command;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -19,7 +19,7 @@ public class SignOutCommand implements ICommand{
         logger.info("in SignOutCommand");
 
         String page = ConfigurationManager.getInstance()
-                .getProperty(EnumManager.SIGN_OUT.toString());
+                .getProperty(ResourceManager.SIGN_OUT.toString());
 
         request.getSession().invalidate();
 

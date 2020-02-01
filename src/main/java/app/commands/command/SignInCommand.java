@@ -1,7 +1,7 @@
 package app.commands.command;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.factory.MySqlDaoFactory;
@@ -23,7 +23,7 @@ public class SignInCommand implements ICommand{
         logger.info("in SignInCommand");
 
         String page = ConfigurationManager.getInstance()
-                .getProperty(EnumManager.SIGN_IN.toString());
+                .getProperty(ResourceManager.SIGN_IN.toString());
 
         String method = request.getMethod();
 
@@ -38,12 +38,12 @@ public class SignInCommand implements ICommand{
             return page;
         }
 
-        if (method.equalsIgnoreCase(EnumManager.POST.toString())) {
+        if (method.equalsIgnoreCase(ResourceManager.POST.toString())) {
 
             logger.info("POST in SignInCommand");
 
-            String login = request.getParameter(EnumManager.LOGIN.toString());
-            String password = request.getParameter(EnumManager.PASSWORD.toString());
+            String login = request.getParameter(ResourceManager.LOGIN.toString());
+            String password = request.getParameter(ResourceManager.PASSWORD.toString());
             SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
 
             currentUser = signInDAO.getUserByLogPas(login,password);

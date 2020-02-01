@@ -10,7 +10,7 @@ public class ConfigurationManager {
 
     private static ConfigurationManager instance = null;
 
-    private ResourceBundle resourceBundle = ResourceBundle.getBundle(EnumManager.BUNDLE_NAME.toString());
+    private ResourceBundle resourceBundle = ResourceBundle.getBundle(ResourceManager.BUNDLE_NAME.toString());
 
     private ConfigurationManager(){}
 

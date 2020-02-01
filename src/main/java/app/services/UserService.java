@@ -1,7 +1,7 @@
 package app.services;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.entities.Conference;
 import app.entities.Role;
 import app.entities.User;
@@ -39,7 +39,7 @@ public class UserService {
         switch (user.getRole()){
             case USER:
                 logger.info("IN USER SERVICE USER");
-                page = confManager.getProperty(EnumManager.USER_CABINET.toString());
+                page = confManager.getProperty(ResourceManager.USER_CABINET.toString());
                 List<Conference> conferences = getConfToRegIn(user.getCustomerId());
                 request.getSession().setAttribute("conferencesToRegisterIn",
                         conferences);
@@ -47,17 +47,17 @@ public class UserService {
                         getConfUserWasPresentIn(user.getCustomerId()));
                 break;
             case SPEAKER:
-                page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
+                page = confManager.getProperty(ResourceManager.SPEAKER_CABINET.toString());
                 request.getSession().setAttribute("speakerConfList",
                         MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
                 break;
             case MODER:
-                page = confManager.getProperty(EnumManager.MODER_CABINET.toString());
+                page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
                 break;
             case ADMIN:
-                page = confManager.getProperty(EnumManager.ADMIN_CABINET.toString());
+                page = confManager.getProperty(ResourceManager.ADMIN_CABINET.toString());
                 break;
-            default: page = confManager.getProperty(EnumManager.SIGN_IN.toString());
+            default: page = confManager.getProperty(ResourceManager.SIGN_IN.toString());
                 break;
         }
 

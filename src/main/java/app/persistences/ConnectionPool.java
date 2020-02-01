@@ -1,6 +1,6 @@
 package app.persistences;
 
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -36,7 +36,7 @@ public class ConnectionPool {
     public static Connection getDefaultConnection() throws SQLException {
 
         DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-        return DriverManager.getConnection(EnumManager.URL_DB.toString(),
-                EnumManager.USERNAME_DB.toString(), EnumManager.PASSWORD_DB.toString());
+        return DriverManager.getConnection(ResourceManager.URL_DB.toString(),
+                ResourceManager.USERNAME_DB.toString(), ResourceManager.PASSWORD_DB.toString());
     }
 }

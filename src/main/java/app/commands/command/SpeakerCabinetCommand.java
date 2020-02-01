@@ -1,7 +1,7 @@
 package app.commands.command;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.entities.Conference;
 import app.entities.Role;
 import app.entities.User;
@@ -23,16 +23,16 @@ public class SpeakerCabinetCommand implements ICommand{
         logger.info("in SpeakerCabinetCommand");
 
         ConfigurationManager confManager = ConfigurationManager.getInstance();
-        String page = confManager.getProperty(EnumManager.SPEAKER_CABINET.toString());
+        String page = confManager.getProperty(ResourceManager.SPEAKER_CABINET.toString());
 
-        String action = request.getParameter(EnumManager.ACTION.toString());
+        String action = request.getParameter(ResourceManager.ACTION.toString());
         System.out.println("ACTION in SpeakerCabinetCommand"+action);
 
         if(action != null){
 
             logger.info("Action != null");
 
-            EnumManager speakerAction = EnumManager.valueOf(action.toUpperCase());
+            ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
 
             switch (speakerAction){
                 case OFFER_A_SPEECH:

@@ -1,7 +1,7 @@
 package app.controllers;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.commands.command.ICommand;
 import app.commands.factory.CommandFactory;
 import org.apache.log4j.Logger;
@@ -22,7 +22,7 @@ public class Controller extends HttpServlet {
 
         logger.info("In Controller doGet");
 
-        logger.info(request.getParameter(EnumManager.COMMAND.toString()));
+        logger.info(request.getParameter(ResourceManager.COMMAND.toString()));
 
         processRequest(request, response);
     }
@@ -32,7 +32,7 @@ public class Controller extends HttpServlet {
 
         logger.info("In Controller doPost");
 
-        logger.info(request.getParameter(EnumManager.COMMAND.toString()));
+        logger.info(request.getParameter(ResourceManager.COMMAND.toString()));
 
         processRequest(request, response);
     }
@@ -56,7 +56,7 @@ public class Controller extends HttpServlet {
         } else {
 // установка страницы c cообщением об ошибке
             page = ConfigurationManager.getInstance()
-                    .getProperty(EnumManager.INDEX.toString());
+                    .getProperty(ResourceManager.INDEX.toString());
 
             logger.info(request.getContextPath() + "  -> request.getContextPath()");
             logger.info("RESPONSE TO:" + request.getContextPath() + page);

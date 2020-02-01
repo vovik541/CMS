@@ -1,9 +1,8 @@
 package app.commands.command;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.entities.User;
-import app.persistences.factory.MySqlDaoFactory;
 import app.services.UserService;
 import org.apache.log4j.Logger;
 
@@ -36,12 +35,12 @@ public class EmptyCommand implements ICommand{
 
         if(request.getParameter("EmptyCommandSignUp") != null){
             return ConfigurationManager.getInstance()
-                    .getProperty(EnumManager.SIGN_UP.toString());
+                    .getProperty(ResourceManager.SIGN_UP.toString());
         }
 
         logger.info("default page = sign_in");
         page = ConfigurationManager.getInstance()
-                .getProperty(EnumManager.SIGN_IN.toString());
+                .getProperty(ResourceManager.SIGN_IN.toString());
 
         return page;
     }

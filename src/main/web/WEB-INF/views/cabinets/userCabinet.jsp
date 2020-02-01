@@ -11,6 +11,9 @@
 <head>
     <title>User</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url("/resources/css/userCabinet.css");
+    </style>
 </head>
 
 <body class="w3-light-grey">
@@ -87,6 +90,58 @@
                 <c:choose>
                     <c:when test="${conf.rate == 0}">
                         You can rate the speaker!
+                        <ul>
+                            <li>
+                            <form id="${conf.conferenceId}r">
+                                <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                <input type="hidden" name="rate" value="1" />
+                                <input type="hidden" name="action" value="give_rate" />
+                                <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                    1
+                                </button>
+                            </form>
+                            </li>
+                            <li>
+                                <form id="${conf.conferenceId}r">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="rate" value="2" />
+                                    <input type="hidden" name="action" value="give_rate" />
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                        2
+                                    </button>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="${conf.conferenceId}r">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="rate" value="3" />
+                                    <input type="hidden" name="action" value="give_rate" />
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                        3
+                                    </button>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="${conf.conferenceId}r">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="rate" value="4" />
+                                    <input type="hidden" name="action" value="give_rate" />
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                        4
+                                    </button>
+                                </form>
+                            </li>
+                            <li>
+                                <form id="${conf.conferenceId}r">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="rate" value="5" />
+                                    <input type="hidden" name="action" value="give_rate" />
+                                    <button class="rateButton" name="command" value="user_cabinet" form="${conf.conferenceId}r">
+                                        5
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
                     </c:when>
                     <c:otherwise>
                         <p>You rated speaker by ${conf.rate}</p>

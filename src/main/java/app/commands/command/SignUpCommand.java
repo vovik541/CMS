@@ -1,7 +1,7 @@
 package app.commands.command;
 
 import app.Managers.ConfigurationManager;
-import app.Managers.EnumManager;
+import app.Managers.ResourceManager;
 import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.dao.SignUpDAO;
@@ -25,13 +25,13 @@ public class SignUpCommand implements ICommand {
         String method = request.getMethod();
         ConfigurationManager confManager = ConfigurationManager.getInstance();
 
-        String page = confManager.getProperty(EnumManager.SIGN_UP.toString());
+        String page = confManager.getProperty(ResourceManager.SIGN_UP.toString());
 
-        if (method.equalsIgnoreCase(EnumManager.GET.toString())) {
+        if (method.equalsIgnoreCase(ResourceManager.GET.toString())) {
 
             return page;
 
-        }else if (method.equalsIgnoreCase(EnumManager.POST.toString())){
+        }else if (method.equalsIgnoreCase(ResourceManager.POST.toString())){
 
             doSignUp(request);
 
@@ -71,8 +71,8 @@ public class SignUpCommand implements ICommand {
             SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
             SignUpDAO signUpDAO = MySqlDaoFactory.getSignUpDAO();
 
-            if(!(signUpDAO.checkBy(EnumManager.LOGIN.toString(), login) ||
-                    signUpDAO.checkBy(EnumManager.EMAIL.toString(), email))){
+            if(!(signUpDAO.checkBy(ResourceManager.LOGIN.toString(), login) ||
+                    signUpDAO.checkBy(ResourceManager.EMAIL.toString(), email))){
 
                 User user = new User(firstName, lastName, email, login, password);
                 MySqlDaoFactory.getSignUpDAO().createUser(user);

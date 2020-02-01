@@ -1,6 +1,6 @@
 package app.Managers;
 
-public enum EnumManager {
+public enum ResourceManager {
 
     //_______________Name of file with paths
 
@@ -33,6 +33,7 @@ public enum EnumManager {
     //________________USER_ACTIONS
 
     REGISTER_IN_CONFERENCE("REGISTER_IN_CONFERENCE"),
+    GIVE_RATE("GIVE_RATE"),
 
     //________________SPEAKER_ACTIONS
 
@@ -45,7 +46,7 @@ public enum EnumManager {
 
     private String value;
 
-    EnumManager(String v) {
+    ResourceManager(String v) {
         value = v;
     }
 
