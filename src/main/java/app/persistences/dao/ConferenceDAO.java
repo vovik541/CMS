@@ -7,14 +7,13 @@ import app.persistences.ConnectionPool;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ConferenceDAO {
+
+    private static final Logger logger = Logger.getLogger(ConferenceDAO.class);
 
     private static final String sql = "select conferences.conference_id, conferences.conference_name, conferences.date,\n" +
             "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.location, rate,\n" +
@@ -48,9 +47,13 @@ public class ConferenceDAO {
     private static final String ADD_CONFERENCE = "INSERT INTO conferences (conference_name, date, begins_at, ends_at, " +
             "location, is_accepted_moder, is_accepted_speaker, speaker_id) " +
             "VALUES (?,{d?},{t?},{t?},?,?,?,?)";
-
-
-    private static final Logger logger = Logger.getLogger(ConferenceDAO.class);
+    private static final String GET_CONFERENCE_BY_SPEAKER_ID = "SELECT * FROM conferences WHERE speaker_id = ?";
+    private static final String DELETE_CONFERENCE_BY_ID = "DELETE FROM conferences WHERE conference_id = ?";
+    private static final String SET_AGREEMENT = "UPDATE conferences SET ? = ? WHERE conference_id = ?";
+    private static final String REGISTER_IN_CONFERENCE = "INSERT INTO registered_in_conference " +
+            "(user_id, conference_id) VALUES (?,?);";
+    private static final String GET_CONF_ID_USER_IS_REG_IN = "SELECT * FROM registered_in_conference " +
+            "WHERE user_id = ?";
 
     public void addConference(Conference conference, Boolean accepted_by_moder,
                               Boolean accepted_by_speaker){
@@ -66,44 +69,15 @@ public class ConferenceDAO {
 
     public List<Conference> getConfBySpeakerId(int id){
 
-        List<Conference> conferences = new LinkedList<>();
+        List<Conference> conferences = null;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {id};
 
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resSet = null;
+        ResultSet resultSet = executor.getResultSet(GET_CONFERENCE_BY_SPEAKER_ID, arguments);
 
-        String query = "SELECT * FROM conferences WHERE speaker_id = ?";
+        conferences = getConferencesFromResSet(resultSet,3);
+        executor.close();
 
-        try {
-            connection = ConnectionDB.getConnection();
-            preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1,id);
-            resSet = preparedStatement.executeQuery();
-
-            while (resSet.next()){
-                conferences.add(new Conference(
-                        resSet.getInt("conference_id"),
-                        resSet.getInt("speaker_id"),
-                        resSet.getString("conference_name"),
-                        resSet.getDate("date").toString(),
-                        resSet.getTime("begins_at").toString(),
-                        resSet.getTime("ends_at").toString(),
-                        resSet.getString("location"),
-                        resSet.getBoolean("is_accepted_moder"),
-                        resSet.getBoolean("is_accepted_speaker")));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                resSet.close();
-                preparedStatement.close();
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
         return conferences;
     }
 
@@ -111,32 +85,11 @@ public class ConferenceDAO {
 
     public void deleteById(int id) {
 
-        String sql = "DELETE FROM conferences WHERE conference_id = '"+id+"'";
-        Connection connection = null;
-        Statement statement = null;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {id};
 
-        try {
-            connection = ConnectionPool.getConnection();
-            connection.setAutoCommit(false);
-            statement = connection.createStatement();
-            statement.execute(sql);
-            connection.commit();
-
-        } catch (SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-            e.printStackTrace();
-        } finally {
-            try {
-                statement.close();
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+        executor.executeStatement(DELETE_CONFERENCE_BY_ID,arguments);
+        executor.close();
     }
 
     //set agreement by admin || speaker || moder about conference
@@ -144,6 +97,7 @@ public class ConferenceDAO {
     public void setAgreement(Role role, int id, Boolean agreement){
 
         String agreementColumn = null;
+        QueryExecutor executor = new QueryExecutor();
 
         if(role == Role.SPEAKER){
             agreementColumn = "is_accepted_speaker";
@@ -151,33 +105,10 @@ public class ConferenceDAO {
             agreementColumn = "is_accepted_moder";
         }
 
-        String sql = "UPDATE conferences SET " +
-                agreementColumn + " = " + agreement + " WHERE conference_id = '" + id + "'";
-        Connection connection = null;
-        Statement statement = null;
+        Object[] arguments = {agreementColumn, agreement, id};
 
-        try {
-            connection = ConnectionPool.getConnection();
-            connection.setAutoCommit(false);
-            statement = connection.createStatement();
-            statement.execute(sql);
-            connection.commit();
-
-        } catch (SQLException e) {
-            try {
-                connection.rollback();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-            }
-            e.printStackTrace();
-        } finally {
-            try {
-                statement.close();
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+        executor.executeStatement(SET_AGREEMENT, arguments);
+        executor.close();
     }
 
     //returns conferences that will happen
@@ -188,14 +119,8 @@ public class ConferenceDAO {
         QueryExecutor executor = new QueryExecutor();
         Object[] arguments = {currentDate,currentTime,currentDate};
 
-        try {
-
-            ResultSet resSet = executor.getResultSet(GET_CONF_BEFORE_DAY_TIME,arguments);
-            conferences = getConferencesFromResSet(resSet,2);
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        ResultSet resSet = executor.getResultSet(GET_CONF_BEFORE_DAY_TIME,arguments);
+        conferences = getConferencesFromResSet(resSet,2);
 
         return conferences;
     }
@@ -216,74 +141,34 @@ public class ConferenceDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        executor.close();
         return isRegistered;
     }
 
     public void registerInConf(int userId, int conferenceId){
-
-//        logger.info("USER ID AND CONFERENCE ID:" +userId + " " +conferenceId);
-
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
-        String sql = "INSERT INTO registered_in_conference (user_id, conference_id) " +
-                "VALUES (?,?);";
-
-        try {
-            connection = ConnectionPool.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,userId);
-            preparedStatement.setInt(2,conferenceId);
-            preparedStatement.execute();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connection.close();
-            } catch (SQLException e) {
-//            logger.warn("connection wasn't closed!! Error in SignUpModel.createUser()");
-                e.printStackTrace();
-            }
-        }
+        Object[] arguments = {userId, conferenceId};
+        QueryExecutor executor = new QueryExecutor();
+        executor.executeStatement(REGISTER_IN_CONFERENCE, arguments);
+        executor.close();
     }
 
     //returns conferences ids that user with userId is registered in
 
     public ArrayList<Integer> getRegisteredConfId(int userId) {
 
-        ArrayList<Integer> confId = new ArrayList<>();
+        ArrayList<Integer> confId = null;
 
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet= null;
-        Boolean isRegistered = false;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {userId};
 
-        String sql = "SELECT * FROM registered_in_conference " +
-                "WHERE user_id = ?";
+        ResultSet resultSet = executor.getResultSet(GET_CONF_ID_USER_IS_REG_IN, arguments);
 
         try {
-            connection = ConnectionPool.getConnection();
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,userId);
-
-            resultSet=preparedStatement.executeQuery();
-
             while (resultSet.next()){
                 confId.add(resultSet.getInt("conference_id"));
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            try {
-                resultSet.close();
-                preparedStatement.close();
-                connection.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
         }
 
         return confId;
@@ -294,12 +179,9 @@ public class ConferenceDAO {
         List<Conference> conferences = null;
         Object[] arguments = {currentDate,currentTime,currentDate,userId};
 
-        try {
-            ResultSet resSet = executor.getResultSet(GET_CONFERENCES_USER_GOT_PART_IN,arguments);
-            conferences = getConferencesFromResSet(resSet,1);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        ResultSet resSet = executor.getResultSet(GET_CONFERENCES_USER_GOT_PART_IN,arguments);
+        conferences = getConferencesFromResSet(resSet,1);
+        executor.close();
 
         return conferences;
     }
@@ -341,6 +223,18 @@ public class ConferenceDAO {
                         ));
                     }return conferences;
                 case 3:
+                    while (resSet.next()){
+                    conferences.add(new Conference(
+                            resSet.getInt("conference_id"),
+                            resSet.getInt("speaker_id"),
+                            resSet.getString("conference_name"),
+                            resSet.getDate("date").toString(),
+                            resSet.getTime("begins_at").toString(),
+                            resSet.getTime("ends_at").toString(),
+                            resSet.getString("location"),
+                            resSet.getBoolean("is_accepted_moder"),
+                            resSet.getBoolean("is_accepted_speaker")));
+                    }return conferences;
                 default:return null;
             }
         } catch (SQLException e) {
@@ -349,6 +243,3 @@ public class ConferenceDAO {
         return null;
     }
 }
-
-
-

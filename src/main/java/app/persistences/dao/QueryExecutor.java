@@ -13,20 +13,12 @@ public class QueryExecutor {
     /**
      * PreparedStatement instance
      */
-    private PreparedStatement preparedStatement;
-
+    private PreparedStatement preparedStatement = null;
+    private ResultSet resultSet = null;
     /**
      * Connection instance
      */
-    private Connection connection;
-
-    {
-        try {
-            connection = ConnectionDB.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+    private Connection connection = ConnectionPool.getConnection();
 
     /**
      * Singleton instance
@@ -46,7 +38,6 @@ public class QueryExecutor {
     private void setValues(PreparedStatement preparedStatement, Object... values) throws SQLException {
         for (int i = 0; i < values.length; i++) {
             preparedStatement.setObject(i + 1, values[i]);
-            System.out.println(values[i].toString());
         }
     }
     /**
@@ -56,21 +47,22 @@ public class QueryExecutor {
      * @param args
      * @return if if request is insert
      */
-    public int executeStatement(String query, Object... args) {
+    public void executeStatement(String query, Object... args) {
         try {
-            preparedStatement = (PreparedStatement) connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            connection.setAutoCommit(false);
+            preparedStatement = (PreparedStatement) connection.prepareStatement(query);
             setValues(preparedStatement, args);
-            int res = preparedStatement.executeUpdate();
-            ResultSet resultSet = preparedStatement.getGeneratedKeys();
-            if (resultSet.next()) {
-                return resultSet.getInt(1);
-            } else {
-                return res;
-            }
+            preparedStatement.executeUpdate();
+            connection.commit();
+
         } catch (SQLException e) {
+            try {
+                connection.rollback();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
             logger.error("Execute statement error " + e.getMessage());
         }
-        return 0;
     }
 
     /**
@@ -81,17 +73,29 @@ public class QueryExecutor {
      * @return result of select queries
      * @throws SQLException
      */
-    public ResultSet getResultSet(String query, Object... args) throws SQLException {
-        preparedStatement = (PreparedStatement) connection.prepareStatement(query);
-        setValues(preparedStatement, args);
-        return preparedStatement.executeQuery();
+    public ResultSet getResultSet(String query, Object... args) {
+        try {
+            preparedStatement = (PreparedStatement) connection.prepareStatement(query);
+            setValues(preparedStatement, args);
+            resultSet = preparedStatement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return resultSet;
     }
     /**
      * Returns connection to pool.
      */
-    public void closeConnection() {
+    public void close() {
         try {
+            if (resultSet != null){
+                resultSet.close();
+            }
+            if(preparedStatement != null){
+                preparedStatement.close();
+            }
             connection.close();
+
         } catch (SQLException e) {
             logger.error("Error while closing connection");
         }
