@@ -53,7 +53,17 @@
                 </label>
 
                 <p>${beginsAt}</p>
-                <p>${year}</p>
+                <label>
+                    <input type="date" name="date">
+                </label>
+                <label>
+                    <input type="time" min="08:00" max="23:00" name="beginsAtTime">
+                </label>
+                <p>${endsAt}</p>
+                <label>
+                    <input type="time" min="08:00" max="23:00" name="endsAtTime">
+                </label>
+            <%--<p>${year}</p>
                 <label><input type="text" name="year"><br /></label>
                 <p>${month}</p>
                 <label>
@@ -80,7 +90,7 @@
                 <label>
                     <input type="text" name="endMin"><br />
                 </label>
-
+--%>
                 <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer"
                         <c:set var="action" value="offer_a_speech" scope="session"/>>Submit</button>
             </form>

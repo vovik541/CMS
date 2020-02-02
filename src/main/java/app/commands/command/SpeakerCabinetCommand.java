@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,20 +92,12 @@ public class SpeakerCabinetCommand implements ICommand{
 
         String confName;
         String date;
-        String beginsAt;
-        String endsAt;
+        String beginsAtTime;
+        String endsAtTime;
         String location;
         Boolean acceptedByModer = false;
         Boolean acceptedBySpeaker = false;
         int speakerId;
-
-        int year;
-        int month;
-        int day;
-        int begHour;
-        int begMin;
-        int endHour;
-        int endMin;
 
         User user = (User) request.getSession().getAttribute("currentUser");
         speakerId = user.getCustomerId();
@@ -112,26 +105,16 @@ public class SpeakerCabinetCommand implements ICommand{
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
-        try {
-            year = Integer.parseInt(request.getParameter("year"));
-            month = Integer.parseInt(request.getParameter("month"));
-            day = Integer.parseInt(request.getParameter("day"));
-            begHour = Integer.parseInt(request.getParameter("begHour"));
-            begMin = Integer.parseInt(request.getParameter("begMin"));
-            endHour = Integer.parseInt(request.getParameter("endHour"));
-            endMin = Integer.parseInt(request.getParameter("endMin"));
+            date = request.getParameter("date") + " 00:00:00";
+            beginsAtTime = request.getParameter("beginsAtTime");
+            endsAtTime = request.getParameter("endsAtTime");
 
-            date = year + "-" + toFormat(month) + "-" + toFormat(day);
-            beginsAt = toFormat(begHour) + ":" + toFormat(begMin) + ":00";
-            endsAt = toFormat(endHour) + ":" + toFormat(endMin) + ":00";
+            beginsAtTime = formatTime(beginsAtTime);
+            endsAtTime = formatTime(endsAtTime);
 
-            logger.info("before IF");
-            if(check(month,12) && check(day,31) &&
-                    check(begHour,24) && check(begMin,60) &&
-                    check(endHour, 24) && check(endMin,60)){
-            logger.info("IN  IF!!!!!!!!");
+            if(date != null && beginsAtTime != null && endsAtTime != null){
                 Conference conference = new Conference(speakerId, confName,
-                        date, beginsAt, endsAt, location, acceptedByModer,
+                        date, beginsAtTime, endsAtTime, location, acceptedByModer,
                         acceptedBySpeaker);
 
                 conference.setAcceptedBySpeaker(true);
@@ -142,16 +125,25 @@ public class SpeakerCabinetCommand implements ICommand{
 
                 request.setAttribute("isInputError",false);
                 request.setAttribute("isAdded",true);
+
+            }else {
+                request.setAttribute("isInputError",true);
+                request.setAttribute("isAdded",false);
             }
+    }
 
-            request.setAttribute("isInputError",true);
-            request.setAttribute("isAdded",false);
+    private static String formatTime(String timeStr){
 
-        }catch (NumberFormatException ex){
-            request.setAttribute("isInputError",true);
-            request.setAttribute("isAdded",false);
+        String formatted = timeStr.substring(2,5)+":00";
+        int hours = Integer.parseInt(timeStr.substring(0,2));
+        hours++;
+        if(hours > 24){
+            return "01"+formatted;
+        }else if(hours < 10){
+            return "0" + hours + formatted;
+        }else {
+            return hours + formatted;
         }
-
     }
 
     private static void setConfExtraInfo(HttpServletRequest request){

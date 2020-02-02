@@ -20,8 +20,8 @@ public class ConferenceDAO {
             "customers.first_name, customers.last_name\n" +
             "FROM conferences\n" +
             "INNER JOIN customers ON conferences.speaker_id = customers.customer_id\n" +
-            "WHERE ((date > {d?}) OR " +
-            "(ends_at > {t?} AND date = {d?}) " +
+            "WHERE (((date > {d?}) OR " +
+            "(ends_at > {t?} AND date = {d?})) " +
             "AND is_accepted_speaker = '1' AND is_accepted_moder = '1');";
     private static final String GET_CONFERENCES_USER_GOT_PART_IN = "select conferences.conference_id, conferences.conference_name, conferences.date,\n" +
             "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.location, rate,\n" +
