@@ -1,6 +1,7 @@
 package app.persistences.dao;
 
 import app.entities.Conference;
+import app.entities.ConferenceInfo;
 import app.entities.Role;
 import org.apache.log4j.Logger;
 
@@ -18,7 +19,7 @@ public class ConferenceDAO {
             "conferences.is_accepted_speaker, conferences.location,\n" +
             "customers.first_name, customers.last_name\n" +
             "FROM conferences\n" +
-            "INNER JOIN customers on conferences.speaker_id = customers.customer_id\n" +
+            "INNER JOIN customers ON conferences.speaker_id = customers.customer_id\n" +
             "WHERE ((date > {d?}) OR " +
             "(ends_at > {t?} AND date = {d?}) " +
             "AND is_accepted_speaker = '1' AND is_accepted_moder = '1');";
@@ -37,6 +38,7 @@ public class ConferenceDAO {
             "location, is_accepted_moder, is_accepted_speaker, speaker_id) " +
             "VALUES (?,{d?},{t?},{t?},?,?,?,?)";
     private static final String GET_CONFERENCE_BY_SPEAKER_ID = "SELECT * FROM conferences WHERE speaker_id = ?";
+    private static final String DELETE_REGISTERED_IN_CONFERENCE = "DELETE FROM registered_in_conference WHERE conference_id = ?";
     private static final String DELETE_CONFERENCE_BY_ID = "DELETE FROM conferences WHERE conference_id = ?";
     private static final String SET_AGREEMENT_SPEAKER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
     private static final String SET_AGREEMENT_MODER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
@@ -45,6 +47,11 @@ public class ConferenceDAO {
     private static final String GET_CONF_ID_USER_IS_REG_IN = "SELECT * FROM registered_in_conference " +
             "WHERE user_id = ?";
     private static final String GIVE_RATE = "UPDATE registered_in_conference  SET rate = ? WHERE conference_id = ? AND user_id = ?;";
+    private static final String GET_SPEAKER_RATE = "SELECT rate FROM registered_in_conference \n" +
+            "INNER JOIN conferences ON registered_in_conference.conference_id = conferences.conference_id\n" +
+            "WHERE speaker_id = ? AND rate != '0';";
+    private static final String GET_MORE_CONFERENCE_INFO = "SELECT user_id, is_present FROM registered_in_conference " +
+            "WHERE conference_id = ?;";
 
     public void addConference(Conference conference, Boolean accepted_by_moder,
                               Boolean accepted_by_speaker){
@@ -73,6 +80,14 @@ public class ConferenceDAO {
     }
 
     //delete conference by id
+
+    public void deleteRegisteredInConf(int conferenceId){
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {conferenceId};
+
+        executor.executeStatement(DELETE_REGISTERED_IN_CONFERENCE,arguments);
+        executor.close();
+    }
 
     public void deleteById(int id) {
 
@@ -188,6 +203,61 @@ public class ConferenceDAO {
         executor.executeStatement(GIVE_RATE, arguments);
         executor.close();
 
+    }
+
+    public List<Integer> getSpeakerRates(int speaker_id){
+        List<Integer> speakerRates = new LinkedList<>();
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {speaker_id};
+
+        ResultSet resultSet = executor.getResultSet(GET_SPEAKER_RATE, arguments);
+        try {
+            while (resultSet.next()){
+                speakerRates.add(resultSet.getInt("rate"));
+            }
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return speakerRates;
+    }
+
+    //  how many users were registered and present
+
+    public ConferenceInfo getMoreConfInfo(int conferenceId){
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {conferenceId};
+
+        ResultSet resultSet = executor.getResultSet(GET_MORE_CONFERENCE_INFO, arguments);
+
+        int registered = 0;
+        int presented = 0;
+
+        try {
+
+            //I didn't want to make 2 queries to get number of Registered And Present users
+            //like SELECT COUNT .. so I did this 'while' with 1 query to DB
+
+            while (resultSet.next()){
+
+                if(resultSet.getInt("is_present") != 0){
+                    presented++;
+                }
+
+                registered++;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        executor.close();
+
+        ConferenceInfo conferenceInfo = new ConferenceInfo(
+                conferenceId, registered, presented);
+
+        return conferenceInfo;
     }
 
     private List<Conference> getConferencesFromResSet(ResultSet resSet, int initType){

@@ -34,6 +34,8 @@
 
     <h1>SPEAKER</h1>
 
+    <h5>YOUR RATE is ${sessionScope.speakerRate}</h5>
+
     <div>
         <h1>${offer}</h1>
         <form method="post" id="offer">
@@ -105,7 +107,8 @@
                 <th>${beginsAt}</th>
                 <th>${endsAt}</th>
                 <th>Confirm</th>
-                <td>Accepted By Moder</td>
+                <th>Accepted By Moder</th>
+                <th>More details</th>
                 <th>Delete</th>
             </tr>
             <c:forEach var="conf" items="${sessionScope.speakerConfList}">
@@ -140,6 +143,24 @@
                         <c:choose>
                             <c:when test="${conf.acceptedByModer}">ACCEPTED</c:when>
                             <c:otherwise>NOT ACCEPTED</c:otherwise>
+                        </c:choose>
+                    </td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${sessionScope.conferenceInfo.conferenceId == conf.conferenceId}">
+                                <p>presented: ${sessionScope.conferenceInfo.numberOfPresentUsers}</p>
+                                <p>registered: ${sessionScope.conferenceInfo.numberOfRegisteredUsers}</p>
+                            </c:when>
+
+                            <c:otherwise>
+                                <form method="post" id="${conf.conferenceId}info">
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <input type="hidden" name="command" value="speaker_cabinet" />
+                                    <input type="hidden" name="action" value="get_more_info" />
+                                    <input type="hidden" name="id" value="${conf.conferenceId}" />
+                                    <button form="${conf.conferenceId}info"></button>
+                                </form>
+                            </c:otherwise>
                         </c:choose>
                     </td>
                     <td>

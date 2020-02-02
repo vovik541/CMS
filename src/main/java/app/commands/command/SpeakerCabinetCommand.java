@@ -3,6 +3,7 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.Conference;
+import app.entities.ConferenceInfo;
 import app.entities.Role;
 import app.entities.User;
 import app.persistences.factory.MySqlDaoFactory;
@@ -12,6 +13,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SpeakerCabinetCommand implements ICommand{
 
@@ -51,6 +54,9 @@ public class SpeakerCabinetCommand implements ICommand{
                     logger.info("REFUSE_THE_CONFERENCE");
                     doRefuse(request);
                     break;
+                case GET_MORE_INFO:
+                    setConfExtraInfo(request);
+                    break;
                 default:
                     logger.info("DEFAULT IN SWITCH");
                     break;
@@ -59,10 +65,28 @@ public class SpeakerCabinetCommand implements ICommand{
             User user = (User) request.getSession().getAttribute("currentUser");
             request.getSession().setAttribute("speakerConfList",
                     MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+
+            request.getSession().setAttribute("speakerRate", getSpeakerRate(user.getCustomerId()));
+            System.out.println(getSpeakerRate(user.getCustomerId()));
         }
 
         return page;
     }
+
+    public static float getSpeakerRate(int speakerId){
+        float speakerRate = 0;
+
+        List<Integer> rates = MySqlDaoFactory.getConferenceDAO().getSpeakerRates(speakerId);
+
+        for(int rate: rates){
+            speakerRate += rate;
+        }
+
+        speakerRate = speakerRate/rates.size();
+
+        return speakerRate;
+    }
+
     private static void doOffer(HttpServletRequest request){
 
         String confName;
@@ -134,10 +158,16 @@ public class SpeakerCabinetCommand implements ICommand{
 
     }
 
-    private static void doDelete(HttpServletRequest request){
-//        logger.info("doDelete");
+    private static void setConfExtraInfo(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
-//        logger.info("id = :"+conferenceId);
+        ConferenceInfo conferenceInfo = MySqlDaoFactory.getConferenceDAO().
+                getMoreConfInfo(conferenceId);
+        request.getSession().setAttribute("conferenceInfo", conferenceInfo);
+    }
+
+    private static void doDelete(HttpServletRequest request){
+        int conferenceId = Integer.parseInt(request.getParameter("id"));
+        MySqlDaoFactory.getConferenceDAO().deleteRegisteredInConf(conferenceId);
         MySqlDaoFactory.getConferenceDAO().deleteById(conferenceId);
     }
 

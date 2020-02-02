@@ -64,9 +64,9 @@ public class Help {
         properties.setProperty("login.errorLoginPassMessage","Невірний пароль або логін!");
 
         properties.setProperty("speaker.offer","Запропонувати доклад");
-        properties.setProperty("speaker.confName","Тема доклада:");
+        properties.setProperty("speaker.confName","Тема докладу:");
         properties.setProperty("speaker.year","Рік:");
-        properties.setProperty("speaker.month","Місяь:");
+        properties.setProperty("speaker.month","Місяць:");
         properties.setProperty("speaker.day","День:");
         properties.setProperty("speaker.beginsAt","Початок в:");
         properties.setProperty("speaker.endsAt", "Конец в:");

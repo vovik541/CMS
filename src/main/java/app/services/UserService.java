@@ -2,6 +2,7 @@ package app.services;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
+import app.commands.command.SpeakerCabinetCommand;
 import app.entities.Conference;
 import app.entities.Role;
 import app.entities.User;
@@ -50,6 +51,8 @@ public class UserService {
                 page = confManager.getProperty(ResourceManager.SPEAKER_CABINET.toString());
                 request.getSession().setAttribute("speakerConfList",
                         MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
+                request.getSession().setAttribute("speakerRate", SpeakerCabinetCommand.getSpeakerRate(user.getCustomerId()));
+
                 break;
             case MODER:
                 page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());

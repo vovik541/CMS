@@ -75,7 +75,6 @@ public class UserCabinetCommand implements ICommand{
     private void doGiveRate(HttpServletRequest request, int userId){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         int rate = Integer.parseInt(request.getParameter("rate"));
-        System.out.println("!!!!!!!!!!!!!! "+ rate);
         MySqlDaoFactory.getConferenceDAO().setRate(rate, conferenceId, userId);
     }
 }
