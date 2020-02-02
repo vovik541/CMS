@@ -22,6 +22,25 @@ public class User {
     }
 
     public User(String firstName, String lastName, String email,
+                String login, int role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.login = login;
+
+        if(role == 1){
+            this.role = Role.USER;
+        }else if (role == 2){
+            this.role = Role.SPEAKER;
+        }else if (role == 3){
+            this.role = Role.MODER;
+        }else{
+            this.role = Role.ADMIN;
+        }
+
+    }
+
+    public User(String firstName, String lastName, String email,
                 String login, String password, int role) {
         this.firstName = firstName;
         this.lastName = lastName;

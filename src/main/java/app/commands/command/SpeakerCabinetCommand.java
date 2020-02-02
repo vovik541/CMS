@@ -112,13 +112,6 @@ public class SpeakerCabinetCommand implements ICommand{
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
-//        try {
-//            confName = URLDecoder.decode(confName, "UTF-8");
-//            location = URLDecoder.decode(location, "UTF-8");
-//        } catch (UnsupportedEncodingException e) {
-//            e.printStackTrace();
-//        }
-
         try {
             year = Integer.parseInt(request.getParameter("year"));
             month = Integer.parseInt(request.getParameter("month"));
@@ -136,13 +129,16 @@ public class SpeakerCabinetCommand implements ICommand{
             if(check(month,12) && check(day,31) &&
                     check(begHour,24) && check(begMin,60) &&
                     check(endHour, 24) && check(endMin,60)){
-
+            logger.info("IN  IF!!!!!!!!");
                 Conference conference = new Conference(speakerId, confName,
                         date, beginsAt, endsAt, location, acceptedByModer,
                         acceptedBySpeaker);
 
+                conference.setAcceptedBySpeaker(true);
+                conference.setAcceptedByModer(false);
+
                 MySqlDaoFactory.getConferenceDAO().
-                        addConference(conference,false,true);
+                        addConference(conference);
 
                 request.setAttribute("isInputError",false);
                 request.setAttribute("isAdded",true);

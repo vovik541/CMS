@@ -43,6 +43,8 @@ public enum ResourceManager {
     DELETE_CONFERENCE("DELETE_CONFERENCE"),
     GET_MORE_INFO("GET_MORE_INFO"),
 
+    //________________MODER_ACTIONS
+
     LOGIN_ERROR("MESSAGE.LOGIN_ERROR");
 
     private String value;

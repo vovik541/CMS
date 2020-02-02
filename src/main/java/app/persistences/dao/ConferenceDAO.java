@@ -52,17 +52,38 @@ public class ConferenceDAO {
             "WHERE speaker_id = ? AND rate != '0';";
     private static final String GET_MORE_CONFERENCE_INFO = "SELECT user_id, is_present FROM registered_in_conference " +
             "WHERE conference_id = ?;";
+    private static final String GET_NUMBER_OF_CUSTOMERS = "SELECT COUNT(customer_id) AS total FROM customers;";
 
-    public void addConference(Conference conference, Boolean accepted_by_moder,
-                              Boolean accepted_by_speaker){
+    public int getNumOfCustomers(){
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {};
+        int nOfUsers = 0;
+
+        ResultSet resultSet = executor.getResultSet(GET_NUMBER_OF_CUSTOMERS,arguments);
+
+        try {
+            if (resultSet.next()){
+                nOfUsers = resultSet.getInt("total");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        executor.close();
+
+        return  nOfUsers;
+    }
+
+    public void addConference(Conference conference){
 
         Object[] arguments = {conference.getConfName(),conference.getDate(),
                 conference.getBeginsAt(),conference.getEndsAt(),conference.getLocation(),
-                accepted_by_moder,accepted_by_speaker,
+                conference.getAcceptedByModer(),conference.getAcceptedBySpeaker(),
                 conference.getSpeakerId()};
 
         QueryExecutor executor = new QueryExecutor();
         executor.executeStatement(ADD_CONFERENCE,arguments);
+        executor.close();
     }
 
     public List<Conference> getConfBySpeakerId(int id){
@@ -239,14 +260,17 @@ public class ConferenceDAO {
             //I didn't want to make 2 queries to get number of Registered And Present users
             //like SELECT COUNT .. so I did this 'while' with 1 query to DB
 
-            while (resultSet.next()){
+//            while (resultSet.next()){
 
-                if(resultSet.getInt("is_present") != 0){
-                    presented++;
+//                if(resultSet.getInt("is_present") != 0){
+//                    presented++;
+//                }
+                if ( resultSet.last() ) {
+                    registered = resultSet.getRow();
                 }
 
-                registered++;
-            }
+//                registered++;
+//            }
 
         } catch (SQLException e) {
             e.printStackTrace();

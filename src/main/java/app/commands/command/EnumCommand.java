@@ -21,6 +21,11 @@ public enum EnumCommand {
             this.command = new SpeakerCabinetCommand();
         }
     },
+    MODER_CABINET{
+        {
+            this.command = new ModerCabinetCommand();
+        }
+    },
     SIGN_OUT{
         {
             this.command = new SignOutCommand();

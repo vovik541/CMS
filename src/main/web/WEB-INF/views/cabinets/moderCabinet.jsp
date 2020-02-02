@@ -13,19 +13,14 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-<form>
-    <button name="language" value="ua" type="submit">ua</button>
-    <button name="language" value="en" type="submit">en</button>
-    <button name="language" value="ru" type="submit">ru</button>
-</form>
-
 <%--<jsp:include page="../template/header.jsp"></jsp:include>--%>
 
 <body class="w3-light-grey">
 
-<c:out value="${language.toString()}"></c:out>
+<jsp:include page="../template/header.jsp"></jsp:include>
 
 <div class="w3-card-4">
+
 
     <h1>MODER</h1>
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">

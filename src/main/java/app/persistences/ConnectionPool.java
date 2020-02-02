@@ -33,10 +33,19 @@ public class ConnectionPool {
          }
          return connection;
     }
-    public static Connection getDefaultConnection() throws SQLException {
+    public static Connection getDefaultConnection(){
 
-        DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-        return DriverManager.getConnection(ResourceManager.URL_DB.toString(),
-                ResourceManager.USERNAME_DB.toString(), ResourceManager.PASSWORD_DB.toString());
+        Connection defaultConnection = null;
+
+        try {
+            DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+
+            defaultConnection = DriverManager.getConnection(ResourceManager.URL_DB.toString(),
+                    ResourceManager.USERNAME_DB.toString(), ResourceManager.PASSWORD_DB.toString());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return defaultConnection;
     }
 }
