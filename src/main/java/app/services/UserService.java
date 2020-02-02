@@ -2,6 +2,7 @@ package app.services;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
+import app.commands.command.ModerCabinetCommand;
 import app.commands.command.SpeakerCabinetCommand;
 import app.entities.Conference;
 import app.entities.Role;
@@ -56,6 +57,7 @@ public class UserService {
                 break;
             case MODER:
                 page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
+                ModerCabinetCommand.doUserPagination(request);
                 break;
             case ADMIN:
                 page = confManager.getProperty(ResourceManager.ADMIN_CABINET.toString());
@@ -133,14 +135,18 @@ public class UserService {
 
         return -1;
     }
-    public void doRegistration(HttpServletRequest request, int userId){
+    public void doRegistration(HttpServletRequest request, User user){
         int conference_id = Integer.parseInt(request.getParameter("id"));
 
         ConferenceDAO conferenceDAO= MySqlDaoFactory.getConferenceDAO();
 
-        if(!conferenceDAO.isRegisteredInConf(userId, conference_id)){
-            conferenceDAO.registerInConf(userId,conference_id);
+        if(!conferenceDAO.isRegisteredInConf(user.getCustomerId(), conference_id)){
+            conferenceDAO.registerInConf(user.getCustomerId(),conference_id);
         }
+        List<Conference> conferences = getConfToRegIn(user.getCustomerId());
+        request.getSession().setAttribute("conferencesToRegisterIn",
+                conferences);
+
     }
 
     public List<Conference> getConfToRegIn(int userId){

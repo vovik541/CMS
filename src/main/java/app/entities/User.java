@@ -21,8 +21,9 @@ public class User {
         this.password = password;
     }
 
-    public User(String firstName, String lastName, String email,
+    public User(int customerId, String firstName, String lastName, String email,
                 String login, int role) {
+        this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

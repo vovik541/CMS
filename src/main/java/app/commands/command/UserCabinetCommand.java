@@ -49,9 +49,8 @@ public class UserCabinetCommand implements ICommand{
 
                 switch (speakerAction){
                     case REGISTER_IN_CONFERENCE:
-
                         logger.info("REGISTER_IN_CONFERENCE");
-                        userService.doRegistration(request, user.getCustomerId());
+                        userService.doRegistration(request, user);
                         break;
                     case GIVE_RATE:
                         logger.info("GIVE_RATE");
@@ -62,9 +61,6 @@ public class UserCabinetCommand implements ICommand{
                         break;
                 }
 
-                List<Conference> conferences = userService.getConfToRegIn(user.getCustomerId());
-                request.getSession().setAttribute("conferencesToRegisterIn",
-                        conferences);
 
                 request.getSession().setAttribute("conferencesWasPresentIn",
                         userService.getConfUserWasPresentIn(user.getCustomerId()));

@@ -11,6 +11,7 @@
 <head>
     <title>Moder</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 </head>
 
 <%--<jsp:include page="../template/header.jsp"></jsp:include>--%>
@@ -19,10 +20,60 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
+<h1>MODER</h1>
+
 <div class="w3-card-4">
+    <div>
+        <form action="ReadCountries">
+
+            <input type="hidden" name="currentPage" value="1">
+
+            <div class="form-group col-md-4">
+
+                <label for="records">Select records per page:</label>
+
+                <select class="form-control" id="records" name="recordsPerPage">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="15">15</option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+        <table>
+            <tr>
+                <th>user ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Login</th>
+                <th>Email</th>
+                <th>role</th>
+                <th>Make Speaker</th>
+            </tr>
+            <c:forEach var="user" items="${sessionScope.usersForModerView}">
+                <tr>
+                    <td>${user.customerId}</td>
+                    <td>${user.firstName}</td>
+                    <td>${user.lastName}</td>
+                    <td>${user.login}</td>
+                    <td>${user.email}</td>
+                    <td>${user.role}</td>
+                </tr>
+            </c:forEach>
+        </table>
 
 
-    <h1>MODER</h1>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+
+    </div>
+
+
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>
             <input type="hidden" name="command" value="sign_out" />

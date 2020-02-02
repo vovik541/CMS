@@ -4,6 +4,7 @@ import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.User;
 import app.persistences.dao.ConferenceDAO;
+import app.persistences.dao.UserDAO;
 import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
@@ -25,23 +26,31 @@ public class ModerCabinetCommand implements ICommand{
 
     User user = (User) request.getSession().getAttribute("currentUser");
 
-//    doUserPagination(request,user);
+    doUserPagination(request);
 
     return page;
     }
-    private static void doUserPagination(HttpServletRequest request){
+    public static void doUserPagination(HttpServletRequest request){
 
-        ConferenceDAO conferenceDAO = MySqlDaoFactory.getConferenceDAO();
+        UserDAO userDAO = MySqlDaoFactory.getUserDAO();
+
+        int currentPage = 1;
+
+
 
         int recordsPerPage = 10;
-        int nOfUsers = conferenceDAO.getNumOfCustomers();
+        int nOfUsers = userDAO.getNumOfCustomers();
         int nOfPages = nOfUsers / recordsPerPage;
 
         if (nOfPages % recordsPerPage > 0) {
             nOfPages++;
         }
 
-//        List<User> users = conferenceDAO.
 
+        request.getSession().setAttribute("nOfPages", nOfPages);
+
+        List<User> users = userDAO.getUsersForPag(currentPage, recordsPerPage);
+
+        request.getSession().setAttribute("usersForModerView", users);
     }
 }

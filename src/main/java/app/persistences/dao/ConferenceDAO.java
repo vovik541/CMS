@@ -52,27 +52,6 @@ public class ConferenceDAO {
             "WHERE speaker_id = ? AND rate != '0';";
     private static final String GET_MORE_CONFERENCE_INFO = "SELECT user_id, is_present FROM registered_in_conference " +
             "WHERE conference_id = ?;";
-    private static final String GET_NUMBER_OF_CUSTOMERS = "SELECT COUNT(customer_id) AS total FROM customers;";
-
-    public int getNumOfCustomers(){
-
-        QueryExecutor executor = new QueryExecutor();
-        Object[] arguments = {};
-        int nOfUsers = 0;
-
-        ResultSet resultSet = executor.getResultSet(GET_NUMBER_OF_CUSTOMERS,arguments);
-
-        try {
-            if (resultSet.next()){
-                nOfUsers = resultSet.getInt("total");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        executor.close();
-
-        return  nOfUsers;
-    }
 
     public void addConference(Conference conference){
 
