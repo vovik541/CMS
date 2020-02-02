@@ -24,7 +24,9 @@
 
 <div class="w3-card-4">
     <div>
-        <form action="ReadCountries">
+        <form>
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="set_records_per_page" />
 
             <input type="hidden" name="currentPage" value="1">
 
@@ -64,8 +66,38 @@
                     <td>${user.role}</td>
                 </tr>
             </c:forEach>
-        </table>
 
+        </table>
+        <nav aria-label="Navigation for countries">
+            <ul class="pagination">
+                <c:if test="${requestScope.currentPage != 1}">
+                    <li class="page-item"><a class="page-link"
+                                             href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage-1}">Previous</a>
+                    </li>
+                </c:if>
+
+                <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
+                    <c:choose>
+                        <c:when test="${requestScope.currentPage eq i}">
+                            <li class="page-item active"><a class="page-link">
+                                    ${i} <span class="sr-only">(current)</span></a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li class="page-item"><a class="page-link"
+                                                     href="?command=moder_cabinet&action=set_records_per_page&recordsPerPage=${recordsPerPage}&currentPage=${i}">${i}</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+
+                <c:if test="${requestScope.currentPage lt requestScope.nOfPages}">
+                    <li class="page-item"><a class="page-link"
+                                             href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage+1}">Next</a>
+                    </li>
+                </c:if>
+            </ul>
+        </nav>
 
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>

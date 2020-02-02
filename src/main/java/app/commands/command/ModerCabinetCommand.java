@@ -22,11 +22,25 @@ public class ModerCabinetCommand implements ICommand{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     ConfigurationManager confManager = ConfigurationManager.getInstance();
-    String page = confManager.getProperty(ResourceManager.ADMIN_CABINET.toString());;
+    String page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());;
 
     User user = (User) request.getSession().getAttribute("currentUser");
 
-    doUserPagination(request);
+        String action = request.getParameter(ResourceManager.ACTION.toString());
+        logger.info("ACTION " + action);
+        ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
+
+        switch (speakerAction){
+            case SET_RECORDS_PER_PAGE:
+                doUserPagination(request);
+                break;
+            default:
+                logger.info("DEFAULT IN SWITCH");
+                break;
+        }
+
+
+        doUserPagination(request);
 
     return page;
     }
@@ -34,22 +48,40 @@ public class ModerCabinetCommand implements ICommand{
 
         UserDAO userDAO = MySqlDaoFactory.getUserDAO();
 
-        int currentPage = 1;
+        String recPerPageStr = request.getParameter("recordsPerPage");
+        String curPageStr = request.getParameter("currentPage");
+        logger.info("STR @@@ "+ curPageStr);
 
-
-
-        int recordsPerPage = 10;
         int nOfUsers = userDAO.getNumOfCustomers();
-        int nOfPages = nOfUsers / recordsPerPage;
+        int currentPage;
+        int recordsPerPage;
+        int nOfPages;
+
+        if(recPerPageStr != null){
+            recordsPerPage = Integer.parseInt(recPerPageStr);
+        }else {
+            recordsPerPage = 10;
+        }
+
+        if(curPageStr != null){
+            currentPage = Integer.parseInt(curPageStr);
+        }else {
+            currentPage = 2;
+        }
+
+        logger.info(recPerPageStr +" recordsPerPage!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+currentPage);
+
+        nOfPages = nOfUsers / recordsPerPage;
 
         if (nOfPages % recordsPerPage > 0) {
             nOfPages++;
         }
 
-
-        request.getSession().setAttribute("nOfPages", nOfPages);
+        request.setAttribute("nOfPages", nOfPages);
 
         List<User> users = userDAO.getUsersForPag(currentPage, recordsPerPage);
+
+        logger.info(users.get(0).toString());
 
         request.getSession().setAttribute("usersForModerView", users);
     }

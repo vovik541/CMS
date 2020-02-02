@@ -45,6 +45,7 @@ public enum ResourceManager {
 
     //________________MODER_ACTIONS
 
+    SET_RECORDS_PER_PAGE("SET_RECORDS_PER_PAGE"),
     LOGIN_ERROR("MESSAGE.LOGIN_ERROR");
 
     private String value;
