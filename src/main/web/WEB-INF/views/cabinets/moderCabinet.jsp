@@ -13,15 +13,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 </head>
-
-<%--<jsp:include page="../template/header.jsp"></jsp:include>--%>
-
 <body class="w3-light-grey">
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
@@ -43,6 +35,8 @@
                     <option value="5">5</option>
                     <option value="10" selected>10</option>
                     <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
                 </select>
 
             </div>
@@ -73,15 +67,45 @@
             </c:forEach>
 
         </table>
-        <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
-            <form>
-                <input type="hidden" name="command" value="moder_cabinet" />
-                <input type="hidden" name="action" value="set_records_per_page" />
-                <input type="hidden" name="currentPage" value="${i}" />
-                <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                <button >${i}</button>
-            </form>
-        </c:forEach>
+
+       <nav>
+           <ul class="pagination">
+               <c:if test="${requestScope.currentPage != 1}">
+                   <li class="page-item">
+                       <form>
+                           <input type="hidden" name="command" value="moder_cabinet" />
+                           <input type="hidden" name="action" value="set_records_per_page" />
+                           <input type="hidden" name="currentPage" value="${requestScope.currentPage - 1}" />
+                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                           <button class="page-link">Previous</button>
+                       </form>
+                   </li>
+               </c:if>
+               <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
+                   <li class="page-item">
+                       <form>
+                           <input type="hidden" name="command" value="moder_cabinet" />
+                           <input type="hidden" name="action" value="set_records_per_page" />
+                           <input type="hidden" name="currentPage" value="${i}" />
+                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                           <button class="page-link">${i}</button>
+                       </form>
+                   </li>
+               </c:forEach>
+               <c:if test="${requestScope.currentPage != requestScope.nOfPages}">
+                   <li class="page-item">
+                       <form>
+                           <input type="hidden" name="command" value="moder_cabinet" />
+                           <input type="hidden" name="action" value="set_records_per_page" />
+                           <input type="hidden" name="currentPage" value="${requestScope.currentPage + 1}" />
+                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                           <button class="page-link">Next</button>
+                       </form>
+                   </li>
+               </c:if>
+           </ul>
+
+       </nav>
         <%--<nav aria-label="Navigation for countries">
             <ul class="pagination">
                 <c:if test="${currentPage != 1}">
@@ -124,6 +148,10 @@
     </footer>
 </div>
 
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
 
 </body>
 </html>

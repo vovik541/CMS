@@ -27,6 +27,8 @@ public class UserDAO {
 
         users = getUsersFromResSet(resultSet);
 
+        executor.close();
+
         return users;
     }
 
