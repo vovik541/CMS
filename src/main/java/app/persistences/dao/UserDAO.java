@@ -19,9 +19,9 @@ public class UserDAO {
 
     public List<User> getUsersForPag(int currentPge, int recordsPerPage){
 
-        List<User> users = new LinkedList<>();
+        List<User> users;
         QueryExecutor executor = new QueryExecutor();
-        Object[] arguments = {(currentPge-1)*recordsPerPage, currentPge*recordsPerPage};
+        Object[] arguments = {(currentPge-1)*recordsPerPage, recordsPerPage};
 
         ResultSet resultSet = executor.getResultSet(GET_CUSTOMERS_FOR_PAGINATION, arguments);
 

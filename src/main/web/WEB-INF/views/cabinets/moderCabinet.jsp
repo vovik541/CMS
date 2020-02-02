@@ -18,6 +18,11 @@
 
 <body class="w3-light-grey">
 
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+
 <jsp:include page="../template/header.jsp"></jsp:include>
 
 <h1>MODER</h1>
@@ -68,17 +73,26 @@
             </c:forEach>
 
         </table>
-        <nav aria-label="Navigation for countries">
+        <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
+            <form>
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="set_records_per_page" />
+                <input type="hidden" name="currentPage" value="${i}" />
+                <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                <button >${i}</button>
+            </form>
+        </c:forEach>
+        <%--<nav aria-label="Navigation for countries">
             <ul class="pagination">
-                <c:if test="${requestScope.currentPage != 1}">
+                <c:if test="${currentPage != 1}">
                     <li class="page-item"><a class="page-link"
                                              href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage-1}">Previous</a>
                     </li>
                 </c:if>
 
-                <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
+                <c:forEach begin="1" end="${nOfPages}" var="i">
                     <c:choose>
-                        <c:when test="${requestScope.currentPage eq i}">
+                        <c:when test="${currentPage eq i}">
                             <li class="page-item active"><a class="page-link">
                                     ${i} <span class="sr-only">(current)</span></a>
                             </li>
@@ -91,17 +105,13 @@
                     </c:choose>
                 </c:forEach>
 
-                <c:if test="${requestScope.currentPage lt requestScope.nOfPages}">
+                <c:if test="${currentPage lt nOfPages}">
                     <li class="page-item"><a class="page-link"
                                              href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage+1}">Next</a>
                     </li>
                 </c:if>
             </ul>
-        </nav>
-
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
+        </nav>--%>
 
     </div>
 

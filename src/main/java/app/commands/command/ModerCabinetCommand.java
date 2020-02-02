@@ -50,26 +50,26 @@ public class ModerCabinetCommand implements ICommand{
 
         String recPerPageStr = request.getParameter("recordsPerPage");
         String curPageStr = request.getParameter("currentPage");
-        logger.info("STR @@@ "+ curPageStr);
-
+        logger.info("curPageINPUT @@@ "+ curPageStr);
+        logger.info("recPageINPUT @@@ "+ recPerPageStr);
         int nOfUsers = userDAO.getNumOfCustomers();
-        int currentPage;
-        int recordsPerPage;
+        int currentPage = 1;
+        int recordsPerPage = 10;
         int nOfPages;
 
+        logger.info("");
+
         if(recPerPageStr != null){
+            logger.info("!!"+ recPerPageStr);
             recordsPerPage = Integer.parseInt(recPerPageStr);
-        }else {
-            recordsPerPage = 10;
         }
 
         if(curPageStr != null){
+            logger.info(curPageStr.length());
             currentPage = Integer.parseInt(curPageStr);
-        }else {
-            currentPage = 2;
         }
-
-        logger.info(recPerPageStr +" recordsPerPage!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+currentPage);
+//
+//        logger.info(recPerPageStr +" recordsPerPage!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+currentPage);
 
         nOfPages = nOfUsers / recordsPerPage;
 
@@ -77,12 +77,15 @@ public class ModerCabinetCommand implements ICommand{
             nOfPages++;
         }
 
-        request.setAttribute("nOfPages", nOfPages);
 
         List<User> users = userDAO.getUsersForPag(currentPage, recordsPerPage);
 
-        logger.info(users.get(0).toString());
+        logger.info(users.size()+" USER SIZE");
 
         request.getSession().setAttribute("usersForModerView", users);
+
+        request.setAttribute("nOfPages", nOfPages);
+        request.setAttribute("currentPage", currentPage);
+        request.setAttribute("recordsPerPage", recordsPerPage);
     }
 }
