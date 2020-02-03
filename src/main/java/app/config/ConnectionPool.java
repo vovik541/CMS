@@ -1,4 +1,4 @@
-package app.persistences;
+package app.config;
 
 import app.Managers.ResourceManager;
 

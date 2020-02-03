@@ -1,0 +1,47 @@
+2020-02-03 23:50:54 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:50:54 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:50:54 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:50:54 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@1b6727d1
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:32 - ACTION set_records_per_page
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:203 - !!10
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:220 - 10 USER SIZE
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:203 - !!10
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:50:54 INFO  ModerCabinetCommand:220 - 10 USER SIZE
+2020-02-03 23:50:54 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:51:02 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:51:02 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:51:02 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:51:02 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@1b6727d1
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:32 - ACTION set_records_per_page
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:203 - !!25
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:220 - 25 USER SIZE
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:203 - !!25
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:51:02 INFO  ModerCabinetCommand:220 - 25 USER SIZE
+2020-02-03 23:51:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:51:08 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:51:08 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:51:08 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:51:08 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@1b6727d1
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:32 - ACTION set_records_per_page
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:203 - !!5
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:220 - 5 USER SIZE
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:203 - !!5
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:208 - 1
+2020-02-03 23:51:08 INFO  ModerCabinetCommand:220 - 5 USER SIZE
+2020-02-03 23:51:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-04 00:01:26 INFO  SessionListener:44 - Session with id : F8C407B7A4F20163CD0943F2BDF796A4 killed.
+2020-02-04 00:01:26 INFO  SessionListener:44 - Session with id : A887ABC96FD625D425700297584E0D60 killed.
+2020-02-04 00:06:26 INFO  SessionListener:44 - Session with id : 769AECEE1F0D9CACF8678F368FD9D59C killed.
+2020-02-04 00:41:19 INFO  SessionListener:38 - Session with id : 5D4EC89BF990031C2F3B09671789AA9E created.
+2020-02-04 00:56:27 INFO  SessionListener:44 - Session with id : 5D4EC89BF990031C2F3B09671789AA9E killed.

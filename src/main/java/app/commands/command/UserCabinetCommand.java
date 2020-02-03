@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.*;
 
+import static app.logic.UserCabinetLogic.doGiveRate;
+
 public class UserCabinetCommand implements ICommand{
 
     private static final Logger logger = Logger.getLogger(UserCabinetCommand.class);
@@ -60,17 +62,10 @@ public class UserCabinetCommand implements ICommand{
                         logger.info("DEFAULT IN SWITCH");
                         break;
                 }
-
-
                 request.getSession().setAttribute("conferencesWasPresentIn",
                         userService.getConfUserWasPresentIn(user.getCustomerId()));
             }
         }
         return page;
-    }
-    private void doGiveRate(HttpServletRequest request, int userId){
-        int conferenceId = Integer.parseInt(request.getParameter("id"));
-        int rate = Integer.parseInt(request.getParameter("rate"));
-        MySqlDaoFactory.getConferenceDAO().setRate(rate, conferenceId, userId);
     }
 }

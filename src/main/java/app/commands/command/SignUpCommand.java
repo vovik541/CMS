@@ -14,6 +14,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static app.logic.SignUpLogic.isInputAlright;
+
 public class SignUpCommand implements ICommand {
 
     private static final Logger logger = Logger.getLogger(SignUpCommand.class);
@@ -66,7 +68,7 @@ public class SignUpCommand implements ICommand {
         password = request.getParameter("password");
         email = request.getParameter("email");
 
-        if(isInputAlright(firstName,lastName,login,password,email)){
+        if(isInputAlright(firstName, lastName, login, password, email)){
 
             SignInDAO signInDAO = MySqlDaoFactory.getSignInDAO();
             SignUpDAO signUpDAO = MySqlDaoFactory.getSignUpDAO();
@@ -93,13 +95,5 @@ public class SignUpCommand implements ICommand {
 
         request.setAttribute("userInputErrorMessage", true);
     }
-    private static boolean isInputAlright(String firstName, String lastName, String login,
-                                          String password, String email){
 
-        if(firstName.isEmpty() || lastName.isEmpty() ||
-                login.isEmpty() || password.isEmpty() || email.isEmpty()){
-            return false;
-        }
-        return true;
-    }
 }
