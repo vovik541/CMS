@@ -74,7 +74,11 @@ public class SignUpCommand implements ICommand {
             if(!(signUpDAO.checkBy(ResourceManager.LOGIN.toString(), login) ||
                     signUpDAO.checkBy(ResourceManager.EMAIL.toString(), email))){
 
-                User user = new User(firstName, lastName, email, login, password);
+                User user = new User.Builder(firstName, lastName)
+                        .setEmail(email)
+                        .setLogin(login)
+                        .setPassword(password)
+                        .build();
                 MySqlDaoFactory.getSignUpDAO().createUser(user);
 
                 User currentUser = signInDAO.getUserByLogPas(login, password);

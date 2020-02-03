@@ -81,20 +81,36 @@ public class SignInDAO {
     }
 
     private List<User> initUsersList(ResultSet userResSet) throws SQLException {
-        User user;
+
         List<User> usersList = new LinkedList<>();
+        String firstName;
+        String lastName;
+        String login;
+        String password;
+        String email;
+        int customerId;
+        int role;
+
 
         while (userResSet.next()){
-//            user = new User(
-//                    userResSet.getInt("customer_id"),
-//                    userResSet.getString("first_name"),
-//                    userResSet.getString("last_name"),
-//                    userResSet.getString("login"),
-//                    userResSet.getString("password"),
-//                    userResSet.getString("email"),
-//                    userResSet.getInt("role")
-//            );
-//            usersList.add(user);
+
+            customerId = userResSet.getInt("customer_id");
+            firstName = userResSet.getString("first_name");
+            lastName = userResSet.getString("last_name");
+            login = userResSet.getString("login");
+            password = userResSet.getString("password");
+            email = userResSet.getString("email");
+            role = userResSet.getInt("role");
+
+            usersList.add(
+                    new User.Builder(firstName,lastName)
+                            .setCustomerId(customerId)
+                            .setLogin(login)
+                            .setEmail(email)
+                            .setPassword(password)
+                            .setRole(role)
+                            .build()
+            );
         }
 //        logger.info("initUsersList worked");
         return usersList;

@@ -74,16 +74,32 @@ public class UserDAO {
 
         List<User> users = new LinkedList<>();
 
+        String firstName;
+        String lastName;
+        String login;
+        String email;
+        int customerId;
+        int role;
+
         try {
             while (resultSet.next()){
-                users.add(new User(
-                        resultSet.getInt("customer_id"),
-                        resultSet.getString("first_name"),
-                        resultSet.getString("last_name"),
-                        resultSet.getString("email"),
-                        resultSet.getString("login"),
-                        resultSet.getInt("role")
-                ));
+
+                customerId = resultSet.getInt("customer_id");
+                firstName = resultSet.getString("first_name");
+                lastName = resultSet.getString("last_name");
+                login = resultSet.getString("login");
+                email = resultSet.getString("email");
+                role = resultSet.getInt("role");
+
+                users.add(
+                        new User.Builder(firstName,lastName)
+                                .setCustomerId(customerId)
+                                .setLogin(login)
+                                .setEmail(email)
+                                .setRole(role)
+                                .build()
+                );
+
             }
         } catch (SQLException e) {
             e.printStackTrace();

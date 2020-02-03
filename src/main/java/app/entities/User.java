@@ -22,21 +22,13 @@ public class User {
         private String password = null;
         private int customerId = 0;
 
-        public Builder() {
-        }
-
-        public Builder setCustomerId(int customerId){
-            this.customerId = customerId;
-            return this;
-        }
-
-        public Builder setFirstName(String firstName){
+        public Builder(String firstName, String lastName) {
             this.firstName = firstName;
-            return this;
+            this.lastName = lastName;
         }
 
-        public Builder setLastName(String lastName) {
-            this.lastName = lastName;
+        public Builder setCustomerId(int customerId) {
+            this.customerId = customerId;
             return this;
         }
 
@@ -82,8 +74,8 @@ public class User {
 
     }
 
-    public User(int customerId, String firstName, String lastName,
-                String email, String login, String password, Role role) {
+    public User(int customerId, String firstName, String lastName, String email,
+                String login, String password, Role role) {
         this.customerId = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -91,54 +83,6 @@ public class User {
         this.login = login;
         this.password = password;
         this.role = role;
-    }
-
-    public User(String firstName, String lastName,String email,String login, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.login = login;
-        this.password = password;
-    }
-
-    public User(int customerId, String firstName, String lastName, String email,
-                String login, int role) {
-        this.customerId = customerId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.login = login;
-
-        if(role == 1){
-            this.role = Role.USER;
-        }else if (role == 2){
-            this.role = Role.SPEAKER;
-        }else if (role == 3){
-            this.role = Role.MODER;
-        }else{
-            this.role = Role.ADMIN;
-        }
-
-    }
-
-    public User(String firstName, String lastName, String email,
-                String login, String password, int role) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.login = login;
-        this.password = password;
-
-        if(role == 1){
-            this.role = Role.USER;
-        }else if (role == 2){
-            this.role = Role.SPEAKER;
-        }else if (role == 3){
-            this.role = Role.MODER;
-        }else{
-            this.role = Role.ADMIN;
-        }
-
     }
 
 
