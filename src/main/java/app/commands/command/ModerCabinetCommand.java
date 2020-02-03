@@ -6,7 +6,6 @@ import app.entities.Conference;
 import app.entities.User;
 import app.persistences.dao.UserDAO;
 import app.persistences.factory.MySqlDaoFactory;
-import app.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -38,10 +37,12 @@ public class ModerCabinetCommand implements ICommand{
             case GIVE_USER_ROLE:
                 giveUserRole(request,1);
                 doUserPagination(request);
+                request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 break;
             case GIVE_SPEAKER_ROLE:
                 giveUserRole(request,2);
                 doUserPagination(request);
+                request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 break;
             case GIVE_SPEECH:
                 giveSpeech(request);
@@ -51,6 +52,7 @@ public class ModerCabinetCommand implements ICommand{
                 break;
         }
 
+
         doUserPagination(request);
 
     return page;
@@ -58,24 +60,34 @@ public class ModerCabinetCommand implements ICommand{
 
     private static void giveSpeech(HttpServletRequest request){
 
+        logger.info("IN");
+
         String confName;
+        String location;
+
         String date = request.getParameter("date") + " 00:00:00";
         String beginsAtTime = request.getParameter("beginsAtTime");
         String endsAtTime = request.getParameter("endsAtTime");
-        String location;
+
         Boolean acceptedByModer = true;
         Boolean acceptedBySpeaker = Boolean.valueOf(request.getParameter("acceptedBySpeaker"));
 
-        int speakerId = 8;
+        String speakerIdOpt = request.getParameter("speakerIdOpt");
+
+        logger.info(date + " !!!!"+ beginsAtTime +" "+ endsAtTime);
 
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
+        if(!date.equals("00:00:00") && !beginsAtTime.isEmpty() && !endsAtTime.isEmpty()
+        && confName != null && location != null){
 
-        beginsAtTime = SpeakerCabinetCommand.formatTime(beginsAtTime);
-        endsAtTime = SpeakerCabinetCommand.formatTime(endsAtTime);
+            logger.info("WORKS AFTER IF");
 
-        if(date != null && beginsAtTime != null && endsAtTime != null){
+            int speakerId = Integer.parseInt(speakerIdOpt);
+
+            beginsAtTime = SpeakerCabinetCommand.formatTime(beginsAtTime);
+            endsAtTime = SpeakerCabinetCommand.formatTime(endsAtTime);
 
             Conference conference = new Conference.Builder(speakerId, confName, location,
                     date, beginsAtTime, endsAtTime)
@@ -135,7 +147,7 @@ public class ModerCabinetCommand implements ICommand{
 
         logger.info(users.size()+" USER SIZE");
 
-        request.getSession().setAttribute("usersForModerView", users);
+        request.setAttribute("usersForModerView", users);
 
         request.setAttribute("nOfPages", nOfPages);
         request.setAttribute("currentPage", currentPage);

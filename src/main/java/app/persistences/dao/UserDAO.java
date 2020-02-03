@@ -20,9 +20,19 @@ public class UserDAO {
     private static final String GET_SPEAKERS_FOR_OPTION="SELECT customer_id, first_name, last_name \n" +
             "FROM customers WHERE role = '2';";
 
-//    public List<User> getSpeakersForOption(){
-//        List<User>
-//    }
+    public List<User> getSpeakersForOption(){
+        List<User> speakers = new LinkedList<>();
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {};
+
+        ResultSet resultSet = executor.getResultSet(GET_SPEAKERS_FOR_OPTION, arguments);
+        speakers = getUsersFromResSet(resultSet, 2);
+
+        executor.close();
+
+        return speakers;
+    }
 
     public void giveRole(int role ,int userId){
 
@@ -43,7 +53,7 @@ public class UserDAO {
 
         ResultSet resultSet = executor.getResultSet(GET_CUSTOMERS_FOR_PAGINATION, arguments);
 
-        users = getUsersFromResSet(resultSet);
+        users = getUsersFromResSet(resultSet,1);
 
         executor.close();
 
@@ -70,7 +80,7 @@ public class UserDAO {
         return  nOfUsers;
     }
 
-    private static List<User> getUsersFromResSet(ResultSet resultSet){
+    private static List<User> getUsersFromResSet(ResultSet resultSet, int initType){
 
         List<User> users = new LinkedList<>();
 
@@ -82,29 +92,46 @@ public class UserDAO {
         int role;
 
         try {
-            while (resultSet.next()){
+            switch (initType){
+                case 1:while (resultSet.next()){
 
-                customerId = resultSet.getInt("customer_id");
-                firstName = resultSet.getString("first_name");
-                lastName = resultSet.getString("last_name");
-                login = resultSet.getString("login");
-                email = resultSet.getString("email");
-                role = resultSet.getInt("role");
+                    customerId = resultSet.getInt("customer_id");
+                    firstName = resultSet.getString("first_name");
+                    lastName = resultSet.getString("last_name");
+                    login = resultSet.getString("login");
+                    email = resultSet.getString("email");
+                    role = resultSet.getInt("role");
 
-                users.add(
-                        new User.Builder(firstName, lastName)
-                                .setCustomerId(customerId)
-                                .setLogin(login)
-                                .setEmail(email)
-                                .setRole(role)
-                                .build()
-                );
+                    users.add(
+                            new User.Builder(firstName, lastName)
+                                    .setCustomerId(customerId)
+                                    .setLogin(login)
+                                    .setEmail(email)
+                                    .setRole(role)
+                                    .build()
+                    );
+                }
+                return users;
+                case 2:
+                    while (resultSet.next()){
+                        customerId = resultSet.getInt("customer_id");
+                        firstName = resultSet.getString("first_name");
+                        lastName = resultSet.getString("last_name");
+
+                        users.add(
+                                new User.Builder(firstName, lastName)
+                                        .setCustomerId(customerId)
+                                        .build()
+                        );
+                    }
+                    return users;
+                default:
+                    break;
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return users;
+        return null;
     }
 }

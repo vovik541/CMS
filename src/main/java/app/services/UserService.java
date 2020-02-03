@@ -57,6 +57,7 @@ public class UserService {
                 break;
             case MODER:
                 page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
+                request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 ModerCabinetCommand.doUserPagination(request);
                 break;
             case ADMIN:

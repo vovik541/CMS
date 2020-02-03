@@ -25,15 +25,17 @@
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="give_speech" />
 
-            <p>${confName}</p>
+            <label>
+                <p>${confName}</p>
                 <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <p>${location}</p>
+                <p>${location}</p>
                 <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <p>${beginsAt}</p>
+                <p>${beginsAt}</p>
                 <input type="date" name="date">
                 <input type="time" min="08:00" max="23:00" name="beginsAtTime">
-            <p>${endsAt}</p>
+                <p>${endsAt}</p>
                 <input type="time" min="08:00" max="23:00" name="endsAtTime">
+            </label>
 
             <label for="accepted">Accepted By Speaker</label>
 
@@ -42,10 +44,27 @@
                 <option value="false" selected>No</option>
             </select>
 
+            <label for="speakers">For Speaker</label>
+
+            <select class="form-control" id="speakers" name="speakerIdOpt">
+                <c:forEach var="speaker" items="${sessionScope.speakersForOption}">
+                    <option value="${speaker.customerId}">
+                        ${speaker.firstName} ${speaker.lastName}
+                    </option>
+                </c:forEach>
+            </select>
+
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">Submit</button>
         </form>
+        <c:if test="${requestScope.isAdded}">
+            <h3>Has been added!</h3>
+        </c:if>
+        <c:if test="${requestScope.isInputError}">
+            <h3>INCORRECT INPUT!!</h3>
+        </c:if>
 
-        <form>
+
+        <form method="post">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="set_records_per_page" />
 
@@ -77,7 +96,7 @@
                 <th>role</th>
                 <th>Make Speaker</th>
             </tr>
-            <c:forEach var="user" items="${sessionScope.usersForModerView}">
+            <c:forEach var="user" items="${requestScope.usersForModerView}">
                 <tr>
                     <td>${user.customerId}</td>
                     <td>${user.firstName}</td>
