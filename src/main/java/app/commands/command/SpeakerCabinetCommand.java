@@ -96,7 +96,7 @@ public class SpeakerCabinetCommand implements ICommand{
         String endsAtTime;
         String location;
         Boolean acceptedByModer = false;
-        Boolean acceptedBySpeaker = false;
+        Boolean acceptedBySpeaker = true;
         int speakerId;
 
         User user = (User) request.getSession().getAttribute("currentUser");
@@ -113,12 +113,12 @@ public class SpeakerCabinetCommand implements ICommand{
             endsAtTime = formatTime(endsAtTime);
 
             if(date != null && beginsAtTime != null && endsAtTime != null){
-                Conference conference = new Conference(speakerId, confName,
-                        date, beginsAtTime, endsAtTime, location, acceptedByModer,
-                        acceptedBySpeaker);
 
-                conference.setAcceptedBySpeaker(true);
-                conference.setAcceptedByModer(false);
+                Conference conference = new Conference.Builder(speakerId, confName, location,
+                        date, beginsAtTime, endsAtTime)
+                        .setAcceptedByModer(acceptedByModer)
+                        .setAcceptedBySpeaker(acceptedBySpeaker)
+                        .build();
 
                 MySqlDaoFactory.getConferenceDAO().
                         addConference(conference);

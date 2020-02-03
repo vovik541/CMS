@@ -267,52 +267,97 @@ public class ConferenceDAO {
 
         List<Conference> conferences = new LinkedList<>();
 
+        String confName;
+        String date;
+        String beginsAtTime;
+        String endsAtTime;
+        String location;
+        String speakerFirstName;
+        String speakerLastName;
+        Boolean acceptedByModer = false;
+        Boolean acceptedBySpeaker = true;
+        int speakerId;
+        int conferenceId;
+        int rate;
+
         try {
             switch (initType){
                 case 1:
                     while (resSet.next()){
-                        conferences.add(new Conference(
-                                resSet.getInt("conference_id"),
-                                resSet.getInt("speaker_id"),
-                                resSet.getString("conference_name"),
-                                resSet.getDate("date").toString(),
-                                resSet.getTime("begins_at").toString(),
-                                resSet.getTime("ends_at").toString(),
-                                resSet.getString("location"),
-                                resSet.getString("first_name"),
-                                resSet.getString("last_Name"),
-                                resSet.getInt("rate")
-                        ));
-                    }return conferences;
+
+                        conferenceId = resSet.getInt("conference_id");
+                        speakerId = resSet.getInt("speaker_id");
+                        confName = resSet.getString("conference_name");
+                        date = resSet.getDate("date").toString();
+                        beginsAtTime = resSet.getTime("begins_at").toString();
+                        endsAtTime = resSet.getTime("ends_at").toString();
+                        location = resSet.getString("location");
+                        speakerFirstName = resSet.getString("first_name");
+                        speakerLastName = resSet.getString("last_Name");
+                        rate = resSet.getInt("rate");
+
+                        conferences.add(
+                                new Conference.Builder(speakerId, confName, location,
+                                        date, beginsAtTime, endsAtTime)
+                                        .setConferenceId(conferenceId)
+                                        .setSpeakerFirstName(speakerFirstName)
+                                        .setSpeakerLastName(speakerLastName)
+                                        .setRate(rate)
+                                        .build()
+                        );
+
+                    }
+                    return conferences;
                 case 2:
                     while (resSet.next()){
-                        conferences.add(new Conference(
-                                resSet.getInt("conference_id"),
-                                resSet.getInt("speaker_id"),
-                                resSet.getString("conference_name"),
-                                resSet.getDate("date").toString(),
-                                resSet.getTime("begins_at").toString(),
-                                resSet.getTime("ends_at").toString(),
-                                resSet.getString("location"),
-                                resSet.getBoolean("is_accepted_moder"),
-                                resSet.getBoolean("is_accepted_speaker"),
-                                resSet.getString("first_name"),
-                                resSet.getString("last_Name")
-                        ));
-                    }return conferences;
+
+                        conferenceId = resSet.getInt("conference_id");
+                        speakerId = resSet.getInt("speaker_id");
+                        confName = resSet.getString("conference_name");
+                        date = resSet.getDate("date").toString();
+                        beginsAtTime = resSet.getTime("begins_at").toString();
+                        endsAtTime = resSet.getTime("ends_at").toString();
+                        location = resSet.getString("location");
+                        speakerFirstName = resSet.getString("first_name");
+                        speakerLastName = resSet.getString("last_Name");
+                        rate = resSet.getInt("rate");
+                        acceptedByModer = resSet.getBoolean("is_accepted_moder");
+                        acceptedBySpeaker = resSet.getBoolean("is_accepted_speaker");
+
+                        conferences.add(
+                                new Conference.Builder(speakerId, confName, location,
+                                        date, beginsAtTime, endsAtTime)
+                                        .setConferenceId(conferenceId)
+                                        .setSpeakerFirstName(speakerFirstName)
+                                        .setSpeakerLastName(speakerLastName)
+                                        .setRate(rate)
+                                        .setAcceptedBySpeaker(acceptedBySpeaker)
+                                        .setAcceptedByModer(acceptedByModer)
+                                        .build()
+                        );
+                    }
+                    return conferences;
                 case 3:
                     while (resSet.next()){
-                    conferences.add(new Conference(
-                            resSet.getInt("conference_id"),
-                            resSet.getInt("speaker_id"),
-                            resSet.getString("conference_name"),
-                            resSet.getDate("date").toString(),
-                            resSet.getTime("begins_at").toString(),
-                            resSet.getTime("ends_at").toString(),
-                            resSet.getString("location"),
-                            resSet.getBoolean("is_accepted_moder"),
-                            resSet.getBoolean("is_accepted_speaker")));
-                    }return conferences;
+
+                        conferenceId = resSet.getInt("conference_id");
+                        speakerId = resSet.getInt("speaker_id");
+                        confName = resSet.getString("conference_name");
+                        date = resSet.getDate("date").toString();
+                        beginsAtTime = resSet.getTime("begins_at").toString();
+                        endsAtTime = resSet.getTime("ends_at").toString();
+                        location = resSet.getString("location");
+                        acceptedByModer = resSet.getBoolean("is_accepted_moder");
+                        acceptedBySpeaker = resSet.getBoolean("is_accepted_speaker");
+
+                        conferences.add(new Conference.Builder(speakerId, confName, location,
+                                date, beginsAtTime, endsAtTime)
+                                .setConferenceId(conferenceId)
+                                .setAcceptedBySpeaker(acceptedBySpeaker)
+                                .setAcceptedByModer(acceptedByModer)
+                                .build());
+                    }
+                    return conferences;
                 default:return null;
             }
         } catch (SQLException e) {

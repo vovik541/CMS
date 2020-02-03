@@ -15,8 +15,8 @@ public class User {
     public static class Builder {
 
         private Role role = Role.USER;
-        private String firstName = null;
-        private String lastName = null;
+        private String firstName;
+        private String lastName;
         private String email = null;
         private String login = null;
         private String password = null;
@@ -85,8 +85,6 @@ public class User {
         this.role = role;
     }
 
-
-
     public int getCustomerId() {
         return customerId;
     }
@@ -142,8 +140,6 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
-
-
 
         @Override
     public String toString() {

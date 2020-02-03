@@ -76,12 +76,12 @@ public class ModerCabinetCommand implements ICommand{
         endsAtTime = SpeakerCabinetCommand.formatTime(endsAtTime);
 
         if(date != null && beginsAtTime != null && endsAtTime != null){
-            Conference conference = new Conference(speakerId, confName,
-                    date, beginsAtTime, endsAtTime, location, acceptedByModer,
-                    acceptedBySpeaker);
 
-            conference.setAcceptedBySpeaker(true);
-            conference.setAcceptedByModer(false);
+            Conference conference = new Conference.Builder(speakerId, confName, location,
+                    date, beginsAtTime, endsAtTime)
+                    .setAcceptedByModer(acceptedByModer)
+                    .setAcceptedBySpeaker(acceptedBySpeaker)
+                    .build();
 
             MySqlDaoFactory.getConferenceDAO().
                     addConference(conference);

@@ -92,15 +92,15 @@ public class UserDAO {
                 role = resultSet.getInt("role");
 
                 users.add(
-                        new User.Builder(firstName,lastName)
+                        new User.Builder(firstName, lastName)
                                 .setCustomerId(customerId)
                                 .setLogin(login)
                                 .setEmail(email)
                                 .setRole(role)
                                 .build()
                 );
-
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
