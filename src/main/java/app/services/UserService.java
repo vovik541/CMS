@@ -57,8 +57,15 @@ public class UserService {
                 break;
             case MODER:
                 page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
-                request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
+                request.getSession().setAttribute("speakersForOption",
+                        MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 ModerCabinetCommand.doUserPagination(request);
+                request.setAttribute("pastConferences",
+                        MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(getCurrentDay(),
+                                getCurrentTime()));
+                request.setAttribute("currentConferences",
+                        MySqlDaoFactory.getConferenceDAO().getCurrentConferences(getCurrentDay(),
+                                getCurrentTime()));
                 break;
             case ADMIN:
                 page = confManager.getProperty(ResourceManager.ADMIN_CABINET.toString());
@@ -70,7 +77,7 @@ public class UserService {
         return page;
     }
 
-    private java.sql.Date getCurrentDay(){
+    public static java.sql.Date getCurrentDay(){
 
         Calendar c=Calendar.getInstance();
 
@@ -92,7 +99,7 @@ public class UserService {
         return currentDateDB;
     }
 
-    private String getCurrentTime(){
+    public static String getCurrentTime(){
 
         Calendar c=Calendar.getInstance();
 
@@ -110,12 +117,12 @@ public class UserService {
         String currentTime = getCurrentTime();
 
         List<Conference> conferences =  MySqlDaoFactory.getConferenceDAO().
-                getConfBeforeDateTime(currentDate,currentTime);
+                getConfAfterDateTime(currentDate,currentTime);
 
         return conferences;
     }
 
-    private String toFormat(int number){
+    private static String toFormat(int number){
         if(number < 10){
             return "0"+number;
         }

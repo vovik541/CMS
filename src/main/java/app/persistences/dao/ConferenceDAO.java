@@ -14,7 +14,7 @@ public class ConferenceDAO {
 
     private static final Logger logger = Logger.getLogger(ConferenceDAO.class);
 
-    private static final String GET_CONF_BEFORE_DAY_TIME = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
+    private static final String GET_CONF_AFTER_DAY_TIME = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
             "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
             "conferences.is_accepted_speaker, conferences.location,\n" +
             "customers.first_name, customers.last_name\n" +
@@ -23,6 +23,22 @@ public class ConferenceDAO {
             "WHERE (((date > {d?}) OR " +
             "(ends_at > {t?} AND date = {d?})) " +
             "AND is_accepted_speaker = '1' AND is_accepted_moder = '1');";
+    private static final String GET_CURRENT_CONFERENCES = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
+            "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
+            "conferences.is_accepted_speaker, conferences.location,\n" +
+            "customers.first_name, customers.last_name\n" +
+            "FROM conferences\n" +
+            "INNER JOIN customers ON conferences.speaker_id = customers.customer_id\n" +
+            "WHERE (date > {d?}) OR " +
+            "(ends_at > {t?} AND date = {d?});";
+    private static final String GET_CONF_BEFORE_DAY_TIME = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
+            "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.is_accepted_moder,\n" +
+            "conferences.is_accepted_speaker, conferences.location,\n" +
+            "customers.first_name, customers.last_name\n" +
+            "FROM conferences\n" +
+            "INNER JOIN customers ON conferences.speaker_id = customers.customer_id\n" +
+            "WHERE (date < {d?}) OR " +
+            "(ends_at < {t?} AND date = {d?});";
     private static final String GET_CONFERENCES_USER_GOT_PART_IN = "SELECT conferences.conference_id, conferences.conference_name, conferences.date,\n" +
             "conferences.begins_at, conferences.ends_at, conferences.speaker_id, conferences.location, rate,\n" +
             "customers.first_name, customers.last_name\n" +
@@ -41,7 +57,7 @@ public class ConferenceDAO {
     private static final String DELETE_REGISTERED_IN_CONFERENCE = "DELETE FROM registered_in_conference WHERE conference_id = ?";
     private static final String DELETE_CONFERENCE_BY_ID = "DELETE FROM conferences WHERE conference_id = ?";
     private static final String SET_AGREEMENT_SPEAKER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
-    private static final String SET_AGREEMENT_MODER = "UPDATE conferences SET is_accepted_speaker = ? WHERE conference_id = ?";
+    private static final String SET_AGREEMENT_MODER = "UPDATE conferences SET is_accepted_moder = ? WHERE conference_id = ?";
     private static final String REGISTER_IN_CONFERENCE = "INSERT INTO registered_in_conference " +
             "(user_id, conference_id) VALUES (?,?);";
     private static final String GET_CONF_ID_USER_IS_REG_IN = "SELECT * FROM registered_in_conference " +
@@ -102,7 +118,6 @@ public class ConferenceDAO {
 
     public void setAgreement(Role role, int id, Boolean agreement){
 
-        String agreementColumn = null;
         QueryExecutor executor = new QueryExecutor();
 
         if(role == Role.SPEAKER){
@@ -120,11 +135,35 @@ public class ConferenceDAO {
         }
     }
 
+    public List<Conference> getCurrentConferences(java.sql.Date currentDate, String currentTime){
+
+        List<Conference> conferences;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {currentDate,currentTime,currentDate};
+
+        ResultSet resSet = executor.getResultSet(GET_CURRENT_CONFERENCES,arguments);
+        conferences = getConferencesFromResSet(resSet,2);
+
+        return conferences;
+    }
+
     //returns conferences that will happen
+
+    public List<Conference> getConfAfterDateTime(java.sql.Date currentDate, String currentTime){
+
+        List<Conference> conferences;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {currentDate,currentTime,currentDate};
+
+        ResultSet resSet = executor.getResultSet(GET_CONF_AFTER_DAY_TIME,arguments);
+        conferences = getConferencesFromResSet(resSet,2);
+
+        return conferences;
+    }
 
     public List<Conference> getConfBeforeDateTime(java.sql.Date currentDate, String currentTime){
 
-        List<Conference> conferences = new LinkedList<>();
+        List<Conference> conferences;
         QueryExecutor executor = new QueryExecutor();
         Object[] arguments = {currentDate,currentTime,currentDate};
 
@@ -316,7 +355,6 @@ public class ConferenceDAO {
                         location = resSet.getString("location");
                         speakerFirstName = resSet.getString("first_name");
                         speakerLastName = resSet.getString("last_Name");
-                        rate = resSet.getInt("rate");
                         acceptedByModer = resSet.getBoolean("is_accepted_moder");
                         acceptedBySpeaker = resSet.getBoolean("is_accepted_speaker");
 
@@ -326,7 +364,6 @@ public class ConferenceDAO {
                                         .setConferenceId(conferenceId)
                                         .setSpeakerFirstName(speakerFirstName)
                                         .setSpeakerLastName(speakerLastName)
-                                        .setRate(rate)
                                         .setAcceptedBySpeaker(acceptedBySpeaker)
                                         .setAcceptedByModer(acceptedByModer)
                                         .build()
@@ -335,7 +372,6 @@ public class ConferenceDAO {
                     return conferences;
                 case 3:
                     while (resSet.next()){
-
                         conferenceId = resSet.getInt("conference_id");
                         speakerId = resSet.getInt("speaker_id");
                         confName = resSet.getString("conference_name");

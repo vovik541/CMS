@@ -3,9 +3,11 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.Conference;
+import app.entities.Role;
 import app.entities.User;
 import app.persistences.dao.UserDAO;
 import app.persistences.factory.MySqlDaoFactory;
+import app.services.UserService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -22,9 +24,9 @@ public class ModerCabinetCommand implements ICommand{
     public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     ConfigurationManager confManager = ConfigurationManager.getInstance();
-    String page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());;
+    String page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
 
-    User user = (User) request.getSession().getAttribute("currentUser");
+        int conferenceId;
 
         String action = request.getParameter(ResourceManager.ACTION.toString());
         logger.info("ACTION " + action);
@@ -47,11 +49,24 @@ public class ModerCabinetCommand implements ICommand{
             case GIVE_SPEECH:
                 giveSpeech(request);
                 break;
+            case MODER_AGREED:
+                conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+                MySqlDaoFactory.getConferenceDAO().setAgreement(Role.MODER,conferenceId,true);
+                break;
+            case MODER_DISAGREED:
+                conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+                MySqlDaoFactory.getConferenceDAO().setAgreement(Role.MODER,conferenceId,false);
+                break;
             default:
                 logger.info("DEFAULT IN SWITCH");
                 break;
         }
-
+        request.setAttribute("pastConferences",
+                MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(UserService.getCurrentDay(),
+                        UserService.getCurrentTime()));
+        request.setAttribute("currentConferences",
+                MySqlDaoFactory.getConferenceDAO().getCurrentConferences(UserService.getCurrentDay(),
+                        UserService.getCurrentTime()));
 
         doUserPagination(request);
 

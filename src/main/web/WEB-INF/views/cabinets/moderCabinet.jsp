@@ -17,6 +17,13 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
+
+<fmt:message key="speaker.confName" var="confName"/>
+<fmt:message key="speaker.beginsAt" var="beginsAt"/>
+<fmt:message key="speaker.endsAt" var="endsAt"/>
+<fmt:message key="speaker.day" var="day"/>
+<fmt:message key="speaker.location" var="location"/>
+
 <h1>MODER</h1>
 
 <div class="w3-card-4">
@@ -137,15 +144,13 @@
                     </c:choose>
                 </tr>
             </c:forEach>
-
-
         </table>
 
        <nav>
            <ul class="pagination">
                <c:if test="${requestScope.currentPage != 1}">
                    <li class="page-item">
-                       <form>
+                       <form method="post">
                            <input type="hidden" name="command" value="moder_cabinet" />
                            <input type="hidden" name="action" value="set_records_per_page" />
                            <input type="hidden" name="currentPage" value="${requestScope.currentPage - 1}" />
@@ -156,7 +161,7 @@
                </c:if>
                <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
                    <li class="page-item">
-                       <form>
+                       <form method="post">
                            <input type="hidden" name="command" value="moder_cabinet" />
                            <input type="hidden" name="action" value="set_records_per_page" />
                            <input type="hidden" name="currentPage" value="${i}" />
@@ -167,7 +172,7 @@
                </c:forEach>
                <c:if test="${requestScope.currentPage != requestScope.nOfPages}">
                    <li class="page-item">
-                       <form>
+                       <form method="post">
                            <input type="hidden" name="command" value="moder_cabinet" />
                            <input type="hidden" name="action" value="set_records_per_page" />
                            <input type="hidden" name="currentPage" value="${requestScope.currentPage + 1}" />
@@ -211,7 +216,96 @@
         </nav>--%>
 
     </div>
+    <h3>Current conferences</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>${confName}</th>
+            <th>SPEAKER</th>
+            <th>${location}</th>
+            <th>${day}</th>
+            <th>${beginsAt}</th>
+            <th>${endsAt}</th>
+            <th>Speaker Agreement</th>
+            <td>Give Agreement</td>
+        </tr>
+        <c:forEach var="conf" items="${requestScope.currentConferences}">
+            <tr>
+                <td>${conf.conferenceId}</td>
+                <td>${conf.confName}</td>
+                <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
+                <td>${conf.location}</td>
+                <td>${conf.date}</td>
+                <td>${conf.beginsAt}</td>
+                <td>${conf.endsAt}</td>
+                <td>
+                    <c:choose>
+                        <c:when test="${conf.acceptedBySpeaker eq 'true'}">
+                            Speaker accepted
+                        </c:when>
+                        <c:otherwise>
+                            Speaker didn't accept
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+                <td>
+                    <c:choose>
+                        <c:when test="${conf.acceptedByModer eq 'true'}">
+                            <form method="post">
+                                <input type="hidden" name="command" value="moder_cabinet" />
+                                <input type="hidden" name="action" value="moder_disagreed">
+                                <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
+                                <button type="submit">Not accept</button>
+                            </form>
+                        </c:when>
+                        <c:otherwise>
+                            <form method="post">
+                                <input type="hidden" name="command" value="moder_cabinet" />
+                                <input type="hidden" name="action" value="moder_agreed">
+                                <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
+                                <button type="submit">Accept</button>
+                            </form>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+    <h3>PAST CONFERENCES</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>${confName}</th>
+            <th>SPEAKER</th>
+            <th>${location}</th>
+            <th>${day}</th>
+            <th>${beginsAt}</th>
+            <th>${endsAt}</th>
+            <th>Speaker Agreement</th>
 
+        </tr>
+        <c:forEach var="conf" items="${requestScope.pastConferences}">
+            <tr>
+                <td>${conf.conferenceId}</td>
+                <td>${conf.confName}</td>
+                <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
+                <td>${conf.location}</td>
+                <td>${conf.date}</td>
+                <td>${conf.beginsAt}</td>
+                <td>${conf.endsAt}</td>
+                <td>
+                    <c:choose>
+                        <c:when test="${conf.acceptedBySpeaker eq 'true'}">
+                            Speaker accepted
+                        </c:when>
+                        <c:otherwise>
+                            Speaker didn't accept
+                        </c:otherwise>
+                    </c:choose>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
 
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>
