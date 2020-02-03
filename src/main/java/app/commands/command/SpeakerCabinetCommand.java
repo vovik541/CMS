@@ -132,7 +132,7 @@ public class SpeakerCabinetCommand implements ICommand{
             }
     }
 
-    private static String formatTime(String timeStr){
+    public static String formatTime(String timeStr){
 
         String formatted = timeStr.substring(2,5)+":00";
         int hours = Integer.parseInt(timeStr.substring(0,2));
@@ -167,22 +167,5 @@ public class SpeakerCabinetCommand implements ICommand{
     private static void doRefuse(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         MySqlDaoFactory.getConferenceDAO().setAgreement(Role.SPEAKER, conferenceId, false);
-    }
-
-    private static boolean check(int number, int maxValue){
-        if(number < 1){
-            return false;
-        }
-        if (number > maxValue){
-            return false;
-        }
-        return true;
-    }
-
-    private static String toFormat(int number){
-        if(number < 10){
-            return "0"+number;
-        }
-        return String.valueOf(number);
     }
 }

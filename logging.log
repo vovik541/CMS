@@ -12017,3 +12017,1194 @@
 2020-02-03 01:46:47 INFO  SignInCommand:36 - user exists in SignInCommand
 2020-02-03 01:46:47 INFO  UserService:43 - IN USER SERVICE USER
 2020-02-03 01:46:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/userCabinet.jsp
+2020-02-03 13:06:59 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:07:02 INFO  SessionListener:38 - Session with id : 7F5D180E51B0ECF3CA21188C0B071398 created.
+2020-02-03 13:07:02 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:02 INFO  Controller:25 - 
+2020-02-03 13:07:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:07:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:07:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:07:02 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:07:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:07:03 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:07:03 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:07:03 INFO  SessionListener:38 - Session with id : A59E2038C196EF58C27ABA19A3E9015B created.
+2020-02-03 13:07:03 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:03 INFO  Controller:25 - 
+2020-02-03 13:07:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:07:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:07:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:07:03 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:07:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:07:03 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:07:03 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:07:04 INFO  SessionListener:38 - Session with id : 346C0DA8D46C0458B1A44E425BA62646 created.
+2020-02-03 13:07:04 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:04 INFO  Controller:25 - 
+2020-02-03 13:07:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:07:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:07:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:07:04 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:07:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:07:04 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:07:04 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:07:19 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:07:19 INFO  Controller:35 - sign_in
+2020-02-03 13:07:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:07:19 INFO  CommandFactory:38 - app.commands.command.SignInCommand@4fdc7028
+2020-02-03 13:07:19 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:07:19 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:07:20 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:07:20 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:07:20 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:07:20 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:07:20 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ null
+2020-02-03 13:07:20 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ null
+2020-02-03 13:07:20 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:20 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:20 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:07:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:36 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:36 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:36 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:36 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:36 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:07:36 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:38 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:38 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:38 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:38 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:38 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:38 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:39 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:39 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:39 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:39 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:39 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:39 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:41 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:41 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:41 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:41 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:41 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:41 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:42 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:42 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:42 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:42 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:42 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:42 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:43 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:43 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:43 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:43 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 4
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 4
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:07:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:43 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:43 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:43 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:43 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:43 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:07:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:50 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:50 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:50 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:50 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:83 - 25 USER SIZE
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:50 INFO  ModerCabinetCommand:83 - 25 USER SIZE
+2020-02-03 13:07:50 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:53 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:53 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:53 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:53 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:83 - 17 USER SIZE
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:07:53 INFO  ModerCabinetCommand:83 - 17 USER SIZE
+2020-02-03 13:07:53 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:07:59 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:07:59 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:07:59 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:07:59 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:07:59 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:07:59 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:07:59 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:83 - 25 USER SIZE
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 25
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:63 - !!25
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:08:00 INFO  ModerCabinetCommand:83 - 25 USER SIZE
+2020-02-03 13:08:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:07 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:07 INFO  Controller:25 - 
+2020-02-03 13:09:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:09:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:09:07 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:09:07 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:09:07 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ null
+2020-02-03 13:09:07 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ null
+2020-02-03 13:09:07 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:07 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:08 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:08 INFO  Controller:25 - 
+2020-02-03 13:09:08 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:09:08 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:09:08 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:09:08 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ null
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ null
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:08 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:08 INFO  Controller:25 - 
+2020-02-03 13:09:08 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:09:08 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:09:08 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:09:08 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ null
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ null
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:08 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:09 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:09 INFO  Controller:25 - 
+2020-02-03 13:09:09 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:09:09 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:09:09 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:09:09 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:09:09 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ null
+2020-02-03 13:09:09 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ null
+2020-02-03 13:09:09 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:09 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:09 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:54 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:54 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:09:54 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:09:54 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:54 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:54 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:55 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:55 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:09:55 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:09:55 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:55 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:55 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:56 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:56 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:09:56 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:09:56 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:56 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:56 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:56 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:09:56 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:09:56 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:56 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:09:56 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:09:58 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:09:58 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:09:58 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:09:58 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 5
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:09:58 INFO  ModerCabinetCommand:83 - 2 USER SIZE
+2020-02-03 13:09:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:10:00 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:10:00 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:10:00 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:10:00 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 4
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 4
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:00 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:10:02 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:10:02 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:10:02 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:10:02 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 3
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:02 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:10:03 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:10:03 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:10:03 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:10:03 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 2
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:03 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:10:04 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:10:04 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:10:04 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:10:04 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@73cd75c5
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:30 - ACTION set_records_per_page
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:53 - curPageINPUT @@@ 1
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:54 - recPageINPUT @@@ 10
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:60 - 
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:63 - !!10
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:68 - 1
+2020-02-03 13:10:04 INFO  ModerCabinetCommand:83 - 10 USER SIZE
+2020-02-03 13:10:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:18:00 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:18:01 INFO  SessionListener:38 - Session with id : D56BF58741057B7E46783360D3EA1BB8 created.
+2020-02-03 13:18:01 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:18:01 INFO  Controller:25 - 
+2020-02-03 13:18:01 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:18:01 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:18:01 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:18:01 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:18:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:18:02 INFO  SessionListener:38 - Session with id : 912AD7D648F6F9285079764834BAAADF created.
+2020-02-03 13:18:02 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:18:02 INFO  Controller:25 - 
+2020-02-03 13:18:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:18:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:18:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:18:02 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:18:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:18:02 INFO  SessionListener:38 - Session with id : 3F4F8E217659AB0B42BAB440AB51E9A2 created.
+2020-02-03 13:18:02 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:18:02 INFO  Controller:25 - 
+2020-02-03 13:18:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:18:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:18:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:18:02 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:18:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:18:02 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:18:07 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:18:07 INFO  Controller:35 - sign_in
+2020-02-03 13:18:07 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:18:07 INFO  CommandFactory:38 - app.commands.command.SignInCommand@11a0b16e
+2020-02-03 13:18:07 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:18:07 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:18:08 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:18:08 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:18:08 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:18:08 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:18:08 INFO  ModerCabinetCommand:58 - 
+2020-02-03 13:18:08 INFO  ModerCabinetCommand:78 - 10 USER SIZE
+2020-02-03 13:18:08 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:18:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:18:14 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:18:14 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:18:14 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:18:14 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@3ceb226e
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:58 - 
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:61 - !!10
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:66 - 1
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:78 - 10 USER SIZE
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:58 - 
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:61 - !!10
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:66 - 1
+2020-02-03 13:18:14 INFO  ModerCabinetCommand:78 - 10 USER SIZE
+2020-02-03 13:18:14 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:18:18 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:18:18 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:18:18 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:18:18 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@3ceb226e
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:58 - 
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:61 - !!10
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:66 - 1
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:78 - 10 USER SIZE
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:58 - 
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:61 - !!10
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:66 - 1
+2020-02-03 13:18:18 INFO  ModerCabinetCommand:78 - 10 USER SIZE
+2020-02-03 13:18:18 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:34:00 INFO  SessionListener:44 - Session with id : 3F4F8E217659AB0B42BAB440AB51E9A2 killed.
+2020-02-03 13:34:00 INFO  SessionListener:44 - Session with id : D56BF58741057B7E46783360D3EA1BB8 killed.
+2020-02-03 13:34:00 INFO  SessionListener:44 - Session with id : 912AD7D648F6F9285079764834BAAADF killed.
+2020-02-03 13:40:47 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:40:49 INFO  SessionListener:38 - Session with id : BDB6F58F23C74FB06E68D9A4E6287084 created.
+2020-02-03 13:40:49 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:40:49 INFO  Controller:25 - 
+2020-02-03 13:40:49 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:40:49 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:40:49 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:40:49 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:40:49 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:40:49 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:40:49 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:40:49 INFO  SessionListener:38 - Session with id : 5D085673941C53C78592FB634D6FF224 created.
+2020-02-03 13:40:49 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:40:49 INFO  Controller:25 - 
+2020-02-03 13:40:49 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:40:49 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:40:49 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:40:49 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:40:49 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:40:50 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:40:50 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:40:50 INFO  SessionListener:38 - Session with id : 5EBBFEF93C0FA32CD1A8D030EA25CFB2 created.
+2020-02-03 13:40:50 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:40:50 INFO  Controller:25 - 
+2020-02-03 13:40:50 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:40:50 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:40:50 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:40:50 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:40:50 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:40:50 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:40:50 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:40:56 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:40:56 INFO  Controller:35 - sign_in
+2020-02-03 13:40:56 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:40:56 INFO  CommandFactory:38 - app.commands.command.SignInCommand@23acfb2f
+2020-02-03 13:40:56 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:40:56 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:40:57 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:40:57 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:40:57 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:40:57 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:40:57 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:40:57 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:40:57 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:40:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:41:21 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:41:21 INFO  Controller:35 - sign_in
+2020-02-03 13:41:21 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:41:21 INFO  CommandFactory:38 - app.commands.command.SignInCommand@23acfb2f
+2020-02-03 13:41:21 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:41:21 INFO  SignInCommand:36 - user exists in SignInCommand
+2020-02-03 13:41:21 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:41:21 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:41:21 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:43:31 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:43:32 INFO  SessionListener:38 - Session with id : D8DE14A09508BB5D1ED8B15E51E6AF82 created.
+2020-02-03 13:43:32 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:43:32 INFO  Controller:25 - 
+2020-02-03 13:43:32 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:43:32 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:43:32 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:43:32 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:43:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:43:33 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:43:33 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:43:33 INFO  SessionListener:38 - Session with id : 1D30E5B4C6147E1916AE4BD9405B146B created.
+2020-02-03 13:43:33 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:43:33 INFO  Controller:25 - 
+2020-02-03 13:43:33 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:43:33 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:43:33 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:43:33 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:43:33 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:43:33 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:43:33 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:43:34 INFO  SessionListener:38 - Session with id : 0B41AB0E54114B6962A996D7DB93FDAB created.
+2020-02-03 13:43:34 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:43:34 INFO  Controller:25 - 
+2020-02-03 13:43:34 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:43:34 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:43:34 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:43:34 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:43:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:43:34 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:43:34 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:43:43 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:43:43 INFO  Controller:35 - sign_in
+2020-02-03 13:43:43 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:43:43 INFO  CommandFactory:38 - app.commands.command.SignInCommand@51d6e95f
+2020-02-03 13:43:43 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:43:43 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:43:44 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:43:44 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:43:44 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:43:44 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:43:44 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:43:44 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:43:44 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:43:44 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:43:51 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:43:51 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:43:51 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:43:51 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6a1e31e9
+2020-02-03 13:43:51 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:43:51 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:43:51 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:43:51 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:43:51 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:43:51 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:43:53 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:43:53 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:43:53 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:43:53 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6a1e31e9
+2020-02-03 13:43:53 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:45:16 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:45:17 INFO  SessionListener:38 - Session with id : E8DDC767089027F3BE1E536C0CB76DDA created.
+2020-02-03 13:45:17 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:17 INFO  Controller:25 - 
+2020-02-03 13:45:17 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:45:17 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:45:17 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:45:17 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:45:17 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:45:18 INFO  SessionListener:38 - Session with id : DC9E766463AA5F4C05B0AD2DDC2D09A3 created.
+2020-02-03 13:45:18 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:18 INFO  Controller:25 - 
+2020-02-03 13:45:18 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:45:18 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:45:18 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:45:18 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:45:18 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:45:18 INFO  SessionListener:38 - Session with id : 7972108156A60B4037E044C616CA95FB created.
+2020-02-03 13:45:18 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:18 INFO  Controller:25 - 
+2020-02-03 13:45:18 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:45:18 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:45:18 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:45:18 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:45:18 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:45:18 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:45:20 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:45:20 INFO  Controller:35 - sign_in
+2020-02-03 13:45:20 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:45:20 INFO  CommandFactory:38 - app.commands.command.SignInCommand@63b3a42a
+2020-02-03 13:45:20 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:45:20 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:45:21 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:45:21 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:45:21 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:45:21 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:45:21 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:21 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:22 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:45:22 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:24 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:24 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:24 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:24 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:24 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:45:24 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:24 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:24 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:24 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:24 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:25 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:25 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:25 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:25 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:25 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:45:25 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:25 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:25 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:25 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:25 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:26 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:26 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:26 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:26 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:26 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:45:26 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:26 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:26 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:26 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:27 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:27 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:27 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:27 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:27 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:45:27 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:27 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:27 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:27 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:31 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:31 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:31 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:31 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:31 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:45:31 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:31 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:31 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:31 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:31 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:34 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:34 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:34 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:34 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:34 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:36 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:36 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:36 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:36 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:36 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:45:36 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:36 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:36 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:36 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:36 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:42 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:42 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:42 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:42 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:42 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:43 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:44 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:44 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:44 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:44 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:44 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:45:44 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:44 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:44 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:44 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:44 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:48 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:48 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:48 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:48 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:48 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:45:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:53 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:53 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:53 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:53 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:91 - 17 USER SIZE
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:45:53 INFO  ModerCabinetCommand:91 - 17 USER SIZE
+2020-02-03 13:45:53 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:45:54 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:45:54 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:45:54 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:45:54 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:45:54 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:45:54 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:54 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:54 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:45:54 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:45:54 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:46:07 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:46:07 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:46:07 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:46:07 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:46:07 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:46:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:46:17 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:46:17 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:46:17 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:46:17 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:91 - 17 USER SIZE
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:46:17 INFO  ModerCabinetCommand:91 - 17 USER SIZE
+2020-02-03 13:46:17 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:46:19 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:46:19 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:46:19 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:46:19 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:46:19 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:46:19 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:19 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:46:19 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:46:19 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:46:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:47:46 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:47:46 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:47:46 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:47:46 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:47:46 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:47:46 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:47:48 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:47:48 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:47:48 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:47:48 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:47:48 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:47:48 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:48 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:47:48 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:48 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:47:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:47:51 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:47:51 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:47:51 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:47:51 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@7ce62809
+2020-02-03 13:47:51 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:47:51 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:51 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:47:51 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:47:51 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:47:51 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:49:53 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 13:49:56 INFO  SessionListener:38 - Session with id : A9E6B6E0EB13B9C20B125C4B004B4C2E created.
+2020-02-03 13:49:56 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:49:56 INFO  Controller:25 - 
+2020-02-03 13:49:56 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:49:56 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:49:56 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:49:56 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:49:56 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:49:57 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:49:57 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:49:57 INFO  SessionListener:38 - Session with id : 6E9EF87A779A9252666C318B75098207 created.
+2020-02-03 13:49:57 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:49:57 INFO  Controller:25 - 
+2020-02-03 13:49:57 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:49:57 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:49:57 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:49:57 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:49:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:49:57 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:49:57 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:49:58 INFO  SessionListener:38 - Session with id : 28C076DAD542681791744603BCC00C33 created.
+2020-02-03 13:49:58 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:49:58 INFO  Controller:25 - 
+2020-02-03 13:49:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:49:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:49:58 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:49:58 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 13:49:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 13:49:58 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 13:49:58 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 13:51:19 INFO  Controller:33 - In Controller doPost
+2020-02-03 13:51:19 INFO  Controller:35 - sign_in
+2020-02-03 13:51:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 13:51:20 INFO  CommandFactory:38 - app.commands.command.SignInCommand@b1a39
+2020-02-03 13:51:20 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 13:51:20 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 13:51:20 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 13:51:20 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 13:51:20 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 13:51:20 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 13:51:20 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:20 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:51:20 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 13:51:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:31 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:31 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:31 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:31 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:31 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:31 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:32 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:32 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:32 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:32 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:32 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:33 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:33 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:33 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:33 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:33 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:34 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:37 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:37 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:37 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:37 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:37 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:37 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:38 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:38 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:38 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:38 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:38 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:38 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:40 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:40 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:40 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:40 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:29 - ACTION give_speaker_role
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:40 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:40 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:41 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:41 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:41 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:41 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:29 - ACTION give_user_role
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:41 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:51:41 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:51:47 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:51:47 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:51:47 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:51:47 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:74 - !!25
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:51:47 INFO  ModerCabinetCommand:91 - 25 USER SIZE
+2020-02-03 13:51:47 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:03 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:03 INFO  Controller:25 - 
+2020-02-03 13:52:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:03 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:03 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:03 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:04 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:04 INFO  Controller:25 - 
+2020-02-03 13:52:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:04 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:04 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:04 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:05 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:05 INFO  Controller:25 - 
+2020-02-03 13:52:05 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:05 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:05 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:05 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:05 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:05 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:06 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:06 INFO  Controller:25 - 
+2020-02-03 13:52:06 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:06 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:06 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:06 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:06 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:06 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:06 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:07 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:07 INFO  Controller:25 - 
+2020-02-03 13:52:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:07 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:07 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:07 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:07 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:07 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:07 INFO  Controller:25 - 
+2020-02-03 13:52:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 13:52:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 13:52:07 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 13:52:07 INFO  EmptyCommand:31 - USER EXISTS in EmptyCommand
+2020-02-03 13:52:07 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:07 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:12 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:12 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:52:12 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:52:12 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:74 - !!10
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:52:12 INFO  ModerCabinetCommand:91 - 10 USER SIZE
+2020-02-03 13:52:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 13:52:19 INFO  Controller:23 - In Controller doGet
+2020-02-03 13:52:19 INFO  Controller:25 - moder_cabinet
+2020-02-03 13:52:19 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 13:52:19 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@475423ba
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:29 - ACTION set_records_per_page
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:71 - 
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:74 - !!5
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:79 - 1
+2020-02-03 13:52:19 INFO  ModerCabinetCommand:91 - 5 USER SIZE
+2020-02-03 13:52:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 14:05:54 INFO  SessionListener:44 - Session with id : 6E9EF87A779A9252666C318B75098207 killed.
+2020-02-03 14:05:54 INFO  SessionListener:44 - Session with id : A9E6B6E0EB13B9C20B125C4B004B4C2E killed.
+2020-02-03 14:07:54 INFO  SessionListener:44 - Session with id : 28C076DAD542681791744603BCC00C33 killed.
+2020-02-03 14:08:27 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 14:08:28 INFO  SessionListener:38 - Session with id : 3D068ACB6DC24A57B41300E4E1128AF1 created.
+2020-02-03 14:08:28 INFO  Controller:23 - In Controller doGet
+2020-02-03 14:08:28 INFO  Controller:25 - 
+2020-02-03 14:08:28 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 14:08:28 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 14:08:28 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 14:08:28 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 14:08:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 14:08:29 INFO  SessionListener:38 - Session with id : 5B7A1D98CC8C02684900C59B0E4881D3 created.
+2020-02-03 14:08:29 INFO  Controller:23 - In Controller doGet
+2020-02-03 14:08:29 INFO  Controller:25 - 
+2020-02-03 14:08:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 14:08:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 14:08:29 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 14:08:29 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 14:08:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 14:08:29 INFO  SessionListener:38 - Session with id : BDBE222ED2E45114B847CE1096C6AA66 created.
+2020-02-03 14:08:29 INFO  Controller:23 - In Controller doGet
+2020-02-03 14:08:29 INFO  Controller:25 - 
+2020-02-03 14:08:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 14:08:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 14:08:29 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 14:08:29 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 14:08:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 14:08:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 14:18:16 INFO  Controller:33 - In Controller doPost
+2020-02-03 14:18:16 INFO  Controller:35 - sign_in
+2020-02-03 14:18:16 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 14:18:16 INFO  CommandFactory:38 - app.commands.command.SignInCommand@19e6e26c
+2020-02-03 14:18:16 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 14:18:16 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 14:18:17 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 14:18:17 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 14:18:17 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 14:18:17 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 14:18:17 INFO  ModerCabinetCommand:117 - 
+2020-02-03 14:18:17 INFO  ModerCabinetCommand:137 - 10 USER SIZE
+2020-02-03 14:18:17 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 14:18:17 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 14:24:26 INFO  SessionListener:44 - Session with id : 3D068ACB6DC24A57B41300E4E1128AF1 killed.
+2020-02-03 14:24:26 INFO  SessionListener:44 - Session with id : 5B7A1D98CC8C02684900C59B0E4881D3 killed.
+2020-02-03 14:33:27 INFO  SessionListener:44 - Session with id : BDBE222ED2E45114B847CE1096C6AA66 killed.
+2020-02-03 15:05:17 INFO  SessionListener:38 - Session with id : B97C109F15E414E355AE301F2AB4286C created.
+2020-02-03 15:05:17 INFO  Controller:23 - In Controller doGet
+2020-02-03 15:05:17 INFO  Controller:25 - 
+2020-02-03 15:05:17 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 15:05:17 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 15:05:17 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 15:05:17 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 15:05:17 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 15:05:17 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 15:05:17 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 15:05:19 INFO  Controller:33 - In Controller doPost
+2020-02-03 15:05:19 INFO  Controller:35 - sign_in
+2020-02-03 15:05:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 15:05:19 INFO  CommandFactory:38 - app.commands.command.SignInCommand@19e6e26c
+2020-02-03 15:05:19 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 15:05:19 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 15:05:19 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 15:05:19 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 15:05:19 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 15:05:19 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 15:05:19 INFO  ModerCabinetCommand:117 - 
+2020-02-03 15:05:19 INFO  ModerCabinetCommand:137 - 10 USER SIZE
+2020-02-03 15:05:19 INFO  SessionListener:52 - Attribute added: usersForModerView
+2020-02-03 15:05:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 15:20:31 INFO  SessionListener:44 - Session with id : B97C109F15E414E355AE301F2AB4286C killed.

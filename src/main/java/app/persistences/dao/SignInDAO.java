@@ -85,16 +85,16 @@ public class SignInDAO {
         List<User> usersList = new LinkedList<>();
 
         while (userResSet.next()){
-            user = new User(
-                    userResSet.getInt("customer_id"),
-                    userResSet.getString("first_name"),
-                    userResSet.getString("last_name"),
-                    userResSet.getString("login"),
-                    userResSet.getString("password"),
-                    userResSet.getString("email"),
-                    userResSet.getInt("role")
-            );
-            usersList.add(user);
+//            user = new User(
+//                    userResSet.getInt("customer_id"),
+//                    userResSet.getString("first_name"),
+//                    userResSet.getString("last_name"),
+//                    userResSet.getString("login"),
+//                    userResSet.getString("password"),
+//                    userResSet.getString("email"),
+//                    userResSet.getInt("role")
+//            );
+//            usersList.add(user);
         }
 //        logger.info("initUsersList worked");
         return usersList;

@@ -46,6 +46,10 @@ public enum ResourceManager {
     //________________MODER_ACTIONS
 
     SET_RECORDS_PER_PAGE("SET_RECORDS_PER_PAGE"),
+    GIVE_SPEAKER_ROLE("GIVE_SPEAKER_ROLE"),
+    GIVE_USER_ROLE("GIVE_USER_POLE"),
+    GIVE_SPEECH("GIVE_SPEECH"),
+
     LOGIN_ERROR("MESSAGE.LOGIN_ERROR");
 
     private String value;

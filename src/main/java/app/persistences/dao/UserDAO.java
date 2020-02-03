@@ -16,6 +16,24 @@ public class UserDAO {
     private static final String GET_NUMBER_OF_CUSTOMERS = "SELECT COUNT(customer_id) AS total FROM customers;";
     private static final String GET_CUSTOMERS_FOR_PAGINATION = "SELECT customer_id, first_name, last_name," +
             "login, email, role FROM customers ORDER BY first_name LIMIT ?, ?;";
+    private static final String GIVE_ROLE = "UPDATE customers SET role = ? WHERE customers.customer_id = ?;";
+    private static final String GET_SPEAKERS_FOR_OPTION="SELECT customer_id, first_name, last_name \n" +
+            "FROM customers WHERE role = '2';";
+
+//    public List<User> getSpeakersForOption(){
+//        List<User>
+//    }
+
+    public void giveRole(int role ,int userId){
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {role, userId};
+
+        executor.executeStatement(GIVE_ROLE, arguments);
+
+        executor.close();
+
+    }
 
     public List<User> getUsersForPag(int currentPge, int recordsPerPage){
 

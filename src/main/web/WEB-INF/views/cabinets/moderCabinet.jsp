@@ -21,6 +21,30 @@
 
 <div class="w3-card-4">
     <div>
+        <form method="post" id="offer">
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="give_speech" />
+
+            <p>${confName}</p>
+                <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <p>${location}</p>
+                <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <p>${beginsAt}</p>
+                <input type="date" name="date">
+                <input type="time" min="08:00" max="23:00" name="beginsAtTime">
+            <p>${endsAt}</p>
+                <input type="time" min="08:00" max="23:00" name="endsAtTime">
+
+            <label for="accepted">Accepted By Speaker</label>
+
+            <select class="form-control" id="accepted" name="acceptedBySpeaker">
+                <option value="true">Yes</option>
+                <option value="false" selected>No</option>
+            </select>
+
+            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">Submit</button>
+        </form>
+
         <form>
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="set_records_per_page" />
@@ -40,9 +64,7 @@
                 </select>
 
             </div>
-
             <button type="submit" class="btn btn-primary">Submit</button>
-
         </form>
 
         <table>
@@ -63,8 +85,40 @@
                     <td>${user.login}</td>
                     <td>${user.email}</td>
                     <td>${user.role}</td>
+                    <c:choose>
+                        <c:when test="${user.role eq 'USER'}">
+                            <td>
+                                <form>
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="give_speaker_role">
+                                    <input type="hidden" name="userId" value="${user.customerId}">
+                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
+                                    <button type="submit">Make Speaker</button>
+                                </form>
+                            </td>
+                        </c:when>
+                        <c:when test="${user.role eq 'SPEAKER'}">
+                            <td>
+                                <form>
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="give_user_role">
+                                    <input type="hidden" name="userId" value="${user.customerId}">
+                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
+                                    <button type="submit">Make User</button>
+                                </form>
+                            </td>
+                        </c:when>
+                        <c:otherwise>
+                            <td>
+                                You have po permission to change this role
+                            </td>
+                        </c:otherwise>
+                    </c:choose>
                 </tr>
             </c:forEach>
+
 
         </table>
 

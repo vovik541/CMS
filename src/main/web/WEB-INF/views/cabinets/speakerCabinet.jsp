@@ -23,11 +23,6 @@
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>
 <fmt:message key="speaker.endsAt" var="endsAt"/>
-<fmt:message key="speaker.month" var="month"/>
-<fmt:message key="speaker.year" var="year"/>
-<fmt:message key="speaker.day" var="day"/>
-<fmt:message key="speaker.hour" var="hour"/>
-<fmt:message key="speaker.minute" var="minute"/>
 <fmt:message key="speaker.location" var="location"/>
 
 <div class="w3-card-4">
@@ -63,36 +58,8 @@
                 <label>
                     <input type="time" min="08:00" max="23:00" name="endsAtTime">
                 </label>
-            <%--<p>${year}</p>
-                <label><input type="text" name="year"><br /></label>
-                <p>${month}</p>
-                <label>
-                    <input type="text" name="month"><br />
-                </label>
-                <p>${day}</p>
-                <label>
-                    <input type="text" name="day"><br />
-                </label>
-                <p>${hour}</p>
-                <label>
-                    <input type="text" name="begHour"><br />
-                </label>
-                <p>${minute}</p>
-                <label>
-                    <input type="text" name="begMin"><br />
-                </label>
-                <p>${endsAt}</p>
-                <p>${hour}</p>
-                <label>
-                    <input type="text" name="endHour"><br />
-                </label>
-                <p>${minute}</p>
-                <label>
-                    <input type="text" name="endMin"><br />
-                </label>
---%>
                 <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer"
-                        <c:set var="action" value="offer_a_speech" scope="session"/>>Submit</button>
+                        <%--<c:set var="action" value="offer_a_speech" scope="session"/>--%>>Submit</button>
             </form>
         </c:if>
         <c:if test="${requestScope.isAdded}">
