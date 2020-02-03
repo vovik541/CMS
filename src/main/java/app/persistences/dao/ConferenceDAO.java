@@ -231,25 +231,21 @@ public class ConferenceDAO {
 
         ResultSet resultSet = executor.getResultSet(GET_MORE_CONFERENCE_INFO, arguments);
 
+
         int registered = 0;
         int presented = 0;
 
         try {
 
-            //I didn't want to make 2 queries to get number of Registered And Present users
-            //like SELECT COUNT .. so I did this 'while' with 1 query to DB
-
-//            while (resultSet.next()){
-
-//                if(resultSet.getInt("is_present") != 0){
-//                    presented++;
-//                }
-                if ( resultSet.last() ) {
-                    registered = resultSet.getRow();
+            while (resultSet.next()){
+                if(resultSet.getInt("is_present") != 0){
+                    presented++;
                 }
+            }
 
-//                registered++;
-//            }
+            if (resultSet.last() ) {
+                registered = resultSet.getRow();
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
