@@ -57,6 +57,18 @@ public class ModerCabinetCommand implements ICommand{
                 conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
                 MySqlDaoFactory.getConferenceDAO().setAgreement(Role.MODER,conferenceId,false);
                 break;
+            case CHANGE_CONFERENCE_NAME:
+                changeConferenceName(request);
+                break;
+            case CHANGE_TIME:
+                changeTime(request);
+                break;
+            case CHANGE_LOCATION:
+                changeLocation(request);
+                break;
+            case CHANGE_SPEAKER:
+                changeSpeaker(request);
+                break;
             default:
                 logger.info("DEFAULT IN SWITCH");
                 break;
@@ -71,6 +83,51 @@ public class ModerCabinetCommand implements ICommand{
         doUserPagination(request);
 
     return page;
+    }
+
+    //not ready! (works without checking input)
+
+    private static void changeSpeaker(HttpServletRequest request){
+        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+        int speakerId = Integer.parseInt(request.getParameter("speakerId"));
+
+        MySqlDaoFactory.getConferenceDAO().changeSpeaker(speakerId, conferenceId);
+    }
+
+    //not ready! (works without checking input)
+
+    private static void changeTime(HttpServletRequest request){
+        String date = request.getParameter("date") + " 00:00:00";
+        String beginsAtTime = request.getParameter("beginsAtTime");
+        String endsAtTime = request.getParameter("endsAtTime");
+
+        if(!date.equals("00:00:00") && !beginsAtTime.isEmpty() && !endsAtTime.isEmpty()) {
+
+            int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+            beginsAtTime = beginsAtTime + ":00";
+            endsAtTime = endsAtTime + ":00";
+
+            MySqlDaoFactory.getConferenceDAO().changeDateTime(conferenceId,
+                    date, beginsAtTime, endsAtTime);
+        }
+    }
+
+    //not ready! (works without checking input)
+
+    private static void changeConferenceName(HttpServletRequest request){
+        String conferenceName = request.getParameter("conferenceName");
+        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+
+        MySqlDaoFactory.getConferenceDAO().changeConferenceName(conferenceName, conferenceId);
+    }
+
+    //not ready! (works without checking input)
+
+    private static void changeLocation(HttpServletRequest request){
+        String location = request.getParameter("location");
+        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+
+        MySqlDaoFactory.getConferenceDAO().changeLocation(location, conferenceId);
     }
 
     private static void giveSpeech(HttpServletRequest request){

@@ -28,6 +28,55 @@
 
 <div class="w3-card-4">
     <div>
+
+        <h5>Change time</h5>
+        <form method="post">
+            <p>Conference Id</p>
+            <input type="number" name="conferenceId">
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="change_time" />
+            <p>${beginsAt}</p>
+            <input type="date" name="date">
+            <input type="time" min="08:00" max="23:00" name="beginsAtTime">
+            <p>${endsAt}</p>
+            <input type="time" min="08:00" max="23:00" name="endsAtTime">
+            <button type="submit">submit</button>
+        </form>
+
+        <h5>Change Location</h5>
+        <form method="post">
+            <p>Conference Id</p>
+            <input type="number" name="conferenceId">
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="change_location" />
+            <p>${location}</p>
+            <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <button type="submit">submit</button>
+
+        </form>
+
+        <h5>Conference Name</h5>
+        <form method="post">
+            <p>Conference Id</p>
+            <input type="number" name="conferenceId">
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="change_conference_name" />
+            <p>${confName}</p>
+            <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+            <button type="submit">submit</button>
+        </form>
+
+        <h5>Change Speaker</h5>
+        <form method="post">
+            <p>Speaker Id</p>
+            <input type="number" name="speakerId">
+            <p>Conference Id</p>
+            <input type="number" name="conferenceId">
+            <input type="hidden" name="command" value="moder_cabinet" />
+            <input type="hidden" name="action" value="change_speaker" />
+            <button type="submit">submit</button>
+        </form>
+
         <form method="post" id="offer">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="give_speech" />
@@ -184,36 +233,6 @@
            </ul>
 
        </nav>
-        <%--<nav aria-label="Navigation for countries">
-            <ul class="pagination">
-                <c:if test="${currentPage != 1}">
-                    <li class="page-item"><a class="page-link"
-                                             href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage-1}">Previous</a>
-                    </li>
-                </c:if>
-
-                <c:forEach begin="1" end="${nOfPages}" var="i">
-                    <c:choose>
-                        <c:when test="${currentPage eq i}">
-                            <li class="page-item active"><a class="page-link">
-                                    ${i} <span class="sr-only">(current)</span></a>
-                            </li>
-                        </c:when>
-                        <c:otherwise>
-                            <li class="page-item"><a class="page-link"
-                                                     href="?command=moder_cabinet&action=set_records_per_page&recordsPerPage=${recordsPerPage}&currentPage=${i}">${i}</a>
-                            </li>
-                        </c:otherwise>
-                    </c:choose>
-                </c:forEach>
-
-                <c:if test="${currentPage lt nOfPages}">
-                    <li class="page-item"><a class="page-link"
-                                             href="?recordsPerPage=${recordsPerPage}&currentPage=${currentPage+1}">Next</a>
-                    </li>
-                </c:if>
-            </ul>
-        </nav>--%>
 
     </div>
     <h3>Current conferences</h3>
@@ -314,7 +333,6 @@
         </form>
     </footer>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>

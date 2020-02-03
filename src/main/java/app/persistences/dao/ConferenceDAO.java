@@ -68,6 +68,47 @@ public class ConferenceDAO {
             "WHERE speaker_id = ? AND rate != '0';";
     private static final String GET_MORE_CONFERENCE_INFO = "SELECT user_id, is_present FROM registered_in_conference " +
             "WHERE conference_id = ?;";
+    private static final String CHANGE_SPEAKER = "UPDATE conferences SET speaker_id = ? WHERE conference_id = ?;";
+    private static final String CHANGE_CONFERENCE_NAME = "UPDATE conferences SET conference_name = ? WHERE conference_id = ?";
+    private static final String CHANGE_LOCATION = "UPDATE conferences SET location = ? WHERE conference_id = ?";
+    private static final String CHANGE_DATE_TIME = "UPDATE conferences SET date = ?, begins_at = ?, ends_at = ?  WHERE conference_id = ?;";
+
+    public void changeSpeaker(int speakerId, int conferenceId){
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {speakerId, conferenceId};
+
+        executor.executeStatement(CHANGE_SPEAKER, arguments);
+
+        executor.close();
+    }
+
+    public void changeLocation(String location, int conferenceId){
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {location, conferenceId};
+
+        executor.executeStatement(CHANGE_LOCATION, arguments);
+
+        executor.close();
+    }
+    public void changeConferenceName(String conferenceName, int conferenceId){
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {conferenceName, conferenceId};
+
+        executor.executeStatement(CHANGE_CONFERENCE_NAME, arguments);
+
+        executor.close();
+    }
+
+    public void changeDateTime(int conferenceId, String date,
+                               String beginsAtTime, String endsAtTime){
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {date, beginsAtTime, endsAtTime, conferenceId};
+
+        executor.executeStatement(CHANGE_DATE_TIME, arguments);
+
+        executor.close();
+    }
 
     public void addConference(Conference conference){
 

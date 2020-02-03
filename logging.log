@@ -1358,3 +1358,239 @@
 2020-02-03 22:02:43 INFO  ModerCabinetCommand:151 - 1
 2020-02-03 22:02:43 INFO  ModerCabinetCommand:163 - 20 USER SIZE
 2020-02-03 22:02:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:21:57 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 23:21:59 INFO  SessionListener:38 - Session with id : 9331150A8E170DA1A2AACD825CCFD2EA created.
+2020-02-03 23:21:59 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:21:59 INFO  Controller:25 - 
+2020-02-03 23:21:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:21:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:21:59 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:21:59 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:21:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:22:00 INFO  SessionListener:38 - Session with id : 7CA298ECE2296C61807DA4B0AEC340D4 created.
+2020-02-03 23:22:00 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:22:00 INFO  Controller:25 - 
+2020-02-03 23:22:00 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:22:00 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:22:00 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:22:00 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:22:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:22:00 INFO  SessionListener:38 - Session with id : CE59CABCB39ED56B1EA4432736A942FD created.
+2020-02-03 23:22:00 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:22:00 INFO  Controller:25 - 
+2020-02-03 23:22:00 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:22:00 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:22:00 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:22:00 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:22:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:22:00 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:22:02 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:22:02 INFO  Controller:35 - sign_in
+2020-02-03 23:22:02 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 23:22:02 INFO  CommandFactory:38 - app.commands.command.SignInCommand@592dc496
+2020-02-03 23:22:02 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 23:22:02 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 23:22:03 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 23:22:03 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 23:22:03 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 23:22:03 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 23:22:03 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-03 23:22:03 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:22:03 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:22:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:22:58 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:22:58 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:22:58 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:22:58 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6cb74861
+2020-02-03 23:22:58 INFO  ModerCabinetCommand:32 - ACTION change_location
+2020-02-03 23:22:58 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:22:58 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:22:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:23:21 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:23:21 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:23:21 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:23:21 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6cb74861
+2020-02-03 23:23:21 INFO  ModerCabinetCommand:32 - ACTION change_conference_name
+2020-02-03 23:23:21 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:23:21 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:23:21 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:24:57 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:24:57 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:24:57 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:24:57 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6cb74861
+2020-02-03 23:24:57 INFO  ModerCabinetCommand:32 - ACTION change_speaker
+2020-02-03 23:24:57 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:24:57 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:24:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:25:32 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:25:32 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:25:32 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:25:32 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@6cb74861
+2020-02-03 23:25:32 INFO  ModerCabinetCommand:32 - ACTION change_speaker
+2020-02-03 23:25:32 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:25:32 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:25:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:28:06 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 23:28:07 INFO  SessionListener:38 - Session with id : BBC63771B4EE1E79AF1281A8075FEA5B created.
+2020-02-03 23:28:07 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:28:07 INFO  Controller:25 - 
+2020-02-03 23:28:07 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:28:07 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:28:07 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:28:07 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:28:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:28:08 INFO  SessionListener:38 - Session with id : 400E52EF578F23C045FFA5DC0447ACCE created.
+2020-02-03 23:28:08 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:28:08 INFO  Controller:25 - 
+2020-02-03 23:28:08 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:28:08 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:28:08 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:28:08 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:28:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:28:08 INFO  SessionListener:38 - Session with id : F78249470819A577697172910426CCE9 created.
+2020-02-03 23:28:08 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:28:08 INFO  Controller:25 - 
+2020-02-03 23:28:08 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:28:08 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:28:08 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:28:08 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:28:08 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:28:08 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:28:12 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:28:12 INFO  Controller:35 - sign_in
+2020-02-03 23:28:12 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 23:28:12 INFO  CommandFactory:38 - app.commands.command.SignInCommand@11a0b16e
+2020-02-03 23:28:12 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 23:28:12 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 23:28:13 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 23:28:13 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 23:28:13 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 23:28:13 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 23:28:13 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-03 23:28:13 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:28:13 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:28:13 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:28:30 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:28:30 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:28:30 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:28:30 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@188b2360
+2020-02-03 23:28:30 INFO  ModerCabinetCommand:32 - ACTION change_conference_name
+2020-02-03 23:28:30 INFO  ModerCabinetCommand:179 - 
+2020-02-03 23:28:30 INFO  ModerCabinetCommand:199 - 10 USER SIZE
+2020-02-03 23:28:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:41:36 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 23:41:37 INFO  SessionListener:38 - Session with id : DD969EF87F09FA3FDC4CFFB6D426C465 created.
+2020-02-03 23:41:37 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:41:37 INFO  Controller:25 - 
+2020-02-03 23:41:37 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:41:37 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:41:37 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:41:37 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:41:37 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:41:38 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:41:38 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:41:38 INFO  SessionListener:38 - Session with id : B9AD4BECEC167988D0BCC3730A4AC1A9 created.
+2020-02-03 23:41:38 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:41:38 INFO  Controller:25 - 
+2020-02-03 23:41:38 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:41:38 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:41:38 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:41:38 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:41:38 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:41:38 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:41:38 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:41:39 INFO  SessionListener:38 - Session with id : FB31D5415AA72037EEE4BB821F644338 created.
+2020-02-03 23:41:39 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:41:39 INFO  Controller:25 - 
+2020-02-03 23:41:39 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:41:39 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:41:39 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:41:39 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:41:39 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:41:39 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:41:39 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:43:06 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:43:06 INFO  Controller:35 - sign_in
+2020-02-03 23:43:06 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 23:43:06 INFO  CommandFactory:38 - app.commands.command.SignInCommand@513c1845
+2020-02-03 23:43:06 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 23:43:06 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 23:43:07 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 23:43:07 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 23:43:07 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 23:43:07 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 23:43:07 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-03 23:43:07 INFO  ModerCabinetCommand:190 - 
+2020-02-03 23:43:07 INFO  ModerCabinetCommand:210 - 10 USER SIZE
+2020-02-03 23:43:07 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:43:26 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:43:26 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:43:26 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:43:26 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@34dbca0d
+2020-02-03 23:43:26 INFO  ModerCabinetCommand:32 - ACTION change_time
+2020-02-03 23:43:26 INFO  ModerCabinetCommand:190 - 
+2020-02-03 23:43:26 INFO  ModerCabinetCommand:210 - 10 USER SIZE
+2020-02-03 23:43:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:45:27 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-03 23:45:28 INFO  SessionListener:38 - Session with id : F8C407B7A4F20163CD0943F2BDF796A4 created.
+2020-02-03 23:45:28 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:45:28 INFO  Controller:25 - 
+2020-02-03 23:45:28 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:45:28 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:45:28 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:45:28 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:45:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:45:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:45:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:45:29 INFO  SessionListener:38 - Session with id : A887ABC96FD625D425700297584E0D60 created.
+2020-02-03 23:45:29 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:45:29 INFO  Controller:25 - 
+2020-02-03 23:45:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:45:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:45:29 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:45:29 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:45:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:45:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:45:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:45:30 INFO  SessionListener:38 - Session with id : 769AECEE1F0D9CACF8678F368FD9D59C created.
+2020-02-03 23:45:30 INFO  Controller:23 - In Controller doGet
+2020-02-03 23:45:30 INFO  Controller:25 - 
+2020-02-03 23:45:30 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-03 23:45:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-03 23:45:30 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-03 23:45:30 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-03 23:45:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-03 23:45:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-03 23:45:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-03 23:45:32 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:45:32 INFO  Controller:35 - sign_in
+2020-02-03 23:45:32 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-03 23:45:32 INFO  CommandFactory:38 - app.commands.command.SignInCommand@5defcb65
+2020-02-03 23:45:32 INFO  SignInCommand:23 - in SignInCommand
+2020-02-03 23:45:32 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-03 23:45:33 INFO  SignInDAO:61 - user was found by login / password
+2020-02-03 23:45:33 INFO  SignInDAO:64 - SignInDAO.getUserByLogPas() gave output
+2020-02-03 23:45:33 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-03 23:45:33 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-03 23:45:33 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-03 23:45:33 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:45:33 INFO  ModerCabinetCommand:220 - 10 USER SIZE
+2020-02-03 23:45:33 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-03 23:45:44 INFO  Controller:33 - In Controller doPost
+2020-02-03 23:45:44 INFO  Controller:35 - moder_cabinet
+2020-02-03 23:45:44 INFO  CommandFactory:27 - COMMAND IN FACTORY moder_cabinet
+2020-02-03 23:45:44 INFO  CommandFactory:38 - app.commands.command.ModerCabinetCommand@1b6727d1
+2020-02-03 23:45:44 INFO  ModerCabinetCommand:32 - ACTION change_time
+2020-02-03 23:45:44 INFO  ModerCabinetCommand:200 - 
+2020-02-03 23:45:44 INFO  ModerCabinetCommand:220 - 10 USER SIZE
+2020-02-03 23:45:44 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
