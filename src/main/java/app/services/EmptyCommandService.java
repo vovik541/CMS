@@ -67,6 +67,8 @@ public class EmptyCommandService {
                 request.setAttribute("currentConferences",
                         MySqlDaoFactory.getConferenceDAO().getCurrentConferences(getCurrentDay(),
                                 getCurrentTime()));
+                request.getSession().setAttribute("conferencesToRegisterIn",
+                        userCabinetLogic.getConfToRegIn(user.getCustomerId()));
                 break;
             case ADMIN:
                 page = confManager.getProperty(ResourceManager.ADMIN_CABINET.toString());

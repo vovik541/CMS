@@ -1,5 +1,6 @@
 package app.logic;
 
+import app.CommonsEmail.MailCommons;
 import app.entities.Conference;
 import app.entities.User;
 import app.persistences.dao.UserDAO;
@@ -110,6 +111,24 @@ public class ModerCabinetLogic {
         }else {
             request.setAttribute("isInputError",true);
             request.setAttribute("isAdded",false);
+        }
+    }
+
+    public void sentLetter(HttpServletRequest request){
+        String subject = request.getParameter("subject");
+        String message = request.getParameter("message");
+
+        if(subject.isEmpty() || message.isEmpty()){
+            request.setAttribute("letterError", true);
+        }else {
+            int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+            List<String> emails = MySqlDaoFactory.getConferenceDAO().getEmailsByConf(conferenceId);
+
+            if(emails.size() > 0){
+                MailCommons.sendMail(emails, subject, message);
+            }
+
+            request.setAttribute("letterError", false);
         }
     }
 

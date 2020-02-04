@@ -163,7 +163,7 @@
                     <c:choose>
                         <c:when test="${user.role eq 'USER'}">
                             <td>
-                                <form>
+                                <form method="post">
                                     <input type="hidden" name="command" value="moder_cabinet" />
                                     <input type="hidden" name="action" value="give_speaker_role">
                                     <input type="hidden" name="userId" value="${user.customerId}">
@@ -175,7 +175,7 @@
                         </c:when>
                         <c:when test="${user.role eq 'SPEAKER'}">
                             <td>
-                                <form>
+                                <form method="post">
                                     <input type="hidden" name="command" value="moder_cabinet" />
                                     <input type="hidden" name="action" value="give_user_role">
                                     <input type="hidden" name="userId" value="${user.customerId}">
@@ -325,6 +325,29 @@
             </tr>
         </c:forEach>
     </table>
+
+    <p>Write reminder letter</p>
+    <c:if test="${requestScope.letterError == true}">
+        INCORRECT INPUT
+    </c:if>
+    <form method="post" id="letter">
+        <input type="hidden" name="command" value="moder_cabinet" />
+        <input type="hidden" name="action" value="sent_letter">
+        <input type="text" name="subject">
+        <input type="text" name="message">
+
+        <label for="conferenceIdLt">For Speaker</label>
+
+        <select class="form-control" id="conferenceIdLt" name="conferenceId">
+            <c:forEach var="conference" items="${sessionScope.conferencesToRegisterIn}">
+                <option value="${conference.conferenceId}">
+                    ${conference.confName}
+                </option>
+            </c:forEach>
+        </select>
+
+        <button form="letter">Sent</button>
+    </form>
 
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>

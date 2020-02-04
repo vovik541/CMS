@@ -72,6 +72,29 @@ public class ConferenceDAO {
     private static final String CHANGE_CONFERENCE_NAME = "UPDATE conferences SET conference_name = ? WHERE conference_id = ?";
     private static final String CHANGE_LOCATION = "UPDATE conferences SET location = ? WHERE conference_id = ?";
     private static final String CHANGE_DATE_TIME = "UPDATE conferences SET date = ?, begins_at = ?, ends_at = ?  WHERE conference_id = ?;";
+    private static final String GET_EMAILS_BY_CONF = "SELECT email FROM customers INNER JOIN registered_in_conference ON customers.customer_id = registered_in_conference.user_id\n" +
+            "WHERE registered_in_conference.conference_id = ?;";
+
+    public List<String> getEmailsByConf(int conferenceId){
+
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {conferenceId};
+        List<String> emails = new LinkedList<>();
+
+        ResultSet resultSet = executor.getResultSet(GET_EMAILS_BY_CONF, arguments);
+
+        try {
+            while (resultSet.next()){
+                emails.add(resultSet.getString("email"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        executor.close();
+
+        return emails;
+    }
 
     public void changeSpeaker(int speakerId, int conferenceId){
         QueryExecutor executor = new QueryExecutor();
@@ -266,7 +289,7 @@ public class ConferenceDAO {
     public List<Conference> getConfUserWasPresentIn(int userId, java.sql.Date currentDate, String currentTime){
 
         QueryExecutor executor = new QueryExecutor();
-        List<Conference> conferences = null;
+        List<Conference> conferences;
         Object[] arguments = {currentDate,currentTime,currentDate,userId};
 
         ResultSet resSet = executor.getResultSet(GET_CONFERENCES_USER_GOT_PART_IN,arguments);

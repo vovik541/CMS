@@ -68,6 +68,9 @@ public class ModerCabinetCommand implements ICommand{
             case CHANGE_SPEAKER:
                 moderCabinetLogic.changeSpeaker(request);
                 break;
+            case SENT_LETTER:
+                moderCabinetLogic.sentLetter(request);
+                break;
             default:
                 logger.info("DEFAULT IN SWITCH");
                 break;
