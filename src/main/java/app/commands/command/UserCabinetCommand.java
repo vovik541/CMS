@@ -2,19 +2,17 @@ package app.commands.command;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
-import app.entities.Conference;
 import app.entities.User;
-import app.persistences.factory.MySqlDaoFactory;
-import app.services.UserService;
+import app.logic.SignUpLogic;
+import app.logic.UserCabinetLogic;
+import app.services.EmptyCommandService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.*;
 
-import static app.logic.UserCabinetLogic.doGiveRate;
 
 public class UserCabinetCommand implements ICommand{
 
@@ -47,23 +45,22 @@ public class UserCabinetCommand implements ICommand{
                 ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
                 User user = (User) request.getSession().getAttribute("currentUser");
 
-                UserService userService = UserService.getInstance();
 
                 switch (speakerAction){
                     case REGISTER_IN_CONFERENCE:
                         logger.info("REGISTER_IN_CONFERENCE");
-                        userService.doRegistration(request, user);
+                        SignUpLogic.getInstance().doRegistration(request, user);
                         break;
                     case GIVE_RATE:
                         logger.info("GIVE_RATE");
-                        doGiveRate(request, user.getCustomerId());
+                        UserCabinetLogic.getInstance().doGiveRate(request, user.getCustomerId());
                         break;
                     default:
                         logger.info("DEFAULT IN SWITCH");
                         break;
                 }
                 request.getSession().setAttribute("conferencesWasPresentIn",
-                        userService.getConfUserWasPresentIn(user.getCustomerId()));
+                        UserCabinetLogic.getInstance().getConfUserWasPresentIn(user.getCustomerId()));
             }
         }
         return page;

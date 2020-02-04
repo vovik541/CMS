@@ -61,37 +61,4 @@ public class SignUpDAO {
 
         }
     }
-    public Boolean checkBy(String checkParam, String value){
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-
-        Boolean exists = false;
-
-        String sql = "SELECT * FROM cms_db.customers " +
-                "WHERE " + checkParam + " = ?;";
-
-        try {
-            connection = ConnectionPool.getConnection();
-
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, value);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()){
-                exists = true;
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }finally {
-            try {
-                preparedStatement.close();
-                connection.close();
-            } catch (SQLException e) {
-                logger.warn("connection wasn't closed!! Error in SignUpDAO.checkBy()");
-                e.printStackTrace();
-            }
-        return exists;
-        }
-    }
 }

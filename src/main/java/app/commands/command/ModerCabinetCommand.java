@@ -2,21 +2,16 @@ package app.commands.command;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
-import app.entities.Conference;
 import app.entities.Role;
-import app.entities.User;
-import app.persistences.dao.UserDAO;
+import app.logic.ModerCabinetLogic;
 import app.persistences.factory.MySqlDaoFactory;
-import app.services.UserService;
+import app.services.EmptyCommandService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-
-import static app.logic.ModerCabinetLogic.*;
 
 public class ModerCabinetCommand implements ICommand{
 
@@ -34,22 +29,24 @@ public class ModerCabinetCommand implements ICommand{
         logger.info("ACTION " + action);
         ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
 
+        ModerCabinetLogic moderCabinetLogic = ModerCabinetLogic.getInstance();
+
         switch (speakerAction){
             case SET_RECORDS_PER_PAGE:
-                doUserPagination(request);
+                moderCabinetLogic.doUserPagination(request);
                 break;
             case GIVE_USER_ROLE:
-                giveUserRole(request,1);
-                doUserPagination(request);
+                moderCabinetLogic.giveUserRole(request,1);
+                moderCabinetLogic.doUserPagination(request);
                 request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 break;
             case GIVE_SPEAKER_ROLE:
-                giveUserRole(request,2);
-                doUserPagination(request);
+                moderCabinetLogic.giveUserRole(request,2);
+                moderCabinetLogic.doUserPagination(request);
                 request.getSession().setAttribute("speakersForOption", MySqlDaoFactory.getUserDAO().getSpeakersForOption());
                 break;
             case GIVE_SPEECH:
-                giveSpeech(request);
+                moderCabinetLogic.giveSpeech(request);
                 break;
             case MODER_AGREED:
                 conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
@@ -60,29 +57,29 @@ public class ModerCabinetCommand implements ICommand{
                 MySqlDaoFactory.getConferenceDAO().setAgreement(Role.MODER,conferenceId,false);
                 break;
             case CHANGE_CONFERENCE_NAME:
-                changeConferenceName(request);
+                moderCabinetLogic.changeConferenceName(request);
                 break;
             case CHANGE_TIME:
-                changeTime(request);
+                moderCabinetLogic.changeTime(request);
                 break;
             case CHANGE_LOCATION:
-                changeLocation(request);
+                moderCabinetLogic.changeLocation(request);
                 break;
             case CHANGE_SPEAKER:
-                changeSpeaker(request);
+                moderCabinetLogic.changeSpeaker(request);
                 break;
             default:
                 logger.info("DEFAULT IN SWITCH");
                 break;
         }
         request.setAttribute("pastConferences",
-                MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(UserService.getCurrentDay(),
-                        UserService.getCurrentTime()));
+                MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(EmptyCommandService.getCurrentDay(),
+                        EmptyCommandService.getCurrentTime()));
         request.setAttribute("currentConferences",
-                MySqlDaoFactory.getConferenceDAO().getCurrentConferences(UserService.getCurrentDay(),
-                        UserService.getCurrentTime()));
+                MySqlDaoFactory.getConferenceDAO().getCurrentConferences(EmptyCommandService.getCurrentDay(),
+                        EmptyCommandService.getCurrentTime()));
 
-        doUserPagination(request);
+        moderCabinetLogic.doUserPagination(request);
 
     return page;
     }

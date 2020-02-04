@@ -14,7 +14,19 @@ public class SpeakerCabinetLogic {
 
     private static final Logger logger = Logger.getLogger(SpeakerCabinetLogic.class);
 
-    public static float getSpeakerRate(int speakerId){
+    private static SpeakerCabinetLogic instance= null;
+
+    public static SpeakerCabinetLogic getInstance() {
+        if (instance == null)
+            instance = new SpeakerCabinetLogic();
+        return instance;
+    }
+
+    private SpeakerCabinetLogic(){
+
+    }
+
+    public float getSpeakerRate(int speakerId){
         float speakerRate = 0;
 
         List<Integer> rates = MySqlDaoFactory.getConferenceDAO().getSpeakerRates(speakerId);
@@ -28,7 +40,7 @@ public class SpeakerCabinetLogic {
         return speakerRate;
     }
 
-    public static void doOffer(HttpServletRequest request){
+    public void doOffer(HttpServletRequest request){
 
         String confName;
         String date;
@@ -72,7 +84,7 @@ public class SpeakerCabinetLogic {
         }
     }
 
-    public static String formatTime(String timeStr){
+    public String formatTime(String timeStr){
 
         String formatted = timeStr.substring(2,5)+":00";
         int hours = Integer.parseInt(timeStr.substring(0,2));
@@ -86,25 +98,25 @@ public class SpeakerCabinetLogic {
         }
     }
 
-    public static void setConfExtraInfo(HttpServletRequest request){
+    public void setConfExtraInfo(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         ConferenceInfo conferenceInfo = MySqlDaoFactory.getConferenceDAO().
                 getMoreConfInfo(conferenceId);
         request.getSession().setAttribute("conferenceInfo", conferenceInfo);
     }
 
-    public static void doDelete(HttpServletRequest request){
+    public void doDelete(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         MySqlDaoFactory.getConferenceDAO().deleteRegisteredInConf(conferenceId);
         MySqlDaoFactory.getConferenceDAO().deleteById(conferenceId);
     }
 
-    public static void doConfirm(HttpServletRequest request){
+    public void doConfirm(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         MySqlDaoFactory.getConferenceDAO().setAgreement(Role.SPEAKER, conferenceId, true);
     }
 
-    public static void doRefuse(HttpServletRequest request){
+    public void doRefuse(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("id"));
         MySqlDaoFactory.getConferenceDAO().setAgreement(Role.SPEAKER, conferenceId, false);
     }

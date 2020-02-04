@@ -3,7 +3,7 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.User;
-import app.services.UserService;
+import app.services.EmptyCommandService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -29,7 +29,7 @@ public class EmptyCommand implements ICommand{
         //if user logged -> go to his cabinet
         if(currentUser != null){
             logger.info("USER EXISTS in EmptyCommand");
-            page = UserService.getInstance().getPageByRole(currentUser,request);
+            page = EmptyCommandService.getInstance().getPageByRole(currentUser,request);
             return page;
         }
 

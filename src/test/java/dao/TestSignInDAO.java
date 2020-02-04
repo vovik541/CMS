@@ -8,13 +8,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Mockito.*;
-
 
 public class TestSignInDAO extends Mockito {
     private static SignInDAO signInDAO = null;
@@ -45,4 +43,24 @@ public class TestSignInDAO extends Mockito {
         when(signInDAO.getUserByLogPas("login1","password1")).thenReturn(user1);
     }
 
+    @Test
+    public void getUsersTest(){
+        List<User> users = signInDAO.getUsers();
+        assertEquals(2, users.size());
+        assertEquals("firstName1", users.get(0).getFirstName());
+        assertEquals("lastName2", users.get(1).getLastName());
+    }
+
+    @Test
+    public void getUsersByLogPassTest(){
+        String login = "login1";
+        String password = "password1";
+
+        User user = signInDAO.getUserByLogPas(login,password);
+        assertEquals(login, user.getLogin());
+        assertEquals(password, user.getPassword());
+
+        user = signInDAO.getUserByLogPas("badLogin", "badPassword");
+        assertNull(user);
+    }
 }

@@ -5,7 +5,7 @@ import app.Managers.ResourceManager;
 import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import app.persistences.factory.MySqlDaoFactory;
-import app.services.UserService;
+import app.services.EmptyCommandService;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
@@ -34,7 +34,7 @@ public class SignInCommand implements ICommand{
         //if user logged -> go to his cabinet
         if(currentUser != null){
             logger.info("user exists in SignInCommand");
-            page = UserService.getInstance().getPageByRole(currentUser,request);
+            page = EmptyCommandService.getInstance().getPageByRole(currentUser,request);
             return page;
         }
 
@@ -52,7 +52,7 @@ public class SignInCommand implements ICommand{
 
                 logger.info("user logged in SignInCommand");
                 request.getSession().setAttribute("currentUser", currentUser);
-                page = UserService.getInstance().getPageByRole(currentUser, request);
+                page = EmptyCommandService.getInstance().getPageByRole(currentUser, request);
 
             } else {
 

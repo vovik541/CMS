@@ -92,7 +92,6 @@ public class SignInDAO {
         int customerId;
         int role;
 
-
         while (userResSet.next()){
 
             customerId = userResSet.getInt("customer_id");

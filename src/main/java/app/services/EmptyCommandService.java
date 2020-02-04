@@ -2,34 +2,33 @@ package app.services;
 
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
-import app.commands.command.ModerCabinetCommand;
-import app.commands.command.SpeakerCabinetCommand;
 import app.entities.Conference;
 import app.entities.Role;
 import app.entities.User;
-import app.persistences.dao.ConferenceDAO;
+import app.logic.ModerCabinetLogic;
+import app.logic.SpeakerCabinetLogic;
+import app.logic.UserCabinetLogic;
 import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class UserService {
+public class EmptyCommandService {
 
-    private static final Logger logger = Logger.getLogger(UserService.class);
+    private static final Logger logger = Logger.getLogger(EmptyCommandService.class);
 
-    private UserService() {
+    private EmptyCommandService() {
     }
 
-    private static UserService instance = null;
+    private static EmptyCommandService instance = null;
 
-    public static synchronized UserService getInstance() {
+    public static synchronized EmptyCommandService getInstance() {
         if (instance == null)
-            instance = new UserService();
+            instance = new EmptyCommandService();
         return instance;
     }
 
@@ -38,28 +37,30 @@ public class UserService {
         ConfigurationManager confManager = ConfigurationManager.getInstance();
         String page;
 
+        UserCabinetLogic userCabinetLogic = UserCabinetLogic.getInstance();
+
         switch (user.getRole()){
             case USER:
                 logger.info("IN USER SERVICE USER");
                 page = confManager.getProperty(ResourceManager.USER_CABINET.toString());
-                List<Conference> conferences = getConfToRegIn(user.getCustomerId());
+                List<Conference> conferences = userCabinetLogic.getConfToRegIn(user.getCustomerId());
                 request.getSession().setAttribute("conferencesToRegisterIn",
                         conferences);
                 request.getSession().setAttribute("conferencesWasPresentIn",
-                        getConfUserWasPresentIn(user.getCustomerId()));
+                        userCabinetLogic.getConfUserWasPresentIn(user.getCustomerId()));
                 break;
             case SPEAKER:
                 page = confManager.getProperty(ResourceManager.SPEAKER_CABINET.toString());
                 request.getSession().setAttribute("speakerConfList",
                         MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
-                request.getSession().setAttribute("speakerRate", SpeakerCabinetCommand.getSpeakerRate(user.getCustomerId()));
-
+                request.getSession().setAttribute("speakerRate", SpeakerCabinetLogic.getInstance().
+                        getSpeakerRate(user.getCustomerId()));
                 break;
             case MODER:
                 page = confManager.getProperty(ResourceManager.MODER_CABINET.toString());
                 request.getSession().setAttribute("speakersForOption",
                         MySqlDaoFactory.getUserDAO().getSpeakersForOption());
-                ModerCabinetCommand.doUserPagination(request);
+                ModerCabinetLogic.getInstance().doUserPagination(request);
                 request.setAttribute("pastConferences",
                         MySqlDaoFactory.getConferenceDAO().getConfBeforeDateTime(getCurrentDay(),
                                 getCurrentTime()));
@@ -128,9 +129,9 @@ public class UserService {
         }
         return String.valueOf(number);
     }
-    private int parseRoleToInt(Role role){
+    private int parseRoleToInt(Role role) {
 
-        switch (role){
+        switch (role) {
             case USER:
                 return 1;
             case SPEAKER:
@@ -142,45 +143,5 @@ public class UserService {
         }
 
         return -1;
-    }
-    public void doRegistration(HttpServletRequest request, User user){
-        int conference_id = Integer.parseInt(request.getParameter("id"));
-
-        ConferenceDAO conferenceDAO= MySqlDaoFactory.getConferenceDAO();
-
-        if(!conferenceDAO.isRegisteredInConf(user.getCustomerId(), conference_id)){
-            conferenceDAO.registerInConf(user.getCustomerId(),conference_id);
-        }
-        List<Conference> conferences = getConfToRegIn(user.getCustomerId());
-        request.getSession().setAttribute("conferencesToRegisterIn",
-                conferences);
-
-    }
-
-    public List<Conference> getConfToRegIn(int userId){
-
-        //here we got all conferences that didn't pass/end until now
-
-        List<Conference> conferences = UserService.getInstance().getConfForView();
-
-        //id of conferences that user registered in
-
-        ArrayList<Integer> confId = MySqlDaoFactory.getConferenceDAO().getRegisteredConfId(userId);
-
-        //writing "registered" in conferences
-
-        for(Conference conference: conferences){
-            for (Integer conferenceId:confId){
-                if(conference.getConferenceId()==conferenceId){
-                    conference.setRegistered(true);
-                }
-            }
-        }
-        return conferences;
-    }
-    public List<Conference> getConfUserWasPresentIn(int userId){
-        List<Conference> conferences = MySqlDaoFactory.getConferenceDAO().
-                getConfUserWasPresentIn(userId,getCurrentDay(),getCurrentTime());
-        return conferences;
     }
 }

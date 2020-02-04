@@ -9,15 +9,25 @@ import org.apache.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-import static app.logic.SpeakerCabinetLogic.formatTime;
-
 public class ModerCabinetLogic {
 
     private static final Logger logger = Logger.getLogger(ModerCabinetLogic.class);
 
+    private static ModerCabinetLogic instance= null;
+
+    public static ModerCabinetLogic getInstance() {
+        if (instance == null)
+            instance = new ModerCabinetLogic();
+        return instance;
+    }
+
+    private ModerCabinetLogic(){
+
+    }
+
     //not ready! (works without checking input)
 
-    public static void changeSpeaker(HttpServletRequest request){
+    public void changeSpeaker(HttpServletRequest request){
         int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
         int speakerId = Integer.parseInt(request.getParameter("speakerId"));
 
@@ -26,7 +36,7 @@ public class ModerCabinetLogic {
 
     //not ready! (works without checking input)
 
-    public static void changeTime(HttpServletRequest request){
+    public void changeTime(HttpServletRequest request){
         String date = request.getParameter("date") + " 00:00:00";
         String beginsAtTime = request.getParameter("beginsAtTime");
         String endsAtTime = request.getParameter("endsAtTime");
@@ -44,7 +54,7 @@ public class ModerCabinetLogic {
 
     //not ready! (works without checking input)
 
-    public static void changeConferenceName(HttpServletRequest request){
+    public void changeConferenceName(HttpServletRequest request){
         String conferenceName = request.getParameter("conferenceName");
         int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
 
@@ -53,16 +63,14 @@ public class ModerCabinetLogic {
 
     //not ready! (works without checking input)
 
-    public static void changeLocation(HttpServletRequest request){
+    public void changeLocation(HttpServletRequest request){
         String location = request.getParameter("location");
         int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
 
         MySqlDaoFactory.getConferenceDAO().changeLocation(location, conferenceId);
     }
 
-    public static void giveSpeech(HttpServletRequest request){
-
-        logger.info("IN");
+    public void giveSpeech(HttpServletRequest request){
 
         String confName;
         String location;
@@ -76,20 +84,16 @@ public class ModerCabinetLogic {
 
         String speakerIdOpt = request.getParameter("speakerIdOpt");
 
-        logger.info(date + " !!!!"+ beginsAtTime +" "+ endsAtTime);
-
         confName = request.getParameter("confName");
         location = request.getParameter("location");
 
         if(!date.equals("00:00:00") && !beginsAtTime.isEmpty() && !endsAtTime.isEmpty()
                 && confName != null && location != null){
 
-            logger.info("WORKS AFTER IF");
-
             int speakerId = Integer.parseInt(speakerIdOpt);
 
-            beginsAtTime = formatTime(beginsAtTime);
-            endsAtTime = formatTime(endsAtTime);
+            beginsAtTime = SpeakerCabinetLogic.getInstance().formatTime(beginsAtTime);
+            endsAtTime = SpeakerCabinetLogic.getInstance().formatTime(endsAtTime);
 
             Conference conference = new Conference.Builder(speakerId, confName, location,
                     date, beginsAtTime, endsAtTime)
@@ -109,12 +113,12 @@ public class ModerCabinetLogic {
         }
     }
 
-    public static void giveUserRole(HttpServletRequest request, int role){
+    public void giveUserRole(HttpServletRequest request, int role){
         int userId = Integer.parseInt(request.getParameter("userId"));
         MySqlDaoFactory.getUserDAO().giveRole(role,userId);
     }
 
-    public static void doUserPagination(HttpServletRequest request){
+    public void doUserPagination(HttpServletRequest request){
 
         UserDAO userDAO = MySqlDaoFactory.getUserDAO();
 

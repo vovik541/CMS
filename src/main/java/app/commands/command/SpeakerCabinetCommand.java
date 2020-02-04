@@ -3,6 +3,7 @@ package app.commands.command;
 import app.Managers.ConfigurationManager;
 import app.Managers.ResourceManager;
 import app.entities.User;
+import app.logic.SpeakerCabinetLogic;
 import app.persistences.factory.MySqlDaoFactory;
 import org.apache.log4j.Logger;
 
@@ -33,26 +34,27 @@ public class SpeakerCabinetCommand implements ICommand{
             logger.info("Action != null");
 
             ResourceManager speakerAction = ResourceManager.valueOf(action.toUpperCase());
+            SpeakerCabinetLogic logic = SpeakerCabinetLogic.getInstance();
 
             switch (speakerAction){
                 case OFFER_A_SPEECH:
-                    doOffer(request);
+                    logic.doOffer(request);
                     logger.info("OFFER_A_SPEECH");
                     break;
                 case DELETE_CONFERENCE:
                     logger.info("DELETE_A_CONFERENCE");
-                    doDelete(request);
+                    logic.doDelete(request);
                     break;
                 case CONFIRM_CONFERENCE:
                     logger.info("CONFIRM_A_CONFERENCE");
-                    doConfirm(request);
+                    logic.doConfirm(request);
                     break;
                 case REFUSE_CONFERENCE:
                     logger.info("REFUSE_THE_CONFERENCE");
-                    doRefuse(request);
+                    logic.doRefuse(request);
                     break;
                 case GET_MORE_INFO:
-                    setConfExtraInfo(request);
+                    logic.setConfExtraInfo(request);
                     break;
                 default:
                     logger.info("DEFAULT IN SWITCH");
@@ -63,8 +65,7 @@ public class SpeakerCabinetCommand implements ICommand{
             request.getSession().setAttribute("speakerConfList",
                     MySqlDaoFactory.getConferenceDAO().getConfBySpeakerId(user.getCustomerId()));
 
-            request.getSession().setAttribute("speakerRate", getSpeakerRate(user.getCustomerId()));
-            System.out.println(getSpeakerRate(user.getCustomerId()));
+            request.getSession().setAttribute("speakerRate", logic.getSpeakerRate(user.getCustomerId()));
         }
 
         return page;
