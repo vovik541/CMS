@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-
 <body class="w3-light-grey">
 
 <jsp:include page="../template/header.jsp"></jsp:include>
@@ -18,6 +17,7 @@
 <fmt:message key="login.login" var="logMessage"/>
 <fmt:message key="login.password" var="passMessage"/>
 <fmt:message key="login.errorLoginPassMessage" var="authError"/>
+<fmt:message key="signUp" var="signUp"/>
 
 
 <div class="w3-card-4">
@@ -47,12 +47,11 @@
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form id="GoToSignUp" method="get">
             <input type="hidden" name="EmptyCommandSignUp" value="up"/>
-            <button type="submit" form="GoToSignUp">Sign Up</button>
+            <button type="submit" form="GoToSignUp">${signUp}</button>
         </form>
-        <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>
+<%--        <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>--%>
     </footer>
 </div>
-
 
 </body>
 </html>

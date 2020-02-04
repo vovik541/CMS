@@ -7,8 +7,6 @@
 <fmt:setLocale value="${language}"/>
 
 <header>
-    <h1>HEADER</h1>
-
     <c:out value="${sessionScope.page.toString()}"></c:out>
 
     <c:choose>
@@ -31,7 +29,4 @@
             </form>
         </c:when>
     </c:choose>
-
-    <c:out value="${language.toString()}"></c:out>
-
 </header>

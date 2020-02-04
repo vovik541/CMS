@@ -52,7 +52,7 @@
             <td>${conf.confName}</td>
             <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
             <td>${conf.location}</td>
-                <td>${conf.date}</td>
+            <td>${conf.date}</td>
             <td>${conf.beginsAt}</td>
             <td>${conf.endsAt}</td>
 

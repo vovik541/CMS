@@ -23,12 +23,10 @@
 <fmt:message key="speaker.endsAt" var="endsAt"/>
 <fmt:message key="speaker.date" var="date"/>
 <fmt:message key="speaker.location" var="location"/>
-<fmt:message key="speaker" var="speaker"/>
+<fmt:message key="speaker" var="speakerText"/>
 <fmt:message key="speaker.incorrectInput" var="incorrectInputMessage"/>
 <fmt:message key="speaker.confAdded" var="confAddedMessage"/>
-<fmt:message key="speaker.moreDetails" var="moreDetails"/>
 <fmt:message key="speaker.accByModer" var="accByModer"/>
-<fmt:message key="speaker.present" var="present"/>
 <fmt:message key="speaker.registered" var="registered"/>
 <fmt:message key="speaker.denyMessage" var="denyMessage"/>
 
@@ -61,6 +59,10 @@
 <fmt:message key="giveAgreement" var="giveAgreement"/>
 <fmt:message key="currentConferences" var="currentConferences"/>
 <fmt:message key="pastConferences" var="pastConferences"/>
+<fmt:message key="speakerId" var="speakerId"/>
+<fmt:message key="conferenceId" var="conferenceId"/>
+<fmt:message key="subject" var="subject"/>
+<fmt:message key="message" var="message"/>
 
 <fmt:message key="moder.accBySpeaker" var="accBySpeaker"/>
 <fmt:message key="moder.selectRecRepPage" var="selRecPerPage"/>
@@ -81,7 +83,7 @@
 
         <h5>${changeTime}</h5>
         <form method="post">
-            <p>Conference Id</p>
+            <p>${conferenceId}</p>
             <input type="number" name="conferenceId">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="change_time" />
@@ -95,7 +97,7 @@
 
         <h5>${changeLocation}</h5>
         <form method="post">
-            <p>Conference Id</p>
+            <p>${conferenceId}</p>
             <input type="number" name="conferenceId">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="change_location" />
@@ -107,7 +109,7 @@
 
         <h5>${changeConferenceName}</h5>
         <form method="post">
-            <p>Conference Id</p>
+            <p>${conferenceId}</p>
             <input type="number" name="conferenceId">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="change_conference_name" />
@@ -118,9 +120,9 @@
 
         <h5>${changeSpeaker}</h5>
         <form method="post">
-            <p>Speaker Id</p>
+            <p>${speakerId}</p>
             <input type="number" name="speakerId">
-            <p>Conference Id</p>
+            <p>${conferenceId}</p>
             <input type="number" name="conferenceId">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="change_speaker" />
@@ -151,7 +153,7 @@
                 <option value="false" selected>${no}</option>
             </select>
 
-            <label for="speakers">${speaker}</label>
+            <label for="speakers"><%--${speaker}--%></label>
 
             <select class="form-control" id="speakers" name="speakerIdOpt">
                 <c:forEach var="speaker" items="${sessionScope.speakersForOption}">
@@ -291,13 +293,13 @@
         <tr>
             <th>${id}</th>
             <th>${confName}</th>
-            <th>${speaker}</th>
+            <th>${speakerText}</th>
             <th>${location}</th>
             <th>${date}</th>
             <th>${beginsAt}</th>
             <th>${endsAt}</th>
             <th>${speakerAgreement}</th>
-            <td>${giveAgreement}</td>
+            <th>${giveAgreement}</th>
         </tr>
         <c:forEach var="conf" items="${requestScope.currentConferences}">
             <tr>
@@ -311,7 +313,7 @@
                 <td>
                     <c:choose>
                         <c:when test="${conf.acceptedBySpeaker eq 'true'}">
-                            <p>${speakerAcca}</p>
+                            <p>${speakerAcc}</p>
                         </c:when>
                         <c:otherwise>
                             <p>${speakerDidntAcc}</p>
@@ -341,18 +343,18 @@
             </tr>
         </c:forEach>
     </table>
+
     <h3>${pastConferences}</h3>
     <table>
         <tr>
-            <th>ID</th>
+            <th>${id}</th>
             <th>${confName}</th>
-            <th>${speaker}</th>
+            <th>${speakerText}</th>
             <th>${location}</th>
             <th>${date}</th>
             <th>${beginsAt}</th>
             <th>${endsAt}</th>
             <th>${speakerAgreement}</th>
-
         </tr>
         <c:forEach var="conf" items="${requestScope.pastConferences}">
             <tr>
@@ -384,10 +386,12 @@
     <form method="post" id="letter">
         <input type="hidden" name="command" value="moder_cabinet" />
         <input type="hidden" name="action" value="sent_letter">
+        <p>${subject}</p>
         <input type="text" name="subject">
+        <p>${message}</p>
         <input type="text" name="message">
 
-        <label for="conferenceIdLt">For Speaker</label>
+        <label for="conferenceIdLt"></label>
 
         <select class="form-control" id="conferenceIdLt" name="conferenceId">
             <c:forEach var="conference" items="${sessionScope.conferencesToRegisterIn}">
