@@ -123,25 +123,10 @@ public class EmptyCommandService {
         return conferences;
     }
 
-    private static String toFormat(int number){
+    public static String toFormat(int number){
         if(number < 10){
             return "0"+number;
         }
         return String.valueOf(number);
-    }
-    private int parseRoleToInt(Role role) {
-
-        switch (role) {
-            case USER:
-                return 1;
-            case SPEAKER:
-                return 2;
-            case MODER:
-                return 3;
-            case ADMIN:
-                return 4;
-        }
-
-        return -1;
     }
 }

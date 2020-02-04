@@ -4,7 +4,6 @@ import app.entities.User;
 import app.persistences.dao.SignInDAO;
 import org.junit.BeforeClass;
 
-
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -15,6 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class TestSignInDAO extends Mockito {
+
     private static SignInDAO signInDAO = null;
     private static User user1 = null;
     private static User user2 = null;

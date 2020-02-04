@@ -21,7 +21,7 @@ public class UserDAO {
             "FROM customers WHERE role = '2';";
 
     public List<User> getSpeakersForOption(){
-        List<User> speakers = new LinkedList<>();
+        List<User> speakers;
 
         QueryExecutor executor = new QueryExecutor();
         Object[] arguments = {};
