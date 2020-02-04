@@ -33,7 +33,13 @@ public class Help {
         //------------------------------------------------------------------------------
 
         FileOutputStream messages_en=new FileOutputStream("src/main/resources/messages_en.properties");
-        properties.setProperty("greetings","HELLO");
+
+        properties.setProperty("user.registerInConference","Register in conference");
+        properties.setProperty("user.youHaveBeen","Conferences you have visited");
+//        properties.setProperty("");
+//        properties.setProperty("");
+
+        properties.setProperty("speaker","Speaker");
 
         properties.setProperty("login.enter","Sign in:");
         properties.setProperty("login.login","Login");
@@ -42,13 +48,8 @@ public class Help {
 
         properties.setProperty("speaker.offer","Offer a Speech");
         properties.setProperty("speaker.confName","Topic / Theme:");
-        properties.setProperty("speaker.year","Year:");
-        properties.setProperty("speaker.month","Month:");
-        properties.setProperty("speaker.day","Day:");
         properties.setProperty("speaker.beginsAt","Begins at:");
         properties.setProperty("speaker.endsAt", "Ends at:");
-        properties.setProperty("speaker.hour","At (hour):");
-        properties.setProperty("speaker.minute","At (min):");
         properties.setProperty("speaker.location", "Location");
 
         properties.store(messages_en,"");

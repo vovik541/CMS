@@ -15,21 +15,19 @@ public class SignInDAO {
 
     private static final Logger logger = Logger.getLogger(SignInDAO.class);
 
+    private static final String GET_USERS = "SELECT * FROM сustomers;";
+    private static final String GET_USER_BY_LOG_PASS = "SELECT * FROM customers WHERE login = ? AND password = ?";
+
     public List<User> getUsers(){
         List<User> usersList;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {};
 
-        String query = "SELECT * FROM сustomers";
+        ResultSet resultSet = executor.getResultSet(GET_USERS, arguments);
 
-        try (ResultSet customerResSet = ConnectionPool.getConnection().
-                createStatement().executeQuery(query)) {
+        usersList = initUsersList(resultSet);
 
-            usersList = initUsersList(customerResSet);
-//            logger.info("Customers were read");
-        } catch (SQLException e) {
-            logger.error("Customers weren't read! ERROR in SignInModel.readCustomers()");
-            e.printStackTrace();
-            return null;
-        }
+        executor.close();
 
         return usersList;
     }
@@ -38,50 +36,28 @@ public class SignInDAO {
 
     public User getUserByLogPas(String login, String password){
 
-        Connection connection = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet userResSet = null;
+        QueryExecutor executor = new QueryExecutor();
+        Object[] arguments = {login, password};
+        List<User> usersList;
+        User user = null;
 
-        String query = "SELECT * FROM customers WHERE login = ? AND password = ?";
+        ResultSet resultSet = executor.getResultSet(GET_USER_BY_LOG_PASS, arguments);
+        usersList = initUsersList(resultSet);
 
-        try {
-            List<User> usersList = null;
-            User user = null;
+        executor.close();
 
-            connection = ConnectionPool.getConnection();
-
-            preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, login);
-            preparedStatement.setString(2, password);
-            userResSet = preparedStatement.executeQuery();
-
-            usersList = initUsersList(userResSet);
-
-            if (usersList.size() == 1) {
-                user = usersList.get(0);
-                logger.info("user was found by login / password");
-            }
-
-            logger.info("SignInDAO.getUserByLogPas() gave output");
-            return user;
-
-        } catch (SQLException e) {
-            logger.error("User wasn't gotten! Error in SignInModel.getUserByLogPas()");
-            e.printStackTrace();
-        }finally {
-            try {
-                userResSet.close();
-                preparedStatement.close();
-                connection.close();
-            } catch (SQLException e) {
-                logger.warn("connection wasn't closed!! Error in SignInModel.getUserByLogPas()");
-                e.printStackTrace();
-            }
+        if (usersList.size() == 1) {
+            user = usersList.get(0);
+            logger.info("user was found by login / password");
+        }else {
+            logger.warn("User wasn't gotten! Error in SignInModel.getUserByLogPas()");
         }
-        return null;
+        logger.info("SignInDAO.getUserByLogPas() gave output");
+
+        return user;
     }
 
-    private List<User> initUsersList(ResultSet userResSet) throws SQLException {
+    private List<User> initUsersList(ResultSet userResSet) {
 
         List<User> usersList = new LinkedList<>();
         String firstName;
@@ -92,26 +68,32 @@ public class SignInDAO {
         int customerId;
         int role;
 
-        while (userResSet.next()){
+        try {
+            while (userResSet.next()){
 
-            customerId = userResSet.getInt("customer_id");
-            firstName = userResSet.getString("first_name");
-            lastName = userResSet.getString("last_name");
-            login = userResSet.getString("login");
-            password = userResSet.getString("password");
-            email = userResSet.getString("email");
-            role = userResSet.getInt("role");
+                customerId = userResSet.getInt("customer_id");
+                firstName = userResSet.getString("first_name");
+                lastName = userResSet.getString("last_name");
+                login = userResSet.getString("login");
+                password = userResSet.getString("password");
+                email = userResSet.getString("email");
+                role = userResSet.getInt("role");
 
-            usersList.add(
-                    new User.Builder(firstName,lastName)
-                            .setCustomerId(customerId)
-                            .setLogin(login)
-                            .setEmail(email)
-                            .setPassword(password)
-                            .setRole(role)
-                            .build()
-            );
+                usersList.add(
+                        new User.Builder(firstName,lastName)
+                                .setCustomerId(customerId)
+                                .setLogin(login)
+                                .setEmail(email)
+                                .setPassword(password)
+                                .setRole(role)
+                                .build()
+                );
+            }
+        } catch (SQLException e) {
+            logger.error("Customers weren't read! ERROR in SignInDAO.readCustomers()");
+            e.printStackTrace();
         }
+
 //        logger.info("initUsersList worked");
         return usersList;
     }

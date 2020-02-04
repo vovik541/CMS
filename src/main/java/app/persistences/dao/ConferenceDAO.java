@@ -142,6 +142,7 @@ public class ConferenceDAO {
 
         QueryExecutor executor = new QueryExecutor();
         executor.executeStatement(ADD_CONFERENCE,arguments);
+
         executor.close();
     }
 
@@ -154,6 +155,7 @@ public class ConferenceDAO {
         ResultSet resultSet = executor.getResultSet(GET_CONFERENCE_BY_SPEAKER_ID, arguments);
 
         conferences = getConferencesFromResSet(resultSet,3);
+
         executor.close();
 
         return conferences;
@@ -166,6 +168,7 @@ public class ConferenceDAO {
         Object[] arguments = {conferenceId};
 
         executor.executeStatement(DELETE_REGISTERED_IN_CONFERENCE,arguments);
+
         executor.close();
     }
 
@@ -175,6 +178,7 @@ public class ConferenceDAO {
         Object[] arguments = {id};
 
         executor.executeStatement(DELETE_CONFERENCE_BY_ID,arguments);
+
         executor.close();
     }
 
@@ -194,8 +198,8 @@ public class ConferenceDAO {
 
             Object[] arguments = {agreement, id};
             executor.executeStatement(SET_AGREEMENT_MODER, arguments);
-            executor.close();
 
+            executor.close();
         }
     }
 
@@ -207,6 +211,8 @@ public class ConferenceDAO {
 
         ResultSet resSet = executor.getResultSet(GET_CURRENT_CONFERENCES,arguments);
         conferences = getConferencesFromResSet(resSet,2);
+
+        executor.close();
 
         return conferences;
     }
@@ -222,6 +228,8 @@ public class ConferenceDAO {
         ResultSet resSet = executor.getResultSet(GET_CONF_AFTER_DAY_TIME,arguments);
         conferences = getConferencesFromResSet(resSet,2);
 
+        executor.close();
+
         return conferences;
     }
 
@@ -233,6 +241,8 @@ public class ConferenceDAO {
 
         ResultSet resSet = executor.getResultSet(GET_CONF_BEFORE_DAY_TIME,arguments);
         conferences = getConferencesFromResSet(resSet,2);
+
+        executor.close();
 
         return conferences;
     }
@@ -253,14 +263,18 @@ public class ConferenceDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         executor.close();
+
         return isRegistered;
     }
 
     public void registerInConf(int userId, int conferenceId){
         Object[] arguments = {userId, conferenceId};
         QueryExecutor executor = new QueryExecutor();
+
         executor.executeStatement(REGISTER_IN_CONFERENCE, arguments);
+
         executor.close();
     }
 
@@ -284,6 +298,8 @@ public class ConferenceDAO {
             e.printStackTrace();
         }
 
+        executor.close();
+
         return confId;
     }
     public List<Conference> getConfUserWasPresentIn(int userId, java.sql.Date currentDate, String currentTime){
@@ -294,6 +310,7 @@ public class ConferenceDAO {
 
         ResultSet resSet = executor.getResultSet(GET_CONFERENCES_USER_GOT_PART_IN,arguments);
         conferences = getConferencesFromResSet(resSet,1);
+
         executor.close();
 
         return conferences;
@@ -303,9 +320,10 @@ public class ConferenceDAO {
 
         QueryExecutor executor = new QueryExecutor();
         Object[] arguments = {rate, conferenceId, userId};
-        executor.executeStatement(GIVE_RATE, arguments);
-        executor.close();
 
+        executor.executeStatement(GIVE_RATE, arguments);
+
+        executor.close();
     }
 
     public List<Integer> getSpeakerRates(int speaker_id){
@@ -322,6 +340,8 @@ public class ConferenceDAO {
         }catch (SQLException e) {
             e.printStackTrace();
         }
+
+        executor.close();
 
         return speakerRates;
     }
