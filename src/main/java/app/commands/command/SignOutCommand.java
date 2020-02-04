@@ -19,7 +19,7 @@ public class SignOutCommand implements ICommand{
         logger.info("in SignOutCommand");
 
         String page = ConfigurationManager.getInstance()
-                .getProperty(ResourceManager.SIGN_OUT.toString());
+                .getProperty(ResourceManager.SIGN_OUT.toString()) + "?language="+request.getSession().getAttribute("language");
 
         request.getSession().invalidate();
 

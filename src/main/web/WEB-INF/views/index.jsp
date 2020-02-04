@@ -15,13 +15,13 @@
 
 <body class="w3-light-grey">
 
-<%--<jsp:forward page="/controller"/>--%>
+<jsp:forward page="/controller"/>
 
-<form method="post">
-  <input type="hidden" name="command" value="sign_in">
-  <button type="submit"></button>
-</form>
-<a href="/controller">LOGIN</a>
+<%--<form method="post">--%>
+<%--  <input type="hidden" name="command" value="sign_in">--%>
+<%--  <button type="submit"></button>--%>
+<%--</form>--%>
+<%--<a href="/controller?command=sign_in">LOGIN</a>--%>
 
 </body>
 </html>

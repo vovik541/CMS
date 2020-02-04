@@ -133,7 +133,7 @@
         <form method="post" id="offer">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="give_speech" />
-            <p>${offer}</p>
+            <h3>${offer}</h3>
             <label>
                 <p>${confName}</p>
                 <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
@@ -145,7 +145,6 @@
                 <p>${endsAt}</p>
                 <input type="time" min="08:00" max="23:00" name="endsAtTime">
             </label>
-
             <label for="accepted">${accBySpeaker}</label>
 
             <select class="form-control" id="accepted" name="acceptedBySpeaker">
@@ -163,7 +162,7 @@
                 </c:forEach>
             </select>
 
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">Submit</button>
+            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">${submit}</button>
         </form>
         <c:if test="${requestScope.isAdded}">
             <h3>${confAddedMessage}</h3>

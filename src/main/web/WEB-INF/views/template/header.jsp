@@ -12,20 +12,20 @@
     <c:choose>
         <c:when test="${language.toString() eq 'ru'}">
             <form>
-                <button name="language" value="en" type="submit">en</button>
-                <button name="language" value="ua" type="submit">ua</button>
+                <button name="language" value="en" type="submit" class="w3-btn w3-round-large">en</button>
+                <button name="language" value="ua" type="submit" class="w3-btn w3-round-large">ua</button>
             </form>
         </c:when>
         <c:when test="${language.toString() eq 'ua'}">
             <form>
-                <button name="language" value="en" type="submit">en</button>
-                <button name="language" value="ru" type="submit">ru</button>
+                <button name="language" value="en" type="submit" class="w3-btn w3-round-large">en</button>
+                <button name="language" value="ru" type="submit" class="w3-btn w3-round-large">ru</button>
             </form>
         </c:when>
         <c:when test="${language.toString() eq 'en'}">
             <form>
-                <button name="language" value="ua" type="submit">ua</button>
-                <button name="language" value="ru" type="submit">ru</button>
+                <button name="language" value="ua" type="submit" class="w3-btn w3-round-large">ua</button>
+                <button name="language" value="ru" type="submit" class="w3-btn w3-round-large">ru</button>
             </form>
         </c:when>
     </c:choose>

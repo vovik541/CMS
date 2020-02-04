@@ -80,9 +80,10 @@ public class SignUpLogic {
                 request.setAttribute("userExistsErrorMessage", true);
             }
             request.setAttribute("userInputErrorMessage", false);
+        }else {
+            request.setAttribute("userInputErrorMessage", true);
         }
 
-        request.setAttribute("userInputErrorMessage", true);
     }
 
     public boolean isInputAlright(String firstName, String lastName, String login,
@@ -94,6 +95,7 @@ public class SignUpLogic {
         }
         return true;
     }
+
     public Boolean checkBy(String checkParam, String value){
         Connection connection = null;
         PreparedStatement preparedStatement = null;

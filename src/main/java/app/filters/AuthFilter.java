@@ -4,6 +4,9 @@ package app.filters;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import app.Managers.ResourceManager;
+import app.entities.Role;
+import app.entities.User;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -53,12 +56,51 @@ public class AuthFilter implements Filter {
 
             final HttpSession session = req.getSession();
 
-            if(session.getAttribute("currentUser") == null){
-                logger.info("user hasn't access to page! redirecting to /login");
-                resp.sendRedirect("/login");
-            }else {
-                logger.info("AuthServlet worked good");
-                filterChain.doFilter(request, response);
+            User user = (User) session.getAttribute("currentUser");
+
+            String commandFromFront = request.getParameter(ResourceManager.COMMAND.toString());
+
+            logger.info("COMMAND IN FACTORY "+ commandFromFront);
+
+            if(commandFromFront != null || !commandFromFront.isEmpty()){
+                ResourceManager command = ResourceManager.valueOf(commandFromFront.toUpperCase());
+                if((command == ResourceManager.MODER_CABINET ||
+                        command == ResourceManager.ADMIN_CABINET ||
+                        command == ResourceManager.USER_CABINET||
+                        command == ResourceManager.SPEAKER_CABINET)&& user == null){
+                    resp.sendRedirect("/");
+                }else {
+                    if(user != null){
+                        switch (command){
+                            case ADMIN_CABINET:
+                                if(user.getRole() == Role.ADMIN){
+                                    filterChain.doFilter(request, response);
+                                }else{
+                                    resp.sendRedirect("/");
+                                }
+                            case MODER_CABINET:
+                                if(user.getRole() == Role.MODER){
+                                    filterChain.doFilter(request, response);
+                                }else{
+
+                                }
+                            case SPEAKER_CABINET:
+                                if(user.getRole() == Role.SPEAKER){
+                                    filterChain.doFilter(request, response);
+                                }else{
+                                    resp.sendRedirect("/");
+                                }
+                            case USER_CABINET:
+                                if(user.getRole() == Role.USER){
+                                    filterChain.doFilter(request, response);
+                                }else{
+                                    resp.sendRedirect("/");
+                                }
+                            default:filterChain.doFilter(request, response);
+                        }
+
+                    }
+                }
             }
         }
     }

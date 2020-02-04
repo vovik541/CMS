@@ -149,15 +149,11 @@ public class ModerCabinetLogic {
         int recordsPerPage = 10;
         int nOfPages;
 
-        logger.info("");
-
         if(recPerPageStr != null){
-            logger.info("!!"+ recPerPageStr);
             recordsPerPage = Integer.parseInt(recPerPageStr);
         }
 
         if(curPageStr != null){
-            logger.info(curPageStr.length());
             currentPage = Integer.parseInt(curPageStr);
         }
 

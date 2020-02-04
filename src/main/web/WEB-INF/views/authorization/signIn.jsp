@@ -1,6 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="language"
+       value="${not empty param.language ? param.language : not empty language ? language : 'en'}"
+       scope="session"/>
+<fmt:setLocale value="${language}"/>
 <fmt:setBundle basename="messages"/>
 
 <html>
@@ -18,7 +22,7 @@
 <fmt:message key="login.password" var="passMessage"/>
 <fmt:message key="login.errorLoginPassMessage" var="authError"/>
 <fmt:message key="signUp" var="signUp"/>
-
+<fmt:message key="submit" var="submit"/>
 
 <div class="w3-card-4">
     <div class="w3-container w3-blue-grey w3-opacity w3-right-align">
@@ -41,7 +45,7 @@
             </label>
             <input type="hidden" name="command" value="sign_in" />
 <%--            <input type="hidden" name="isPressed" value="true" />--%>
-            <button type="submit" form="signIn" class="w3-btn w3-green w3-round-large w3-margin-bottom">Submit</button>
+            <button type="submit" form="signIn" class="w3-btn w3-green w3-round-large w3-margin-bottom">${submit}</button>
         </form>
     </div>
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
