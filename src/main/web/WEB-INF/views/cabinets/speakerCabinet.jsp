@@ -19,17 +19,37 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
+
+
 <fmt:message key="speaker.offer" var="offer"/>
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>
 <fmt:message key="speaker.endsAt" var="endsAt"/>
+<fmt:message key="speaker.date" var="date"/>
 <fmt:message key="speaker.location" var="location"/>
+<fmt:message key="speaker" var="speaker"/>
+<fmt:message key="speaker.incorrectInput" var="incorrectInputMessage"/>
+<fmt:message key="speaker.confAdded" var="confAddedMessage"/>
+<fmt:message key="speaker.moreDetails" var="moreDetails"/>
+<fmt:message key="speaker.accByModer" var="accByModer"/>
+<fmt:message key="speaker.present" var="present"/>
+<fmt:message key="speaker.registered" var="registered"/>
+<fmt:message key="speaker.denyMessage" var="denyMessage"/>
+
+<fmt:message key="signOut" var="signOut"/>
+<fmt:message key="submit" var="submit"/>
+<fmt:message key="delete" var="delete"/>
+<fmt:message key="confirm" var="confirm"/>
+<fmt:message key="refuse" var="refuse"/>
+<fmt:message key="status" var="status"/>
+<fmt:message key="accepted" var="accepted"/>
+<fmt:message key="notAccepted" var="notAccepted"/>
+<fmt:message key="show" var="show"/>
+
+<fmt:message key="user.rate" var="rate"/>
 
 <div class="w3-card-4">
-
-    <h1>SPEAKER</h1>
-
-    <h5>YOUR RATE is ${sessionScope.speakerRate}</h5>
+    <h5>${rate} ${sessionScope.speakerRate}</h5>
 
     <div>
         <h1>${offer}</h1>
@@ -58,22 +78,21 @@
                 <label>
                     <input type="time" min="08:00" max="23:00" name="endsAtTime">
                 </label>
-                <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer"
-                        <%--<c:set var="action" value="offer_a_speech" scope="session"/>--%>>Submit</button>
+                <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">${submit}</button>
             </form>
         </c:if>
         <c:if test="${requestScope.isAdded}">
-            <h3>Has been added!</h3>
+            <h3>${confAddedMessage}</h3>
         </c:if>
         <c:if test="${requestScope.isInputError}">
-            <h3>INCORRECT INPUT!!</h3>
+            <h3>${incorrectInputMessage}</h3>
         </c:if>
     </div>
 
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
-        <form>
+        <form method="post">
             <input type="hidden" name="command" value="sign_out" />
-            <button>SIGN OUT</button>
+            <button type="submit">${signOut}</button>
         </form>
     </footer>
     <div>
@@ -81,13 +100,13 @@
             <tr>
                 <th>${confName}</th>
                 <th>${location}</th>
-                <th>${day}</th>
+                <th>${date}</th>
                 <th>${beginsAt}</th>
                 <th>${endsAt}</th>
-                <th>Confirm</th>
-                <th>Accepted By Moder</th>
-                <th>More details</th>
-                <th>Delete</th>
+                <th>${status}</th>
+                <th>${accByModer}</th>
+                <th>${moreDetails}</th>
+                <th>${delete}</th>
             </tr>
             <c:forEach var="conf" items="${sessionScope.speakerConfList}">
                 <tr>
@@ -103,7 +122,7 @@
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="command" value="speaker_cabinet" />
                                     <input type="hidden" name="action" value="refuse_conference" />
-                                    <button type="submit" form="${conf.conferenceId}refuse">refuse</button>
+                                    <button type="submit" form="${conf.conferenceId}refuse">${refuse}</button>
                                 </form>
                             </c:when>
                             <c:when test="${not conf.acceptedBySpeaker}">
@@ -111,7 +130,7 @@
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="command" value="speaker_cabinet" />
                                     <input type="hidden" name="action" value="confirm_conference" />
-                                    <button type="submit" form="${conf.conferenceId}confirm">Confirm</button>
+                                    <button type="submit" form="${conf.conferenceId}confirm">${confirm}</button>
                                 </form>
                             </c:when>
                             <c:otherwise></c:otherwise>
@@ -119,15 +138,15 @@
                     </td>
                     <td>
                         <c:choose>
-                            <c:when test="${conf.acceptedByModer}">ACCEPTED</c:when>
-                            <c:otherwise>NOT ACCEPTED</c:otherwise>
+                            <c:when test="${conf.acceptedByModer}">${accepted}</c:when>
+                            <c:otherwise>${notAccepted}</c:otherwise>
                         </c:choose>
                     </td>
                     <td>
                         <c:choose>
                             <c:when test="${sessionScope.conferenceInfo.conferenceId == conf.conferenceId}">
-                                <p>presented: ${sessionScope.conferenceInfo.numberOfPresentUsers}</p>
-                                <p>registered: ${sessionScope.conferenceInfo.numberOfRegisteredUsers}</p>
+                                <p>${present}: ${sessionScope.conferenceInfo.numberOfPresentUsers}</p>
+                                <p>${registered}: ${sessionScope.conferenceInfo.numberOfRegisteredUsers}</p>
                             </c:when>
 
                             <c:otherwise>
@@ -136,7 +155,7 @@
                                     <input type="hidden" name="command" value="speaker_cabinet" />
                                     <input type="hidden" name="action" value="get_more_info" />
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
-                                    <button form="${conf.conferenceId}info"></button>
+                                    <button form="${conf.conferenceId}info">${show}</button>
                                 </form>
                             </c:otherwise>
                         </c:choose>
@@ -144,15 +163,14 @@
                     <td>
                         <c:choose>
                             <c:when test="${conf.acceptedByModer}">
-                                You can not delete conf accepted by Moder
+                                <p>${denyMessage}</p>
                             </c:when>
                             <c:otherwise>
                                 <form method="post" id="${conf.conferenceId}del">
                                     <input type="hidden" name="id" value="${conf.conferenceId}" />
                                     <input type="hidden" name="command" value="speaker_cabinet" />
                                     <input type="hidden" name="action" value="delete_conference" />
-                                        <%--                            <c:set var="action" value="delete_conference" scope="session"/>--%>
-                                    <button type="submit" form="${conf.conferenceId}del">Delete</button>
+                                    <button type="submit" form="${conf.conferenceId}del">${delete}</button>
                                 </form>
                             </c:otherwise>
                         </c:choose>

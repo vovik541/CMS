@@ -10,23 +10,44 @@ public class Help {
         Properties properties=new Properties();
 
         FileOutputStream messages=new FileOutputStream("src/main/resources/messages.properties");
-        properties.setProperty("greetings","HELLO");
+        properties.setProperty("register","Register");
+        properties.setProperty("signOut","Sign Out");
+        properties.setProperty("submit","Submit");
+        properties.setProperty("delete","Delete");
+        properties.setProperty("confirm","Confirm");
+        properties.setProperty("refuse","Refuse");
+        properties.setProperty("status","Status:");
+        properties.setProperty("accepted","ACCEPTED");
+        properties.setProperty("notAccepted","NOT ACCEPTED");
+        properties.setProperty("show","Show");
+
+
+        properties.setProperty("user.registerInConference","Register in conference");
+        properties.setProperty("user.visited","Conferences you have visited");
+        properties.setProperty("user.registered","You are registered.");
+        properties.setProperty("user.giveARate","Give a rate.");
+        properties.setProperty("user.rate","Rate:");
+        properties.setProperty("user.haveRated","You have rated a speaker:");
 
         properties.setProperty("login.enter","Sign in:");
         properties.setProperty("login.login","Login");
         properties.setProperty("login.password","Password");
         properties.setProperty("login.errorLoginPassMessage","Login or Password doesn't suit!");
 
+        properties.setProperty("speaker","Speaker");
         properties.setProperty("speaker.offer","Offer a Speech");
         properties.setProperty("speaker.confName","Topic / Theme:");
-        properties.setProperty("speaker.year","Year:");
-        properties.setProperty("speaker.month","Month:");
-        properties.setProperty("speaker.day","Day:");
         properties.setProperty("speaker.beginsAt","Begins at:");
         properties.setProperty("speaker.endsAt", "Ends at:");
-        properties.setProperty("speaker.hour","At (hour):");
-        properties.setProperty("speaker.minute","At (min):");
-        properties.setProperty("speaker.location", "Location");
+        properties.setProperty("speaker.location", "Location:");
+        properties.setProperty("speaker.date","Date:");
+        properties.setProperty("speaker.confAdded","The Conference has been added.");
+        properties.setProperty("speaker.incorrectInput","Incorrect input! Please, check all fields and try again.");
+        properties.setProperty("speaker.moreDetails","More details:");
+        properties.setProperty("speaker.accByModer","Accepted by moder:");
+        properties.setProperty("speaker.present","Present:");
+        properties.setProperty("speaker.registered","Registered:");
+        properties.setProperty("speaker.denyMessage","You can't delete conf accepted by Moder");
 
         properties.store(messages,"");
 
@@ -34,69 +55,84 @@ public class Help {
 
         FileOutputStream messages_en=new FileOutputStream("src/main/resources/messages_en.properties");
 
-        properties.setProperty("user.registerInConference","Register in conference");
-        properties.setProperty("user.youHaveBeen","Conferences you have visited");
-//        properties.setProperty("");
-//        properties.setProperty("");
+        properties.setProperty("register","Register");
+        properties.setProperty("signOut","Sign Out");
 
-        properties.setProperty("speaker","Speaker");
+        properties.setProperty("user.registerInConference","Register in conference");
+        properties.setProperty("user.visited","Conferences you have visited");
+        properties.setProperty("user.registered","You are registered.");
+        properties.setProperty("user.giveARate","Give a rate.");
+        properties.setProperty("user.rate","Rate.");
+        properties.setProperty("user.haveRated","You have rated a speaker:");
 
         properties.setProperty("login.enter","Sign in:");
         properties.setProperty("login.login","Login");
         properties.setProperty("login.password","Password");
         properties.setProperty("login.errorLoginPassMessage","Login or Password doesn't suit!");
 
+        properties.setProperty("speaker","Speaker");
         properties.setProperty("speaker.offer","Offer a Speech");
         properties.setProperty("speaker.confName","Topic / Theme:");
         properties.setProperty("speaker.beginsAt","Begins at:");
         properties.setProperty("speaker.endsAt", "Ends at:");
         properties.setProperty("speaker.location", "Location");
+        properties.setProperty("speaker.date","Date:");
 
         properties.store(messages_en,"");
 
         //------------------------------------------------------------------------------
 
         FileOutputStream messages_ua=new FileOutputStream("src/main/resources/messages_ua.properties");
-        properties.setProperty("greetings","ПРИВІТ");
+        properties.setProperty("register","Register");
+        properties.setProperty("signOut","Sign Out");
 
-        properties.setProperty("login.enter","Вхід:");
-        properties.setProperty("login.login","Логін");
-        properties.setProperty("login.password","Пароль");
-        properties.setProperty("login.errorLoginPassMessage","Невірний пароль або логін!");
+        properties.setProperty("user.registerInConference","Register in conference");
+        properties.setProperty("user.visited","Conferences you have visited");
+        properties.setProperty("user.registered","You are registered.");
+        properties.setProperty("user.giveARate","Give a rate.");
+        properties.setProperty("user.rate","Rate.");
+        properties.setProperty("user.haveRated","You have rated a speaker:");
 
-        properties.setProperty("speaker.offer","Запропонувати доклад");
-        properties.setProperty("speaker.confName","Тема докладу:");
-        properties.setProperty("speaker.year","Рік:");
-        properties.setProperty("speaker.month","Місяць:");
-        properties.setProperty("speaker.day","День:");
-        properties.setProperty("speaker.beginsAt","Початок в:");
-        properties.setProperty("speaker.endsAt", "Конец в:");
-        properties.setProperty("speaker.hour","о Годині:");
-        properties.setProperty("speaker.minute","Хвилин:");
-        properties.setProperty("speaker.location", "Місце проведення заходу:");
+        properties.setProperty("login.enter","Sign in:");
+        properties.setProperty("login.login","Login");
+        properties.setProperty("login.password","Password");
+        properties.setProperty("login.errorLoginPassMessage","Login or Password doesn't suit!");
+
+        properties.setProperty("speaker","Speaker");
+        properties.setProperty("speaker.offer","Offer a Speech");
+        properties.setProperty("speaker.confName","Topic / Theme:");
+        properties.setProperty("speaker.beginsAt","Begins at:");
+        properties.setProperty("speaker.endsAt", "Ends at:");
+        properties.setProperty("speaker.location", "Location");
+        properties.setProperty("speaker.date","Date:");
 
         properties.store(messages_ua,"");
 
         //------------------------------------------------------------------------------
 
         FileOutputStream messages_ru=new FileOutputStream("src/main/resources/messages_ru.properties");
-        properties.setProperty("greeting","Привет");
+        properties.setProperty("register","Register");
+        properties.setProperty("signOut","Sign Out");
 
-        properties.setProperty("login.enter","Вход:");
-        properties.setProperty("login.login","Логин");
-        properties.setProperty("login.password","Пароль");
-        properties.setProperty("login.errorLoginPassMessage","Неверный пароль или логин!");
+        properties.setProperty("user.registerInConference","Register in conference");
+        properties.setProperty("user.visited","Conferences you have visited");
+        properties.setProperty("user.registered","You are registered.");
+        properties.setProperty("user.giveARate","Give a rate.");
+        properties.setProperty("user.rate","Rate.");
+        properties.setProperty("user.haveRated","You have rated a speaker:");
 
-        properties.setProperty("speaker.offer","Предложить Доклад");
-        properties.setProperty("speaker.confName","Тема доклада:");
-        properties.setProperty("speaker.year","Год (20**):");
-        properties.setProperty("speaker.month","Месяц (1-12):");
-        properties.setProperty("speaker.day","Число Дня:");
-        properties.setProperty("speaker.beginsAt","Начало в:");
-        properties.setProperty("speaker.endsAt", "Конец в:");
-        properties.setProperty("speaker.hour","Час (0-24):");
-        properties.setProperty("speaker.minute","Минут (0-60):");
-        properties.setProperty("speaker.location", "Место проведения мероприятия");
+        properties.setProperty("login.enter","Sign in:");
+        properties.setProperty("login.login","Login");
+        properties.setProperty("login.password","Password");
+        properties.setProperty("login.errorLoginPassMessage","Login or Password doesn't suit!");
+
+        properties.setProperty("speaker","Speaker");
+        properties.setProperty("speaker.offer","Offer a Speech");
+        properties.setProperty("speaker.confName","Topic / Theme:");
+        properties.setProperty("speaker.beginsAt","Begins at:");
+        properties.setProperty("speaker.endsAt", "Ends at:");
+        properties.setProperty("speaker.location", "Location");
+        properties.setProperty("speaker.date","Date:");
 
         properties.store(messages_ru,"");
     }
