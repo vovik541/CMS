@@ -35,6 +35,7 @@ public class SignInDAO {
     }
 
     //returns null if login or password are not existed
+
     public User getUserByLogPas(String login, String password){
 
         Connection connection = null;
