@@ -19,8 +19,6 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
-
-
 <fmt:message key="speaker.offer" var="offer"/>
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>

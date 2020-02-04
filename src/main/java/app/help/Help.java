@@ -20,6 +20,26 @@ public class Help {
         properties.setProperty("accepted","ACCEPTED");
         properties.setProperty("notAccepted","NOT ACCEPTED");
         properties.setProperty("show","Show");
+        properties.setProperty("yes","Yes");
+        properties.setProperty("no","No");
+        properties.setProperty("userId","User ID:");
+        properties.setProperty("firstName","First Name:");
+        properties.setProperty("lastName","Last Name");
+        properties.setProperty("login","Login:");
+        properties.setProperty("email","E-mail:");
+        properties.setProperty("role","Role:");
+        properties.setProperty("next","Next");
+        properties.setProperty("previous","Previous");
+        properties.setProperty("id","ID:");
+        properties.setProperty("sent","Sent");
+        properties.setProperty("speakerAcc","Speaker accepted");
+        properties.setProperty("speakerDidntAcc","Speaker didn't accept");
+        properties.setProperty("speakerAgreement","Speaker Agreement");
+        properties.setProperty("giveAgreement","Give Agreement");
+        properties.setProperty("currentConferences","Current conferences:");
+        properties.setProperty("accept","Accept");
+        properties.setProperty("deny","Deny");
+        properties.setProperty("pastConferences","Past Conferences:");
 
 
         properties.setProperty("user.registerInConference","Register in conference");
@@ -48,6 +68,18 @@ public class Help {
         properties.setProperty("speaker.present","Present:");
         properties.setProperty("speaker.registered","Registered:");
         properties.setProperty("speaker.denyMessage","You can't delete conf accepted by Moder");
+
+        properties.setProperty("moder.accBySpeaker","Accepted by speaker:");
+        properties.setProperty("moder.selectRecRepPage","Select records per page:");
+        properties.setProperty("moder.giveSpeakerRole","Give Role:");
+        properties.setProperty("moder.makeSpeaker","Make Speaker");
+        properties.setProperty("moder.makeUser","Make User");
+        properties.setProperty("moder.noPermission","You have po permission to change this role");
+        properties.setProperty("moder.letterText","Write a letter to th Conference members:");
+        properties.setProperty("moder.changeTime","Change Time:");
+        properties.setProperty("moder.changeSpeaker","Change Speaker:");
+        properties.setProperty("moder.changeLocation","Change Location:");
+        properties.setProperty("moder.changeConferenceName","Change Conference Name:");
 
         properties.store(messages,"");
 

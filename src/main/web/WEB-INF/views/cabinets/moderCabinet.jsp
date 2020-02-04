@@ -17,19 +17,69 @@
 
 <jsp:include page="../template/header.jsp"></jsp:include>
 
-
+<fmt:message key="speaker.offer" var="offer"/>
 <fmt:message key="speaker.confName" var="confName"/>
 <fmt:message key="speaker.beginsAt" var="beginsAt"/>
 <fmt:message key="speaker.endsAt" var="endsAt"/>
-<fmt:message key="speaker.day" var="day"/>
+<fmt:message key="speaker.date" var="date"/>
 <fmt:message key="speaker.location" var="location"/>
+<fmt:message key="speaker" var="speaker"/>
+<fmt:message key="speaker.incorrectInput" var="incorrectInputMessage"/>
+<fmt:message key="speaker.confAdded" var="confAddedMessage"/>
+<fmt:message key="speaker.moreDetails" var="moreDetails"/>
+<fmt:message key="speaker.accByModer" var="accByModer"/>
+<fmt:message key="speaker.present" var="present"/>
+<fmt:message key="speaker.registered" var="registered"/>
+<fmt:message key="speaker.denyMessage" var="denyMessage"/>
 
-<h1>MODER</h1>
+<fmt:message key="signOut" var="signOut"/>
+<fmt:message key="submit" var="submit"/>
+<fmt:message key="delete" var="delete"/>
+<fmt:message key="confirm" var="confirm"/>
+<fmt:message key="refuse" var="refuse"/>
+<fmt:message key="status" var="status"/>
+<fmt:message key="accepted" var="accepted"/>
+<fmt:message key="notAccepted" var="notAccepted"/>
+<fmt:message key="show" var="show"/>
+<fmt:message key="yes" var="yes"/>
+<fmt:message key="no" var="no"/>
+<fmt:message key="userId" var="userId"/>
+<fmt:message key="firstName" var="firstName"/>
+<fmt:message key="lastName" var="lastName"/>
+<fmt:message key="login" var="login"/>
+<fmt:message key="email" var="email"/>
+<fmt:message key="role" var="role"/>
+<fmt:message key="next" var="next"/>
+<fmt:message key="deny" var="deny"/>
+<fmt:message key="accept" var="accept"/>
+<fmt:message key="previous" var="previous"/>
+<fmt:message key="id" var="id"/>
+<fmt:message key="sent" var="sent"/>
+<fmt:message key="speakerAcc" var="speakerAcc"/>
+<fmt:message key="speakerDidntAcc" var="speakerDidntAcc"/>
+<fmt:message key="speakerAgreement" var="speakerAgreement"/>
+<fmt:message key="giveAgreement" var="giveAgreement"/>
+<fmt:message key="currentConferences" var="currentConferences"/>
+<fmt:message key="pastConferences" var="pastConferences"/>
+
+<fmt:message key="moder.accBySpeaker" var="accBySpeaker"/>
+<fmt:message key="moder.selectRecRepPage" var="selRecPerPage"/>
+<fmt:message key="moder.giveSpeakerRole" var="giveRole"/>
+<fmt:message key="moder.makeSpeaker" var="makeSpeaker"/>
+<fmt:message key="moder.makeUser" var="makeUser"/>
+<fmt:message key="moder.noPermission" var="noPermission"/>
+<fmt:message key="moder.letterText" var="letterText"/>
+<fmt:message key="moder.changeConferenceName" var="changeConferenceName"/>
+<fmt:message key="moder.changeLocation" var="changeLocation"/>
+<fmt:message key="moder.changeSpeaker" var="changeSpeaker"/>
+<fmt:message key="moder.changeTime" var="changeTime"/>
+
+<fmt:message key="user.rate" var="rate"/>
 
 <div class="w3-card-4">
     <div>
 
-        <h5>Change time</h5>
+        <h5>${changeTime}</h5>
         <form method="post">
             <p>Conference Id</p>
             <input type="number" name="conferenceId">
@@ -40,10 +90,10 @@
             <input type="time" min="08:00" max="23:00" name="beginsAtTime">
             <p>${endsAt}</p>
             <input type="time" min="08:00" max="23:00" name="endsAtTime">
-            <button type="submit">submit</button>
+            <button type="submit">${submit}</button>
         </form>
 
-        <h5>Change Location</h5>
+        <h5>${changeLocation}</h5>
         <form method="post">
             <p>Conference Id</p>
             <input type="number" name="conferenceId">
@@ -51,11 +101,11 @@
             <input type="hidden" name="action" value="change_location" />
             <p>${location}</p>
             <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <button type="submit">submit</button>
+            <button type="submit">${submit}</button>
 
         </form>
 
-        <h5>Conference Name</h5>
+        <h5>${changeConferenceName}</h5>
         <form method="post">
             <p>Conference Id</p>
             <input type="number" name="conferenceId">
@@ -63,10 +113,10 @@
             <input type="hidden" name="action" value="change_conference_name" />
             <p>${confName}</p>
             <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <button type="submit">submit</button>
+            <button type="submit">${submit}</button>
         </form>
 
-        <h5>Change Speaker</h5>
+        <h5>${changeSpeaker}</h5>
         <form method="post">
             <p>Speaker Id</p>
             <input type="number" name="speakerId">
@@ -74,13 +124,14 @@
             <input type="number" name="conferenceId">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="change_speaker" />
-            <button type="submit">submit</button>
+            <button type="submit">${submit}</button>
         </form>
+<%--____________________________ OFFER A SPECH ___________________________--%>
 
         <form method="post" id="offer">
             <input type="hidden" name="command" value="moder_cabinet" />
             <input type="hidden" name="action" value="give_speech" />
-
+            <p>${offer}</p>
             <label>
                 <p>${confName}</p>
                 <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
@@ -93,14 +144,14 @@
                 <input type="time" min="08:00" max="23:00" name="endsAtTime">
             </label>
 
-            <label for="accepted">Accepted By Speaker</label>
+            <label for="accepted">${accBySpeaker}</label>
 
             <select class="form-control" id="accepted" name="acceptedBySpeaker">
-                <option value="true">Yes</option>
-                <option value="false" selected>No</option>
+                <option value="true">${yes}</option>
+                <option value="false" selected>${no}</option>
             </select>
 
-            <label for="speakers">For Speaker</label>
+            <label for="speakers">${speaker}</label>
 
             <select class="form-control" id="speakers" name="speakerIdOpt">
                 <c:forEach var="speaker" items="${sessionScope.speakersForOption}">
@@ -113,10 +164,10 @@
             <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">Submit</button>
         </form>
         <c:if test="${requestScope.isAdded}">
-            <h3>Has been added!</h3>
+            <h3>${confAddedMessage}</h3>
         </c:if>
         <c:if test="${requestScope.isInputError}">
-            <h3>INCORRECT INPUT!!</h3>
+            <h3>${incorrectInputMessage}</h3>
         </c:if>
 
 
@@ -128,7 +179,7 @@
 
             <div class="form-group col-md-4">
 
-                <label for="records">Select records per page:</label>
+                <label for="records">${selRecPerPage}</label>
 
                 <select class="form-control" id="records" name="recordsPerPage">
                     <option value="5">5</option>
@@ -139,18 +190,18 @@
                 </select>
 
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">${submit}</button>
         </form>
 
         <table>
             <tr>
-                <th>user ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Login</th>
-                <th>Email</th>
-                <th>role</th>
-                <th>Make Speaker</th>
+                <th>${userId}</th>
+                <th>${firstName}</th>
+                <th>${lastName}</th>
+                <th>${login}</th>
+                <th>${email}</th>
+                <th>${role}</th>
+                <th>${giveRole}</th>
             </tr>
             <c:forEach var="user" items="${requestScope.usersForModerView}">
                 <tr>
@@ -169,7 +220,7 @@
                                     <input type="hidden" name="userId" value="${user.customerId}">
                                     <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
                                     <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
-                                    <button type="submit">Make Speaker</button>
+                                    <button type="submit">${makeSpeaker}</button>
                                 </form>
                             </td>
                         </c:when>
@@ -181,13 +232,13 @@
                                     <input type="hidden" name="userId" value="${user.customerId}">
                                     <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
                                     <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
-                                    <button type="submit">Make User</button>
+                                    <button type="submit">${makeUser}</button>
                                 </form>
                             </td>
                         </c:when>
                         <c:otherwise>
                             <td>
-                                You have po permission to change this role
+                                <p>${noPermission}</p>
                             </td>
                         </c:otherwise>
                     </c:choose>
@@ -204,7 +255,7 @@
                            <input type="hidden" name="action" value="set_records_per_page" />
                            <input type="hidden" name="currentPage" value="${requestScope.currentPage - 1}" />
                            <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                           <button class="page-link">Previous</button>
+                           <button class="page-link">${previous}</button>
                        </form>
                    </li>
                </c:if>
@@ -226,7 +277,7 @@
                            <input type="hidden" name="action" value="set_records_per_page" />
                            <input type="hidden" name="currentPage" value="${requestScope.currentPage + 1}" />
                            <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                           <button class="page-link">Next</button>
+                           <button class="page-link">${next}</button>
                        </form>
                    </li>
                </c:if>
@@ -235,18 +286,18 @@
        </nav>
 
     </div>
-    <h3>Current conferences</h3>
+    <h3>${currentConferences}</h3>
     <table>
         <tr>
-            <th>ID</th>
+            <th>${id}</th>
             <th>${confName}</th>
-            <th>SPEAKER</th>
+            <th>${speaker}</th>
             <th>${location}</th>
-            <th>${day}</th>
+            <th>${date}</th>
             <th>${beginsAt}</th>
             <th>${endsAt}</th>
-            <th>Speaker Agreement</th>
-            <td>Give Agreement</td>
+            <th>${speakerAgreement}</th>
+            <td>${giveAgreement}</td>
         </tr>
         <c:forEach var="conf" items="${requestScope.currentConferences}">
             <tr>
@@ -260,10 +311,10 @@
                 <td>
                     <c:choose>
                         <c:when test="${conf.acceptedBySpeaker eq 'true'}">
-                            Speaker accepted
+                            <p>${speakerAcca}</p>
                         </c:when>
                         <c:otherwise>
-                            Speaker didn't accept
+                            <p>${speakerDidntAcc}</p>
                         </c:otherwise>
                     </c:choose>
                 </td>
@@ -274,7 +325,7 @@
                                 <input type="hidden" name="command" value="moder_cabinet" />
                                 <input type="hidden" name="action" value="moder_disagreed">
                                 <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
-                                <button type="submit">Not accept</button>
+                                <button type="submit">${deny}</button>
                             </form>
                         </c:when>
                         <c:otherwise>
@@ -282,7 +333,7 @@
                                 <input type="hidden" name="command" value="moder_cabinet" />
                                 <input type="hidden" name="action" value="moder_agreed">
                                 <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
-                                <button type="submit">Accept</button>
+                                <button type="submit">${accept}</button>
                             </form>
                         </c:otherwise>
                     </c:choose>
@@ -290,17 +341,17 @@
             </tr>
         </c:forEach>
     </table>
-    <h3>PAST CONFERENCES</h3>
+    <h3>${pastConferences}</h3>
     <table>
         <tr>
             <th>ID</th>
             <th>${confName}</th>
-            <th>SPEAKER</th>
+            <th>${speaker}</th>
             <th>${location}</th>
-            <th>${day}</th>
+            <th>${date}</th>
             <th>${beginsAt}</th>
             <th>${endsAt}</th>
-            <th>Speaker Agreement</th>
+            <th>${speakerAgreement}</th>
 
         </tr>
         <c:forEach var="conf" items="${requestScope.pastConferences}">
@@ -315,10 +366,10 @@
                 <td>
                     <c:choose>
                         <c:when test="${conf.acceptedBySpeaker eq 'true'}">
-                            Speaker accepted
+                            <p>${speakerAcc}</p>
                         </c:when>
                         <c:otherwise>
-                            Speaker didn't accept
+                            <p>${speakerDidntAcc}</p>
                         </c:otherwise>
                     </c:choose>
                 </td>
@@ -326,9 +377,9 @@
         </c:forEach>
     </table>
 
-    <p>Write reminder letter</p>
+    <p>${letterText}</p>
     <c:if test="${requestScope.letterError == true}">
-        INCORRECT INPUT
+        <p>${incorrectInputMessage}</p>
     </c:if>
     <form method="post" id="letter">
         <input type="hidden" name="command" value="moder_cabinet" />
@@ -346,13 +397,13 @@
             </c:forEach>
         </select>
 
-        <button form="letter">Sent</button>
+        <button form="letter">${sent}</button>
     </form>
 
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>
             <input type="hidden" name="command" value="sign_out" />
-            <button>SIGN OUT</button>
+            <button>${signOut}</button>
         </form>
     </footer>
 </div>
