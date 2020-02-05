@@ -47,20 +47,23 @@
     <h1>${register}</h1>
 </div>
 
-<c:if test="${requestScope.userExistsErrorMessage == true}">
-    <div class="alert alert-danger" role="alert">
-        <h1 style="color: red">${userExistsError}</h1>
-    </div>
-</c:if>
-<c:if test="${requestScope.userInputErrorMessage}">
-    <div class="alert alert-danger" role="alert">
-        <h1 style="color: red">${userInputErrorMessage}</h1>
-    </div>
-</c:if>
+
 <div class="w3-contain  er w3-center w3-green p-3">
     <h2>${greetings}</h2>
 </div>
 
+<div class="container d-flex justify-content-center">
+    <c:if test="${requestScope.userExistsErrorMessage == true}">
+        <div class="alert alert-danger" role="alert">
+            <h1 style="color: red">${userExistsError}</h1>
+        </div>
+    </c:if>
+    <c:if test="${requestScope.userInputErrorMessage}">
+        <div class="alert alert-danger" role="alert">
+            <h1 style="color: red">${userInputErrorMessage}</h1>
+        </div>
+    </c:if>
+</div>
 <div class="container d-flex justify-content-center">
     <div class="row">
         <form method="post" class="w3-selection w3-light-grey w3-padding" id="signUpForm">

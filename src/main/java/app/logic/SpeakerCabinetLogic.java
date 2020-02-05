@@ -61,10 +61,11 @@ public class SpeakerCabinetLogic {
         beginsAtTime = request.getParameter("beginsAtTime");
         endsAtTime = request.getParameter("endsAtTime");
 
-        beginsAtTime = formatTime(beginsAtTime);
-        endsAtTime = formatTime(endsAtTime);
+        if(!date.equals("00:00:00") && !beginsAtTime.isEmpty() && !endsAtTime.isEmpty()
+                && confName != null && location != null){
 
-        if(date != null && beginsAtTime != null && endsAtTime != null){
+            beginsAtTime = formatTime(beginsAtTime);
+            endsAtTime = formatTime(endsAtTime);
 
             Conference conference = new Conference.Builder(speakerId, confName, location,
                     date, beginsAtTime, endsAtTime)

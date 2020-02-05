@@ -247,8 +247,8 @@ public class Help {
         properties.setProperty("speaker.incorrectInput","Неправильно введені данні! Будь ласка, заповніть всі поля та спробуйте ще раз.");
         properties.setProperty("speaker.moreDetails","Більше деталей:");
         properties.setProperty("speaker.accByModer","Підтверджено Модератором:");
-        properties.setProperty("speaker.present","Присутньо:");
-        properties.setProperty("speaker.registered","Зареєстровано:");
+        properties.setProperty("speaker.present","Присутньо");
+        properties.setProperty("speaker.registered","Зареєстровано");
         properties.setProperty("speaker.denyMessage","Ви не можете удалити Конференцію, підтверджену Модератором");
 
         properties.setProperty("moder.accBySpeaker","Підтверджено Спікером:");
