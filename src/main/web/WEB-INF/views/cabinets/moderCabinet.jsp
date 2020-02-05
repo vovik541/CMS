@@ -80,7 +80,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col">
             <form method="post">
                 <input type="hidden" name="command" value="moder_cabinet" />
                 <input type="hidden" name="action" value="set_records_per_page" />
@@ -91,14 +91,13 @@
 
                     <label for="records">${selRecPerPage}</label>
 
-                    <select class="form-control" id="records" name="recordsPerPage">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
+                    <select class="form-control" id="records" name="recordsPerPage" style="width: 65px">
+                        <option value="5" selected>5</option>
+                        <option value="10">10</option>
                         <option value="15">15</option>
                         <option value="20">20</option>
                         <option value="25">25</option>
                     </select>
-
                 </div>
                 <button type="submit" class="btn btn-primary">${submit}</button>
             </form>
@@ -205,7 +204,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm">
+        <div class="col-sm m-3 p-3" style="background-color: #E5E5E5">
             <h5>${changeTime}</h5>
             <form method="post">
                 <p>${conferenceId}</p>
@@ -217,10 +216,10 @@
                 <input type="time" min="08:00" max="23:00" name="beginsAtTime">
                 <p>${endsAt}</p>
                 <input type="time" min="08:00" max="23:00" name="endsAtTime">
-                <button type="submit">${submit}</button>
+                <button type="submit" class="btn btn-primary">${submit}</button>
             </form>
         </div>
-        <div class="col-sm">
+        <div class="col-sm m-3 p-3" style="background-color: #E5E5E5">
             <h5>${changeLocation}</h5>
             <form method="post">
                 <p>${conferenceId}</p>
@@ -228,11 +227,11 @@
                 <input type="hidden" name="command" value="moder_cabinet" />
                 <input type="hidden" name="action" value="change_location" />
                 <p>${location}</p>
-                <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-                <button type="submit">${submit}</button>
+                <input type="text" name="location" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%"><br />
+                <button type="submit" class="btn btn-primary">${submit}</button>
             </form>
         </div>
-        <div class="col-sm">
+        <div class="col-sm m-3 p-3" style="background-color: #E5E5E5">
             <h5>${changeConferenceName}</h5>
             <form method="post">
                 <p>${conferenceId}</p>
@@ -240,11 +239,11 @@
                 <input type="hidden" name="command" value="moder_cabinet" />
                 <input type="hidden" name="action" value="change_conference_name" />
                 <p>${confName}</p>
-                <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-                <button type="submit">${submit}</button>
+                <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%"><br />
+                <button type="submit" class="btn btn-primary">${submit}</button>
             </form>
         </div>
-        <div class="col-sm">
+        <div class="col-sm m-3 p-3" style="background-color: #E5E5E5">
             <h5>${changeSpeaker}</h5>
             <form method="post">
                 <p>${speakerId}</p>
@@ -253,186 +252,196 @@
                 <input type="number" name="conferenceId">
                 <input type="hidden" name="command" value="moder_cabinet" />
                 <input type="hidden" name="action" value="change_speaker" />
-                <button type="submit">${submit}</button>
+                <div class=" pt-3 mt-2">
+                    <button type="submit" class="btn btn-primary">${submit}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h3>${currentConferences}</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>${id}</th>
+                <th>${confName}</th>
+                <th>${speakerText}</th>
+                <th>${location}</th>
+                <th>${date}</th>
+                <th>${beginsAt}</th>
+                <th>${endsAt}</th>
+                <th>${speakerAgreement}</th>
+                <th>${giveAgreement}</th>
+            </tr>
+            </thead>
+            <c:forEach var="conf" items="${requestScope.currentConferences}">
+                <tr>
+                    <td>${conf.conferenceId}</td>
+                    <td>${conf.confName}</td>
+                    <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
+                    <td>${conf.location}</td>
+                    <td>${conf.date}</td>
+                    <td>${conf.beginsAt}</td>
+                    <td>${conf.endsAt}</td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${conf.acceptedBySpeaker eq 'true'}">
+                                <p>${speakerAcc}</p>
+                            </c:when>
+                            <c:otherwise>
+                                <p>${speakerDidntAcc}</p>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${conf.acceptedByModer eq 'true'}">
+                                <form method="post">
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="moder_disagreed">
+                                    <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
+                                    <button type="submit">${deny}</button>
+                                </form>
+                            </c:when>
+                            <c:otherwise>
+                                <form method="post">
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="moder_agreed">
+                                    <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
+                                    <button type="submit">${accept}</button>
+                                </form>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+    <div class="row">
+
+        <h3>${pastConferences}</h3>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>${id}</th>
+                <th>${confName}</th>
+                <th>${speakerText}</th>
+                <th>${location}</th>
+                <th>${date}</th>
+                <th>${beginsAt}</th>
+                <th>${endsAt}</th>
+                <th>${speakerAgreement}</th>
+            </tr>
+            </thead>
+            <c:forEach var="conf" items="${requestScope.pastConferences}">
+                <tr>
+                    <td>${conf.conferenceId}</td>
+                    <td>${conf.confName}</td>
+                    <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
+                    <td>${conf.location}</td>
+                    <td>${conf.date}</td>
+                    <td>${conf.beginsAt}</td>
+                    <td>${conf.endsAt}</td>
+                    <td>
+                        <c:choose>
+                            <c:when test="${conf.acceptedBySpeaker eq 'true'}">
+                                <p>${speakerAcc}</p>
+                            </c:when>
+                            <c:otherwise>
+                                <p>${speakerDidntAcc}</p>
+                            </c:otherwise>
+                        </c:choose>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+</div>
+
+<div class="container pt-3 d-flex justify-content-around" >
+    <div class="row" >
+        <div class="col pt-3 mr-4" style="background-color: #E5E5E5; ">
+            <form method="post" id="offer">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="give_speech" />
+                <h3>${offer}</h3>
+                <p>${confName}</p>
+                <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%"><br />
+                <p>${location}</p>
+                <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%"><br />
+                <p>${beginsAt}</p>
+                <input type="date" name="date">
+                <input type="time" min="08:00" max="23:00" name="beginsAtTime">
+                <p>${endsAt}</p>
+                <input type="time" min="08:00" max="23:00" name="endsAtTime">
+                <label for="accepted">${accBySpeaker}</label>
+
+                <select class="form-control" id="accepted" name="acceptedBySpeaker">
+                    <option value="true">${yes}</option>
+                    <option value="false" selected>${no}</option>
+                </select>
+
+                <label for="speakers"><%--${speaker}--%></label>
+
+                <select class="form-control" id="speakers" name="speakerIdOpt">
+                    <c:forEach var="speaker" items="${sessionScope.speakersForOption}">
+                        <option value="${speaker.customerId}">
+                                ${speaker.firstName} ${speaker.lastName}
+                        </option>
+                    </c:forEach>
+                </select>
+                <div class="pt-3">
+                    <button type="submit" class="btn btn-primary" form="offer">${submit}</button>
+                </div>
+            </form>
+            <c:if test="${requestScope.isAdded}">
+                <div class="alert alert-success" role="alert">
+                    <h3>${confAddedMessage}</h3>
+                </div>
+            </c:if>
+            <c:if test="${requestScope.isInputError}">
+                <div class="alert alert-danger" role="alert">
+                    <h3>${incorrectInputMessage}</h3>
+                </div>
+            </c:if>
+        </div>
+        <div class="col pt-3 ml-4" style="background-color: #E5E5E5; ">
+            <h3>${letterText}</h3>
+            <c:if test="${requestScope.letterError == true}">
+                <div class="alert alert-danger" role="alert">
+                    <h5>${incorrectInputMessage}</h5>
+                </div>
+            </c:if>
+            <form method="post" id="letter">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="sent_letter">
+                <p>${subject}</p>
+                <input type="text" name="subject" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%">
+                <p>${message}</p>
+                <input type="text" name="message" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 80%">
+
+                <label for="conferenceIdLt"></label>
+
+                <select class="form-control" id="conferenceIdLt" name="conferenceId" style="width: 80%">
+                    <c:forEach var="conference" items="${sessionScope.conferencesToRegisterIn}">
+                        <option value="${conference.conferenceId} ">
+                                ${conference.confName}
+                        </option>
+                    </c:forEach>
+                </select>
+                <div class="pt-3">
+                    <button form="letter" class="btn btn-primary">${sent}</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
 
-
 <div class="w3-card-4">
-    <div>
-
-
-
-
-
-
-
-
-<%--____________________________ OFFER A SPECH ___________________________--%>
-
-        <form method="post" id="offer">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="give_speech" />
-            <h3>${offer}</h3>
-            <label>
-                <p>${confName}</p>
-                <input type="text" name="confName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-                <p>${location}</p>
-                <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-                <p>${beginsAt}</p>
-                <input type="date" name="date">
-                <input type="time" min="08:00" max="23:00" name="beginsAtTime">
-                <p>${endsAt}</p>
-                <input type="time" min="08:00" max="23:00" name="endsAtTime">
-            </label>
-            <label for="accepted">${accBySpeaker}</label>
-
-            <select class="form-control" id="accepted" name="acceptedBySpeaker">
-                <option value="true">${yes}</option>
-                <option value="false" selected>${no}</option>
-            </select>
-
-            <label for="speakers"><%--${speaker}--%></label>
-
-            <select class="form-control" id="speakers" name="speakerIdOpt">
-                <c:forEach var="speaker" items="${sessionScope.speakersForOption}">
-                    <option value="${speaker.customerId}">
-                        ${speaker.firstName} ${speaker.lastName}
-                    </option>
-                </c:forEach>
-            </select>
-
-            <button type="submit" class="w3-btn w3-green w3-round-large w3-margin-bottom" form="offer">${submit}</button>
-        </form>
-        <c:if test="${requestScope.isAdded}">
-            <h3>${confAddedMessage}</h3>
-        </c:if>
-        <c:if test="${requestScope.isInputError}">
-            <h3>${incorrectInputMessage}</h3>
-        </c:if>
-
-
-
-    </div>
-    <h3>${currentConferences}</h3>
-    <table>
-        <tr>
-            <th>${id}</th>
-            <th>${confName}</th>
-            <th>${speakerText}</th>
-            <th>${location}</th>
-            <th>${date}</th>
-            <th>${beginsAt}</th>
-            <th>${endsAt}</th>
-            <th>${speakerAgreement}</th>
-            <th>${giveAgreement}</th>
-        </tr>
-        <c:forEach var="conf" items="${requestScope.currentConferences}">
-            <tr>
-                <td>${conf.conferenceId}</td>
-                <td>${conf.confName}</td>
-                <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
-                <td>${conf.location}</td>
-                <td>${conf.date}</td>
-                <td>${conf.beginsAt}</td>
-                <td>${conf.endsAt}</td>
-                <td>
-                    <c:choose>
-                        <c:when test="${conf.acceptedBySpeaker eq 'true'}">
-                            <p>${speakerAcc}</p>
-                        </c:when>
-                        <c:otherwise>
-                            <p>${speakerDidntAcc}</p>
-                        </c:otherwise>
-                    </c:choose>
-                </td>
-                <td>
-                    <c:choose>
-                        <c:when test="${conf.acceptedByModer eq 'true'}">
-                            <form method="post">
-                                <input type="hidden" name="command" value="moder_cabinet" />
-                                <input type="hidden" name="action" value="moder_disagreed">
-                                <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
-                                <button type="submit">${deny}</button>
-                            </form>
-                        </c:when>
-                        <c:otherwise>
-                            <form method="post">
-                                <input type="hidden" name="command" value="moder_cabinet" />
-                                <input type="hidden" name="action" value="moder_agreed">
-                                <input type="hidden" name="conferenceId" value="${conf.conferenceId}">
-                                <button type="submit">${accept}</button>
-                            </form>
-                        </c:otherwise>
-                    </c:choose>
-                </td>
-            </tr>
-        </c:forEach>
-    </table>
-
-    <h3>${pastConferences}</h3>
-    <table>
-        <tr>
-            <th>${id}</th>
-            <th>${confName}</th>
-            <th>${speakerText}</th>
-            <th>${location}</th>
-            <th>${date}</th>
-            <th>${beginsAt}</th>
-            <th>${endsAt}</th>
-            <th>${speakerAgreement}</th>
-        </tr>
-        <c:forEach var="conf" items="${requestScope.pastConferences}">
-            <tr>
-                <td>${conf.conferenceId}</td>
-                <td>${conf.confName}</td>
-                <td>${conf.speakerFirstName} ${conf.speakerLastName}</td>
-                <td>${conf.location}</td>
-                <td>${conf.date}</td>
-                <td>${conf.beginsAt}</td>
-                <td>${conf.endsAt}</td>
-                <td>
-                    <c:choose>
-                        <c:when test="${conf.acceptedBySpeaker eq 'true'}">
-                            <p>${speakerAcc}</p>
-                        </c:when>
-                        <c:otherwise>
-                            <p>${speakerDidntAcc}</p>
-                        </c:otherwise>
-                    </c:choose>
-                </td>
-            </tr>
-        </c:forEach>
-    </table>
-
-    <p>${letterText}</p>
-    <c:if test="${requestScope.letterError == true}">
-        <p>${incorrectInputMessage}</p>
-    </c:if>
-    <form method="post" id="letter">
-        <input type="hidden" name="command" value="moder_cabinet" />
-        <input type="hidden" name="action" value="sent_letter">
-        <p>${subject}</p>
-        <input type="text" name="subject">
-        <p>${message}</p>
-        <input type="text" name="message">
-
-        <label for="conferenceIdLt"></label>
-
-        <select class="form-control" id="conferenceIdLt" name="conferenceId">
-            <c:forEach var="conference" items="${sessionScope.conferencesToRegisterIn}">
-                <option value="${conference.conferenceId} ">
-                    ${conference.confName}
-                </option>
-            </c:forEach>
-        </select>
-
-        <button form="letter">${sent}</button>
-    </form>
-
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>
             <input type="hidden" name="command" value="sign_out" />

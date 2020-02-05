@@ -48,10 +48,14 @@
 <div class="w3-container w3-padding">
 
     <c:if test="${requestScope.userExistsErrorMessage == true}">
-        <h1 style="color: red">${userExistsError}</h1>
+        <div class="alert alert-danger" role="alert">
+            <h1 style="color: red">${userExistsError}</h1>
+        </div>
     </c:if>
     <c:if test="${requestScope.userInputErrorMessage}">
-        <h1 style="color: red">${userInputErrorMessage}</h1>
+        <div class="alert alert-danger" role="alert">
+            <h1 style="color: red">${userInputErrorMessage}</h1>
+        </div>
     </c:if>
 
     <div class="w3-card-4">

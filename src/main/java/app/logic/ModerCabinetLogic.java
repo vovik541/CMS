@@ -29,10 +29,15 @@ public class ModerCabinetLogic {
     //not ready! (works without checking input)
 
     public void changeSpeaker(HttpServletRequest request){
-        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
-        int speakerId = Integer.parseInt(request.getParameter("speakerId"));
+        String conferenceIdStr = request.getParameter("conferenceId");
+        String speakerIdStr= request.getParameter("speakerId");
 
-        MySqlDaoFactory.getConferenceDAO().changeSpeaker(speakerId, conferenceId);
+        if(!conferenceIdStr.isEmpty()&&!speakerIdStr.isEmpty()){
+            int conferenceId = Integer.parseInt(conferenceIdStr);
+            int speakerId = Integer.parseInt(speakerIdStr);
+
+            MySqlDaoFactory.getConferenceDAO().changeSpeaker(speakerId, conferenceId);
+        }
     }
 
     //not ready! (works without checking input)
@@ -57,18 +62,25 @@ public class ModerCabinetLogic {
 
     public void changeConferenceName(HttpServletRequest request){
         String conferenceName = request.getParameter("conferenceName");
-        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+        String conferenceIdStr = request.getParameter("conferenceId");
 
-        MySqlDaoFactory.getConferenceDAO().changeConferenceName(conferenceName, conferenceId);
+        if(!conferenceIdStr.isEmpty() && conferenceIdStr != null){
+            int conferenceId = Integer.parseInt(conferenceIdStr);
+            MySqlDaoFactory.getConferenceDAO().changeConferenceName(conferenceName, conferenceId);
+        }
+
     }
 
     //not ready! (works without checking input)
 
     public void changeLocation(HttpServletRequest request){
         String location = request.getParameter("location");
-        int conferenceId = Integer.parseInt(request.getParameter("conferenceId"));
+        String conferenceIdStr = request.getParameter("conferenceId");
 
-        MySqlDaoFactory.getConferenceDAO().changeLocation(location, conferenceId);
+        if(!location.isEmpty() && conferenceIdStr != null){
+            int conferenceId = Integer.parseInt(conferenceIdStr);
+            MySqlDaoFactory.getConferenceDAO().changeLocation(location, conferenceId);
+        }
     }
 
     public void giveSpeech(HttpServletRequest request){
@@ -146,7 +158,7 @@ public class ModerCabinetLogic {
 
         int nOfUsers = userDAO.getNumOfCustomers();
         int currentPage = 1;
-        int recordsPerPage = 10;
+        int recordsPerPage = 5;
         int nOfPages;
 
         if(recPerPageStr != null){
