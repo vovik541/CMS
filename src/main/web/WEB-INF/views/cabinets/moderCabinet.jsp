@@ -78,56 +78,199 @@
 
 <fmt:message key="user.rate" var="rate"/>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <form method="post">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="set_records_per_page" />
+
+                <input type="hidden" name="currentPage" value="1">
+
+                <div class="form-group col-md-4">
+
+                    <label for="records">${selRecPerPage}</label>
+
+                    <select class="form-control" id="records" name="recordsPerPage">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+
+                </div>
+                <button type="submit" class="btn btn-primary">${submit}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row>">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">${userId}</th>
+                <th scope="col">${firstName}</th>
+                <th scope="col">${lastName}</th>
+                <th scope="col">${login}</th>
+                <th scope="col">${email}</th>
+                <th scope="col">${role}</th>
+                <th scope="col">${giveRole}</th>
+            </tr>
+            </thead>
+            <c:forEach var="user" items="${requestScope.usersForModerView}">
+                <tr style="padding-top: 2px">
+                    <td>${user.customerId}</td>
+                    <td>${user.firstName}</td>
+                    <td>${user.lastName}</td>
+                    <td>${user.login}</td>
+                    <td>${user.email}</td>
+                    <td>${user.role}</td>
+                    <c:choose>
+                        <c:when test="${user.role eq 'USER'}">
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="give_speaker_role">
+                                    <input type="hidden" name="userId" value="${user.customerId}">
+                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
+                                    <button type="submit">${makeSpeaker}</button>
+                                </form>
+                            </td>
+                        </c:when>
+                        <c:when test="${user.role eq 'SPEAKER'}">
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="command" value="moder_cabinet" />
+                                    <input type="hidden" name="action" value="give_user_role">
+                                    <input type="hidden" name="userId" value="${user.customerId}">
+                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
+                                    <button type="submit">${makeUser}</button>
+                                </form>
+                            </td>
+                        </c:when>
+                        <c:otherwise>
+                            <td>
+                                <p>${noPermission}</p>
+                            </td>
+                        </c:otherwise>
+                    </c:choose>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+
+    <div class="row">
+        <nav>
+            <ul class="pagination">
+                <c:if test="${requestScope.currentPage != 1}">
+                    <li class="page-item">
+                        <form method="post">
+                            <input type="hidden" name="command" value="moder_cabinet" />
+                            <input type="hidden" name="action" value="set_records_per_page" />
+                            <input type="hidden" name="currentPage" value="${requestScope.currentPage - 1}" />
+                            <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                            <button class="page-link">${previous}</button>
+                        </form>
+                    </li>
+                </c:if>
+                <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
+                    <li class="page-item">
+                        <form method="post">
+                            <input type="hidden" name="command" value="moder_cabinet" />
+                            <input type="hidden" name="action" value="set_records_per_page" />
+                            <input type="hidden" name="currentPage" value="${i}" />
+                            <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                            <button class="page-link">${i}</button>
+                        </form>
+                    </li>
+                </c:forEach>
+                <c:if test="${requestScope.currentPage != requestScope.nOfPages}">
+                    <li class="page-item">
+                        <form method="post">
+                            <input type="hidden" name="command" value="moder_cabinet" />
+                            <input type="hidden" name="action" value="set_records_per_page" />
+                            <input type="hidden" name="currentPage" value="${requestScope.currentPage + 1}" />
+                            <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
+                            <button class="page-link">${next}</button>
+                        </form>
+                    </li>
+                </c:if>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h5>${changeTime}</h5>
+            <form method="post">
+                <p>${conferenceId}</p>
+                <input type="number" name="conferenceId">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="change_time" />
+                <p>${beginsAt}</p>
+                <input type="date" name="date">
+                <input type="time" min="08:00" max="23:00" name="beginsAtTime">
+                <p>${endsAt}</p>
+                <input type="time" min="08:00" max="23:00" name="endsAtTime">
+                <button type="submit">${submit}</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h5>${changeLocation}</h5>
+            <form method="post">
+                <p>${conferenceId}</p>
+                <input type="number" name="conferenceId">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="change_location" />
+                <p>${location}</p>
+                <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+                <button type="submit">${submit}</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h5>${changeConferenceName}</h5>
+            <form method="post">
+                <p>${conferenceId}</p>
+                <input type="number" name="conferenceId">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="change_conference_name" />
+                <p>${confName}</p>
+                <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+                <button type="submit">${submit}</button>
+            </form>
+        </div>
+        <div class="col-sm">
+            <h5>${changeSpeaker}</h5>
+            <form method="post">
+                <p>${speakerId}</p>
+                <input type="number" name="speakerId">
+                <p>${conferenceId}</p>
+                <input type="number" name="conferenceId">
+                <input type="hidden" name="command" value="moder_cabinet" />
+                <input type="hidden" name="action" value="change_speaker" />
+                <button type="submit">${submit}</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="w3-card-4">
     <div>
 
-        <h5>${changeTime}</h5>
-        <form method="post">
-            <p>${conferenceId}</p>
-            <input type="number" name="conferenceId">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="change_time" />
-            <p>${beginsAt}</p>
-            <input type="date" name="date">
-            <input type="time" min="08:00" max="23:00" name="beginsAtTime">
-            <p>${endsAt}</p>
-            <input type="time" min="08:00" max="23:00" name="endsAtTime">
-            <button type="submit">${submit}</button>
-        </form>
 
-        <h5>${changeLocation}</h5>
-        <form method="post">
-            <p>${conferenceId}</p>
-            <input type="number" name="conferenceId">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="change_location" />
-            <p>${location}</p>
-            <input type="text" name="location"class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <button type="submit">${submit}</button>
 
-        </form>
 
-        <h5>${changeConferenceName}</h5>
-        <form method="post">
-            <p>${conferenceId}</p>
-            <input type="number" name="conferenceId">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="change_conference_name" />
-            <p>${confName}</p>
-            <input type="text" name="conferenceName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            <button type="submit">${submit}</button>
-        </form>
 
-        <h5>${changeSpeaker}</h5>
-        <form method="post">
-            <p>${speakerId}</p>
-            <input type="number" name="speakerId">
-            <p>${conferenceId}</p>
-            <input type="number" name="conferenceId">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="change_speaker" />
-            <button type="submit">${submit}</button>
-        </form>
+
+
+
 <%--____________________________ OFFER A SPECH ___________________________--%>
 
         <form method="post" id="offer">
@@ -172,119 +315,6 @@
         </c:if>
 
 
-        <form method="post">
-            <input type="hidden" name="command" value="moder_cabinet" />
-            <input type="hidden" name="action" value="set_records_per_page" />
-
-            <input type="hidden" name="currentPage" value="1">
-
-            <div class="form-group col-md-4">
-
-                <label for="records">${selRecPerPage}</label>
-
-                <select class="form-control" id="records" name="recordsPerPage">
-                    <option value="5">5</option>
-                    <option value="10" selected>10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                </select>
-
-            </div>
-            <button type="submit" class="btn btn-primary">${submit}</button>
-        </form>
-
-        <table>
-            <tr>
-                <th>${userId}</th>
-                <th>${firstName}</th>
-                <th>${lastName}</th>
-                <th>${login}</th>
-                <th>${email}</th>
-                <th>${role}</th>
-                <th>${giveRole}</th>
-            </tr>
-            <c:forEach var="user" items="${requestScope.usersForModerView}">
-                <tr>
-                    <td>${user.customerId}</td>
-                    <td>${user.firstName}</td>
-                    <td>${user.lastName}</td>
-                    <td>${user.login}</td>
-                    <td>${user.email}</td>
-                    <td>${user.role}</td>
-                    <c:choose>
-                        <c:when test="${user.role eq 'USER'}">
-                            <td>
-                                <form method="post">
-                                    <input type="hidden" name="command" value="moder_cabinet" />
-                                    <input type="hidden" name="action" value="give_speaker_role">
-                                    <input type="hidden" name="userId" value="${user.customerId}">
-                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
-                                    <button type="submit">${makeSpeaker}</button>
-                                </form>
-                            </td>
-                        </c:when>
-                        <c:when test="${user.role eq 'SPEAKER'}">
-                            <td>
-                                <form method="post">
-                                    <input type="hidden" name="command" value="moder_cabinet" />
-                                    <input type="hidden" name="action" value="give_user_role">
-                                    <input type="hidden" name="userId" value="${user.customerId}">
-                                    <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                                    <input type="hidden" name="currentPage" value="${requestScope.currentPage}" />
-                                    <button type="submit">${makeUser}</button>
-                                </form>
-                            </td>
-                        </c:when>
-                        <c:otherwise>
-                            <td>
-                                <p>${noPermission}</p>
-                            </td>
-                        </c:otherwise>
-                    </c:choose>
-                </tr>
-            </c:forEach>
-        </table>
-
-       <nav>
-           <ul class="pagination">
-               <c:if test="${requestScope.currentPage != 1}">
-                   <li class="page-item">
-                       <form method="post">
-                           <input type="hidden" name="command" value="moder_cabinet" />
-                           <input type="hidden" name="action" value="set_records_per_page" />
-                           <input type="hidden" name="currentPage" value="${requestScope.currentPage - 1}" />
-                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                           <button class="page-link">${previous}</button>
-                       </form>
-                   </li>
-               </c:if>
-               <c:forEach begin="1" end="${requestScope.nOfPages}" var="i">
-                   <li class="page-item">
-                       <form method="post">
-                           <input type="hidden" name="command" value="moder_cabinet" />
-                           <input type="hidden" name="action" value="set_records_per_page" />
-                           <input type="hidden" name="currentPage" value="${i}" />
-                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                           <button class="page-link">${i}</button>
-                       </form>
-                   </li>
-               </c:forEach>
-               <c:if test="${requestScope.currentPage != requestScope.nOfPages}">
-                   <li class="page-item">
-                       <form method="post">
-                           <input type="hidden" name="command" value="moder_cabinet" />
-                           <input type="hidden" name="action" value="set_records_per_page" />
-                           <input type="hidden" name="currentPage" value="${requestScope.currentPage + 1}" />
-                           <input type="hidden" name="recordsPerPage" value="${requestScope.recordsPerPage}" />
-                           <button class="page-link">${next}</button>
-                       </form>
-                   </li>
-               </c:if>
-           </ul>
-
-       </nav>
 
     </div>
     <h3>${currentConferences}</h3>
@@ -394,7 +424,7 @@
 
         <select class="form-control" id="conferenceIdLt" name="conferenceId">
             <c:forEach var="conference" items="${sessionScope.conferencesToRegisterIn}">
-                <option value="${conference.conferenceId}">
+                <option value="${conference.conferenceId} ">
                     ${conference.confName}
                 </option>
             </c:forEach>

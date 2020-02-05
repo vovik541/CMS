@@ -6,7 +6,7 @@
        scope="session"/>
 <fmt:setLocale value="${language}"/>
 
-<header>
+<header class="w3-container w3-blue-grey w3-opacity w3-right-align">
     <c:out value="${sessionScope.page.toString()}"></c:out>
 
     <c:choose>
