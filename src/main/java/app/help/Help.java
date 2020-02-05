@@ -50,6 +50,7 @@ public class Help {
         properties.setProperty("message","Message:");
         properties.setProperty("userInputErrorMessage","Fields mustn't be empty!");
         properties.setProperty("userExistsError","User with such log or email exists!");
+        properties.setProperty("signOutMessage","You were logged out");
 
         properties.setProperty("user.registerInConference","Register in conference");
         properties.setProperty("user.visited","Conferences you have visited");
@@ -135,6 +136,7 @@ public class Help {
         properties.setProperty("message","Message:");
         properties.setProperty("userInputErrorMessage","Fields mustn't be empty!");
         properties.setProperty("userExistsError","User with such log or email exists!");
+        properties.setProperty("signOutMessage","You were logged out");
 
         properties.setProperty("user.registerInConference","Register in conference");
         properties.setProperty("user.visited","Conferences you have visited");
@@ -220,6 +222,7 @@ public class Help {
         properties.setProperty("message","Повідомлення:");
         properties.setProperty("userInputErrorMessage","Будь ласка, заповніть всі поля!");
         properties.setProperty("userExistsError","Користувач із таким логіном або поштою вже існує!");
+        properties.setProperty("signOutMessage","Ви вийшли з системи");
 
         properties.setProperty("user.registerInConference","Зареєструватися в Конференції");
         properties.setProperty("user.visited","Ваші відвідані конференції");
@@ -305,6 +308,7 @@ public class Help {
         properties.setProperty("message","Сообщение:");
         properties.setProperty("userInputErrorMessage","Поля не должны быть пустыми!");
         properties.setProperty("userExistsError","Пользователь с таким логином или почтой существует!");
+        properties.setProperty("signOutMessage","Вы вышли из системы");
 
         properties.setProperty("user.registerInConference","Принять учястие в конференции");
         properties.setProperty("user.visited","Конференции, на которых вы побывали");

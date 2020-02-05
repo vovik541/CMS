@@ -15,21 +15,23 @@
 </head>
 
 <body class="w3-light-grey">
-<c:choose>
-    <c:when test="${language.toString() eq 'ru'}">
-        <a href="?command=sign_up&language=en" class="w3-btn w3-round-large">en</a>
-        <a href="?command=sign_up&language=ua" class="w3-btn w3-round-large">ua</a>
-    </c:when>
-    <c:when test="${language.toString() eq 'ua'}">
-        <a href="?command=sign_up&language=en" class="w3-btn w3-round-large">en</a>
-        <a href="?command=sign_up&language=ru" class="w3-btn w3-round-large">ru</a>
-    </c:when>
-    <c:when test="${language.toString() eq 'en'}">
-        <a href="?command=sign_up&language=ua" class="w3-btn w3-round-large">ua</a>
-        <a href="?command=sign_up&language=ru" class="w3-btn w3-round-large">ru</a>
-    </c:when>
-</c:choose>
-<%--<jsp:include page="../template/header.jsp"></jsp:include>--%>
+
+<div class="w3-container w3-blue-grey w3-opacity w3-right-align">
+    <c:choose>
+            <c:when test="${language.toString() eq 'ru'}">
+                <a href="?command=sign_up&language=en" class="w3-btn w3-round-large">en</a>
+                <a href="?command=sign_up&language=ua" class="w3-btn w3-round-large">ua</a>
+            </c:when>
+            <c:when test="${language.toString() eq 'ua'}">
+                <a href="?command=sign_up&language=en" class="w3-btn w3-round-large">en</a>
+                <a href="?command=sign_up&language=ru" class="w3-btn w3-round-large">ru</a>
+            </c:when>
+            <c:when test="${language.toString() eq 'en'}">
+                <a href="?command=sign_up&language=ua" class="w3-btn w3-round-large">ua</a>
+                <a href="?command=sign_up&language=ru" class="w3-btn w3-round-large">ru</a>
+            </c:when>
+    </c:choose>
+</div>
 
 <fmt:message key="signIn" var="signInText"/>
 <fmt:message key="firstName" var="firstName"/>
@@ -45,40 +47,33 @@
     <h1>${register}</h1>
 </div>
 
-<div class="w3-container w3-padding">
+<c:if test="${requestScope.userExistsErrorMessage == true}">
+    <div class="alert alert-danger" role="alert">
+        <h1 style="color: red">${userExistsError}</h1>
+    </div>
+</c:if>
+<c:if test="${requestScope.userInputErrorMessage}">
+    <div class="alert alert-danger" role="alert">
+        <h1 style="color: red">${userInputErrorMessage}</h1>
+    </div>
+</c:if>
+<div class="w3-contain  er w3-center w3-green p-3">
+    <h2>${greetings}</h2>
+</div>
 
-    <c:if test="${requestScope.userExistsErrorMessage == true}">
-        <div class="alert alert-danger" role="alert">
-            <h1 style="color: red">${userExistsError}</h1>
-        </div>
-    </c:if>
-    <c:if test="${requestScope.userInputErrorMessage}">
-        <div class="alert alert-danger" role="alert">
-            <h1 style="color: red">${userInputErrorMessage}</h1>
-        </div>
-    </c:if>
-
-    <div class="w3-card-4">
-        <div class="w3-container w3-center w3-green">
-            <h2>${greetings}</h2>
-        </div>
-
+<div class="container d-flex justify-content-center">
+    <div class="row">
         <form method="post" class="w3-selection w3-light-grey w3-padding" id="signUpForm">
-            <label>${firstName}
-                <input type="text" name="firstName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            </label>
-            <label>${lastName}
-                <input type="text" name="lastName" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            </label>
-            <label>Email:
-                <input type="text" name="email" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            </label>
-            <label>${login}
-                <input type="text" name="login" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            </label>
-            <label>${password}
-                <input type="password" name="password" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
-            </label>
+            <p>${firstName}</p>
+            <input type="text" name="firstName" class="w3-input w3-border w3-round-large" style="width: 110%"><br />
+            <p>${lastName}</p>
+            <input type="text" name="lastName" class="w3-input w3-border w3-round-large" style="width: 110%"><br />
+            <p>Email:</p>
+            <input type="text" name="email" class="w3-input w3-border w3-round-large" style="width: 110%"><br />
+            <p>${login}</p>
+            <input type="text" name="login" class="w3-input w3-border w3-round-large" style="width: 110%"><br />
+            <p>${password}</p>
+            <input type="password" name="password" class="w3-input w3-border w3-round-large" style="width: 110%"><br />
 
             <input type="hidden" name="command" value="sign_up" />
             <input type="hidden" name="isPressed" value="true" />
@@ -93,7 +88,6 @@
         <input type="hidden" name="command" value="sign_in" />
         <button type="submit" form="backToLog">${signInText}</button>
     </form>
-<%--    <button class="w3-btn w3-round-large" onclick="location.href='..'">Back to main</button>--%>
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>

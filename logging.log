@@ -1297,3 +1297,1324 @@
 2020-02-05 16:08:23 INFO  ModerCabinetCommand:29 - ACTION change_conference_name
 2020-02-05 16:08:23 INFO  ModerCabinetLogic:177 - 5 USER SIZE
 2020-02-05 16:08:23 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-05 16:23:40 INFO  SessionListener:44 - Session with id : 2D7B3E04E6705E6560E3F2E2F2472B9A killed.
+2020-02-05 16:23:40 INFO  SessionListener:44 - Session with id : 4C91ED5C5E04A2500054DC4F534F4C94 killed.
+2020-02-05 16:23:40 INFO  SessionListener:44 - Session with id : 99FE6B9D0C1347B76EBD17AEFDA01D9C killed.
+2020-02-05 16:32:55 INFO  SessionListener:38 - Session with id : 27E348FAD7535D98177C2CE5FEA2D507 created.
+2020-02-05 16:32:55 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 16:32:55 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 16:32:55 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:32:55 INFO  Controller:25 - sign_out
+2020-02-05 16:32:55 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 16:32:55 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 16:32:55 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 16:32:55 INFO  SessionListener:44 - Session with id : 27E348FAD7535D98177C2CE5FEA2D507 killed.
+2020-02-05 16:32:55 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 16:32:56 INFO  SessionListener:38 - Session with id : 7449E0E61A5D399F547ACEF16AB6CD67 created.
+2020-02-05 16:32:56 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 16:32:56 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 16:32:58 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:32:58 INFO  Controller:25 - 
+2020-02-05 16:32:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:32:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:32:58 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:32:58 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:32:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:33:22 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:33:22 INFO  Controller:25 - 
+2020-02-05 16:33:22 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:33:22 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:33:22 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:33:22 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:33:22 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:33:23 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:33:23 INFO  Controller:25 - 
+2020-02-05 16:33:23 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:33:23 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:33:23 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:33:23 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:33:23 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:33:23 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:33:23 INFO  Controller:25 - 
+2020-02-05 16:33:23 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:33:23 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:33:23 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:33:23 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:33:23 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:01 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:01 INFO  Controller:25 - 
+2020-02-05 16:34:01 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:01 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:01 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:01 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:02 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:02 INFO  Controller:25 - 
+2020-02-05 16:34:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:02 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:03 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:03 INFO  Controller:25 - 
+2020-02-05 16:34:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:03 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:04 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:04 INFO  Controller:25 - 
+2020-02-05 16:34:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:04 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:04 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:04 INFO  Controller:25 - 
+2020-02-05 16:34:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:04 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:05 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:05 INFO  Controller:25 - 
+2020-02-05 16:34:05 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:05 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:05 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:05 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:34:31 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:34:31 INFO  Controller:25 - 
+2020-02-05 16:34:31 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:34:31 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:34:31 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:34:31 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:34:31 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:35:02 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:35:02 INFO  Controller:25 - 
+2020-02-05 16:35:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:35:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:35:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:35:02 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:35:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:35:03 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:35:03 INFO  Controller:25 - 
+2020-02-05 16:35:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:35:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:35:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:35:03 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:35:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:35:41 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:35:41 INFO  Controller:25 - 
+2020-02-05 16:35:41 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:35:41 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:35:41 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:35:41 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:35:41 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:36:15 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:36:15 INFO  Controller:25 - 
+2020-02-05 16:36:15 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:36:15 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:36:15 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:36:15 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:36:15 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:38:35 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:35 INFO  Controller:25 - 
+2020-02-05 16:38:35 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:38:35 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:38:35 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:38:35 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:38:35 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:38:36 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:36 INFO  Controller:25 - 
+2020-02-05 16:38:36 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:38:36 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:38:36 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:38:36 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:38:36 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:38:37 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:37 INFO  Controller:25 - 
+2020-02-05 16:38:37 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:38:37 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:38:37 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:38:37 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 16:38:37 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:38:50 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:50 INFO  Controller:25 - 
+2020-02-05 16:38:50 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:38:50 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:38:50 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:38:50 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:38:55 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:55 INFO  Controller:25 - sign_in
+2020-02-05 16:38:55 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:38:55 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:38:55 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:38:55 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:38:57 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:38:57 INFO  Controller:25 - 
+2020-02-05 16:38:57 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:38:57 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:38:57 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:38:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:06 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:06 INFO  Controller:25 - sign_up
+2020-02-05 16:39:06 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:06 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:06 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:06 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:40 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:40 INFO  Controller:25 - sign_up
+2020-02-05 16:39:40 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:40 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:40 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:40 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:41 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:41 INFO  Controller:25 - sign_up
+2020-02-05 16:39:41 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:41 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:41 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:41 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:42 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:42 INFO  Controller:25 - sign_up
+2020-02-05 16:39:42 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:42 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:42 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:42 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:57 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:57 INFO  Controller:25 - sign_up
+2020-02-05 16:39:57 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:57 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:57 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:58 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:58 INFO  Controller:25 - sign_up
+2020-02-05 16:39:58 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:58 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:58 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:39:59 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:39:59 INFO  Controller:25 - sign_up
+2020-02-05 16:39:59 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:39:59 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:39:59 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:39:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:10 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:10 INFO  Controller:25 - sign_up
+2020-02-05 16:40:10 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:10 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:10 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:10 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:11 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:11 INFO  Controller:25 - sign_up
+2020-02-05 16:40:11 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:11 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:11 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:11 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:11 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:11 INFO  Controller:25 - sign_up
+2020-02-05 16:40:11 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:11 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:11 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:11 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:12 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:12 INFO  Controller:25 - sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:12 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:12 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:12 INFO  Controller:25 - sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:12 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:12 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:12 INFO  Controller:25 - sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:12 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:12 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:13 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:13 INFO  Controller:25 - sign_up
+2020-02-05 16:40:13 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:13 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:13 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:13 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:13 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:13 INFO  Controller:25 - sign_up
+2020-02-05 16:40:13 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:13 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:13 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:13 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:14 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:14 INFO  Controller:25 - sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:14 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:14 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:14 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:14 INFO  Controller:25 - sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:14 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:14 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:14 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:14 INFO  Controller:25 - sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:14 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:14 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:14 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:40:15 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:40:15 INFO  Controller:25 - sign_up
+2020-02-05 16:40:15 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:40:15 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:40:15 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:40:15 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:42:35 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:42:35 INFO  Controller:25 - sign_up
+2020-02-05 16:42:35 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:42:35 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:42:35 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:42:35 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:42:36 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:42:36 INFO  Controller:25 - sign_up
+2020-02-05 16:42:36 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:42:36 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:42:36 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:42:36 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:42:49 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:42:49 INFO  Controller:25 - sign_in
+2020-02-05 16:42:49 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:42:49 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:42:49 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:42:49 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:43:59 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:43:59 INFO  Controller:25 - 
+2020-02-05 16:43:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:43:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:43:59 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:43:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:01 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:01 INFO  Controller:25 - 
+2020-02-05 16:44:01 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:01 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:01 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:01 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:01 INFO  Controller:25 - 
+2020-02-05 16:44:01 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:01 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:01 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:02 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:02 INFO  Controller:25 - 
+2020-02-05 16:44:02 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:02 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:02 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:02 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:03 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:03 INFO  Controller:25 - 
+2020-02-05 16:44:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:03 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:03 INFO  Controller:25 - 
+2020-02-05 16:44:03 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:03 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:03 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:04 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:04 INFO  Controller:25 - 
+2020-02-05 16:44:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:05 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:05 INFO  Controller:25 - 
+2020-02-05 16:44:05 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:05 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:05 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:58 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:58 INFO  Controller:25 - 
+2020-02-05 16:44:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:58 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:44:59 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:44:59 INFO  Controller:25 - 
+2020-02-05 16:44:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:44:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:44:59 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:44:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:00 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:00 INFO  Controller:25 - 
+2020-02-05 16:45:00 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:00 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:00 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:01 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:01 INFO  Controller:25 - 
+2020-02-05 16:45:01 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:01 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:01 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:04 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:04 INFO  Controller:25 - 
+2020-02-05 16:45:04 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:04 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:04 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:04 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:05 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:05 INFO  Controller:25 - 
+2020-02-05 16:45:05 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:05 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:05 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:29 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:29 INFO  Controller:25 - 
+2020-02-05 16:45:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:29 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:45:30 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:45:30 INFO  Controller:25 - 
+2020-02-05 16:45:30 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:45:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:45:30 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:45:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:19 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:19 INFO  Controller:25 - 
+2020-02-05 16:46:19 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:19 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:19 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:24 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:24 INFO  Controller:25 - 
+2020-02-05 16:46:24 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:24 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:24 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:24 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:24 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:24 INFO  Controller:25 - 
+2020-02-05 16:46:24 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:24 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:24 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:24 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:25 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:25 INFO  Controller:25 - 
+2020-02-05 16:46:25 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:25 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:25 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:25 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:26 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:26 INFO  Controller:25 - 
+2020-02-05 16:46:26 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:26 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:26 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:26 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:26 INFO  Controller:25 - 
+2020-02-05 16:46:26 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:26 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:26 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:27 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:27 INFO  Controller:25 - 
+2020-02-05 16:46:27 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:27 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:27 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:46:46 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:46:46 INFO  Controller:25 - 
+2020-02-05 16:46:46 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:46:46 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:46:46 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:46:46 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:47:27 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:47:27 INFO  Controller:25 - 
+2020-02-05 16:47:27 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:47:27 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:47:27 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:47:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:47:29 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:47:29 INFO  Controller:25 - 
+2020-02-05 16:47:29 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:47:29 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:47:29 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:47:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:48:20 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:48:20 INFO  Controller:25 - 
+2020-02-05 16:48:20 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:48:20 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:48:20 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:48:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:30 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:30 INFO  Controller:25 - 
+2020-02-05 16:49:30 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:30 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:30 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:31 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:31 INFO  Controller:25 - 
+2020-02-05 16:49:31 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:31 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:31 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:31 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:32 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:32 INFO  Controller:25 - 
+2020-02-05 16:49:32 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:32 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:32 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:33 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:33 INFO  Controller:25 - 
+2020-02-05 16:49:33 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:33 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:33 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:33 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:34 INFO  Controller:25 - 
+2020-02-05 16:49:34 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:34 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:34 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:49:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:49:34 INFO  Controller:25 - 
+2020-02-05 16:49:34 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:49:34 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:49:34 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:49:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:50:40 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:50:40 INFO  Controller:25 - 
+2020-02-05 16:50:40 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:50:40 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:50:40 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:50:40 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:50:42 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:50:42 INFO  Controller:25 - 
+2020-02-05 16:50:42 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:50:42 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:50:42 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:50:42 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:51:40 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:51:40 INFO  Controller:25 - 
+2020-02-05 16:51:40 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:51:40 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:51:40 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:51:40 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:51:42 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:51:42 INFO  Controller:25 - 
+2020-02-05 16:51:42 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:51:42 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:51:42 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:51:42 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:51:59 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:51:59 INFO  Controller:25 - 
+2020-02-05 16:51:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:51:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:51:59 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:51:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:52:00 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:52:00 INFO  Controller:25 - 
+2020-02-05 16:52:00 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:52:00 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:52:00 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:52:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:52:27 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:52:27 INFO  Controller:25 - 
+2020-02-05 16:52:27 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:52:27 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:52:27 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:52:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:52:37 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:52:37 INFO  Controller:25 - 
+2020-02-05 16:52:37 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:52:37 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:52:37 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:52:37 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:52:44 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:52:44 INFO  Controller:25 - sign_up
+2020-02-05 16:52:44 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_up
+2020-02-05 16:52:44 INFO  CommandFactory:38 - app.commands.command.SignUpCommand@5a116925
+2020-02-05 16:52:44 INFO  SignUpCommand:21 - in SignUpCommand
+2020-02-05 16:52:44 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:53:00 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:53:00 INFO  Controller:25 - sign_in
+2020-02-05 16:53:00 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:53:00 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:53:00 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:53:00 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:56:43 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:56:43 INFO  Controller:25 - 
+2020-02-05 16:56:43 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 16:56:43 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 16:56:43 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 16:56:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 16:56:47 INFO  Controller:23 - In Controller doGet
+2020-02-05 16:56:47 INFO  Controller:25 - sign_in
+2020-02-05 16:56:47 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:56:47 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:56:47 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:56:47 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:56:53 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:56:53 INFO  Controller:35 - sign_in
+2020-02-05 16:56:53 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:56:53 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:56:53 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:56:53 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:56:53 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:56:53 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:56:53 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:56:53 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:03 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:03 INFO  Controller:35 - sign_in
+2020-02-05 16:57:03 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:03 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:03 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:03 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:03 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:03 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:03 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:03 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:05 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:05 INFO  Controller:35 - sign_in
+2020-02-05 16:57:05 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:05 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:05 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:05 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:05 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:05 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:05 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:05 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:26 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:26 INFO  Controller:35 - sign_in
+2020-02-05 16:57:26 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:26 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:26 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:26 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:26 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:26 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:26 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:28 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:28 INFO  Controller:35 - sign_in
+2020-02-05 16:57:28 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:28 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:28 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:28 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:28 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:28 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:28 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:53 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:53 INFO  Controller:35 - sign_in
+2020-02-05 16:57:53 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:53 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:53 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:53 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:53 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:53 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:53 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:53 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:55 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:55 INFO  Controller:35 - sign_in
+2020-02-05 16:57:55 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:55 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:55 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:55 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:55 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:55 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:55 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:55 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:55 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:55 INFO  Controller:35 - sign_in
+2020-02-05 16:57:55 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:55 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:55 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:55 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:55 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:55 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:55 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:55 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:57 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:57 INFO  Controller:35 - sign_in
+2020-02-05 16:57:57 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:57 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:57 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:57 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:57 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:57 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:57 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:57 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:57 INFO  Controller:35 - sign_in
+2020-02-05 16:57:57 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:57 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:57 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:57 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:57 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:57 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:57 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:57 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:57:58 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:57:58 INFO  Controller:35 - sign_in
+2020-02-05 16:57:58 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:57:58 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:57:58 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:57:58 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:57:58 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:57:58 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:57:58 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:57:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:58:23 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:58:23 INFO  Controller:35 - sign_in
+2020-02-05 16:58:23 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:58:23 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:58:23 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:58:23 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:58:23 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:58:23 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:58:23 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:58:23 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:18 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:18 INFO  Controller:35 - sign_in
+2020-02-05 16:59:18 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:18 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:18 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:18 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:18 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:18 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:18 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:18 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:19 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:19 INFO  Controller:35 - sign_in
+2020-02-05 16:59:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:19 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:19 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:19 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:19 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:19 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:19 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:28 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:28 INFO  Controller:35 - sign_in
+2020-02-05 16:59:28 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:28 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:28 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:28 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:28 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:28 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:28 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:30 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:30 INFO  Controller:35 - sign_in
+2020-02-05 16:59:30 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:30 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:30 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:30 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:30 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:30 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:30 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:31 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:31 INFO  Controller:35 - sign_in
+2020-02-05 16:59:31 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:31 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:31 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:31 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:31 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:31 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:31 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:31 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:32 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:32 INFO  Controller:35 - sign_in
+2020-02-05 16:59:32 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:32 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:32 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:32 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:32 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:32 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:32 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:32 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:32 INFO  Controller:35 - sign_in
+2020-02-05 16:59:32 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:32 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:32 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:32 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:32 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:32 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:32 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:32 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:52 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:52 INFO  Controller:35 - sign_in
+2020-02-05 16:59:52 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:52 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:52 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:52 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:52 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:52 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:52 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:52 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 16:59:53 INFO  Controller:33 - In Controller doPost
+2020-02-05 16:59:53 INFO  Controller:35 - sign_in
+2020-02-05 16:59:53 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 16:59:53 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 16:59:53 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 16:59:53 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 16:59:53 WARN  SignInDAO:53 - User wasn't gotten! Error in SignInModel.getUserByLogPas()
+2020-02-05 16:59:53 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 16:59:53 INFO  SignInCommand:59 - incorrect input in SignInCommand
+2020-02-05 16:59:53 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:00:01 INFO  Controller:33 - In Controller doPost
+2020-02-05 17:00:01 INFO  Controller:35 - sign_in
+2020-02-05 17:00:01 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:00:01 INFO  CommandFactory:38 - app.commands.command.SignInCommand@da1dca
+2020-02-05 17:00:01 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:00:01 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 17:00:01 INFO  SignInDAO:51 - user was found by login / password
+2020-02-05 17:00:01 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 17:00:01 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-05 17:00:01 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-05 17:00:01 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-05 17:00:01 INFO  ModerCabinetLogic:177 - 5 USER SIZE
+2020-02-05 17:00:01 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-05 17:00:01 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-05 17:00:15 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:15 INFO  Controller:25 - sign_out
+2020-02-05 17:00:15 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:15 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:15 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:15 INFO  SessionListener:44 - Session with id : 7449E0E61A5D399F547ACEF16AB6CD67 killed.
+2020-02-05 17:00:15 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:00:15 INFO  SessionListener:38 - Session with id : AE395DBF7DEF169DBA893EF35C4DE37B created.
+2020-02-05 17:00:15 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:15 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:20 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:20 INFO  Controller:25 - sign_out
+2020-02-05 17:00:20 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:20 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:20 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:20 INFO  SessionListener:44 - Session with id : AE395DBF7DEF169DBA893EF35C4DE37B killed.
+2020-02-05 17:00:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=ua
+2020-02-05 17:00:20 INFO  SessionListener:38 - Session with id : 826443B11D2E4CAE2825227BC7D32E47 created.
+2020-02-05 17:00:20 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:20 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:22 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:22 INFO  Controller:25 - sign_out
+2020-02-05 17:00:22 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:22 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:22 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:22 INFO  SessionListener:44 - Session with id : 826443B11D2E4CAE2825227BC7D32E47 killed.
+2020-02-05 17:00:22 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=ru
+2020-02-05 17:00:22 INFO  SessionListener:38 - Session with id : C0C143AC6736653A26C58F31A29AD4B4 created.
+2020-02-05 17:00:22 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:22 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:22 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:22 INFO  Controller:25 - sign_out
+2020-02-05 17:00:22 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:22 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:22 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:22 INFO  SessionListener:44 - Session with id : C0C143AC6736653A26C58F31A29AD4B4 killed.
+2020-02-05 17:00:22 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:00:22 INFO  SessionListener:38 - Session with id : 9D6D4B409BFCD1BF0494EB6C5AC1C7FD created.
+2020-02-05 17:00:22 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:22 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:23 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:23 INFO  Controller:25 - sign_out
+2020-02-05 17:00:23 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:23 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:23 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:23 INFO  SessionListener:44 - Session with id : 9D6D4B409BFCD1BF0494EB6C5AC1C7FD killed.
+2020-02-05 17:00:23 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=ru
+2020-02-05 17:00:23 INFO  SessionListener:38 - Session with id : AB2BDBDA0988AB9BF78AD5FE25AAD0D8 created.
+2020-02-05 17:00:23 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:23 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:25 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:25 INFO  Controller:25 - sign_out
+2020-02-05 17:00:25 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:25 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:25 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:25 INFO  SessionListener:44 - Session with id : AB2BDBDA0988AB9BF78AD5FE25AAD0D8 killed.
+2020-02-05 17:00:25 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:00:25 INFO  SessionListener:38 - Session with id : 2E4F8BB07F2CD0EFD758016AC222CE74 created.
+2020-02-05 17:00:25 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:25 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:25 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:25 INFO  Controller:25 - sign_out
+2020-02-05 17:00:25 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:25 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:25 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:25 INFO  SessionListener:44 - Session with id : 2E4F8BB07F2CD0EFD758016AC222CE74 killed.
+2020-02-05 17:00:25 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=ru
+2020-02-05 17:00:25 INFO  SessionListener:38 - Session with id : 39B2ED7DDE98D1E76485F02BFFDD2098 created.
+2020-02-05 17:00:25 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:25 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:00:27 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:00:27 INFO  Controller:25 - sign_out
+2020-02-05 17:00:27 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:00:27 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@5e176c09
+2020-02-05 17:00:27 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:00:27 INFO  SessionListener:44 - Session with id : 39B2ED7DDE98D1E76485F02BFFDD2098 killed.
+2020-02-05 17:00:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:00:27 INFO  SessionListener:38 - Session with id : 5E29749FE54C0EC9DD1E1AF7FB0CBBB3 created.
+2020-02-05 17:00:27 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:00:27 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:05:17 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-05 17:05:18 INFO  SessionListener:38 - Session with id : 982AEDB0198B93F3FA22412324AA268C created.
+2020-02-05 17:05:18 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:05:18 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:05:18 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:18 INFO  Controller:25 - 
+2020-02-05 17:05:18 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:05:18 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:05:18 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:05:18 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:05:18 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:05:19 INFO  SessionListener:38 - Session with id : A4F00C51BE744E58A5D231BD93B2581B created.
+2020-02-05 17:05:19 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:05:19 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:05:19 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:19 INFO  Controller:25 - 
+2020-02-05 17:05:19 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:05:19 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:05:19 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:05:19 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:05:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:05:19 INFO  SessionListener:38 - Session with id : 2F6529D9742928869680F3D22262E64B created.
+2020-02-05 17:05:19 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:05:19 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:05:19 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:19 INFO  Controller:25 - 
+2020-02-05 17:05:19 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:05:19 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:05:19 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:05:19 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:05:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:05:27 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:27 INFO  Controller:25 - 
+2020-02-05 17:05:27 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:05:27 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:05:27 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:05:27 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 17:05:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:34 INFO  Controller:25 - sign_in
+2020-02-05 17:05:34 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:05:34 INFO  CommandFactory:38 - app.commands.command.SignInCommand@27ef8e5b
+2020-02-05 17:05:34 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:05:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:05:35 INFO  Controller:33 - In Controller doPost
+2020-02-05 17:05:35 INFO  Controller:35 - sign_in
+2020-02-05 17:05:35 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:05:35 INFO  CommandFactory:38 - app.commands.command.SignInCommand@27ef8e5b
+2020-02-05 17:05:35 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:05:35 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 17:05:36 INFO  SignInDAO:51 - user was found by login / password
+2020-02-05 17:05:36 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 17:05:36 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-05 17:05:36 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-05 17:05:36 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-05 17:05:36 INFO  ModerCabinetLogic:180 - 5 USER SIZE
+2020-02-05 17:05:36 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-05 17:05:36 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-05 17:05:39 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:05:39 INFO  Controller:25 - sign_out
+2020-02-05 17:05:39 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:05:39 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:05:39 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:05:39 INFO  SessionListener:44 - Session with id : 2F6529D9742928869680F3D22262E64B killed.
+2020-02-05 17:05:39 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:05:40 INFO  SessionListener:38 - Session with id : 83D581093CFD0BCBF6BA5CAF11DCB891 created.
+2020-02-05 17:05:40 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:05:40 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:06:30 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:06:30 INFO  Controller:25 - sign_out
+2020-02-05 17:06:30 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:06:30 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:06:30 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:06:30 INFO  SessionListener:44 - Session with id : 83D581093CFD0BCBF6BA5CAF11DCB891 killed.
+2020-02-05 17:06:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:06:31 INFO  SessionListener:38 - Session with id : D01D3DDCD3434EA8BC7B8D4E079E7CBE created.
+2020-02-05 17:06:31 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:06:31 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:06:33 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:06:33 INFO  Controller:25 - sign_out
+2020-02-05 17:06:33 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:06:33 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:06:33 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:06:33 INFO  SessionListener:44 - Session with id : D01D3DDCD3434EA8BC7B8D4E079E7CBE killed.
+2020-02-05 17:06:33 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:06:33 INFO  SessionListener:38 - Session with id : A184E27D247C5EC4905B3FED3F60AB74 created.
+2020-02-05 17:06:33 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:06:33 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:06:33 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:06:33 INFO  Controller:25 - sign_out
+2020-02-05 17:06:33 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:06:33 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:06:33 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:06:33 INFO  SessionListener:44 - Session with id : A184E27D247C5EC4905B3FED3F60AB74 killed.
+2020-02-05 17:06:33 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:06:33 INFO  SessionListener:38 - Session with id : 5D5F21D0303D30E850263F97D0B0D43B created.
+2020-02-05 17:06:33 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:06:33 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:06:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:06:34 INFO  Controller:25 - sign_out
+2020-02-05 17:06:34 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:06:34 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:06:34 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:06:34 INFO  SessionListener:44 - Session with id : 5D5F21D0303D30E850263F97D0B0D43B killed.
+2020-02-05 17:06:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:06:34 INFO  SessionListener:38 - Session with id : 89D5D772B311D9BE23FF0072383B7A93 created.
+2020-02-05 17:06:34 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:06:34 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:06:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:06:34 INFO  Controller:25 - sign_out
+2020-02-05 17:06:34 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:06:34 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:06:34 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:06:34 INFO  SessionListener:44 - Session with id : 89D5D772B311D9BE23FF0072383B7A93 killed.
+2020-02-05 17:06:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:06:34 INFO  SessionListener:38 - Session with id : 9E577F910AFC42EE45D93645731E7A70 created.
+2020-02-05 17:06:34 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:06:34 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:17 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:17 INFO  Controller:25 - sign_out
+2020-02-05 17:07:17 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:17 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:17 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:17 INFO  SessionListener:44 - Session with id : 9E577F910AFC42EE45D93645731E7A70 killed.
+2020-02-05 17:07:17 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:18 INFO  SessionListener:38 - Session with id : 41445033D1CE9699B9CC784F50E8675D created.
+2020-02-05 17:07:18 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:18 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:19 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:19 INFO  Controller:25 - sign_out
+2020-02-05 17:07:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:19 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:19 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:19 INFO  SessionListener:44 - Session with id : 41445033D1CE9699B9CC784F50E8675D killed.
+2020-02-05 17:07:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:19 INFO  SessionListener:38 - Session with id : A09D1B6C5EDC8EBDB124F2505F400016 created.
+2020-02-05 17:07:19 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:19 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:19 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:19 INFO  Controller:25 - sign_out
+2020-02-05 17:07:19 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:19 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:19 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:19 INFO  SessionListener:44 - Session with id : A09D1B6C5EDC8EBDB124F2505F400016 killed.
+2020-02-05 17:07:19 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:19 INFO  SessionListener:38 - Session with id : ECB000E76E983114511A1FF89AF37E2D created.
+2020-02-05 17:07:19 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:19 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:20 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:20 INFO  Controller:25 - sign_out
+2020-02-05 17:07:20 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:20 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:20 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:20 INFO  SessionListener:44 - Session with id : ECB000E76E983114511A1FF89AF37E2D killed.
+2020-02-05 17:07:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:20 INFO  SessionListener:38 - Session with id : 98513C75C8A00218AEF895536F95FB64 created.
+2020-02-05 17:07:20 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:20 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:48 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:48 INFO  Controller:25 - sign_out
+2020-02-05 17:07:48 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:48 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:48 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:48 INFO  SessionListener:44 - Session with id : 98513C75C8A00218AEF895536F95FB64 killed.
+2020-02-05 17:07:48 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:49 INFO  SessionListener:38 - Session with id : 7DF9E06E42AC6096551C5D277F120FE9 created.
+2020-02-05 17:07:49 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:49 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:07:49 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:07:49 INFO  Controller:25 - sign_out
+2020-02-05 17:07:49 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:07:49 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:07:49 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:07:49 INFO  SessionListener:44 - Session with id : 7DF9E06E42AC6096551C5D277F120FE9 killed.
+2020-02-05 17:07:49 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:07:49 INFO  SessionListener:38 - Session with id : 2A12853CC3E010024F2878128623D6C5 created.
+2020-02-05 17:07:49 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:07:50 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:25 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:25 INFO  Controller:25 - sign_out
+2020-02-05 17:08:25 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:25 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:25 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:25 INFO  SessionListener:44 - Session with id : 2A12853CC3E010024F2878128623D6C5 killed.
+2020-02-05 17:08:25 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:26 INFO  SessionListener:38 - Session with id : C1FDB9F0DBC7ACBAE42291DF0DA9AF0A created.
+2020-02-05 17:08:26 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:26 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:26 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:26 INFO  Controller:25 - sign_out
+2020-02-05 17:08:26 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:26 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:26 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:26 INFO  SessionListener:44 - Session with id : C1FDB9F0DBC7ACBAE42291DF0DA9AF0A killed.
+2020-02-05 17:08:26 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:26 INFO  SessionListener:38 - Session with id : D589B65E9B74BCF0B0B357459E052873 created.
+2020-02-05 17:08:26 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:26 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:28 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:28 INFO  Controller:25 - sign_out
+2020-02-05 17:08:28 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:28 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:28 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:28 INFO  SessionListener:44 - Session with id : D589B65E9B74BCF0B0B357459E052873 killed.
+2020-02-05 17:08:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:28 INFO  SessionListener:38 - Session with id : DD5012A68ACF1A4740AF46888900772E created.
+2020-02-05 17:08:28 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:28 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:28 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:28 INFO  Controller:25 - sign_out
+2020-02-05 17:08:28 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:28 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:28 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:28 INFO  SessionListener:44 - Session with id : DD5012A68ACF1A4740AF46888900772E killed.
+2020-02-05 17:08:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:28 INFO  SessionListener:38 - Session with id : B26E1E4EADE329CE3F555421AD49B0A4 created.
+2020-02-05 17:08:28 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:28 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:29 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:29 INFO  Controller:25 - sign_out
+2020-02-05 17:08:29 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:29 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:29 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:29 INFO  SessionListener:44 - Session with id : B26E1E4EADE329CE3F555421AD49B0A4 killed.
+2020-02-05 17:08:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:29 INFO  SessionListener:38 - Session with id : 5102B7696FACB27AD38A83D5E8CEAA40 created.
+2020-02-05 17:08:29 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:29 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:30 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:30 INFO  Controller:25 - sign_out
+2020-02-05 17:08:30 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:30 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:30 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:30 INFO  SessionListener:44 - Session with id : 5102B7696FACB27AD38A83D5E8CEAA40 killed.
+2020-02-05 17:08:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:30 INFO  SessionListener:38 - Session with id : 05831976F64239D05153276BA5683AA2 created.
+2020-02-05 17:08:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:30 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:30 INFO  Controller:25 - sign_out
+2020-02-05 17:08:30 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:30 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:30 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:30 INFO  SessionListener:44 - Session with id : 05831976F64239D05153276BA5683AA2 killed.
+2020-02-05 17:08:30 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:30 INFO  SessionListener:38 - Session with id : E931A9C288346C9AA56EE155ABEF2894 created.
+2020-02-05 17:08:30 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:30 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:08:51 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:08:51 INFO  Controller:25 - sign_out
+2020-02-05 17:08:51 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:08:51 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:08:51 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:08:51 INFO  SessionListener:44 - Session with id : E931A9C288346C9AA56EE155ABEF2894 killed.
+2020-02-05 17:08:51 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:08:51 INFO  SessionListener:38 - Session with id : DC62D839E27B78B5290E4428857B293F created.
+2020-02-05 17:08:51 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:08:51 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:11 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:09:11 INFO  Controller:25 - sign_out
+2020-02-05 17:09:11 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:09:11 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:09:11 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:09:11 INFO  SessionListener:44 - Session with id : DC62D839E27B78B5290E4428857B293F killed.
+2020-02-05 17:09:11 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:09:11 INFO  SessionListener:38 - Session with id : 4575D8B0BB159A0A9BFEACAA7946AC2E created.
+2020-02-05 17:09:11 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:09:11 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:12 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:09:12 INFO  Controller:25 - sign_out
+2020-02-05 17:09:12 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:09:12 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@73f08ec7
+2020-02-05 17:09:12 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:09:12 INFO  SessionListener:44 - Session with id : 4575D8B0BB159A0A9BFEACAA7946AC2E killed.
+2020-02-05 17:09:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:09:12 INFO  SessionListener:38 - Session with id : 08A7EFC4866C4396918853BC814DA7C0 created.
+2020-02-05 17:09:12 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:09:12 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:57 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-05 17:09:58 INFO  SessionListener:38 - Session with id : 160D20EBE551324C9306C6BCB8DEE599 created.
+2020-02-05 17:09:58 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:09:58 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:58 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:09:58 INFO  Controller:25 - 
+2020-02-05 17:09:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:09:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:09:58 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:09:58 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:09:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:09:58 INFO  SessionListener:38 - Session with id : BADDA4B7B56239EA89DC29589BB634FC created.
+2020-02-05 17:09:58 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:09:58 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:58 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:09:58 INFO  Controller:25 - 
+2020-02-05 17:09:58 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:09:58 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:09:58 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:09:58 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:09:58 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:09:59 INFO  SessionListener:38 - Session with id : 659044D1378D06EC88D1A7E162E8CE05 created.
+2020-02-05 17:09:59 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:09:59 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:09:59 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:09:59 INFO  Controller:25 - 
+2020-02-05 17:09:59 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:09:59 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:09:59 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:09:59 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:09:59 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:10:11 INFO  Controller:33 - In Controller doPost
+2020-02-05 17:10:11 INFO  Controller:35 - sign_in
+2020-02-05 17:10:11 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:10:11 INFO  CommandFactory:38 - app.commands.command.SignInCommand@6ef85fbf
+2020-02-05 17:10:11 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:10:11 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 17:10:12 INFO  SignInDAO:51 - user was found by login / password
+2020-02-05 17:10:12 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 17:10:12 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-05 17:10:12 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-05 17:10:12 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-05 17:10:12 INFO  ModerCabinetLogic:180 - 5 USER SIZE
+2020-02-05 17:10:12 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-05 17:10:12 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-05 17:10:15 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:15 INFO  Controller:25 - sign_out
+2020-02-05 17:10:15 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:15 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:15 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:15 INFO  SessionListener:44 - Session with id : 659044D1378D06EC88D1A7E162E8CE05 killed.
+2020-02-05 17:10:15 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:16 INFO  SessionListener:38 - Session with id : AC24F43C9E321ACC1C169ECD5CA4A9EF created.
+2020-02-05 17:10:16 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:16 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:10:34 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:34 INFO  Controller:25 - sign_out
+2020-02-05 17:10:34 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:34 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:34 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:34 INFO  SessionListener:44 - Session with id : AC24F43C9E321ACC1C169ECD5CA4A9EF killed.
+2020-02-05 17:10:34 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:35 INFO  SessionListener:38 - Session with id : 9DDE786C6E313BB31C6D6E8173AE47C7 created.
+2020-02-05 17:10:35 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:35 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:10:37 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:37 INFO  Controller:25 - sign_out
+2020-02-05 17:10:37 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:37 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:37 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:37 INFO  SessionListener:44 - Session with id : 9DDE786C6E313BB31C6D6E8173AE47C7 killed.
+2020-02-05 17:10:37 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:37 INFO  SessionListener:38 - Session with id : CB88C2795E31849A23E4FBBC6ECA9447 created.
+2020-02-05 17:10:37 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:37 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:10:50 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:50 INFO  Controller:25 - sign_out
+2020-02-05 17:10:50 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:50 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:50 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:50 INFO  SessionListener:44 - Session with id : CB88C2795E31849A23E4FBBC6ECA9447 killed.
+2020-02-05 17:10:50 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:50 INFO  SessionListener:38 - Session with id : 51F3B303CE848E16064C37659A64C9F2 created.
+2020-02-05 17:10:50 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:50 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:10:51 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:51 INFO  Controller:25 - sign_out
+2020-02-05 17:10:51 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:51 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:51 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:51 INFO  SessionListener:44 - Session with id : 51F3B303CE848E16064C37659A64C9F2 killed.
+2020-02-05 17:10:51 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:51 INFO  SessionListener:38 - Session with id : 837A4843C0D1B8921D757BC7213E3BB6 created.
+2020-02-05 17:10:51 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:51 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:10:52 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:10:52 INFO  Controller:25 - sign_out
+2020-02-05 17:10:52 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:10:52 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@b73a578
+2020-02-05 17:10:52 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:10:52 INFO  SessionListener:44 - Session with id : 837A4843C0D1B8921D757BC7213E3BB6 killed.
+2020-02-05 17:10:52 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:10:52 INFO  SessionListener:38 - Session with id : A623A624D070B78E8660D53AA703FE4E created.
+2020-02-05 17:10:52 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:10:52 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:11:40 INFO  SessionListener:25 - contextInitialized Apache Tomcat/9.0.30
+2020-02-05 17:11:41 INFO  SessionListener:38 - Session with id : 997C4827FCF9336A20D42CD96C597D28 created.
+2020-02-05 17:11:41 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:11:41 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:11:41 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:11:41 INFO  Controller:25 - 
+2020-02-05 17:11:41 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:11:41 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:11:41 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:11:41 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:11:41 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:11:42 INFO  SessionListener:38 - Session with id : C98DD489C079FC188F23031EA29E63A0 created.
+2020-02-05 17:11:42 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:11:42 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:11:42 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:11:42 INFO  Controller:25 - 
+2020-02-05 17:11:42 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:11:42 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:11:42 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:11:42 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:11:42 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:11:43 INFO  SessionListener:38 - Session with id : B8E4A4A7929C23E82B3588F09E4340D4 created.
+2020-02-05 17:11:43 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:11:43 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:11:43 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:11:43 INFO  Controller:25 - 
+2020-02-05 17:11:43 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:11:43 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:11:43 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:11:43 INFO  EmptyCommand:41 - default page = sign_in
+2020-02-05 17:11:43 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:11:46 INFO  Controller:33 - In Controller doPost
+2020-02-05 17:11:46 INFO  Controller:35 - sign_in
+2020-02-05 17:11:46 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:11:46 INFO  CommandFactory:38 - app.commands.command.SignInCommand@1c3cadfe
+2020-02-05 17:11:46 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:11:46 INFO  SignInCommand:43 - POST in SignInCommand
+2020-02-05 17:11:47 INFO  SignInDAO:51 - user was found by login / password
+2020-02-05 17:11:47 INFO  SignInDAO:55 - SignInDAO.getUserByLogPas() gave output
+2020-02-05 17:11:47 INFO  SignInCommand:53 - user logged in SignInCommand
+2020-02-05 17:11:47 INFO  SessionListener:52 - Attribute added: currentUser
+2020-02-05 17:11:47 INFO  SessionListener:52 - Attribute added: speakersForOption
+2020-02-05 17:11:47 INFO  ModerCabinetLogic:180 - 5 USER SIZE
+2020-02-05 17:11:47 INFO  SessionListener:52 - Attribute added: conferencesToRegisterIn
+2020-02-05 17:11:47 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/cabinets/moderCabinet.jsp
+2020-02-05 17:11:52 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:11:52 INFO  Controller:25 - sign_out
+2020-02-05 17:11:52 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_out
+2020-02-05 17:11:52 INFO  CommandFactory:38 - app.commands.command.SignOutCommand@6177202d
+2020-02-05 17:11:52 INFO  SignOutCommand:19 - in SignOutCommand
+2020-02-05 17:11:52 INFO  SessionListener:44 - Session with id : B8E4A4A7929C23E82B3588F09E4340D4 killed.
+2020-02-05 17:11:52 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signOut.jsp?language=en
+2020-02-05 17:11:52 INFO  SessionListener:38 - Session with id : 6EDDCD06A8C67DB92D861F79B7737BE2 created.
+2020-02-05 17:11:52 INFO  SessionListener:52 - Attribute added: language
+2020-02-05 17:11:52 INFO  SessionListener:52 - Attribute added: javax.servlet.jsp.jstl.fmt.request.charset
+2020-02-05 17:12:20 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:12:20 INFO  Controller:25 - 
+2020-02-05 17:12:20 INFO  CommandFactory:27 - COMMAND IN FACTORY null
+2020-02-05 17:12:20 INFO  CommandFactory:30 - In Factory defined like EMPTY!
+2020-02-05 17:12:20 INFO  EmptyCommand:24 - in EmptyCommand
+2020-02-05 17:12:20 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signUp.jsp
+2020-02-05 17:12:29 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:12:29 INFO  Controller:25 - sign_in
+2020-02-05 17:12:29 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:12:29 INFO  CommandFactory:38 - app.commands.command.SignInCommand@1c3cadfe
+2020-02-05 17:12:29 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:12:29 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp
+2020-02-05 17:13:28 INFO  Controller:23 - In Controller doGet
+2020-02-05 17:13:28 INFO  Controller:25 - sign_in
+2020-02-05 17:13:28 INFO  CommandFactory:27 - COMMAND IN FACTORY sign_in
+2020-02-05 17:13:28 INFO  CommandFactory:38 - app.commands.command.SignInCommand@1c3cadfe
+2020-02-05 17:13:28 INFO  SignInCommand:23 - in SignInCommand
+2020-02-05 17:13:28 INFO  Controller:49 - PAGE IN CONTROLLER: /WEB-INF/views/authorization/signIn.jsp

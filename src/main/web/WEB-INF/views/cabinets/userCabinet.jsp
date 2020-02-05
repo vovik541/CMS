@@ -12,7 +12,6 @@
     <title>User</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-
     <style>
         @import url("/resources/css/userCabinet.css");
     </style>
@@ -38,6 +37,12 @@
 <fmt:message key="user.giveARate" var="giveRate"/>
 <fmt:message key="user.rate" var="rate"/>
 <fmt:message key="user.haveRated" var="haveRated"/>
+
+<div class="container">
+    <divc
+</div>
+
+
 
 <table>
     <tr>
@@ -165,7 +170,6 @@
 </c:if>
 
 <div class="w3-card-4">
-
     <footer class="w3-container w3-grey w3-opacity w3-right-align w3-padding">
         <form>
             <input type="hidden" name="command" value="sign_out" />

@@ -18,38 +18,49 @@
 
 <body class="w3-light-grey">
 
-<c:choose>
-    <c:when test="${language.toString() eq 'ru'}">
-        <a href="?command=sign_out&language=en" class="w3-btn w3-round-large">en</a>
-        <a href="?command=sign_out&language=ua" class="w3-btn w3-round-large">ua</a>
-    </c:when>
-    <c:when test="${language.toString() eq 'ua'}">
-        <a href="?command=sign_out&language=en" class="w3-btn w3-round-large">en</a>
-        <a href="?command=sign_out&language=ru" class="w3-btn w3-round-large">ru</a>
-    </c:when>
-    <c:when test="${language.toString() eq 'en'}">
-        <a href="?command=sign_out&language=ua" class="w3-btn w3-round-large">ua</a>
-        <a href="?command=sign_out&language=ru" class="w3-btn w3-round-large">ru</a>
-    </c:when>
-</c:choose>
+<div class="w3-container w3-blue-grey w3-opacity w3-right-align">
+    <c:choose>
+        <c:when test="${language.toString() eq 'ru'}">
+            <a href="?command=sign_out&language=en" class="w3-btn w3-round-large">en</a>
+            <a href="?command=sign_out&language=ua" class="w3-btn w3-round-large">ua</a>
+        </c:when>
+        <c:when test="${language.toString() eq 'ua'}">
+            <a href="?command=sign_out&language=en" class="w3-btn w3-round-large">en</a>
+            <a href="?command=sign_out&language=ru" class="w3-btn w3-round-large">ru</a>
+        </c:when>
+        <c:when test="${language.toString() eq 'en'}">
+            <a href="?command=sign_out&language=ua" class="w3-btn w3-round-large">ua</a>
+            <a href="?command=sign_out&language=ru" class="w3-btn w3-round-large">ru</a>
+        </c:when>
+    </c:choose>
+</div>
 
 <fmt:message key="signUp" var="signUp"/>
 <fmt:message key="signIn" var="signIn"/>
+<fmt:message key="signOutMessage" var="signOutMessage"/>
 
-
-<div>
-    <h1>You were logged out</h1>
+<div class="container d-flex justify-content-center pt-5">
+        <div>
+            <div class="alert alert-info mr-5 pr-5" role="alert">
+                <h1>${signOutMessage}</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form method="get" id="backToLog">
+                        <button type="submit" class="btn btn-primary" form="backToLog">${signIn}</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <form id="GoToSignUp" method="get">
+                        <input type="hidden" name="EmptyCommandSignUp" value="up"/>
+                        <button type="submit" class="btn btn-primary" form="GoToSignUp">${signUp}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 </div>
-<form method="get" id="backToLog">
-    <button type="submit" form="backToLog">${signIn}</button>
-</form>
-<form id="GoToSignUp" method="get">
-    <input type="hidden" name="EmptyCommandSignUp" value="up"/>
-    <button type="submit" form="GoToSignUp">${signUp}</button>
-</form>
-<%--<%@ include file="../template/footer.jsp" %>--%>
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" ></script>
 
