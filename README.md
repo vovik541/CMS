@@ -1,10 +1,4 @@
-1. Система Управления Конференциями. Существуют роли:
-Администратор, Модератор, Спикер и обычный Пользователь.
-Модератор может закреплять, предлагать, изменять тему доклада за
-спикером, а также регулировать время и место проведения мероприятия.
-Необходимо учесть возможность просмотра прошедших/будущих митингов.
-У каждого Спикера существует свой рейтинг, в зависимости от рейтинга
-начисляется больше бонусов. Спикер может предлагать свой Доклад.
-Должна быть статистика зарегистрировавшихся людей и сколько физически
-всего пришли на Доклад. Реализовать уведомление участников о
-предстоящих события.
+This project was done as a result of passing the EPAM Systems external Java cources
+
+Project Goal:
+Conference Management System. Availability of roles: Administrator, Moderator, Speaker and Regular User. The moderator can fix, add, change the topic of the report for the speaker, as well as regulate the time and place of the event. It is necessary to take into account the possibility of viewing past / future rallies. Each Speaker has his own rating, depending on the rating, more bonuses are awarded. The speaker can offer his Report. There should be statistics of registered people and how many physically came to the Report. Implement.
